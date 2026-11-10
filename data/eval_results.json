@@ -1,0 +1,64 @@
+{
+ "assistments_2009": {
+  "dataset": "ASSISTments 2009 skill-builder (corrected)",
+  "rows": 259399,
+  "students": 4163,
+  "skills": 111,
+  "split": "80/20 by student, seed 42",
+  "AUC": {
+   "global-mean": 0.5,
+   "skill-mean": 0.6244,
+   "elo": 0.6682,
+   "bkt": 0.7001,
+   "elo-multi (Kwan)": 0.7545
+  },
+  "RMSE": {
+   "global-mean": 0.4729,
+   "skill-mean": 0.4617,
+   "elo": 0.4551,
+   "bkt": 0.4438,
+   "elo-multi (Kwan)": 0.4271
+  }
+ },
+ "eedi_2020_task34": {
+  "dataset": "Eedi NeurIPS 2020 Education Challenge, task 3/4 subset",
+  "rows": 1382727,
+  "students": 4918,
+  "questions": 948,
+  "skills": 57,
+  "split": "80/20 by student, seed 42",
+  "AUC": {
+   "global-mean": 0.5,
+   "skill-mean": 0.5762,
+   "elo": 0.6842,
+   "elo-multi (Kwan)": 0.7764
+  },
+  "RMSE": {
+   "global-mean": 0.499,
+   "skill-mean": 0.4944,
+   "elo": 0.4747,
+   "elo-multi (Kwan)": 0.439
+  }
+ },
+ "simulation": {
+  "setup": "30 simulated learners x 150 practice steps, NaCCA B1-B6 graph",
+  "new_skills_mastered": {
+   "beginner_p1": {
+    "kwan": 25.6,
+    "syllabus": 24.0,
+    "random": 10.4
+   },
+   "gapped_p4": {
+    "kwan": 14.0,
+    "syllabus": 8.8,
+    "random": 10.9
+   }
+  }
+ },
+ "latency": {
+  "recommend_top3_mean_ms": 0.18,
+  "recommend_top3_p95_ms": 0.2,
+  "calls": 3000,
+  "hardware": "single CPU core, pure Python"
+ }
+}

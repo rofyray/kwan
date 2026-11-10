@@ -1,0 +1,19 @@
+# raw data: PDFs, text dumps, ASSISTments, Eedi (fetched by scripts/download_data.sh)
+raw/
+*.zip
+
+# python
+__pycache__/
+.venv/
+.pytest_cache/
+*.pyc
+
+# local artefacts
+*.log
+*.tmp
+demo.png
+.DS_Store
+.claude/
+
+# assembled Hugging Face Space bundle (scripts/build_space.sh)
+build/
