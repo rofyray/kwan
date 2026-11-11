@@ -206,7 +206,8 @@ def _commands_in(help_text: str) -> set[str]:
     """The names listed under the positional-arguments heading of an argparse help text."""
     names: set[str] = set()
     for line in help_text.splitlines():
-        m = re.match(r"^\s{2,6}([a-z][\w-]*)\s{2,}", line)
+        # argparse prints "    name    help"; a name longer than the column sits alone on its line (Python 3.11)
+        m = re.match(r"^\s{2,6}([a-z][\w-]*)(?:\s{2,}|$)", line)
         if m:
             names.add(m.group(1))
     return names
