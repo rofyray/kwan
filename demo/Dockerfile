@@ -7,10 +7,11 @@
 # built from source. On the Space the context is the folder that space-deploy.yml uploads: app.py,
 # README.md, requirements-demo.txt, data/eval_results.json and wheels/kwan-<version>-py3-none-any.whl.
 # Stage 1 copies the wheel it finds or builds one; stage 2 installs it with the demo extra and nothing else,
-# so the final image carries no source tree, no raw data and no build tools.
+# so the final image carries no source tree, no raw data and no build tools. uv does the building and installing.
 
 FROM python:3.12-slim AS build
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 UV_NO_CACHE=1
+COPY --from=ghcr.io/astral-sh/uv:0.11.19 /uv /bin/uv
 WORKDIR /src
 COPY . .
 RUN set -eu; \
@@ -20,19 +21,20 @@ RUN set -eu; \
     if [ -f "$app/data/eval_results.json" ]; then cp "$app/data/eval_results.json" /out/app/data/; \
     elif [ -f data/eval_results.json ]; then cp data/eval_results.json /out/app/data/; fi; \
     if ls "$app"/wheels/kwan-*.whl >/dev/null 2>&1; then cp "$app"/wheels/kwan-*.whl /out/wheels/; \
-    elif [ -f pyproject.toml ]; then pip wheel --no-deps --wheel-dir /out/wheels .; \
+    elif [ -f pyproject.toml ]; then uv build --wheel --out-dir /out/wheels .; \
     else echo "no wheel under $app/wheels and no pyproject.toml in the build context" >&2; exit 1; fi
 
 FROM python:3.12-slim
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1 \
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 UV_NO_CACHE=1 UV_SYSTEM_PYTHON=1 \
     STREAMLIT_BROWSER_GATHER_USAGE_STATS=false STREAMLIT_SERVER_HEADLESS=true
 RUN useradd -m -u 1000 user
+COPY --from=ghcr.io/astral-sh/uv:0.11.19 /uv /bin/uv
 WORKDIR /home/user/app
 # the pinned Streamlit stack first, so that layer is reused when only the kwan wheel changes
 COPY --from=build /out/app/requirements-demo.txt .
-RUN pip install -r requirements-demo.txt
+RUN uv pip install -r requirements-demo.txt
 COPY --from=build /out/wheels /tmp/wheels
-RUN pip install "$(ls /tmp/wheels/kwan-*.whl)[demo]" && rm -rf /tmp/wheels
+RUN uv pip install "$(ls /tmp/wheels/kwan-*.whl)[demo]" && rm -rf /tmp/wheels
 COPY --from=build --chown=user /out/app .
 USER user
 EXPOSE 7860

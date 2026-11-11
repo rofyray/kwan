@@ -5,7 +5,7 @@ import re
 
 import pytest
 
-pytest.importorskip("pyvis", reason="the graph page needs pyvis (pip install 'kwan[demo]')")
+pytest.importorskip("pyvis", reason="the graph page needs pyvis (uv sync --extra demo)")
 
 from kwan import cli  # noqa: E402
 from kwan.graph import build, export, schema  # noqa: E402

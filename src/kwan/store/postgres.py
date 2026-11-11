@@ -3,7 +3,7 @@
 Kwan does not depend on a PostgreSQL driver. This store needs `psycopg` (version 3), which is
 imported only when a `PostgresStore` is created, so `import kwan.store` works without it:
 
-    pip install "psycopg[binary]"
+    uv add 'kwan[postgres]'        (or: uv sync --extra postgres in a source checkout)
 
 The tables hold the same things as the SQLite store, and nothing more:
 
@@ -82,7 +82,7 @@ def _load_driver() -> Any:
     except ImportError as err:
         raise ImportError(
             "PostgresStore needs the 'psycopg' package (version 3), which Kwan does not install. "
-            'Install it with: pip install "psycopg[binary]". '
+            'Install it with: uv add "kwan[postgres]" (or uv sync --extra postgres in a source checkout). '
             "MemoryStore and SQLiteStore work without it."
         ) from err
     return psycopg

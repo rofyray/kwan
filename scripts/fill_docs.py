@@ -11,8 +11,8 @@ sits between two markers:
 This script renders each block from the results file and writes it back. Nothing between the markers
 is typed by hand. A block whose results are not in the file yet says "not run yet".
 
-    python scripts/fill_docs.py            rewrite every block
-    python scripts/fill_docs.py --check    exit 1 if any block is out of date (what the tests run)
+    uv run scripts/fill_docs.py            rewrite every block
+    uv run scripts/fill_docs.py --check    exit 1 if any block is out of date (what the tests run)
 
 Rounding: AUC and the other prediction metrics to 3 decimals in the README and 4 in the docs,
 latency to 2 decimals, simulation means to 1 decimal. Rounding is half-up (PRD decision D8).
@@ -768,7 +768,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
     if args.check:
         if stale:
-            print("out of date (run `python scripts/fill_docs.py`):\n  " + "\n  ".join(stale))
+            print("out of date (run `uv run scripts/fill_docs.py`):\n  " + "\n  ".join(stale))
             return 1
         print("every RESULTS block is up to date")
     return 0

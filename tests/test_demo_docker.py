@@ -93,7 +93,7 @@ def test_dockerfile_follows_the_space_layout_of_appendix_a3():
     assert ("EXPOSE", "7860") in ins
     words = [word for word, _ in ins]
     assert words.index("USER") < words.index("CMD")  # the app never runs as root
-    assert words.index("USER") > max(i for i, (w, a) in enumerate(ins) if w == "RUN" and "pip install" in a)
+    assert words.index("USER") > max(i for i, (w, a) in enumerate(ins) if w == "RUN" and "uv pip install" in a)
 
 
 def test_dockerfile_runs_streamlit_headless_on_port_7860():
@@ -112,11 +112,11 @@ def test_dockerfile_runs_streamlit_headless_on_port_7860():
 def test_dockerfile_installs_the_demo_extra_from_a_wheel_and_nothing_heavy():
     text = DOCKERFILE.read_text(encoding="utf-8")
     assert "[demo]" in text and "kwan-*.whl" in text
-    assert "pip wheel" in text  # built from the repository when no wheel is given
+    assert "uv build --wheel" in text  # built from the repository when no wheel is given
     assert "requirements-demo.txt" in text
     for banned in ("torch", "pykt", "sentence-transformers", "apt-get"):
         assert banned not in text, banned
-    assert re.search(r"PYTHONDONTWRITEBYTECODE=1\s+PYTHONUNBUFFERED=1\s+PIP_NO_CACHE_DIR=1", text)
+    assert re.search(r"PYTHONDONTWRITEBYTECODE=1\s+PYTHONUNBUFFERED=1\s+UV_NO_CACHE=1", text)
     assert "wheels/kwan-*.whl" in text and "data/eval_results.json" in text
     assert "no wheel under" in text  # a context without wheel or source fails loudly
 
@@ -214,7 +214,7 @@ def test_space_deploy_runs_on_release_or_by_hand_and_uploads_the_demo_folder():
     assert doc["on"]["release"]["types"] == ["published"]
     assert "workflow_dispatch" in doc["on"]
     text = steps_text(doc)
-    assert "python -m build --wheel" in text
+    assert "uv build --wheel" in text
     for copied in ("demo/app.py", "demo/Dockerfile", "demo/README.md", "demo/requirements-demo.txt"):
         assert copied in text
     assert "dist/kwan-*.whl space/wheels/" in text
@@ -232,7 +232,7 @@ def test_space_deploy_polls_up_to_ten_minutes_then_runs_the_smoke_test():
     assert "/_stcore/health" in text and 'float(os.environ["POLL_SECONDS"])' in text
     assert ".hf.space" in text
     assert "playwright install --with-deps chromium" in text
-    assert "python demo/smoke_test.py" in text and "steps.space.outputs.url" in text
+    assert "--with playwright demo/smoke_test.py" in text and "steps.space.outputs.url" in text
     assert doc["permissions"] == {"contents": "read"}
 
 
@@ -246,7 +246,7 @@ def test_release_publishes_to_pypi_with_trusted_publishing():
     assert any(u.startswith("pypa/gh-action-pypi-publish@") for u in uses)
     assert not any("password" in json.dumps(step.get("with", {})) for step in pypi["steps"])  # no API token
     build = doc["jobs"]["build"]
-    assert "python -m build --sdist --wheel" in steps_text({"jobs": {"build": build}})
+    assert "uv build --sdist --wheel" in steps_text({"jobs": {"build": build}})
     assert doc["jobs"]["check"]["steps"] and "kwan.__version__" in steps_text({"jobs": {"check": doc["jobs"]["check"]}})
 
 

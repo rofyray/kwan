@@ -1,6 +1,6 @@
 """Put a class of 30 simulated pupils through Kwan's public interface.
 
-Run:       python examples/simulate_a_class.py [--pupils 30] [--days 12]
+Run:       uv run examples/simulate_a_class.py [--pupils 30] [--days 12]
 
 Each pupil starts from one of the simulator's profiles (`kwan.eval.simulate.PROFILES_V2`: a Basic 1
 beginner, a Basic 4 pupil with gaps, a Basic 6 pupil with gaps, and a Basic 4 pupil who is strong in

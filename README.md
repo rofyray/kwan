@@ -6,7 +6,7 @@ Kwan is an open-source learning path engine for the NaCCA Standards-Based Curric
 
 - **Live demo:** https://huggingface.co/spaces/rofyray/kwan (deploys on release)
 - **Documentation:** https://rofyray.github.io/kwan/ (published on release; the same pages are in [`docs/`](docs/index.md))
-- **Package:** `pip install kwan` once 1.0 is released; until then, install from source (see [Install](#install))
+- **Package:** `uv add kwan` once 1.0 is released; until then, install from source (see [Install](#install))
 
 Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is not reviewed, approved or endorsed by NaCCA or the Ministry of Education.
 
@@ -34,7 +34,7 @@ Kwan makes no network call and no AI model call when it recommends. It runs on o
 
 ## Results
 
-Every number in this section is rendered from [`data/eval_results.json`](data/eval_results.json) by `python scripts/fill_docs.py`. Nothing is typed by hand, and a test fails if the README and the file disagree. The [Evidence](docs/evidence.md) page has the same results with more decimals and a reading guide for each table.
+Every number in this section is rendered from [`data/eval_results.json`](data/eval_results.json) by `uv run scripts/fill_docs.py`. Nothing is typed by hand, and a test fails if the README and the file disagree. The [Evidence](docs/evidence.md) page has the same results with more decimals and a reading guide for each table.
 
 ### Does the learner model predict the next answer?
 
@@ -243,9 +243,9 @@ The [Method](docs/method.md) page has the formulas in plain language.
 Kwan needs Python 3.11, 3.12 or 3.13. The core needs only the standard library and `networkx`.
 
 ```bash
-pip install kwan            # the engine (once 1.0 is on PyPI)
-pip install 'kwan[api]'     # plus the REST API
-pip install 'kwan[demo]'    # plus the Streamlit demo
+uv add kwan                 # the engine (once 1.0 is on PyPI)
+uv add 'kwan[api]'          # plus the REST API
+uv add 'kwan[demo]'         # plus the Streamlit demo
 ```
 
 From source, with every extra used in development:
@@ -253,12 +253,11 @@ From source, with every extra used in development:
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-python -m venv .venv && source .venv/bin/activate
-pip install -e '.[dev,api,demo,eval,curriculum]'
-pytest -q
+uv sync --extra api --extra demo --extra eval --extra curriculum
+uv run pytest -q
 ```
 
-The extras: `api` (FastAPI and uvicorn), `demo` (Streamlit and pyvis), `eval` (pandas, numpy, scikit-learn and the dataset downloaders), `curriculum` (pdfplumber), `kt` (pyKT and torch, for the deep knowledge tracing benchmark), `graph-ai` (sentence-transformers, for the decision model), `postgres` (psycopg) and `dev` (ruff, mypy, pytest, build).
+The extras: `api` (FastAPI and uvicorn), `demo` (Streamlit and pyvis), `eval` (pandas, numpy, scikit-learn and the dataset downloaders), `curriculum` (pdfplumber), `kt` (pyKT and torch, for the deep knowledge tracing benchmark), `graph-ai` (sentence-transformers, for the decision model), and `postgres` (psycopg). `uv sync` also installs the `dev` group (ruff, mypy, pytest); the `docs` group holds mkdocs-material. Not on uv? `pip install kwan` and `pip install -e '.[api]'` work too.
 
 The parsed curriculum, the skill map, the bundle and the results file are committed, so the tests, the API and the demo run without downloading anything.
 
@@ -286,7 +285,7 @@ saved = state.to_dict()                            # plain data; LearnerState.fr
 
 ## Command line
 
-Installing Kwan adds the `kwan` command. Run `kwan <command> --help` for the options of each one.
+Installing Kwan adds the `kwan` command (in a source checkout, prefix it with `uv run`, or use `uv tool install kwan` to have it everywhere). Run `kwan <command> --help` for the options of each one.
 
 ```bash
 kwan curriculum fetch                 # download the official PDFs and record their hashes
@@ -315,16 +314,16 @@ kwan context coverage                 # how much is drafted, checked, reviewed a
 kwan bundle --out src/kwan/bundles/   # write kwan-bundle.math.json
 ```
 
-`make all` runs the whole pipeline in order: `data`, `curriculum`, `graph`, `eval`, `fit`, `sim`, `bench`, `bundle` and `test`. `make data` downloads the public datasets listed in `data/datasets.yaml` and is safe to run again. After any step that changes `data/eval_results.json`, run `python scripts/fill_docs.py` to refresh the tables in this README and the docs.
+`make all` runs the whole pipeline in order: `data`, `curriculum`, `graph`, `eval`, `fit`, `sim`, `bench`, `bundle` and `test`. `make data` downloads the public datasets listed in `data/datasets.yaml` and is safe to run again. After any step that changes `data/eval_results.json`, run `uv run scripts/fill_docs.py` to refresh the tables in this README and the docs.
 
 ## REST API
 
 The API is an optional extra. It keeps learner state in a SQLite file by default (set `KWAN_STORE=sqlite:///path/to/file`, `KWAN_STORE=memory` or a Postgres URL to change that) and expects an API key in the `X-API-Key` header when `KWAN_API_KEYS` is set.
 
 ```bash
-pip install 'kwan[api]'
+uv add 'kwan[api]'
 export KWAN_API_KEYS="change-me-to-a-long-random-string"
-uvicorn kwan.api.app:app --port 8000
+uv run uvicorn kwan.api.app:app --port 8000
 ```
 
 | Method | Path | What it does |
@@ -405,6 +404,6 @@ Kwan gets better when people who teach in Ghana shape it. You can help in two wa
 - **Teachers and education specialists:** check that skill links make sense, write or review "Try it in Ghana" settings and short skill labels, and review Twi, Ewe and Ga translations. No coding needed: open a "Teacher review" issue and we will send you a review sheet.
 - **Developers and data scientists:** pick an issue labelled `good first issue`, or help with curriculum parsing, evaluation and the demo. Read `CONTRIBUTING.md` first.
 
-Everyone who contributes is listed in `CONTRIBUTORS.md`, including reviewers. Maintainer: Raymond Okyere-Forson (@rofyray).
+Everyone who contributes is listed in `CONTRIBUTORS.md`, including reviewers. Maintainer: Rofy Ray (@rofyray).
 
 To cite Kwan, use [`CITATION.cff`](CITATION.cff). [Governance](docs/governance.md) records how decisions are made and where Kwan stands with NaCCA.

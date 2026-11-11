@@ -6,7 +6,7 @@ Who looks after Kwan, how decisions are made, and where Kwan stands with NaCCA.
 
 | Name | GitHub | Role |
 |---|---|---|
-| Raymond Okyere-Forson | [@rofyray](https://github.com/rofyray) | Maintainer |
+| Rofy Ray | [@rofyray](https://github.com/rofyray) | Maintainer |
 
 Maintainers review and merge pull requests, cut releases, send out and import teacher review sheets, look after the Code of Conduct, and keep the rules in this document.
 

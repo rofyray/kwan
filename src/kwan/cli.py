@@ -4,7 +4,7 @@ Subcommands come from a registry of modules. Each module in `REGISTRY` exposes
 `register(subparsers)`, which adds its own top-level commands and sets two defaults on each parser:
 
     func   the handler, called with the parsed arguments; it returns an exit code or None
-    extra  (optional) the pip extra that brings the packages the command needs, e.g. "eval"
+    extra  (optional) the extra (pip/uv) that brings the packages the command needs, e.g. "eval"
 
 A registry module that does not exist yet, or that cannot be imported because an optional package is
 missing, is skipped without a word. The hint is printed only when one of its commands is asked for.
@@ -28,7 +28,7 @@ REGISTRY = (
     "kwan._bundle_cli",
 )
 
-# command -> (registry module that provides it, pip extra it needs or None); used only for hints
+# command -> (registry module that provides it, extra it needs or None); used only for hints
 COMMANDS = {
     "curriculum": ("kwan.curriculum._cli", "curriculum"),
     "graph": ("kwan.graph._cli", "graph-ai"),
@@ -43,7 +43,9 @@ COMMANDS = {
 
 def _install_hint(extra: str | None) -> str:
     return (
-        f"Install what it needs with: pip install 'kwan[{extra}]'" if extra else "Check that kwan is fully installed."
+        f"Install what it needs with: uv add 'kwan[{extra}]' (in a source checkout: uv sync --extra {extra})"
+        if extra
+        else "Check that kwan is fully installed."
     )
 
 

@@ -85,7 +85,7 @@ class HashingEmbedder:
 
 
 class MiniLMEmbedder:
-    """`all-MiniLM-L6-v2` sentence embeddings, run locally (Apache-2.0). Needs `pip install 'kwan[graph-ai]'`."""
+    """`all-MiniLM-L6-v2` sentence embeddings, run locally (Apache-2.0). Needs `uv add 'kwan[graph-ai]'`."""
 
     licence = MINILM_LICENCE
 

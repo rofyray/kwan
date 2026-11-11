@@ -1,7 +1,7 @@
 """Kwan in one minute: load the bundle, record a few answers, ask what to learn next.
 
-Install:   pip install kwan
-Run:       python examples/quickstart.py
+Install:   uv add kwan
+Run:       uv run examples/quickstart.py
 
 The learner id is any opaque string you choose. Never use a pupil's name or phone number.
 """

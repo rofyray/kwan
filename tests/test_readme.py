@@ -24,7 +24,7 @@ EM_DASH = chr(0x2014)
 
 PLACEHOLDERS = ("[DEMO URL]", "[VIDEO URL]", "[Names and roles]", "[Name]", "[email]")
 DISCLAIMER = "Kwan is not reviewed, approved or endorsed by NaCCA or the Ministry of Education."
-COMMANDS = {"pip", "make", "kwan", "python", "curl", "docker", "uvicorn", "streamlit", "git"}
+COMMANDS = {"uv", "uvx", "pip", "make", "kwan", "python", "curl", "docker", "uvicorn", "streamlit", "git"}
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
 
 FENCE = re.compile(r"^```(\w*)[^\n]*\n(.*?)^```[^\n]*$", re.S | re.M)
@@ -61,7 +61,7 @@ def test_every_results_block_matches_the_results_file(fill_docs, capsys) -> None
     """scripts/fill_docs.py --check, in process: exit 0 means every block equals what the file renders."""
     code = fill_docs.main(["--check"])
     out = capsys.readouterr().out
-    assert code == 0, f"RESULTS blocks are out of date; run `python scripts/fill_docs.py`:\n{out}"
+    assert code == 0, f"RESULTS blocks are out of date; run `uv run scripts/fill_docs.py`:\n{out}"
 
 
 def test_readme_blocks_render_from_the_file_one_by_one(fill_docs, text) -> None:
@@ -130,7 +130,7 @@ def test_no_email_address(text) -> None:
 
 def test_demo_url_and_maintainer(text) -> None:
     assert "https://huggingface.co/spaces/rofyray/kwan" in text
-    assert "Maintainer: Raymond Okyere-Forson (@rofyray)" in text
+    assert "Maintainer: Rofy Ray (@rofyray)" in text
     assert "## Data and credits" in text and "## Licences" in text
     assert "CC BY 4.0" in text and "`LICENSE-CONTENT`" in text
 

@@ -12,8 +12,8 @@ abstract: >-
   skills with reasons a teacher can read. Kwan is not reviewed, approved or
   endorsed by NaCCA or the Ministry of Education.
 authors:
-  - family-names: "Okyere-Forson"
-    given-names: "Raymond"
+  - family-names: "Ray"
+    given-names: "Rofy"
 repository-code: "https://github.com/rofyray/kwan"
 url: "https://github.com/rofyray/kwan"
 license: MIT

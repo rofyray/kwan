@@ -17,17 +17,16 @@ Everyone who takes part follows the [Code of Conduct](CODE_OF_CONDUCT.md) (Contr
 
 ## 3. Developer setup
 
-Kwan needs Python 3.11, 3.12 or 3.13.
+Kwan needs Python 3.11, 3.12 or 3.13 and [uv](https://docs.astral.sh/uv/), which installs the right Python for you if it is missing.
 
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-python -m venv .venv && source .venv/bin/activate
-pip install -e .[dev,api,demo,eval,curriculum]
-pytest -q
+uv sync --extra api --extra demo --extra eval --extra curriculum
+uv run pytest -q
 ```
 
-On zsh, put quotes around the last part of the install command: `pip install -e '.[dev,api,demo,eval,curriculum]'`.
+`uv sync` creates `.venv`, installs Kwan in editable mode with those extras plus the `dev` group (ruff, mypy, pytest), and pins everything to `uv.lock`. Prefix commands with `uv run`, or activate `.venv` once with `source .venv/bin/activate`. After you change a dependency in `pyproject.toml`, run `uv lock` and commit `uv.lock`.
 
 The curriculum structure, the skill map and the results file are committed, so the tests, the API and the demo run without downloading anything. Tests that need raw data skip themselves.
 
@@ -43,18 +42,17 @@ make all         # rebuilds every committed artifact
 Before you open a pull request, run the same checks as CI:
 
 ```bash
-ruff check .
-ruff format --check .
-mypy
-pytest -q
+uv run ruff check .
+uv run ruff format --check .
+uv run mypy
+uv run pytest -q
 ```
 
 To work on the documentation site:
 
 ```bash
-pip install "mkdocs-material>=9.5,<10"
-mkdocs serve             # preview on http://127.0.0.1:8000
-mkdocs build --strict    # the check CI runs
+uv run --group docs mkdocs serve             # preview on http://127.0.0.1:8000
+uv run --group docs mkdocs build --strict    # the check CI runs
 ```
 
 ## 4. Rules that keep Kwan honest
@@ -97,8 +95,8 @@ You do not need a GitHub workflow, a terminal or any code. You need a spreadshee
 The pull request template has this checklist:
 
 - [ ] The title follows Conventional Commits and the pull request covers one topic.
-- [ ] Tests are added or updated, and `pytest -q` passes.
-- [ ] `ruff check .`, `ruff format --check .` and `mypy` pass.
+- [ ] Tests are added or updated, and `uv run pytest -q` passes.
+- [ ] `uv run ruff check .`, `uv run ruff format --check .` and `uv run mypy` pass.
 - [ ] Every number in user-facing text comes from `data/eval_results.json`.
 - [ ] No raw dataset rows and no NaCCA curriculum text are added.
 - [ ] No parameters or item banks fitted on non-commercial data are shipped.
@@ -106,7 +104,7 @@ The pull request template has this checklist:
 - [ ] No pupil names, emails or free text are stored or logged.
 - [ ] User-facing text is in plain language, with no em dashes and no claim of NaCCA approval.
 - [ ] New or changed practice settings follow the context style guide and are marked reviewed only after a teacher has reviewed them.
-- [ ] Docs are updated where behaviour changed, and `mkdocs build --strict` passes.
+- [ ] Docs are updated where behaviour changed, and `uv run --group docs mkdocs build --strict` passes.
 
 ## 7. Reporting curriculum errors
 

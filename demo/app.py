@@ -1,4 +1,4 @@
-"""Kwan demo UI (Streamlit). Run: streamlit run demo/app.py
+"""Kwan demo UI (Streamlit). Run: uv run streamlit run demo/app.py
 
 The app uses only the public package API (`kwan.Kwan` on the shipped bundle), the graph page export and the
 evaluation results file. Nothing about a visitor is stored: the pupil is a LearnerState in the session.

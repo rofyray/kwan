@@ -1,10 +1,10 @@
 """Evaluate Kwan's learner model on AMMORE, the Rori WhatsApp maths tutor dataset (Ghana among others).
 
-Run:       python examples/evaluate_on_ammore.py [--raw raw/ammore] [--out results.json]
+Run:       uv run examples/evaluate_on_ammore.py [--raw raw/ammore] [--out results.json]
 
 AMMORE is CC BY-NC 4.0: evaluation only. Parameters fitted on it never ship in a Kwan bundle. The
 dataset is not part of the package; this script runs when the files are on disk and otherwise says
-how to get them. It needs the `eval` extra (`pip install 'kwan[eval]'`).
+how to get them. It needs the `eval` extra (`uv sync --extra eval`).
 """
 
 from __future__ import annotations
@@ -44,7 +44,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         from kwan.eval import ammore
     except ModuleNotFoundError as exc:
-        print(f"the package {exc.name!r} is not installed; run: pip install 'kwan[eval]'", file=sys.stderr)
+        print(f"the package {exc.name!r} is not installed; run: uv sync --extra eval", file=sys.stderr)
         return 1
     ammore.main([str(raw), *(["--out", args.out] if args.out else [])])
     return 0

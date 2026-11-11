@@ -7,7 +7,7 @@ hide and show grades and strands. Hovering over a node shows its code and short 
 curriculum description is shown only when the graph is in full-text mode.
 
 `graph_html(G)` returns the page as a string (the demo embeds it); `write_html(G, path)` writes it.
-pyvis is imported only when a page is made (`pip install 'kwan[demo]'`).
+pyvis is imported only when a page is made (`uv add 'kwan[demo]'`).
 """
 
 from __future__ import annotations

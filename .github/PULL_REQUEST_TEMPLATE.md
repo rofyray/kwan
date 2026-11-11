@@ -15,8 +15,8 @@
 ## Checklist
 
 - [ ] The title follows Conventional Commits and the pull request covers one topic.
-- [ ] Tests are added or updated, and `pytest -q` passes.
-- [ ] `ruff check .`, `ruff format --check .` and `mypy` pass.
+- [ ] Tests are added or updated, and `uv run pytest -q` passes.
+- [ ] `uv run ruff check .`, `uv run ruff format --check .` and `uv run mypy` pass.
 - [ ] Every number in user-facing text comes from `data/eval_results.json`.
 - [ ] No raw dataset rows and no NaCCA curriculum text are added.
 - [ ] No parameters or item banks fitted on non-commercial data are shipped.
@@ -24,6 +24,6 @@
 - [ ] No pupil names, emails or free text are stored or logged.
 - [ ] User-facing text is in plain language, with no em dashes and no claim of NaCCA approval.
 - [ ] New or changed practice settings follow the context style guide and are marked reviewed only after a teacher has reviewed them.
-- [ ] Docs are updated where behaviour changed, and `mkdocs build --strict` passes.
+- [ ] Docs are updated where behaviour changed, and `uv run --group docs mkdocs build --strict` passes.
 
 See [CONTRIBUTING.md](https://github.com/rofyray/kwan/blob/main/CONTRIBUTING.md) for the reasons behind each line.

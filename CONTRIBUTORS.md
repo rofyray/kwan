@@ -4,7 +4,7 @@ Kwan gets better when people who teach in Ghana shape it. Everyone who helps is 
 
 ## Maintainer
 
-- Raymond Okyere-Forson ([@rofyray](https://github.com/rofyray))
+- Rofy Ray ([@rofyray](https://github.com/rofyray))
 
 ## Code contributors
 

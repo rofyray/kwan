@@ -3,7 +3,7 @@
 What Kwan's model is for, how it works, how well it does, and where it falls short.
 
 !!! note "Where the numbers come from"
-    No number on this page is typed by hand. Each results block is filled from `data/eval_results.json`, which is written by the evaluation scripts in the Kwan repository, by `python scripts/fill_docs.py`. A block whose results are not in the file yet says so. The [Evidence](evidence.md) page explains how to read each table.
+    No number on this page is typed by hand. Each results block is filled from `data/eval_results.json`, which is written by the evaluation scripts in the Kwan repository, by `uv run scripts/fill_docs.py`. A block whose results are not in the file yet says so. The [Evidence](evidence.md) page explains how to read each table.
 
 ## Summary
 
@@ -17,7 +17,7 @@ What Kwan's model is for, how it works, how well it does, and where it falls sho
 | Output | The chance that a pupil gets each skill right, a mastery estimate per skill, and a ranked list of next skills with reasons |
 | Runs on | One CPU core, with no network call when it recommends |
 | Licence | Code MIT. Kwan-written content CC BY 4.0. |
-| Maintainer | Raymond Okyere-Forson ([@rofyray](https://github.com/rofyray)) |
+| Maintainer | Rofy Ray ([@rofyray](https://github.com/rofyray)) |
 
 ## Intended use
 

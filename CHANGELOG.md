@@ -2,7 +2,7 @@
 
 All notable changes to Kwan are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the package follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `python scripts/fill_docs.py`.
+Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `uv run scripts/fill_docs.py`.
 
 ## [1.0.0rc1] - 2026-11-11
 
@@ -10,7 +10,7 @@ The first release candidate of Kwan 1.0: the Round 1 prototype rebuilt as a Pyth
 
 ### Added
 
-- **Package.** `kwan` is now a package under `src/kwan`, installable with `pip install kwan` and extras `api`, `demo`, `eval`, `kt`, `graph-ai`, `curriculum`, `postgres` and `dev`. The core imports only the standard library and `networkx`. The public interface is `kwan.Kwan` (`from_bundle`, `new_state`, `update`, `recommend`, `mastery_map`, `resolve`), `kwan.LearnerState` and `kwan.Recommendation`.
+- **Package.** `kwan` is now a package under `src/kwan`, installable with `uv add kwan` (or `pip install kwan`) and extras `api`, `demo`, `eval`, `kt`, `graph-ai`, `curriculum` and `postgres`; development tools live in the `dev` and `docs` dependency groups, pinned by `uv.lock`. The core imports only the standard library and `networkx`. The public interface is `kwan.Kwan` (`from_bundle`, `new_state`, `update`, `recommend`, `mastery_map`, `resolve`), `kwan.LearnerState` and `kwan.Recommendation`.
 - **Namespaced ids.** Indicator ids are `math:B4.1.1.1.2`; the bare code is accepted everywhere as an alias (`kwan.ids`).
 - **Curriculum pipeline v2** (`kwan.curriculum`): `kwan curriculum fetch` records the URL, size, SHA-256 and date of each official PDF; `parse` reads every indicator with strand and sub-strand names, descriptions and exemplars through pdfplumber with a pdftotext cross-check; `qa` compares the parse with a hand count per class and strand and writes an HTML report. A corrections file records misprinted codes and how each is handled. NaCCA text goes only to a git-ignored `build/` folder; the committed structure file holds codes, numbers, names and Kwan-written short labels.
 - **Graph schema v2** (`kwan.graph.schema`): nodes carry the indicator record, every edge carries a type (`sequence`, `vertical`, `bridge`, `augmented`) and provenance (what made it, when, review status). `kwan graph build`, `validate` (writes the skill map report) and `export` (interactive HTML).

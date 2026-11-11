@@ -26,7 +26,7 @@ def test_missing_driver_gives_a_clear_error(monkeypatch):
     with pytest.raises(ImportError) as err:
         PostgresStore("dbname=kwan")
     message = str(err.value)
-    assert "psycopg" in message and "pip install" in message
+    assert "psycopg" in message and "uv add" in message
     assert "SQLiteStore" in message  # and it says what works without the driver
     assert "—" not in message
 

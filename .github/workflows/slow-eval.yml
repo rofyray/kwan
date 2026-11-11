@@ -30,11 +30,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
-          cache: pip
-          cache-dependency-path: pyproject.toml
+          enable-cache: true
 
       - name: Free disk space (the datasets need about 11 GB, archives included)
         run: sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android /opt/hostedtoolcache/CodeQL
@@ -42,7 +41,7 @@ jobs:
       - name: Tools that can unpack the Junyi .rar
         run: sudo apt-get update && sudo apt-get install -y libarchive-tools unar
 
-      - run: pip install -e ".[dev,eval]"
+      - run: uv sync --locked --extra eval
 
       # Only the downloaded archives are cached (about 3 GB); they are unpacked again on every run.
       # Junyi (.rar) and XES3G5M (Google Drive) are fragile downloads, so a cached copy matters most for them.
@@ -64,16 +63,16 @@ jobs:
 
       # Fragile datasets that cannot be fetched are skipped with a clear message, never an error.
       - name: Fetch every learner dataset
-        run: bash scripts/download_data.sh learner
+        run: uv run bash scripts/download_data.sh learner
 
       # Datasets that are missing get a "skipped" block only if the file has no numbers for them yet.
       - name: Run every evaluation
-        run: kwan eval all --raw raw --out data/eval_results.json
+        run: uv run kwan eval all --raw raw --out data/eval_results.json
 
       - name: Slow tests
         env:
           KWAN_RUN_SLOW: "1"
-        run: pytest -q -m slow
+        run: uv run pytest -q -m slow
 
       - name: Open a pull request when the results changed
         env:

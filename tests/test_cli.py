@@ -173,7 +173,9 @@ def test_a_module_with_a_missing_optional_package_is_skipped_and_hinted(capsys, 
     code, out, err = run(capsys)  # every other command still works
     assert code == 0 and "sim" in out and err == ""
     code, out, err = run(capsys, "curriculum", "parse")
-    assert code == 2 and "pdfplumber" in err and "pip install 'kwan[curriculum]'" in err
+    assert (
+        code == 2 and "pdfplumber" in err and "uv add 'kwan[curriculum]'" in err and "uv sync --extra curriculum" in err
+    )
 
 
 def test_a_command_that_needs_a_missing_package_at_run_time_prints_the_extra(capsys, monkeypatch):
@@ -190,7 +192,7 @@ def test_a_command_that_needs_a_missing_package_at_run_time_prints_the_extra(cap
     monkeypatch.setitem(sys.modules, "kwan._heavy_cli", module)
     monkeypatch.setattr(cli, "REGISTRY", ("kwan._heavy_cli",))
     code, out, err = run(capsys, "heavy")
-    assert code == 1 and "'pandas' is not installed" in err and "pip install 'kwan[eval]'" in err
+    assert code == 1 and "'pandas' is not installed" in err and "uv add 'kwan[eval]'" in err
 
 
 # ----------------------------------------------------------------------------- data directory

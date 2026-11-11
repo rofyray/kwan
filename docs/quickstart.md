@@ -8,8 +8,8 @@ Kwan needs Python 3.11, 3.12 or 3.13. The core needs only the standard library a
 
 <!-- VERIFY:START id=install-pypi lang=bash -->
 ```bash
-pip install kwan                 # the engine
-pip install 'kwan[api]'          # plus the REST API
+uv add kwan                      # the engine
+uv add 'kwan[api]'               # plus the REST API
 ```
 <!-- VERIFY:END -->
 
@@ -19,7 +19,7 @@ From source:
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-pip install -e '.[dev,api,demo,eval,curriculum]'
+uv sync --extra api --extra demo --extra eval --extra curriculum
 ```
 <!-- VERIFY:END -->
 
@@ -152,7 +152,7 @@ kwan bundle --subject math --text labels --out build/bundles/
 
 Some commands need extra packages: `kwan curriculum` needs `kwan[curriculum]`, and `kwan eval` needs `kwan[eval]`. The command tells you what to install if something is missing. Run `kwan <command> --help` for the options of each command.
 
-There are a few more: `kwan graph validate` checks the map and writes the skill map report, `kwan fit` chooses the forgetting time, the step sizes and the item banks on the public datasets, and `kwan context` runs the checks on practice settings, writes and imports teacher review sheets, and reports coverage. `kwan --help` lists them all. After any command that changes `data/eval_results.json`, `python scripts/fill_docs.py` refreshes the result tables in the README and the docs.
+There are a few more: `kwan graph validate` checks the map and writes the skill map report, `kwan fit` chooses the forgetting time, the step sizes and the item banks on the public datasets, and `kwan context` runs the checks on practice settings, writes and imports teacher review sheets, and reports coverage. `kwan --help` lists them all. After any command that changes `data/eval_results.json`, `uv run scripts/fill_docs.py` refreshes the result tables in the README and the docs.
 
 `kwan curriculum fetch` downloads the NaCCA PDFs to your machine. They are © NaCCA, Ministry of Education. Do not commit them or text taken from them.
 
@@ -164,9 +164,9 @@ The API is an optional extra. It keeps learner state in a SQLite file by default
 
 <!-- VERIFY:START id=api-start lang=bash -->
 ```bash
-pip install 'kwan[api]'
+uv add 'kwan[api]'
 export KWAN_API_KEYS="change-me-to-a-long-random-string"
-uvicorn kwan.api.app:app --port 8000
+uv run uvicorn kwan.api.app:app --port 8000
 ```
 <!-- VERIFY:END -->
 

@@ -266,7 +266,7 @@ def test_citation_cff_describes_kwan() -> None:
     assert cff.get("type", "software") == "software"
     assert str(cff.get("version")) == "1.0.0rc1"
     author = cff["authors"][0]
-    assert (author["given-names"], author["family-names"]) == ("Raymond", "Okyere-Forson")
+    assert (author["given-names"], author["family-names"]) == ("Rofy", "Ray")
 
 
 # ---------------------------------------------------------------------------------------------------
@@ -436,7 +436,7 @@ def _fill_docs():
 
 def test_fill_docs_check_passes() -> None:
     """Every RESULTS block in the README and the docs equals what scripts/fill_docs.py renders from the results file."""
-    assert _fill_docs().main(["--check"]) == 0, "run `python scripts/fill_docs.py`"
+    assert _fill_docs().main(["--check"]) == 0, "run `uv run scripts/fill_docs.py`"
 
 
 @pytest.mark.parametrize("name", RESULTS_PAGES)

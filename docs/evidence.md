@@ -3,7 +3,7 @@
 What has been measured about Kwan, and how to read it.
 
 !!! note "Where the numbers come from"
-    No number on this page is typed by hand. Each results block is filled from `data/eval_results.json`, which is written by the evaluation scripts in the Kwan repository. Each script owns one part of that file, and `python scripts/fill_docs.py` renders the blocks on this page from it. A block whose results are not in the file says "not run yet". You can rebuild the file yourself with `make all`.
+    No number on this page is typed by hand. Each results block is filled from `data/eval_results.json`, which is written by the evaluation scripts in the Kwan repository. Each script owns one part of that file, and `uv run scripts/fill_docs.py` renders the blocks on this page from it. A block whose results are not in the file says "not run yet". You can rebuild the file yourself with `make all`.
 
 ## How to read these results
 
@@ -300,9 +300,9 @@ The [Model card](model-card.md) lists the limits in full. The [Data card](data-c
 ## Reproduce it
 
 ```bash
-pip install -e '.[dev,eval]'
+uv sync --extra eval
 make data     # downloads the public datasets
 make all      # rebuilds every committed result
 ```
 
-The slow evaluations on full datasets also run every week in CI, and a pull request is opened when `data/eval_results.json` changes. After the file changes, `python scripts/fill_docs.py` refreshes this page, the model card and the README; `python scripts/fill_docs.py --check` is the test that keeps them in step.
+The slow evaluations on full datasets also run every week in CI, and a pull request is opened when `data/eval_results.json` changes. After the file changes, `uv run scripts/fill_docs.py` refreshes this page, the model card and the README; `uv run scripts/fill_docs.py --check` is the test that keeps them in step.

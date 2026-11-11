@@ -1,8 +1,8 @@
-PY ?= python
+PY ?= uv run python
 RESULTS := data/eval_results.json
 
 .PHONY: install data curriculum graph eval sim bench fit bundle test lint typecheck api app demo-docker docs all fill-docs
-install:     ; $(PY) -m pip install -e ".[dev,api,demo,eval,curriculum]"
+install:     ; uv sync --extra api --extra demo --extra eval --extra curriculum
 data:        ; bash scripts/download_data.sh
 curriculum:  ; $(PY) -m kwan.cli curriculum fetch && $(PY) -m kwan.cli curriculum parse && $(PY) -m kwan.cli curriculum qa
 graph:       ; $(PY) -m kwan.cli graph build && $(PY) -m kwan.cli graph validate && $(PY) -m kwan.cli graph export --out build/graph/graph.html
@@ -17,6 +17,6 @@ typecheck:   ; $(PY) -m mypy
 api:         ; $(PY) -m uvicorn kwan.api.app:app --reload --port 8000
 app:         ; $(PY) -m streamlit run demo/app.py
 demo-docker: ; docker build -f demo/Dockerfile -t kwan-demo .
-docs:        ; mkdocs build --strict
+docs:        ; uv run --group docs mkdocs build --strict
 fill-docs:   ; $(PY) scripts/fill_docs.py
 all: data curriculum graph eval fit sim bench fill-docs bundle test

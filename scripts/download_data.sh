@@ -214,7 +214,7 @@ get_xes3g5m() {
     say "downloading XES3G5M from Google Drive (file $XES_DRIVE_ID, linked from $XES_URL)"
     run_gdown "$XES_DRIVE_ID" "$tgz.part" || rc=$?
     if [ "$rc" = 127 ]; then
-      skip xes3g5m "gdown is not installed. Run: pip install 'kwan[eval]' (or pip install gdown), then run this script again."
+      skip xes3g5m "gdown is not installed. Run: uv sync --extra eval (or uv tool install gdown), then run this script again."
       return 0
     fi
     if [ "$rc" != 0 ] || [ ! -s "$tgz.part" ]; then
@@ -278,7 +278,7 @@ fi
 
 # ASSISTments 2009 skill builder (corrected), ~9 MB zip, 63 MB CSV.
 # If base.ustc.edu.cn is down, the same file is distributed by the EduData package:
-#   pip install EduData && edudata download assistment-2009-2010-skill   (then copy the CSV to raw/)
+#   uvx --from EduData edudata download assistment-2009-2010-skill   (then copy the CSV to raw/)
 if want assistments-2009; then
   get_zip "$A09_URL" a09.zip . "ASSISTments 2009" "$A09_FILES" 'skill_builder_data_corrected.csv'
 fi

@@ -19,13 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: "3.12"
-      - name: Install mkdocs-material
-        run: pip install "mkdocs-material>=9.5,<10"
+          enable-cache: true
       - name: Build the site (warnings are errors)
-        run: mkdocs build --strict --site-dir site
+        run: uv run --locked --only-group docs mkdocs build --strict --site-dir site
         env:
           NO_MKDOCS_2_WARNING: "1"
       - name: Keep the built site for the deploy job

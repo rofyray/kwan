@@ -31,8 +31,7 @@ Nothing a visitor does here is stored. The pupil lives in the browser session an
 ## Run it yourself
 
 ```bash
-pip install "kwan[demo]"
-streamlit run app.py
+uv run --with "kwan[demo]" streamlit run app.py
 ```
 
 Or build this folder as a container, which is what the Space does:

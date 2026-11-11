@@ -1,13 +1,13 @@
 """Smoke test for the Kwan demo (PRD 10.5): open the app in a real browser and check that it works.
 
-    python demo/smoke_test.py http://localhost:7860
-    python demo/smoke_test.py https://rofyray-kwan.hf.space --wait 600
+    uv run --with playwright demo/smoke_test.py http://localhost:7860
+    uv run --with playwright demo/smoke_test.py https://rofyray-kwan.hf.space --wait 600
 
 Checks, in order: the Streamlit health endpoint answers, the page renders all three tabs, each tab shows
 its content (the curriculum map as an embedded graph page), one click on "Got it right" changes the cards,
 and the NaCCA disclaimer is in the footer. Any failure prints "FAIL: ..." and exits with status 1.
 
-It needs Playwright with Chromium (`pip install playwright && playwright install chromium`). With
+It needs Playwright with Chromium (`uv run --with playwright playwright install chromium` once). With
 `--health-only` it checks the health endpoint alone and needs nothing but the standard library.
 """
 
