@@ -1,0 +1,64 @@
+name: Feature request
+description: Suggest something Kwan should do, or do better.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kwan 1.0 covers NaCCA Mathematics, Basic 1 to Basic 6.
+        English Language, JHS Mathematics, a TypeScript port and platform integrations come after 1.0.
+        They are on the roadmap, so you do not need to ask for them here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Tell us who has the problem (a pupil, a teacher, a developer) and what gets in their way today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Kwan to do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other ways you have thought about
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Kwan?
+      options:
+        - Python package
+        - Command line (kwan ...)
+        - REST API
+        - Demo
+        - Curriculum data
+        - Skill map (graph)
+        - Learner model
+        - Recommender
+        - Practice settings and translations
+        - Evaluation or simulation
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: The rules that keep Kwan honest
+      description: See CONTRIBUTING.md, section 4.
+      options:
+        - label: This idea does not need Kwan to store any pupil's name, email or free text.
+          required: true
+        - label: This idea does not need an LLM call or a network call at the moment Kwan recommends.
+          required: true
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Would you like to help build it?
+      options:
+        - label: Yes, I can open a pull request.
+        - label: Yes, I can test it or review it as a teacher.

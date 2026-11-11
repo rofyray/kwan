@@ -1,0 +1,12 @@
+{
+ "builds_on": "Builds on {prerequisite}, where you are at {pct}%.",
+ "starting_skill": "A starting skill with nothing before it.",
+ "mastery_new": "Still new to you ({pct}%), so expect a few tries.",
+ "mastery_close": "You are at {pct}%, close enough to master with practice.",
+ "mastery_nearly": "Nearly there at {pct}%. A few correct answers will lock it in.",
+ "goal_steps_one": "On the way to your goal, {count} step away.",
+ "goal_steps_other": "On the way to your goal, {count} steps away.",
+ "unlocks_one": "Opens the way to {count} later skill.",
+ "unlocks_other": "Opens the way to {count} later skills.",
+ "review": "You learned this before. A quick check keeps it fresh."
+}

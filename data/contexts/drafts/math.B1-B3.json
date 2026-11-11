@@ -1,0 +1,819 @@
+{
+ "meta": {
+  "subject": "math",
+  "grades": [
+   1,
+   2,
+   3
+  ],
+  "drafted_by": "claude-fable-5-2 (offline draft, not yet reviewed)",
+  "drafted_on": "2026-11-10",
+  "prompt": "Write first drafts of Kwan's own content for every Basic 1 to Basic 3 indicator of the NaCCA Standards-Based Mathematics Curriculum: one short_label (at most 60 characters, own words, says what the pupil can do) and two or three practice settings (at most 220 characters each). Each setting is a short task a teacher can pose, set in everyday Ghanaian life, that practises exactly that indicator with the right number range, operation and concept, read from the indicator and its exemplars in raw/m13.txt. Use own words (never copy or closely paraphrase a NaCCA exemplar), real places across the 16 regions, names from many groups with girls and boys equally, realistic prices in current cedi notes and coins, short sentences at about grade 5 reading level or lower, no brand names, no stereotypes, nothing unsafe and no em dash. Cover every indicator code found in the PDF text, including those missing from data/indicators.json, and check the maths in every setting. Written offline by the model itself with no external API or model call; unreviewed until Ghanaian teachers check it.",
+  "source_file": "raw/m13.txt",
+  "not_in_indicators_json": [
+   {
+    "code": "B2.3.2.1.1",
+    "line": 1752,
+    "note": "Printed with a colon straight after the code ('B2.3.2.1.1:'), so the v1 parser skipped it. The only indicator under B2 strand 3 sub-strand 2."
+   },
+   {
+    "code": "B3.1.1.3.2",
+    "line": 2129,
+    "note": "Printed in the PDF as 'B4.1.1.3.2' (wrong grade digit). It sits in the Basic 3 section, directly after B3.1.1.3.1 under content standard B3.1.1.3. The real B4.1.1.3.2 is in raw/m46.txt."
+   }
+  ],
+  "auto_check_fixes": [
+   {
+    "code": "B1.1.2.3.1",
+    "setting": 0,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B2.1.2.4.3",
+    "setting": 0,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B2.1.3.1.2",
+    "setting": 0,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B2.3.3.3.2",
+    "setting": 1,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B3.3.3.1.1",
+    "setting": 0,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   }
+  ]
+ },
+ "indicators": {
+  "B1.1.1.1.1": {
+   "short_label": "Count up to 100 objects and say how many",
+   "settings": [
+    "Ama sells oranges at Makola Market. She puts them in 6 rows of 10. Count in tens. How many oranges does Ama have?",
+    "Yaw picks up bottle tops for a game in Nkoranza. He counts 2, 4, 6, 8. Keep counting in twos up to 20.",
+    "Ten pupils line up for koko at a school in Ho. Sena is first. Edem is right behind her. What is Edem's place? What is the place of the last pupil?"
+   ]
+  },
+  "B1.1.1.1.2": {
+   "short_label": "Find numbers around a number on a chart to 100",
+   "settings": [
+    "Efua's class in Cape Coast has a 1 to 100 chart with ten numbers in a row. Point to 36. Which number is on its left? On its right? Just above it? Just below it?",
+    "On a 1 to 100 chart, Mawuli from Hohoe covers the number just below 52 with a groundnut shell. Which number did he cover? Which number is just above 52?",
+    "Abena's teacher in Sunyani hides one number on the 1 to 100 chart. It is between 69 and 71. Which number is it? Which number sits right under it?"
+   ]
+  },
+  "B1.1.1.1.3": {
+   "short_label": "Measure with hand-spans, feet or cups and count",
+   "settings": [
+    "Use your hand-span to measure your desk, as Kwame does at his school in Koforidua. Count the hand-spans. How many hand-spans long is the desk?",
+    "Azara fills a small bucket with a cup at a borehole in Walewale. Try it too. Count each cup you pour. How many cups fill the bucket?",
+    "Nii walks heel to toe across his classroom in Teshie and counts his steps. Do the same in your room. How many of your feet long is it?"
+   ]
+  },
+  "B1.1.1.1.4": {
+   "short_label": "Compare groups to 100 using more, less or same",
+   "settings": [
+    "Esi has 14 mangoes at Mankessim market. Kojo has 9 mangoes. Match them one to one. Who has more? Who has less?",
+    "Three trotros leave Kaneshie. One has 12 people, one has 20 and one has 15. Put the numbers in order from least to most.",
+    "Dery has 39 cashew nuts in Wa. His sister has 1 more. How many has she? Their friend has 1 less than Dery. How many is that?"
+   ]
+  },
+  "B1.1.1.1.5": {
+   "short_label": "Compare two numbers with >, < or =",
+   "settings": [
+    "Adwoa sold 27 balls of kenkey in Winneba. Tetteh sold 32. Write the two numbers with >, < or = between them.",
+    "Class 1A in Zuarungu has 45 pupils. Class 1B also has 45. Put the right sign between the numbers: 45 __ 45.",
+    "In ampe at a school in Keta, Selorm's team has 18 points. Enyonam's team has 14. Write 18 __ 14 with >, < or =. Then say it in words."
+   ]
+  },
+  "B1.1.1.1.6": {
+   "short_label": "Say how two numbers to 100 are related",
+   "settings": [
+    "Akosua has 12 bofrot at a stall in Nkawkaw. Yakubu has 8. Tell two true things about the numbers 12 and 8.",
+    "A hen in Navrongo has 6 chicks. Draw a group of groundnuts that has more than 6. Draw another group that has fewer than 6.",
+    "Three friends thread beads in Odumase Krobo. Kekeli has 50. Naa has 48. Akolgo has 5. Whose number is a little less than 50? Whose number is a lot less?"
+   ]
+  },
+  "B1.1.2.1.1": {
+   "short_label": "Add by joining and subtract by taking away to 20",
+   "settings": [
+    "Afia has 9 groundnuts. Her mother in Ejisu gives her 6 more. Act it out with stones. How many groundnuts has Afia now?",
+    "There are 17 pupils on a school bus in Tema. 5 get off at the first stop. How many are still on the bus?",
+    "Atanga had 13 guinea fowl eggs. He sold 4 at Bolgatanga market. Do you add or take away to find what is left? How many are left?"
+   ]
+  },
+  "B1.1.2.2.1": {
+   "short_label": "Find the missing number in sums within 20",
+   "settings": [
+    "Kafui has 8 pencils. Her aunt in Kpando gives her some more. Now she has 14. Use stones to find how many her aunt gave. 8 + __ = 14.",
+    "Lamley had 16 toffees. She shared some with friends in Nungua. She has 9 left. How many did she share? 16 - __ = 9.",
+    "Musah has 11 goats in Yendi. Issah has 15 goats. Draw the goats and match them. How many more goats does Issah have?"
+   ]
+  },
+  "B1.1.2.2.2": {
+   "short_label": "Turn a take-away into an adding sum within 20",
+   "settings": [
+    "Yaa has 12 plantains in Obuasi. She fries 9 for kelewele. To find what is left, think 9 + __ = 12. So what is 12 - 9?",
+    "A canoe at Elmina has seats for 15 fishermen. 11 are in. Think 11 + __ = 15. So what is 15 - 11?",
+    "Mariama knows that 7 + 6 = 13. She has 13 shea nuts in Savelugu and gives away 6. Use her fact to find 13 - 6."
+   ]
+  },
+  "B1.1.2.2.3": {
+   "short_label": "Make up a story for an adding or take-away sum",
+   "settings": [
+    "Make up a story for 8 + 5 = __. Use mangoes at a market in Techiman. Then find the answer.",
+    "Tell a story about girls playing ampe in Dambai that fits 14 - 6 = __. What is the answer?",
+    "Kwabena wrote 9 + __ = 12. Tell a story about a trotro and its riders that fits his sum. Find the missing number."
+   ]
+  },
+  "B1.1.2.3.1": {
+   "short_label": "Use doubles and making 10 for facts to 10",
+   "settings": [
+    "Korkor has 4 oranges in each hand at Somanya market. Double 4. How many oranges does she have?",
+    "Kuukua wants 10 bottle tops for a game in Swedru. She has 7. How many more does she need to make 10?",
+    "Kwesi in Axim has 6 marbles. Say the number that is 2 more. Say the number that is 1 less. Do it fast, with no counters."
+   ]
+  },
+  "B1.1.2.4.1": {
+   "short_label": "Count on or count back to add and subtract to 20",
+   "settings": [
+    "Dzifa has 8 fish at Keta beach. Her brother brings 5 more. Start at 8 and count on 5. How many fish are there now?",
+    "There are 17 yams in a barn in Kintampo. Nana takes out 4. Start at 17 and count back 4. How many yams are left?",
+    "Odoi buys 6 pens, 3 rulers and 4 erasers in Madina. Add 6 and 4 first to make 10. Then add 3. How many things did he buy?"
+   ]
+  },
+  "B1.1.2.4.2": {
+   "short_label": "Solve one-step story sums within 20",
+   "settings": [
+    "Afua picked 11 tomatoes on a farm near Wenchi. Her father picked 7. How many tomatoes did they pick in all?",
+    "Tiyumba had 19 pieces of kulikuli to sell in Tamale. By noon 12 were sold. How many were left?",
+    "Ekow caught 9 crabs at Winneba. Araba caught 14. How many more crabs did Araba catch than Ekow?"
+   ]
+  },
+  "B1.1.3.1.1": {
+   "short_label": "Show one half as 1 of 2 equal parts",
+   "settings": [
+    "A mother in Cape Coast cuts one orange into 2 equal parts for Kobina and Esi. What do we call each part? Draw it.",
+    "Nyameke breaks a stick of sugarcane in Axim into two pieces. One piece is long and one is short. Did he make halves? Say why.",
+    "Fold a sheet of paper so that the two parts match, as Adongo did in Navrongo. Shade one part. What part of the paper is shaded?"
+   ]
+  },
+  "B1.1.3.1.2": {
+   "short_label": "Count halves: one half, two halves, three halves",
+   "settings": [
+    "Auntie Akua cuts 3 oranges in half at her stall in Nsawam. Count the pieces: one half, two halves, and so on. How many halves are there?",
+    "Fati has 4 half slices of boiled yam on a plate in Salaga. Count them aloud in halves. How many whole slices do they make?",
+    "Draw 5 half balls of kenkey, like the ones Tsotsoo shares in Accra. Count them: one half, two halves, and so on. What do you say last?"
+   ]
+  },
+  "B1.1.4.1.1": {
+   "short_label": "Name Ghana coins and say how they relate",
+   "settings": [
+    "Kwaku in Goaso has one 50 pesewas coin. His sister has only 10 pesewas coins. How many of her coins are worth the same as his one coin?",
+    "Hawa saves coins in a tin in Damongo. She has two 50 pesewas coins. Which one coin has the same value as these two?",
+    "Mawusi sorts coins at her mother's shop in Ho. Put them in order from least value to most: 20 pesewas, 5 pesewas, GH₵ 1, 50 pesewas, 10 pesewas."
+   ]
+  },
+  "B1.2.1.1.1": {
+   "short_label": "Copy, extend and fix repeating patterns",
+   "settings": [
+    "A kente strip from Bonwire goes yellow, green, red, yellow, green, red. Which three colours come next?",
+    "In a clapping game in Jasikan, girls go clap, clap, jump, clap, clap, jump. Do the pattern. What comes after the next two claps?",
+    "Suglo lines up seeds in Tolon: maize, bean, bean, maize, bean, maize, bean, bean. One seed is missing. Where does it go? What is the pattern?"
+   ]
+  },
+  "B1.3.1.1.1": {
+   "short_label": "Tell what makes a shape that shape",
+   "settings": [
+    "Frimpomaa draws a big red triangle and a small blue triangle at school in Bechem. What is the same about them? Does colour or size change the name of the shape?",
+    "Look down on a water drum and a cooking pot, like the ones at Asibi's house in Bolgatanga. Which flat shape can you see at the top of each?",
+    "Cut a paper square from corner to corner, as Ofoli did in Tema. Join the two triangles to make the square again. Now put two squares side by side. What new shape is it?"
+   ]
+  },
+  "B1.3.1.1.2": {
+   "short_label": "Name and sort balls, tins, boxes and other solids",
+   "settings": [
+    "At a kiosk in Kasoa there is a football, a milk tin, a matchbox and a sugar cube. Which one is a sphere? Which is a cylinder? Which is a cube?",
+    "Zenabu sorts things in her mother's store in Yendi: tins of tomato, boxes of soap, an orange and a ball. Put the ones that can roll in one group. What is your rule?",
+    "Elikem has a chalk box and a tin of milk in Sogakope. Tell one way they are different. How many flat faces has the chalk box?"
+   ]
+  },
+  "B1.3.1.1.3": {
+   "short_label": "Name and sort flat shapes by sides and corners",
+   "settings": [
+    "Look at the Ghana flag. What shape is the whole flag? How many sides does it have? How many corners?",
+    "Asantewaa cuts paper shapes in Berekum: 3 circles, 2 triangles and 4 squares. Sort them by number of sides. Which group has no straight sides?",
+    "A window at Lartey's school in Aburi is a square. The door is a long rectangle. Tell one thing that is the same about the two shapes and one thing that is different."
+   ]
+  },
+  "B1.3.2.1.1": {
+   "short_label": "Say where things are: above, below, left, right",
+   "settings": [
+    "In a class in Wa, Bayuo sits in front of Amina. Mumuni sits on Amina's left. Who is behind Bayuo? Who is on Mumuni's right?",
+    "Draw a table. Put a bowl of banku on the table and a stool under it. Draw a lamp above the table. Tell a friend where each thing is.",
+    "At the lorry park in Dormaa, a taxi is between two trotros. An okada is to the right of the last trotro. Draw the row. What is next to the okada?"
+   ]
+  },
+  "B1.3.3.1.1": {
+   "short_label": "Compare two things: longer, taller, heavier",
+   "settings": [
+    "Stand a pencil and a piece of chalk on your desk, as Yayra does in Hohoe. Which is taller? Which is shorter?",
+    "Hold a yam in one hand and an orange in the other, like Donkor at Atebubu market. Which is heavier? Which is lighter?",
+    "Asana has a long piece of cloth. Rukaya has a short one. They lay them side by side in Gambaga. How can they tell which is longer?"
+   ]
+  },
+  "B1.4.1.1.1": {
+   "short_label": "Show data in up to three groups with pictures",
+   "settings": [
+    "In Ato's class in Breman Asikuma, 6 pupils like kenkey, 4 like banku and 5 like rice. Draw one small picture for each pupil in three rows.",
+    "Naa counts at the gate in Madina: 5 taxis, 7 trotros and 3 okadas. Use bottle tops to show each group in its own line. How many are there altogether?",
+    "Stand boys in one line and girls in another, as they do at assembly in Tumu. Put down one stone for each child. Which line has more stones?"
+   ]
+  },
+  "B1.4.1.1.2": {
+   "short_label": "Sort data into three groups, count and compare",
+   "settings": [
+    "A class in Sefwi Wiawso picks a best fruit. Mango gets 8 votes, orange 5 and banana 7. How many pupils voted? How many more chose mango than orange?",
+    "Awuni keeps animals in Zebilla: 9 goats, 6 sheep and 4 guinea fowl. Make a tally chart. Which group is smallest? How many animals in all?",
+    "A picture chart shows how pupils in Anloga get to school: 10 walk, 3 ride a bicycle and 2 take a trotro. How many pupils is that? How many fewer ride than walk?"
+   ]
+  },
+  "B2.1.1.1.1": {
+   "short_label": "Count and skip count by 2s, 5s and 10s to 1000",
+   "settings": [
+    "A cocoa farmer in Enchi puts pods in heaps of 10. He has 34 heaps. Count in tens. How many pods is that?",
+    "Oranges at Agona Nkwanta market sell in piles of 5. Count in fives from 100: 100, 105, 110. What are the next four numbers?",
+    "Sumaila counts back in tens as he packs yams in Kintampo: 500, 490, 480, 460, 450. He skipped one number. Which one?"
+   ]
+  },
+  "B2.1.1.1.2": {
+   "short_label": "Find numbers around a number on a chart to 1000",
+   "settings": [
+    "A chart shows 301 to 400 with ten numbers in a row. Find 345, the number of Kwabena's house in Kenyasi. Which number is before it? After it? Just below it?",
+    "Dede has a 1 to 100 chart in Somanya. She points to 67. Name the numbers above it, below it, on its left and on its right.",
+    "A chart in Rashida's class in Damongo shows 501 to 600 in rows of ten. Which number is just above 580? Which number is just below 529?"
+   ]
+  },
+  "B2.1.1.1.3": {
+   "short_label": "Measure with sticks, strides or cups and count",
+   "settings": [
+    "Akolgo in Sirigu cuts a stick as long as 10 hand-spans. He lays it along the classroom 6 times, then 4 more hand-spans. How many hand-spans long is the room?",
+    "Esi fills a big drum in Mankessim. Each bucket holds 10 cups. She pours in 12 buckets and 5 cups. How many cups of water are in the drum?",
+    "Count your strides from the classroom door to the school gate, as Senyo does in Aflao. Group them in tens and ones. How many strides is it?"
+   ]
+  },
+  "B2.1.1.1.4": {
+   "short_label": "Show tens and ones in a 2-digit number",
+   "settings": [
+    "Ama ties broomsticks in bundles of 10 in Konongo. She has 5 bundles and 8 loose sticks. How many sticks is that? Which digit shows the tens?",
+    "A waakye seller in Madina has 63 leaves for wrapping. How many tens and how many ones are in 63? Write 63 as a sum in two ways.",
+    "Mbo says the 3 in 37 and the 3 in 73 mean the same. His friend in Savelugu says no. Who is right? Tell what each 3 stands for."
+   ]
+  },
+  "B2.1.1.1.5": {
+   "short_label": "Describe a number to 1000 in different ways",
+   "settings": [
+    "A school in Bibiani has 298 pupils. Is 298 closer to 300 or to 200? How many less than 300 is it? Tell one more thing about 298.",
+    "Kwesi has 24 oranges at Swedru market. Show two ways to put them in equal piles. Say how many piles and how many in each pile.",
+    "One lorry carries 450 tubers of yam from Salaga. Another carries 45. Is 450 a little more or a lot more than 45? Write 450 as hundreds and tens."
+   ]
+  },
+  "B2.1.1.1.6": {
+   "short_label": "Compare and order numbers to 100 with >, < or =",
+   "settings": [
+    "Abugri has 38 guinea fowl in Zebilla. Awuni has 83. Who has more? Look at the tens. Write the two numbers with > or < between them.",
+    "Four ampe teams in Apam score 56, 65, 49 and 60. Put the scores in order from smallest to biggest.",
+    "A number line in Delali's book in Kpando shows 70, 71, __, 73, __, 75. Fill in the gaps. How do you know?"
+   ]
+  },
+  "B2.1.2.1.1": {
+   "short_label": "Add in any order and use zero in sums to 100",
+   "settings": [
+    "Kwadwo picks 26 mangoes and Serwaa picks 43 in Ejura. Add 26 + 43. Then add 43 + 26. What do you notice?",
+    "A trotro in Tarkwa has 31 people in it. At the next stop 0 people get on. How many are in it now? What does adding 0 do to a number?",
+    "Atampoka had 45 baskets in Bolgatanga. She wove some more and now has 58. Which sum fits: 45 + __ = 58 or 58 + 45 = __? Find the missing number."
+   ]
+  },
+  "B2.1.2.2.1": {
+   "short_label": "Use = and ≠ to check sums within 100",
+   "settings": [
+    "Nii has 20 + 15 crabs at Chorkor. Ayeley has 40 - 5 crabs. Are the two amounts equal? Write = or ≠ between 20 + 15 and 40 - 5.",
+    "Yaw counts cocoa bags in Goaso. He says 36 + 20 is the same as 60. Is he right? Write 36 + 20 __ 60 with = or ≠.",
+    "Fuseina had 50 shea nuts in Tolon and used 32. To find 50 - 32, think 32 + __ = 50. What is the missing number?"
+   ]
+  },
+  "B2.1.2.3.1": {
+   "short_label": "Use mental tricks for adding and subtracting to 19",
+   "settings": [
+    "One crate in Koforidua has 8 bottles of sobolo. Another has 9. Think double 8 and 1 more. How many bottles are there?",
+    "Kuukua has 7 fish at Moree and Ebo brings 6. Make 10 first: 7 + 3. Then add the 3 that are left. How many fish?",
+    "Alhassan has 15 kola nuts in Kumbungu. He gives 6 away. Think 6 + __ = 15. How many does he keep?"
+   ]
+  },
+  "B2.1.2.4.1": {
+   "short_label": "Add and subtract in tens and ones columns to 100",
+   "settings": [
+    "Awo bakes 37 loaves in the morning and 45 in the afternoon in Nsawam. Write the sum in tens and ones columns. How many loaves did she bake?",
+    "A lorry park in Atebubu has 64 cars. 28 drive away. Set it out in tens and ones and subtract. How many cars stay?",
+    "Edem has 52 exercise books in his shop in Ho. He sells 21. Subtract the ones, then the tens. How many books are left?"
+   ]
+  },
+  "B2.1.2.4.2": {
+   "short_label": "Add and subtract to 100 in your own easy way",
+   "settings": [
+    "Afua sells 38 oranges on Monday and 27 on Tuesday at Kejetia Market. Add the tens: 30 + 20. Add the ones: 8 + 7. What is the total?",
+    "Wumpini has 46 yams in Tamale and gets 33 more. Start at 46. Jump on 10 three times. Then add 3. How many yams has he now?",
+    "Senyo has GH₵ 49. His aunt in Anloga gives him GH₵ 25. Move GH₵ 1 from the 25 to the 49. Now add 50 + 24. How much has he?"
+   ]
+  },
+  "B2.1.2.4.3": {
+   "short_label": "Solve one-step and two-step story sums to 100",
+   "settings": [
+    "Yaa has 42 tomatoes at Agbogbloshie market. She sells 15 before noon and 12 after noon. How many are left?",
+    "Ibrahim had GH₵ 60. He paid GH₵ 8 for a trotro in Sawla and GH₵ 20 for waakye. How much money is left?",
+    "Class 2 in Jirapa has 28 girls and 25 boys. 6 pupils are away today. How many pupils are in class?"
+   ]
+  },
+  "B2.1.3.1.1": {
+   "short_label": "Show one half and one quarter of a whole",
+   "settings": [
+    "A mother in Kibi cuts a round loaf of bread into 4 equal parts for four children. What do we call each part? Draw the loaf and shade one part.",
+    "Opoku and Akosua share one ball of banku equally in Mampong. Four friends share another ball of the same size equally. Who gets a bigger piece, Opoku or one of the four?",
+    "Tetteh folds a paper kite twice in Ada so that it has 4 equal parts. He colours 1 part. What part is coloured: a half or a quarter?"
+   ]
+  },
+  "B2.1.3.1.2": {
+   "short_label": "Count in halves and in quarters",
+   "settings": [
+    "Ayisha cuts 2 watermelons into quarters in Walewale. Count them: one quarter, two quarters, and so on. How many quarters are there?",
+    "A seller in Dodowa has 5 half pawpaws on her table. Count them in halves: one half, two halves, and so on. What do you say last?",
+    "Ofori has 3 quarter pieces of sugarcane in Akim Oda. Pokuaa brings 2 more quarter pieces. Count them all in quarters. What do you say last?"
+   ]
+  },
+  "B2.1.3.1.3": {
+   "short_label": "Tell how many halves and quarters make a whole",
+   "settings": [
+    "Enyonam cuts one orange into halves in Kpando. Kosi cuts one orange into quarters. How many pieces does each child have?",
+    "How many quarter slices of yam make one half slice? Azure in Tongo puts two quarters next to a half to check. What does he see?",
+    "A flat loaf of bread in Offinso is cut into 4 equal parts. How many parts make the whole loaf? How many parts make half the loaf?"
+   ]
+  },
+  "B2.1.4.1.1": {
+   "short_label": "Count Ghana coins and notes up to GH₵ 50",
+   "settings": [
+    "Nyarko takes one GH₵ 20 note, one GH₵ 10 note and two GH₵ 5 notes to the market in Sunyani. How much money has she?",
+    "Kweku in Tarkwa wants to change one GH₵ 10 note. How many GH₵ 2 notes have the same value?",
+    "Salifu in Wa has a GH₵ 5 note, three GH₵ 2 coins and two 50 pesewas coins. How much is that altogether?"
+   ]
+  },
+  "B2.2.1.1.1": {
+   "short_label": "Find the rule in number patterns that grow or shrink",
+   "settings": [
+    "Adjeley in Teshie has GH₵ 15. She saves GH₵ 5 more each week: 15, 20, 25, 30. What is the rule? What are the next three numbers?",
+    "Bags of maize leave a store in Ejura. First 90 are left, then 80, 70, 60. What is the rule? How many are left after the next two trips?",
+    "Dery writes the house numbers on his side of a street in Nandom: 12, 14, 16, 19, 20. One is wrong. Which one? What should it be?"
+   ]
+  },
+  "B2.2.1.1.2": {
+   "short_label": "Describe and make skip-counting patterns",
+   "settings": [
+    "Araba sets out bofrot in rows of 3 in Dunkwa. One row has 3, two rows have 6, three rows have 9. How many in four rows? In five rows? What is the rule?",
+    "Make your own number pattern with the rule 'take away 2'. Start at 30, the number of oranges on Akwasi's table in Bekwai. Write six numbers.",
+    "Rahinatu threads beads in Bole. Each string has 4 more beads than the last: 4, 8, 12, 16. Write the next two numbers. Say the rule."
+   ]
+  },
+  "B2.3.1.1.1": {
+   "short_label": "Name solids and tell what features they share",
+   "settings": [
+    "Lartey finds a milk tin, a water drum and a roll of cloth in Aburi. What is the same about their shapes? What do we call this solid?",
+    "Kafui in Peki sorts a football, an orange, a sugar cube, a ludo dice and a chalk box. One group has flat faces. One has none. Which group gets the orange?",
+    "The roof of a round hut in Sirigu comes to a point at the top. Which solid does the roof look like: a cube, a cone or a sphere? How many corners has a cube?"
+   ]
+  },
+  "B2.3.1.1.2": {
+   "short_label": "Name flat shapes by their sides and corners",
+   "settings": [
+    "Walk around your school like Adwoa's class in Bechem. Find a rectangle, a circle and a triangle. Say where you saw each one.",
+    "Mawuli draws a shape with 5 sides and 5 corners in Hohoe. Selasi draws one with 6 sides and 6 corners. Name each shape.",
+    "Sort these by number of corners: the Ghana flag, a square floor tile, a road sign with 3 sides and a round coin. Which ones have 4 corners?"
+   ]
+  },
+  "B2.3.1.1.3": {
+   "short_label": "Draw flat shapes from a given number of sides",
+   "settings": [
+    "Use sticks, like Akanbang in Sandema, to make a shape with 3 sides. Then make one with 4 equal sides and square corners. Name the two shapes.",
+    "Draw a shape with 4 sides and 4 corners where two sides are longer, like a door in Afriyie's house in Obuasi. What is it called?",
+    "Kojo in Saltpond traces round the bottom of a milk tin. Which shape does he get? Then he traces one face of a matchbox. Which shape is that?"
+   ]
+  },
+  "B2.3.2.1.1": {
+   "short_label": "Show that moving a thing does not change its length",
+   "settings": [
+    "Take two sticks of the same length, like Nyameke in Half Assini. Lay one flat and stand one up. Does one look longer? Put them side by side to check.",
+    "Zenabu lays her ruler across her desk in Zabzugu, then along it, then slanting. Is the ruler longer any of these times? How can she show it?",
+    "Two pencils of the same length lie on Efua's desk in Elmina. One points to the door and one to the window. Efua says the first is longer. How can you check?"
+   ]
+  },
+  "B2.3.3.1.1": {
+   "short_label": "Pick a unit, estimate and measure without a ruler",
+   "settings": [
+    "Would you use bottle tops or pencil lengths to measure the blackboard at your school in Kadjebi? Say why. Then guess the number and measure.",
+    "Kwaku measures a desk in Nkoranza with matchsticks and gets 24. Afia uses pencils and gets 6. Why did Kwaku get a bigger number for the same desk?",
+    "A gari seller in Kasoa uses a big tin called an olonka. Guess how many small cups of gari fill a big tin. Then count to check with your own cup and tin."
+   ]
+  },
+  "B2.3.3.1.2": {
+   "short_label": "Compare three or more things by size or weight",
+   "settings": [
+    "Line up a tuber of yam, a stick of cassava and a finger of plantain, as at Techiman market. Which is longest? Which is shortest? Put them in order.",
+    "Fati, Suglo and Napari stand back to back in Karaga. Fati is taller than Suglo. Napari is taller than Fati. Who is tallest? Who is shortest?",
+    "Lift a pawpaw, a mango and a coconut one by one, like Ekow in Sekondi. Which feels heaviest? Which is lightest? Put them in order."
+   ]
+  },
+  "B2.3.3.2.1": {
+   "short_label": "Explain why we need the same unit to measure",
+   "settings": [
+    "A teacher and little Abena both measure the same door in Akim Oda with hand-spans. He gets 9. She gets 14. Why are the numbers not the same?",
+    "A tailor in Kumasi is asked for cloth 'as long as 6 hand-spans'. Whose hand should he use? What could everyone use so that the length is always the same?",
+    "Three pupils in Lawra measure the school veranda with their own strides. They get 18, 21 and 16. Why do they differ? What tool would give them all the same answer?"
+   ]
+  },
+  "B2.3.3.3.1": {
+   "short_label": "Read a calendar and count days and months",
+   "settings": [
+    "Ghana's Independence Day is 6 March. Find it on this year's calendar. What day of the week is it? Which month comes just before March?",
+    "Sena's grandmother comes to stay in Keta for one week and 3 days. How many days is that?",
+    "Serwaa in Mampong has her birthday in the tenth month. Which month is that? How many months come after it before the year ends?"
+   ]
+  },
+  "B2.3.3.3.2": {
+   "short_label": "Time events with claps and with the hour",
+   "settings": [
+    "Count slow claps while a friend skips round the school flag pole twice, as pupils do in Juaboso. How many claps did it take?",
+    "Which of these takes more than an hour? Peeling an orange. Singing a song. A bus trip from Accra to Kumasi.",
+    "School in Kintampo starts at 8 o'clock and closes at 2 o'clock. Count the hours on the clock. How long are pupils in school?"
+   ]
+  },
+  "B2.4.1.1.1": {
+   "short_label": "Collect data with tally marks and ask about it",
+   "settings": [
+    "Ask ten classmates: do you like jollof, waakye or banku best? Make a tally mark for each answer. Which food wins?",
+    "Adongo stands by the road in Navrongo. For ten minutes he makes a tally of bicycles, okadas and cars. Write one question his tally chart can answer.",
+    "A tally chart in Worawora shows the games pupils like: ampe 8, football 11, oware 4. Which game is liked least? How many pupils were asked?"
+   ]
+  },
+  "B2.4.1.2.1": {
+   "short_label": "Draw and read picture graphs",
+   "settings": [
+    "In a picture graph, one fish stands for 2 baskets. Elmina has 4 fish pictures, Axim has 3 and Keta has 5. How many baskets did Keta land? How many in all?",
+    "Pupils in Damongo vote for a fruit: 6 mango, 4 orange, 2 pawpaw. Draw a picture graph. Let one picture stand for 2 pupils. How many pictures for mango?",
+    "Lamley makes a graph with bottle tops in Nungua: 7 for pupils who like ampe, 5 for football and 3 for oware. How many more like ampe than oware?"
+   ]
+  },
+  "B3.1.1.1.1": {
+   "short_label": "Count and skip count in 10s, 100s, 1000s to 10,000",
+   "settings": [
+    "A cocoa depot in Sefwi Wiawso stacks bags in hundreds. Count on in hundreds from 2,700: 2,700, 2,800. Write the next four numbers.",
+    "Kwadwo in Obuasi counts in fifties: 450, 500, 550, 650. He missed one number. Which one? What comes after 650?",
+    "About how many people fit in a full trotro: 2, 20 or 200? About how many pupils are in a big school in Tema: 8, 80 or 800? Say why."
+   ]
+  },
+  "B3.1.1.1.2": {
+   "short_label": "Find numbers around a number on a chart to 10,000",
+   "settings": [
+    "A chart in a classroom in Prestea shows 2,301 to 2,400 in rows of ten. Find 2,345. Which number is on its left? On its right? Just above? Just below?",
+    "Dzifa's chart in Kpeve counts in hundreds with ten numbers in a row: 100, 200, and on up to 10,000. Which number is right after 4,900? Which is just under 4,900?",
+    "On a 1 to 100 chart, Sulemana in Saboba starts at 34. He moves down two rows and one step to the right. Where does he land?"
+   ]
+  },
+  "B3.1.1.1.3": {
+   "short_label": "Break numbers to 10,000 into place values",
+   "settings": [
+    "Traders at Techiman market sold 3,472 tubers of yam. What does the 4 stand for? Write 3,472 as thousands + hundreds + tens + ones.",
+    "A school in Dambai has 635 pupils. Read the number aloud the right way. How many hundreds, tens and ones does it have?",
+    "Korkor makes beads in Odumase Krobo. She made 5,050 one year and 5,500 the next. What is the value of each 5 in 5,050? Which number is bigger?"
+   ]
+  },
+  "B3.1.1.1.4": {
+   "short_label": "Compare and order numbers to 10,000",
+   "settings": [
+    "Traders in Nkawkaw sold 4,580 oranges. Traders in Agona Swedru sold 4,850. Which town sold more? Which digit tells you? Write the numbers with > or <.",
+    "Three schools in Bolgatanga have 1,209, 989 and 1,290 pupils. Put the numbers in order from least to most.",
+    "Yaw in Bekwai reads a number line: 6,000, 6,100, __, 6,300, 6,500. Fill the gap. Which number was left out near the end?"
+   ]
+  },
+  "B3.1.1.2.1": {
+   "short_label": "Describe things that go in opposite ways",
+   "settings": [
+    "Agyei walks 5 steps forward from the flag pole at his school in Goaso. Mansa walks 5 steps backward. How are their moves the same? How are they opposite?",
+    "A trotro goes north from Kumasi to Techiman. What is the opposite trip? Now give the opposite of each word: up, gain, forward, left.",
+    "Oforiwaa in Suhum saves GH₵ 3 on Monday and spends GH₵ 3 on Tuesday. Why are these opposite? What has happened to her money after the two days?"
+   ]
+  },
+  "B3.1.1.2.2": {
+   "short_label": "Use + and - numbers for above and below a level",
+   "settings": [
+    "A canoe floats on the sea at Dixcove. A bird flies 6 metres above the water. A fish swims 4 metres below. Write each one with a + or - sign.",
+    "The ground beside a well in Gushegu is 0. The top of the wall is 1 metre up. The water is 7 metres down. Write both as + or - numbers.",
+    "Mount Afadja near Hohoe rises 885 metres above sea level. Is that a + or a - number? What kind of place would have a - number?"
+   ]
+  },
+  "B3.1.1.3.1": {
+   "short_label": "Show positive and negative numbers on a number line",
+   "settings": [
+    "Draw a number line from -10 to 10 on the ground, like pupils in Jasikan. Stand on 0. Kafui takes 3 steps to the right. Yao takes 3 steps to the left. Name each number.",
+    "Azara in Salaga owes her friend GH₵ 5. Fuseini has GH₵ 5 saved. Which number shows each one: 5 or -5? Mark both on a number line.",
+    "Ebo in Anomabo says -8 is to the left of 0 on the number line. Is he right? Which is further from 0: -8 or 6?"
+   ]
+  },
+  "B3.1.1.3.2": {
+   "short_label": "Count forwards and backwards through zero",
+   "settings": [
+    "Chalk a number line from -10 to 10 at school in Lawra. Start on 3 and hop back 5. Say each number as you hop. Where do you land?",
+    "Count on from -4 to 4 and say every number. Mawuli in Kpando says that is 8 hops. Check by counting the hops.",
+    "Adwoa stands on -6 on a floor number line in Konongo. She hops forward 9. Does she pass zero? Where does she stop?"
+   ]
+  },
+  "B3.1.2.1.1": {
+   "short_label": "Add and subtract within 1000 in columns",
+   "settings": [
+    "A school in Nadowli has 346 girls and 289 boys. Add in columns, starting with the ones. How many pupils are there?",
+    "A trader at Makola Market had 702 yards of cloth and sold 458. Subtract in columns. How many yards are left?",
+    "Fishers at Yeji landed 318 baskets of fish on Friday and some more on Saturday. That made 704 in all. Solve 318 + ☐ = 704. What does the box stand for?"
+   ]
+  },
+  "B3.1.2.2.1": {
+   "short_label": "Use = and ≠ to compare sums within 1000",
+   "settings": [
+    "One lorry carries 250 + 150 bags of maize from Ejura. Another carries 500 - 100 bags. Write = or ≠ between the two sums.",
+    "Naa adds the pupils of two schools in Tema. She says 300 + 240 is equal to 520. Is she right? Write 300 + 240 __ 520 with = or ≠.",
+    "A farmer in Bechem has 400 cocoa pods and breaks 280. To find 400 - 280, think 280 + __ = 400. What is the missing number?"
+   ]
+  },
+  "B3.1.2.3.1": {
+   "short_label": "Add and subtract in your head within 100",
+   "settings": [
+    "Ekua sold 45 balls of kenkey in the morning and 46 at night in Mankessim. Think double 45 and 1 more. How many did she sell?",
+    "A taxi driver in Sunyani drove 38 km before lunch and 47 km after. Move 2 from the 47 to the 38, then add. How far did he drive?",
+    "Issah has 72 guinea fowl in Walewale and sells 29. Take away 30, then add 1 back. How many are left?"
+   ]
+  },
+  "B3.1.2.4.1": {
+   "short_label": "Add within 1000 using hundreds, tens and ones",
+   "settings": [
+    "A kente weaver in Bonwire sold 245 strips last year and 332 this year. Add the hundreds, then the tens, then the ones. What is the total?",
+    "Two schools in Nkwanta have 158 and 264 pupils. Show 158 + 264 with bundles of 100, 10 and 1 sticks. Swap 10 ones for a ten when you can. What is the sum?",
+    "Hawa has 407 shea nuts in Damongo and picks 95 more. Draw hundreds, tens and ones to add them. How many nuts has she now?"
+   ]
+  },
+  "B3.1.2.4.2": {
+   "short_label": "Solve sums within 1000 with a missing number",
+   "settings": [
+    "A store in Koforidua had some bags of rice. It sold 150 and has 275 left. Solve ☐ - 150 = 275. How many bags were there at first?",
+    "Kwesi's school in Takoradi needs 600 chairs and has 395. Count up from 395: 5 more makes 400, then 200 more. How many chairs are missing?",
+    "A farmer near Kete Krachi had 635 yams and sold 198. Take away 200, then add 2 back. How many yams are left?"
+   ]
+  },
+  "B3.1.2.4.3": {
+   "short_label": "Estimate sums and differences up to 1000",
+   "settings": [
+    "A trotro station in Madina had 412 riders in the morning and 379 in the evening. Round each number to the nearest hundred. About how many riders in all?",
+    "A school in Berekum has 680 pupils. 310 are boys. About how many are girls? Use 700 and 300 to estimate. Then find the exact answer. Was your estimate close?",
+    "Efua needs about 900 oranges for a festival in Cape Coast. She has heaps of 520 and 290. Estimate the total. Does she have enough?"
+   ]
+  },
+  "B3.1.2.4.4": {
+   "short_label": "Show that adding in any order gives the same sum",
+   "settings": [
+    "A farm in Kenyasi packs 325 pawpaws, then 164 more. The next day it packs 164, then 325. Work out both totals. What do you notice?",
+    "Habiba counts books in Jirapa. She says 408 + 91 is the same as 91 + 408 without working it out. Is she right? Why? Now find the sum.",
+    "Amina in Bimbilla knows that 517 + 260 = 777. What is 260 + 517? Does the order matter for take away too? Try 9 - 4 and 4 - 9."
+   ]
+  },
+  "B3.1.2.5.1": {
+   "short_label": "Show multiplication as equal groups",
+   "settings": [
+    "Auntie Akweley puts kelewele in 4 bags with 5 pieces in each at her stall in Osu. Draw the bags. Write a multiplication sentence. How many pieces?",
+    "Abdulai in Savelugu has 15 shea nuts. He makes 3 equal groups. How many in each? Write it with ×. Now make 5 equal groups and write that too.",
+    "3 okadas wait at a junction in Sandema. Each has 2 wheels. Skip count in twos to find the number of wheels. Write the multiplication sentence."
+   ]
+  },
+  "B3.1.2.5.2": {
+   "short_label": "Show multiplication with rows and columns",
+   "settings": [
+    "Oranges sit in 4 rows of 5 on a table at Asesewa market. Draw dots for them. Write the multiplication sentence and the total.",
+    "Lay 3 sticks down and 4 sticks across them, as Delali did in Aflao. Count the points where the sticks cross. Which multiplication sentence does this show?",
+    "Desks in a classroom in Tumu stand in 5 rows with 3 in each row. Draw them. Turn your drawing sideways. Is 5 × 3 the same as 3 × 5? How many desks?"
+   ]
+  },
+  "B3.1.2.6.1": {
+   "short_label": "Divide by sharing equally",
+   "settings": [
+    "Four friends in Kpetoe share 20 mangoes equally. Give out one mango at a time until none are left. How many does each friend get?",
+    "Nana shares 15 pieces of yam equally on 3 plates in Atebubu. Draw the plates. How many pieces go on each plate?",
+    "Yakubu has 18 guinea fowl eggs in Nalerigu. He packs them equally into 2 baskets. How many eggs are in each? Write the division sentence."
+   ]
+  },
+  "B3.1.2.6.2": {
+   "short_label": "Divide by making equal groups",
+   "settings": [
+    "Araba has 16 fish at Shama. She puts 4 on each tray. Keep taking away 4 until none are left. How many trays does she fill?",
+    "A taxi in Berekum takes 4 riders at a time. 20 people wait. Take away 4 for each trip. How many trips carry them all?",
+    "Wumpini ties 15 maize cobs in bunches of 5 in Tolon. Show it as 15 - 5 - 5 - 5. How many bunches does he make?"
+   ]
+  },
+  "B3.1.2.6.3": {
+   "short_label": "Use times facts to work out division",
+   "settings": [
+    "20 pupils in Dormaa sit 5 to a bench. Think: what times 5 makes 20? So what is 20 ÷ 5?",
+    "Selorm knows that 3 × 6 = 18. He has 18 oranges in Keta to put in 3 equal bags. Use his fact to find 18 ÷ 3.",
+    "Fill the gaps for Adjoa in Swedru: __ × 2 = 16, so 16 ÷ 2 = __. Tell a short story about 16 sticks of chalk that fits."
+   ]
+  },
+  "B3.1.3.1.1": {
+   "short_label": "Name and write fractions of one whole",
+   "settings": [
+    "A baker in Kumasi cuts a loaf into 5 equal slices. Osei eats one slice. What fraction of the loaf did he eat? Write it in words and in numbers.",
+    "A farmer in Asankragwa splits his field into 8 equal plots. He plants cassava on 3 of them. Write the fraction that has cassava. What does the 8 tell you?",
+    "Draw a strip of kente cloth with 4 equal parts. Colour 1 part gold. What fraction is gold? What fraction is not gold?"
+   ]
+  },
+  "B3.1.3.1.2": {
+   "short_label": "Find fractions of a group and on a number line",
+   "settings": [
+    "There are 12 girls in Naa's ampe group in La. Half of them wear red. How many is that? One quarter wear white. How many is that?",
+    "Draw a line from 0 to 1 for the road from Senyo's house to his school in Akatsi. Split it into 4 equal parts. Mark where he is after 3/4 of the way.",
+    "Azure has 10 goats in Paga. 3 of them are brown. What fraction of the goats is brown? Write it in words and in numbers."
+   ]
+  },
+  "B3.1.3.1.3": {
+   "short_label": "Compare and order simple fractions",
+   "settings": [
+    "Two balls of banku of the same size are shared in Ho. Sena gets 1/2 of one. Edem gets 1/4 of the other. Who gets more? Draw to show why.",
+    "Friends in Wenchi cut a sugarcane stick into 8 equal bits. Yaw gets 3/8, Afia 1/8 and Takyi 4/8. Put the fractions in order from smallest to largest.",
+    "Which is bigger: 1/3 of a yam or 1/5 of the same yam? Bayor in Nandom says 1/5, because 5 is more than 3. Is he right? Say why."
+   ]
+  },
+  "B3.1.4.1.1": {
+   "short_label": "Pay with cedi notes and coins and work out change",
+   "settings": [
+    "Zakari buys waakye for GH₵ 15 at a stall in Nima. He pays with a GH₵ 20 note. How much change does he get? Which notes or coins could it be?",
+    "Ewurama buys 3 exercise books at GH₵ 6 each in Winneba. She pays with a GH₵ 50 note. How much change should she get?",
+    "Memuna pays GH₵ 25 for groundnuts at Tamale market. Show three different ways to make GH₵ 25 with GH₵ 5, GH₵ 10 and GH₵ 20 notes."
+   ]
+  },
+  "B3.2.1.1.1": {
+   "short_label": "Extend number patterns and spot mistakes",
+   "settings": [
+    "A mason in Duayaw Nkwanta lays 4 more blocks in each row: 4, 8, 12, 16. What is the rule? Write the next three numbers.",
+    "A water tank in Bole holds 60 buckets. Each day 6 buckets are used: 60, 54, 48, 42. Say the rule. How many are left after the next two days?",
+    "Achiaa in Kumasi writes down her susu savings: 10, 20, 30, 50, 60. One number is missing. Which one? Then make your own pattern with the rule 'take away 5'."
+   ]
+  },
+  "B3.3.1.1.1": {
+   "short_label": "Count faces, edges and corners of solids",
+   "settings": [
+    "Pick up a matchbox, like Kwabena in Ejisu. How many faces has it? How many edges? How many corners? What shape is each face?",
+    "A tin of milk and a sugar cube sit on Fati's table in Salaga. Which one has a curved face? Which has 8 corners? Which has 12 edges?",
+    "Sort these by number of sides: a road sign with 3 sides, a square tile, the Ghana flag and a five-sided kite. Which two belong together?"
+   ]
+  },
+  "B3.3.1.1.2": {
+   "short_label": "Find and draw angles where two lines meet",
+   "settings": [
+    "Open a pair of scissors a little, then wide, like a tailor at Kejetia Market. Which way makes the bigger angle? Draw both angles.",
+    "Look at the black star on the Ghana flag. How many sharp points does it have? Draw one point with two straight lines. What do we call the turn between the lines?",
+    "Draw a triangle and a four-sided shape with a ruler, like Nii at school in Teshie. Mark every angle with a small curve. How many angles are in each shape?"
+   ]
+  },
+  "B3.3.1.1.3": {
+   "short_label": "Test for right angles with a paper square corner",
+   "settings": [
+    "Fold a sheet of paper twice to make a square corner. Test the corners of your exercise book and your desk, like Asabea in Nkawkaw. Which are right angles?",
+    "Hold your paper square corner against the hands of a clock at 3 o'clock, then at 1 o'clock. Atanga in Bongo says only one is a right angle. Which one?",
+    "Find three things at your school in Kpandai with square corners and one thing whose corner is not square. Check each one with your paper corner."
+   ]
+  },
+  "B3.3.1.1.4": {
+   "short_label": "Name four-sided shapes by their features",
+   "settings": [
+    "Ashitey flies a kite at Labadi beach. It has 4 sides but is not a square or a rectangle. Draw a four-sided shape like that. What do all four-sided shapes share?",
+    "Enyonam cuts out a rectangle, a square and a rhombus in Sogakope. Which have 4 equal sides? Which have 4 square corners? Which one has both?",
+    "Draw a shape with 4 sides where only one pair of sides runs side by side and never meets, like the side of a wheelbarrow in Prang. Name the shape."
+   ]
+  },
+  "B3.3.2.1.1": {
+   "short_label": "Use a number line to find how long something is",
+   "settings": [
+    "A stick lies on a number line from 3 to 8 in Yaa's book in Mampong. Count the unit jumps. How long is the stick?",
+    "Lay a pencil from 0 to 6 on a number line. Slide it so that it starts at 4. Where does it end? Abu in Buipe says its length did not change. Why is he right?",
+    "On a number line of a road in Assin Fosu, the school is at 2 and the market is at 9. How many units apart are they?"
+   ]
+  },
+  "B3.3.3.1.1": {
+   "short_label": "Relate metres and centimetres and choose a unit",
+   "settings": [
+    "A tailor in Koforidua has a tape 1 metre long. How many centimetres is that? How many are in 3 metres?",
+    "Would you use centimetres or metres to measure a pencil? A football field in Obuasi? The height of a door? Say why each time.",
+    "Ebo's desk in Twifo Praso is 120 cm long. Is that more or less than 1 metre? By how many centimetres?"
+   ]
+  },
+  "B3.3.3.1.2": {
+   "short_label": "Choose everyday objects that show 1 cm and 1 m",
+   "settings": [
+    "Pupils in Bibiani chose a little finger nail for about 1 cm and one big stride for about 1 m. Find your own thing for 1 cm and for 1 m. Say why you chose them.",
+    "Sena in Dzodze uses the width of her finger for 1 cm. About how many finger widths long is your pencil? Check with a ruler.",
+    "Yakubu says a door at his school in Gambaga is about 2 big strides tall. Is his stride close to 1 cm or to 1 m? About how tall is the door?"
+   ]
+  },
+  "B3.3.3.1.3": {
+   "short_label": "Estimate and measure lengths and distance around",
+   "settings": [
+    "A school garden in Dormaa is a rectangle 8 m long and 5 m wide. How much fence goes all the way round it?",
+    "Guess the distance round your exercise book in centimetres. Then measure each side with a ruler and add, like Afi in Kpando. How close was your guess?",
+    "Draw two different shapes that each have a distance round of 12 cm, like floor tiles at a shop in Tema. Use a ruler or squared paper."
+   ]
+  },
+  "B3.3.3.2.1": {
+   "short_label": "Relate kilograms and grams, litres and millilitres",
+   "settings": [
+    "A bag of rice in a Takoradi shop is 1 kilogram. How many grams is that? How many grams are in half a kilogram?",
+    "A sachet of water holds 500 ml. How many sachets make 1 litre? Konadu in Agogo drinks 3 sachets a day. Is that more than 1 litre?",
+    "Would you use grams or kilograms to weigh a bag of maize in Funsi? One egg? Would you use litres or millilitres for a bucket of water? A spoon of oil?"
+   ]
+  },
+  "B3.3.3.2.2": {
+   "short_label": "Estimate mass and capacity, then measure to check",
+   "settings": [
+    "Hold a 1 kg bag of sugar. Then hold a tuber of yam, like Napari in Yendi. Is the yam more or less than 1 kg? Check on a scale.",
+    "A sachet of water is half a litre. Guess how many sachets fill a small bucket. Kwesi in Komenda guessed 20. Pour and count to check your guess.",
+    "Guess the order from lightest to heaviest: a mango, a 1 kg bag of gari and a school bag full of books. Then weigh them, as pupils did in Drobo."
+   ]
+  },
+  "B3.3.3.3.1": {
+   "short_label": "Work out how long an event takes",
+   "settings": [
+    "An oware game in Ada starts at 10.15 a.m. and ends at 10.40 a.m. How long did the game last?",
+    "A bus leaves Accra at 7.00 a.m. and gets to Cape Coast at 9.30 a.m. How long is the trip?",
+    "Which of these takes about 10 minutes: eating a bowl of koko, growing maize, or walking from Tamale to Accra? Name something that takes months."
+   ]
+  },
+  "B3.3.3.3.2": {
+   "short_label": "Read dates and count days, weeks and months",
+   "settings": [
+    "Ghana's Independence Day is 6 March and Republic Day is 1 July. Which comes first in the year? Which whole months lie between March and July?",
+    "The school holiday in Sekondi runs from 13 April to 3 May, counting both days. Use a calendar. How many days is that? How many weeks?",
+    "Farmers' Day in Ghana is the first Friday of December. Find it on this year's calendar. What is the date? What day of the week is 25 December?"
+   ]
+  },
+  "B3.3.3.3.3": {
+   "short_label": "Use seconds, minutes, hours and days in problems",
+   "settings": [
+    "Kofi in Suhum helps to boil eggs for 3 minutes. How many seconds is that?",
+    "The trotro from Kasoa to Winneba takes 1 hour. Aba has been riding for 40 minutes. How many minutes are left?",
+    "Memuna's mother in Wa sells koko every day in June. On how many days does she sell? How many days would it be in July?"
+   ]
+  },
+  "B3.4.1.1.1": {
+   "short_label": "Collect data with tallies and tables to answer questions",
+   "settings": [
+    "Ask 20 schoolmates how they come to school: walk, bicycle, trotro or okada. Record with tally marks in a table. Which way is most common?",
+    "Lariba counts birds on her farm in Garu: Monday 12, Tuesday 9, Wednesday 15. Put these in a table. On which day did she see the most? How many in all?",
+    "What question could you answer by counting what sellers bring to a market like the one in Kpassa, such as yam, plantain and cassava? Plan a tally chart for it."
+   ]
+  },
+  "B3.4.1.2.1": {
+   "short_label": "Draw and read graphs where one picture means many",
+   "settings": [
+    "A graph shows bags of cocoa from three farms near Juaboso. One picture means 5 bags. Farm A has 4 pictures, B has 6 and C has 3. How many bags from B? How many in all?",
+    "Draw a picture graph of fish sold in Axim: Monday 20, Tuesday 30, Wednesday 10. Let one fish picture mean 10 fish. Add a title and a key.",
+    "A bar graph shows favourite foods in a class in Gwollu: tuo zaafi 12, jollof 16, waakye 8. How many more chose jollof than waakye? How many pupils voted?"
+   ]
+  }
+ }
+}

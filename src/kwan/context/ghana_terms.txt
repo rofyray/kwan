@@ -1,0 +1,581 @@
+# Kwan: words that mark a practice setting as Ghanaian.
+#
+# Used by the automatic checks (kwan.context.checks): every practice setting must hold at least one
+# term from this file. The curriculum pipeline reads the same file to flag Ghanaian exemplars.
+#
+# Format
+#   - One term per line. A term may be several words ("Cape Coast", "tuo zaafi").
+#   - A line that starts with "#" is a comment. Blank lines are ignored.
+#   - A comment of the form "# [name]" starts a section. Sections are only for people and for
+#     reports; a reader that ignores them still gets the full list.
+#
+# How terms are matched (whole words only)
+#   - A term that starts with a capital letter is a name: it must match exactly, capitals included
+#     ("Ho" matches "a school in Ho", never "who"). A following 's is allowed ("Ama's").
+#   - A term in small letters matches in any case, and also with a plural s or es
+#     ("trotro" matches "Trotros", "mango" would match "mangoes").
+#
+# Rules for editing this file
+#   - Add a term only if you are sure it is real and spelled the way Ghanaian schools write it.
+#   - If you are not sure, leave it out. A missing term costs nothing; a wrong one teaches an error.
+#   - Places sit under their region. Check the region before you add a town.
+#   - No brand names, no names of real, known people.
+
+# [currency]
+GH₵
+cedi
+pesewa
+
+# [country]
+Ghana
+Ghanaian
+Lake Volta
+Volta
+Ashanti Region
+Central Region
+Eastern Region
+Northern Region
+Western Region
+Volta Region
+Oti Region
+Savannah Region
+North East Region
+Greater Accra
+Western North
+Bono East
+Upper East
+Upper West
+
+# [places: Ahafo]
+Goaso
+Bechem
+Duayaw Nkwanta
+Kenyasi
+Mim
+
+# [places: Ashanti]
+Kumasi
+Obuasi
+Ejisu
+Konongo
+Bekwai
+Mampong
+Offinso
+Ejura
+Agogo
+Juaben
+Bonwire
+Ntonso
+Ahwiaa
+Sokoban
+Kejetia
+Kejetia Market
+Baba Yara Stadium
+Lake Bosomtwe
+
+# [places: Bono]
+Sunyani
+Berekum
+Dormaa Ahenkro
+Dormaa
+Wenchi
+Sampa
+Drobo
+
+# [places: Bono East]
+Techiman
+Kintampo
+Atebubu
+Nkoranza
+Yeji
+Prang
+Techiman Market
+Kintampo Waterfalls
+
+# [places: Central]
+Cape Coast
+Winneba
+Elmina
+Kasoa
+Mankessim
+Saltpond
+Apam
+Moree
+Anomabo
+Komenda
+Assin Fosu
+Twifo Praso
+Dunkwa-on-Offin
+Dunkwa
+Agona Swedru
+Swedru
+Breman Asikuma
+Mankessim Market
+Kakum National Park
+
+# [places: Eastern]
+Koforidua
+Nkawkaw
+Akosombo
+Aburi
+Nsawam
+Suhum
+Kibi
+Akim Oda
+Asamankese
+Kade
+Somanya
+Odumase Krobo
+Asesewa
+Kpong
+Akropong
+Abetifi
+Akosombo Dam
+Aburi Botanical Gardens
+
+# [places: Greater Accra]
+Accra
+Tema
+Madina
+Teshie
+Ada Foah
+Ada
+Nungua
+Osu
+La
+Labadi
+Nima
+Chorkor
+Jamestown
+Dansoman
+Kaneshie
+Kaneshie Market
+Makola
+Makola Market
+Agbogbloshie
+Ashaiman
+Dodowa
+Prampram
+
+# [places: North East]
+Nalerigu
+Walewale
+Gambaga
+Bunkpurugu
+Chereponi
+
+# [places: Northern]
+Tamale
+Yendi
+Savelugu
+Tolon
+Bimbilla
+Kumbungu
+Karaga
+Gushegu
+Saboba
+Zabzugu
+Kpandai
+Sagnarigu
+
+# [places: Oti]
+Dambai
+Nkwanta
+Kadjebi
+Jasikan
+Kete Krachi
+Worawora
+Kpassa
+
+# [places: Savannah]
+Damongo
+Salaga
+Bole
+Buipe
+Sawla
+Mole National Park
+
+# [places: Upper East]
+Bolgatanga
+Navrongo
+Bawku
+Paga
+Zebilla
+Zuarungu
+Sirigu
+Tongo
+Sandema
+Bongo
+Garu
+Pusiga
+Binduri
+
+# [places: Upper West]
+Wa
+Lawra
+Tumu
+Nandom
+Jirapa
+Nadowli
+Funsi
+Gwollu
+Wechiau
+
+# [places: Volta]
+Ho
+Hohoe
+Keta
+Aflao
+Kpando
+Anloga
+Sogakope
+Peki
+Kpeve
+Akatsi
+Dzodze
+Denu
+Kpetoe
+Agotime Kpetoe
+Keta Lagoon
+Mount Afadja
+Afadjato
+Wli Waterfalls
+
+# [places: Western]
+Sekondi-Takoradi
+Sekondi
+Takoradi
+Tarkwa
+Axim
+Prestea
+Half Assini
+Agona Nkwanta
+Dixcove
+Shama
+Asankragwa
+Elubo
+Esiama
+Market Circle
+
+# [places: Western North]
+Sefwi Wiawso
+Bibiani
+Enchi
+Juaboso
+Sefwi Bekwai
+
+# [names: Akan]
+Akosua
+Adwoa
+Abena
+Akua
+Yaa
+Afia
+Ama
+Kwasi
+Kwadwo
+Kwabena
+Kwaku
+Yaw
+Kofi
+Kwame
+Esi
+Efua
+Araba
+Kojo
+Ekow
+Kobina
+Kwesi
+Kweku
+Akwasi
+Afua
+Adjoa
+Efia
+Ekua
+Aba
+Ebo
+Ato
+Kuukua
+Ewurama
+Ewurabena
+Nana
+Serwaa
+Osei
+Owusu
+Boakye
+Mensah
+Opoku
+Ofori
+Agyei
+Afriyie
+Frimpomaa
+Asantewaa
+Pokuaa
+Konadu
+Nyarko
+Achiaa
+Asabea
+Oforiwaa
+Mansa
+Takyi
+Donkor
+
+# [names: Ewe]
+Esinam
+Enyonam
+Abla
+Yawa
+Adzo
+Afi
+Mawuli
+Mawusi
+Senyo
+Kodzo
+Yao
+Komla
+Kosi
+Selorm
+Elikem
+Kafui
+Delali
+Dzifa
+Sena
+Edem
+Yayra
+Kekeli
+Dzidzor
+Akpene
+Senam
+Selasi
+Tsatsu
+
+# [names: Ga-Dangme]
+Naa
+Nii
+Dede
+Dedei
+Dei
+Korkor
+Kai
+Ayele
+Ayeley
+Adjeley
+Akweley
+Lamley
+Lamiley
+Lamiokor
+Tsotsoo
+Awo
+Maku
+Tetteh
+Tettey
+Kwei
+Ayitey
+Lante
+Lamptey
+Lartey
+Odoi
+Okai
+Ashitey
+Ofoli
+Narh
+Narteh
+Padi
+
+# [names: Nzema]
+Akuba
+Adwoba
+Kaku
+Kabenla
+Nyameke
+Amihere
+Blay
+Erzuah
+Ackah
+
+# [names: Upper East (Gurune, Kusaal, Buli)]
+Atanga
+Adongo
+Akolgo
+Ayamga
+Ayine
+Azure
+Awuni
+Awini
+Abugri
+Apoka
+Abane
+Atia
+Azumah
+Akanbang
+
+# [names: Upper West (Dagaare)]
+Dery
+Bayuo
+Bayor
+Ziem
+Kuuire
+Tengan
+
+# [names: Dagbani]
+Wumpini
+Suhuyini
+Tiyumba
+Napari
+Neindow
+Suglo
+Wuni
+
+# [names: Muslim names, common in the northern regions and in towns all over Ghana]
+Amina
+Fati
+Rahinatu
+Memunatu
+Memuna
+Azara
+Hawa
+Mariama
+Zenabu
+Rashida
+Habiba
+Ayisha
+Asana
+Rukaya
+Fuseina
+Abiba
+Sumaya
+Alhassan
+Fuseini
+Abukari
+Bukari
+Iddrisu
+Salifu
+Sulemana
+Issah
+Musah
+Mumuni
+Yakubu
+Abdulai
+Ibrahim
+Sumaila
+Zakari
+Mahama
+Abu
+
+# [names: Hausa day names]
+Lamisi
+Talata
+Lariba
+Asibi
+Danladi
+Danjuma
+
+# [food and drink]
+kenkey
+banku
+fufu
+waakye
+jollof
+tuo zaafi
+gari
+red red
+kelewele
+koko
+koose
+bofrot
+shito
+kontomire
+kokonte
+ampesi
+akple
+abolo
+tatale
+tubaani
+wasawasa
+kulikuli
+dawadawa
+sobolo
+asaana
+tilapia
+groundnut
+groundnut soup
+light soup
+palm nut soup
+palm oil
+okro
+garden egg
+pawpaw
+tiger nut
+kola nut
+pure water
+sachet water
+
+# [crops and animals]
+cocoa
+shea
+shea butter
+yam
+cocoyam
+cassava
+plantain
+millet
+sugarcane
+guinea fowl
+
+# [transport]
+trotro
+okada
+aboboyaa
+lorry station
+lorry park
+trotro station
+
+# [games]
+ampe
+oware
+chaskele
+pilolo
+
+# [craft, culture and everyday life]
+kente
+adinkra
+Sankofa
+Gye Nyame
+smock
+fugu
+batakari
+durbar
+susu
+chop bar
+olonka
+calabash
+harmattan
+adowa
+kpanlogo
+agbadza
+borborbor
+bamaya
+fontomfrom
+atumpan
+Homowo
+Hogbetsotso
+Aboakyer
+Damba
+Odwira
+Kundum
+Bakatue
+Fetu Afahye
+
+# [languages]
+Akan
+Twi
+Fante
+Ewe
+Ga
+Dangme
+Dagbani
+Dagaare
+Gurune
+Nzema
+Gonja
+Kasem

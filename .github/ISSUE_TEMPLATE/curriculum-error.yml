@@ -1,0 +1,84 @@
+name: Curriculum error
+description: Kwan has a skill wrong. For example a missing indicator, a description that is cut short, a wrong name or a link that makes no sense.
+title: "curriculum: "
+labels: ["curriculum"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for checking Kwan against the curriculum.
+
+        We need two things to find the problem quickly: the **indicator code** and the **PDF page**.
+        The curriculum text is © NaCCA, Ministry of Education. A few words are enough to show the problem. Please do not paste whole pages.
+  - type: input
+    id: indicator
+    attributes:
+      label: Indicator code
+      description: The code printed in the curriculum, such as B4.1.1.1.2 (Basic 4, strand 1, sub-strand 1, content standard 1, indicator 2). If several indicators are affected, list them all.
+      placeholder: B4.1.1.1.2
+    validations:
+      required: true
+  - type: dropdown
+    id: document
+    attributes:
+      label: Which curriculum PDF?
+      options:
+        - NaCCA Mathematics, Basic 1 to Basic 3 (2019)
+        - NaCCA Mathematics, Basic 4 to Basic 6 (2019)
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: PDF page number
+      description: The page where the indicator appears. Say whether it is the number printed on the page or the page count in your PDF reader.
+      placeholder: "Printed page 57"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of error is it?
+      options:
+        - An indicator is missing from Kwan
+        - Kwan has an indicator that is not in the curriculum
+        - The description is cut short or has the wrong words
+        - The strand, sub-strand or content standard name is wrong
+        - An exemplar is missing or wrong
+        - The short label does not match the skill
+        - A skill link is wrong (A is not needed before B)
+        - A skill link is missing
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: kwan-shows
+    attributes:
+      label: What Kwan shows
+      description: Copy what you see in the demo, the API or the data file.
+    validations:
+      required: true
+  - type: textarea
+    id: curriculum-says
+    attributes:
+      label: What the curriculum says
+      description: A few words, or a description in your own words. Please do not paste whole pages.
+    validations:
+      required: true
+  - type: input
+    id: where-seen
+    attributes:
+      label: Where did you see it?
+      placeholder: The demo, the REST API, data/curriculum/math.structure.json, the QA report
+  - type: input
+    id: version
+    attributes:
+      label: Kwan version or bundle version
+      placeholder: kwan 1.0.0rc1, bundle math-1.0.0
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I checked the indicator code and the page number against the official PDF.
+          required: true

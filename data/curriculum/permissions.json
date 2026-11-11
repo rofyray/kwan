@@ -1,0 +1,7 @@
+{
+ "nacca_text_commit_allowed": false,
+ "granted_by": null,
+ "granted_on": null,
+ "evidence": null,
+ "note": "NaCCA curriculum text (indicator descriptions, content-standard text, exemplars) is copyright NaCCA, Ministry of Education 2019. Kwan commits codes, numbers, names and its own short labels only. Set nacca_text_commit_allowed to true only after NaCCA gives written permission, and record who granted it, when, and where the letter is kept (docs/governance.md)."
+}

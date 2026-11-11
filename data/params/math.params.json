@@ -1,0 +1,43 @@
+{
+ "k_s": 0.5,
+ "k_k": 0.3,
+ "decay": 0.02,
+ "grade_step": 0.4,
+ "transfer": 0.5,
+ "streak_to_master": 3,
+ "tau_days": 30.0,
+ "streak_expiry_days": 30.0,
+ "provenance": {
+  "subject": "math",
+  "datasets": [
+   "assistments_2009",
+   "eedi_2020_task34",
+   "eedi_2020_task12"
+  ],
+  "tau_datasets": [
+   "eedi_2020_task34",
+   "eedi_2020_task12"
+  ],
+  "rule": "tau: the value with the best mean validation AUC at the v1 step sizes on eedi_2020_task34, eedi_2020_task12; k_s, k_k, decay: the triple with the best mean validation AUC across assistments_2009, eedi_2020_task34, eedi_2020_task12 at that tau; then never worse than the v1 defaults by more than 0.002 AUC on the held-out students of assistments_2009, eedi_2020_task34 (a parameter that breaks this goes back to its v1 value); grade_step and transfer keep the v1 values because the public datasets have no prerequisite graph; streak_to_master and streak_expiry_days are not fitted (PRD defaults)",
+  "held_out_auc": {
+   "assistments_2009": {
+    "auc_v1_defaults": 0.75239,
+    "auc_shipped": 0.75281,
+    "gain": 0.00042
+   },
+   "eedi_2020_task12": {
+    "auc_v1_defaults": 0.7859,
+    "auc_shipped": 0.79045,
+    "gain": 0.00455
+   },
+   "eedi_2020_task34": {
+    "auc_v1_defaults": 0.77626,
+    "auc_shipped": 0.78026,
+    "gain": 0.004
+   }
+  },
+  "notes": [],
+  "fitted_at": "2026-11-11T18:20:56+00:00",
+  "results_key": "learner_fit"
+ }
+}

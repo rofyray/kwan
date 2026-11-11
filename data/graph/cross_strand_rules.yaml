@@ -1,0 +1,40 @@
+# Cross-strand candidate rules for the AI-augmented graph (PRD Phase 7, task 7.1).
+#
+# A candidate pair A -> B must be in the same strand, or its (strand of A, strand of B) must be
+# listed here. The list is short on purpose: every extra pair makes more candidates for the decision
+# model to answer and for teachers to review. Each rule says why the earlier strand feeds the later
+# one. These rules were written by hand from the structure of the curriculum; nothing here was fitted
+# to data.
+#
+# `math` is the NaCCA Mathematics curriculum (B1 to B6). Strand numbers are the ones in the indicator
+# codes: 1 Number, 2 Algebra, 3 Geometry and Measurement, 4 Data.
+math:
+  rules:
+    - from: 1
+      to: 2
+      why: Number patterns, equations and unknowns in Algebra use counting and the four operations.
+    - from: 1
+      to: 3
+      why: Measuring length, mass, capacity, time, money, perimeter and area uses counting, operations, fractions and decimals.
+    - from: 1
+      to: 4
+      why: Collecting, counting, graphing and comparing data, and chance, use whole numbers, fractions and percentages.
+    - from: 2
+      to: 3
+      why: Perimeter, area and volume rules are written and used as patterns and simple formulas.
+
+# `junyi_2015` is used only when the method is checked against the Junyi Academy dataset
+# (kwan.graph.junyi). Junyi's `area` plays the part of the strand. Written from general knowledge of
+# school mathematics before any scoring; not fitted to Junyi's links.
+junyi_2015:
+  rules:
+    - {from: arithmetic, to: algebra, why: Algebra generalises arithmetic.}
+    - {from: arithmetic, to: geometry, why: Measurement and angle work use arithmetic.}
+    - {from: arithmetic, to: probability-statistics, why: Statistics and chance use fractions, ratios and averages.}
+    - {from: arithmetic, to: analytic-geometry, why: Coordinates use the number line and operations.}
+    - {from: algebra, to: geometry, why: Geometry problems are solved with equations.}
+    - {from: algebra, to: analytic-geometry, why: Lines and curves are described by equations.}
+    - {from: algebra, to: probability-statistics, why: Counting rules and formulas use algebra.}
+    - {from: algebra, to: calculus, why: Calculus builds on functions and algebra.}
+    - {from: geometry, to: analytic-geometry, why: Analytic geometry puts shapes on coordinates.}
+    - {from: analytic-geometry, to: calculus, why: Calculus studies curves and slopes.}

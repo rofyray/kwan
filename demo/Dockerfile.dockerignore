@@ -1,0 +1,13 @@
+# Used when the build context is the repository root: docker build -f demo/Dockerfile .
+# Only the source tree, the committed data the demo reads and the demo folder reach the build stage.
+*
+!pyproject.toml
+!README.md
+!LICENSE
+!src/
+!data/eval_results.json
+!demo/app.py
+!demo/requirements-demo.txt
+!demo/wheels/
+**/__pycache__/
+**/*.pyc

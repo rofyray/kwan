@@ -1,0 +1,119 @@
+# Deploy the demo to the Hugging Face Space (PRD Phase 10.4 and 10.5).
+#
+# Runs when a GitHub release is published, when release.yml dispatches it, or by hand. It builds the wheel,
+# assembles the Space folder from demo/ (app, Dockerfile, README front matter, pinned requirements) plus
+# wheels/kwan-*.whl, data/eval_results.json and the shipped bundle, uploads the folder with
+# huggingface_hub.upload_folder, waits for the Space to answer (up to 10 minutes) and runs the Playwright
+# smoke test against it.
+#
+# Needs the repository secret HF_TOKEN (a Hugging Face token with write access to the Space) and the
+# repository variable HF_SPACE (the Space id, for example rofyray/kwan).
+
+name: space-deploy
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+concurrency:
+  group: space-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  POLL_SECONDS: "600"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the wheel
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build --wheel --outdir dist
+
+      - name: Assemble the Space folder
+        run: |
+          set -eu
+          rm -rf space
+          mkdir -p space/wheels space/data
+          cp demo/app.py demo/Dockerfile demo/README.md demo/requirements-demo.txt demo/.dockerignore space/
+          cp dist/kwan-*.whl space/wheels/
+          cp data/eval_results.json space/data/
+          cp src/kwan/bundles/kwan-bundle.math.json space/data/
+          ls -lR space
+
+      - name: Upload to the Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+          COMMIT_MESSAGE: "Deploy ${{ github.ref_name }} (${{ github.sha }})"
+        run: |
+          python -m pip install huggingface_hub
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(
+              folder_path="space",
+              repo_id=os.environ["HF_SPACE"],
+              repo_type="space",
+              commit_message=os.environ["COMMIT_MESSAGE"],
+              delete_patterns=["wheels/*.whl"],
+          )
+          PY
+
+      - name: Wait for the Space to answer
+        id: space
+        env:
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          python - <<'PY'
+          import os, re, sys, time, urllib.error, urllib.request
+
+          owner, name = os.environ["HF_SPACE"].split("/", 1)
+          host = re.sub(r"[^a-z0-9-]", "-", f"{owner}-{name}".lower())
+          url = f"https://{host}.hf.space"
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"url={url}\n")
+          deadline = time.monotonic() + float(os.environ["POLL_SECONDS"])
+          last = "not tried yet"
+          while time.monotonic() < deadline:
+              try:
+                  with urllib.request.urlopen(url + "/_stcore/health", timeout=15) as resp:
+                      body = resp.read(64).decode("utf-8", "replace").strip()
+                      if resp.status == 200 and body == "ok":
+                          print(f"{url} answers 200 ok")
+                          sys.exit(0)
+                      last = f"status {resp.status}, body {body!r}"
+              except (urllib.error.URLError, OSError) as e:
+                  last = str(e)
+              print(f"waiting: {last}")
+              time.sleep(15)
+          print(f"the Space at {url} did not answer within {os.environ['POLL_SECONDS']} seconds: {last}")
+          sys.exit(1)
+          PY
+
+      - name: Run the smoke test against the Space
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+          python demo/smoke_test.py "${{ steps.space.outputs.url }}" --wait 120 --screenshot smoke-failure.png
+
+      - name: Keep the failure screenshot
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-failure
+          path: smoke-failure.png
+          if-no-files-found: ignore

@@ -1,0 +1,4657 @@
+{
+ "directed": true,
+ "multigraph": false,
+ "graph": {},
+ "nodes": [
+  {
+   "id": "B1.1.1.1.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Count up to 100 objects and say how many"
+  },
+  {
+   "id": "B1.1.1.1.2",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Find numbers around a number on a chart to 100"
+  },
+  {
+   "id": "B1.1.1.1.3",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Measure with hand-spans, feet or cups and count"
+  },
+  {
+   "id": "B1.1.1.1.4",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Compare groups to 100 using more, less or same"
+  },
+  {
+   "id": "B1.1.1.1.5",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 5,
+   "description": "Compare two numbers with >, < or ="
+  },
+  {
+   "id": "B1.1.1.1.6",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B1.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 6,
+   "description": "Say how two numbers to 100 are related"
+  },
+  {
+   "id": "B1.1.2.1.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Add by joining and subtract by taking away to 20"
+  },
+  {
+   "id": "B1.1.2.2.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Find the missing number in sums within 20"
+  },
+  {
+   "id": "B1.1.2.2.2",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 2,
+   "description": "Turn a take-away into an adding sum within 20"
+  },
+  {
+   "id": "B1.1.2.2.3",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 3,
+   "description": "Make up a story for an adding or take-away sum"
+  },
+  {
+   "id": "B1.1.2.3.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Use doubles and making 10 for facts to 10"
+  },
+  {
+   "id": "B1.1.2.4.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Count on or count back to add and subtract to 20"
+  },
+  {
+   "id": "B1.1.2.4.2",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B1.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 2,
+   "description": "Solve one-step story sums within 20"
+  },
+  {
+   "id": "B1.1.3.1.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B1.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Show one half as 1 of 2 equal parts"
+  },
+  {
+   "id": "B1.1.3.1.2",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B1.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Count halves: one half, two halves, three halves"
+  },
+  {
+   "id": "B1.1.4.1.1",
+   "grade": 1,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B1.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Name Ghana coins and say how they relate"
+  },
+  {
+   "id": "B1.2.1.1.1",
+   "grade": 1,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B1.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 1,
+   "description": "Copy, extend and fix repeating patterns"
+  },
+  {
+   "id": "B1.3.1.1.1",
+   "grade": 1,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B1.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Tell what makes a shape that shape"
+  },
+  {
+   "id": "B1.3.1.1.2",
+   "grade": 1,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B1.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Name and sort balls, tins, boxes and other solids"
+  },
+  {
+   "id": "B1.3.1.1.3",
+   "grade": 1,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B1.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 3,
+   "description": "Name and sort flat shapes by sides and corners"
+  },
+  {
+   "id": "B1.3.2.1.1",
+   "grade": 1,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B1.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 1,
+   "description": "Say where things are: above, below, left, right"
+  },
+  {
+   "id": "B1.3.3.1.1",
+   "grade": 1,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B1.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 1,
+   "description": "Compare two things: longer, taller, heavier"
+  },
+  {
+   "id": "B1.4.1.1.1",
+   "grade": 1,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B1.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 1,
+   "description": "Show data in up to three groups with pictures"
+  },
+  {
+   "id": "B1.4.1.1.2",
+   "grade": 1,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B1.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 2,
+   "description": "Sort data into three groups, count and compare"
+  },
+  {
+   "id": "B2.1.1.1.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Count and skip count by 2s, 5s and 10s to 1000"
+  },
+  {
+   "id": "B2.1.1.1.2",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Find numbers around a number on a chart to 1000"
+  },
+  {
+   "id": "B2.1.1.1.3",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Measure with sticks, strides or cups and count"
+  },
+  {
+   "id": "B2.1.1.1.4",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Show tens and ones in a 2-digit number"
+  },
+  {
+   "id": "B2.1.1.1.5",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 5,
+   "description": "Describe a number to 1000 in different ways"
+  },
+  {
+   "id": "B2.1.1.1.6",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B2.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 6,
+   "description": "Compare and order numbers to 100 with >, < or ="
+  },
+  {
+   "id": "B2.1.2.1.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Add in any order and use zero in sums to 100"
+  },
+  {
+   "id": "B2.1.2.2.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Use = and ≠ to check sums within 100"
+  },
+  {
+   "id": "B2.1.2.3.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Use mental tricks for adding and subtracting to 19"
+  },
+  {
+   "id": "B2.1.2.4.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Add and subtract in tens and ones columns to 100"
+  },
+  {
+   "id": "B2.1.2.4.2",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 2,
+   "description": "Add and subtract to 100 in your own easy way"
+  },
+  {
+   "id": "B2.1.2.4.3",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B2.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 3,
+   "description": "Solve one-step and two-step story sums to 100"
+  },
+  {
+   "id": "B2.1.3.1.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B2.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Show one half and one quarter of a whole"
+  },
+  {
+   "id": "B2.1.3.1.2",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B2.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Count in halves and in quarters"
+  },
+  {
+   "id": "B2.1.3.1.3",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B2.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 3,
+   "description": "Tell how many halves and quarters make a whole"
+  },
+  {
+   "id": "B2.1.4.1.1",
+   "grade": 2,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B2.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Count Ghana coins and notes up to GH₵ 50"
+  },
+  {
+   "id": "B2.2.1.1.1",
+   "grade": 2,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B2.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 1,
+   "description": "Find the rule in number patterns that grow or shrink"
+  },
+  {
+   "id": "B2.2.1.1.2",
+   "grade": 2,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B2.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 2,
+   "description": "Describe and make skip-counting patterns"
+  },
+  {
+   "id": "B2.3.1.1.1",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B2.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Name solids and tell what features they share"
+  },
+  {
+   "id": "B2.3.1.1.2",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B2.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Name flat shapes by their sides and corners"
+  },
+  {
+   "id": "B2.3.1.1.3",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B2.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 3,
+   "description": "Draw flat shapes from a given number of sides"
+  },
+  {
+   "id": "B2.3.3.1.1",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B2.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 1,
+   "description": "Pick a unit, estimate and measure without a ruler"
+  },
+  {
+   "id": "B2.3.3.1.2",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B2.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 2,
+   "description": "Compare three or more things by size or weight"
+  },
+  {
+   "id": "B2.3.3.2.1",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B2.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 1,
+   "description": "Explain why we need the same unit to measure"
+  },
+  {
+   "id": "B2.3.3.3.1",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B2.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 1,
+   "description": "Read a calendar and count days and months"
+  },
+  {
+   "id": "B2.3.3.3.2",
+   "grade": 2,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B2.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 2,
+   "description": "Time events with claps and with the hour"
+  },
+  {
+   "id": "B2.4.1.1.1",
+   "grade": 2,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B2.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 1,
+   "description": "Collect data with tally marks and ask about it"
+  },
+  {
+   "id": "B2.4.1.2.1",
+   "grade": 2,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B2.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 1,
+   "description": "Draw and read picture graphs"
+  },
+  {
+   "id": "B3.1.1.1.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Count and skip count in 10s, 100s, 1000s to 10,000"
+  },
+  {
+   "id": "B3.1.1.1.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Find numbers around a number on a chart to 10,000"
+  },
+  {
+   "id": "B3.1.1.1.3",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Break numbers to 10,000 into place values"
+  },
+  {
+   "id": "B3.1.1.1.4",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Compare and order numbers to 10,000"
+  },
+  {
+   "id": "B3.1.1.2.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 1,
+   "description": "Describe things that go in opposite ways"
+  },
+  {
+   "id": "B3.1.1.2.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 2,
+   "description": "Use + and - numbers for above and below a level"
+  },
+  {
+   "id": "B3.1.1.3.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B3.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 1,
+   "description": "Show positive and negative numbers on a number line"
+  },
+  {
+   "id": "B3.1.2.1.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Add and subtract within 1000 in columns"
+  },
+  {
+   "id": "B3.1.2.2.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Use = and ≠ to compare sums within 1000"
+  },
+  {
+   "id": "B3.1.2.3.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Add and subtract in your head within 100"
+  },
+  {
+   "id": "B3.1.2.4.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Add within 1000 using hundreds, tens and ones"
+  },
+  {
+   "id": "B3.1.2.4.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 2,
+   "description": "Solve sums within 1000 with a missing number"
+  },
+  {
+   "id": "B3.1.2.4.3",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 3,
+   "description": "Estimate sums and differences up to 1000"
+  },
+  {
+   "id": "B3.1.2.4.4",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 4,
+   "description": "Show that adding in any order gives the same sum"
+  },
+  {
+   "id": "B3.1.2.5.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.5",
+   "cs_key": "1.2.5",
+   "indicator_no": 1,
+   "description": "Show multiplication as equal groups"
+  },
+  {
+   "id": "B3.1.2.5.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.5",
+   "cs_key": "1.2.5",
+   "indicator_no": 2,
+   "description": "Show multiplication with rows and columns"
+  },
+  {
+   "id": "B3.1.2.6.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 1,
+   "description": "Divide by sharing equally"
+  },
+  {
+   "id": "B3.1.2.6.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 2,
+   "description": "Divide by making equal groups"
+  },
+  {
+   "id": "B3.1.2.6.3",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B3.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 3,
+   "description": "Use times facts to work out division"
+  },
+  {
+   "id": "B3.1.3.1.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B3.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Name and write fractions of one whole"
+  },
+  {
+   "id": "B3.1.3.1.2",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B3.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Find fractions of a group and on a number line"
+  },
+  {
+   "id": "B3.1.3.1.3",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B3.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 3,
+   "description": "Compare and order simple fractions"
+  },
+  {
+   "id": "B3.1.4.1.1",
+   "grade": 3,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B3.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Pay with cedi notes and coins and work out change"
+  },
+  {
+   "id": "B3.2.1.1.1",
+   "grade": 3,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B3.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 1,
+   "description": "Extend number patterns and spot mistakes"
+  },
+  {
+   "id": "B3.3.1.1.1",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B3.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Count faces, edges and corners of solids"
+  },
+  {
+   "id": "B3.3.1.1.2",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B3.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Find and draw angles where two lines meet"
+  },
+  {
+   "id": "B3.3.1.1.3",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B3.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 3,
+   "description": "Test for right angles with a paper square corner"
+  },
+  {
+   "id": "B3.3.1.1.4",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B3.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 4,
+   "description": "Name four-sided shapes by their features"
+  },
+  {
+   "id": "B3.3.2.1.1",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B3.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 1,
+   "description": "Use a number line to find how long something is"
+  },
+  {
+   "id": "B3.3.3.1.1",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 1,
+   "description": "Relate metres and centimetres and choose a unit"
+  },
+  {
+   "id": "B3.3.3.1.2",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 2,
+   "description": "Choose everyday objects that show 1 cm and 1 m"
+  },
+  {
+   "id": "B3.3.3.1.3",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 3,
+   "description": "Estimate and measure lengths and distance around"
+  },
+  {
+   "id": "B3.3.3.2.1",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 1,
+   "description": "Relate kilograms and grams, litres and millilitres"
+  },
+  {
+   "id": "B3.3.3.2.2",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 2,
+   "description": "Estimate mass and capacity, then measure to check"
+  },
+  {
+   "id": "B3.3.3.3.1",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 1,
+   "description": "Work out how long an event takes"
+  },
+  {
+   "id": "B3.3.3.3.2",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 2,
+   "description": "Read dates and count days, weeks and months"
+  },
+  {
+   "id": "B3.3.3.3.3",
+   "grade": 3,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B3.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 3,
+   "description": "Use seconds, minutes, hours and days in problems"
+  },
+  {
+   "id": "B3.4.1.1.1",
+   "grade": 3,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B3.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 1,
+   "description": "Collect data with tallies and tables to answer questions"
+  },
+  {
+   "id": "B3.4.1.2.1",
+   "grade": 3,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B3.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 1,
+   "description": "Draw and read graphs where one picture means many"
+  },
+  {
+   "id": "B4.1.1.1.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Model numbers up to 100,000 with place value"
+  },
+  {
+   "id": "B4.1.1.1.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Read and write numbers up to 100,000"
+  },
+  {
+   "id": "B4.1.1.1.3",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Find numbers around a given number on a chart"
+  },
+  {
+   "id": "B4.1.1.1.4",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Compare and order numbers using <, = and >"
+  },
+  {
+   "id": "B4.1.1.1.5",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 5,
+   "description": "Round numbers to the nearest 10, 100 or 1,000"
+  },
+  {
+   "id": "B4.1.1.1.6",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 6,
+   "description": "Skip count in 50s and 100s up to 10,000"
+  },
+  {
+   "id": "B4.1.1.2.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 1,
+   "description": "Know Roman numerals up to XXX (30)"
+  },
+  {
+   "id": "B4.1.1.2.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 2,
+   "description": "Change numbers to Roman numerals and back, to 30"
+  },
+  {
+   "id": "B4.1.1.3.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 1,
+   "description": "List all the factors of a number up to 50"
+  },
+  {
+   "id": "B4.1.1.3.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 2,
+   "description": "Find the HCF of two numbers up to 50"
+  },
+  {
+   "id": "B4.1.1.3.3",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 3,
+   "description": "Find the LCM of two numbers"
+  },
+  {
+   "id": "B4.1.1.3.4",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 4,
+   "description": "Link factors and multiples; test for 2, 3, 4, 5"
+  },
+  {
+   "id": "B4.1.1.3.5",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 5,
+   "description": "Make and study patterns in square numbers"
+  },
+  {
+   "id": "B4.1.1.3.6",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 6,
+   "description": "Write square numbers as a number times itself"
+  },
+  {
+   "id": "B4.1.1.4.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.4",
+   "cs_key": "1.1.4",
+   "indicator_no": 1,
+   "description": "Use positive and negative numbers for real life"
+  },
+  {
+   "id": "B4.1.1.4.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B4.1.1.4",
+   "cs_key": "1.1.4",
+   "indicator_no": 2,
+   "description": "Count forwards and backwards through zero"
+  },
+  {
+   "id": "B4.1.2.1.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Recall multiplication facts up to 12 × 12"
+  },
+  {
+   "id": "B4.1.2.2.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Use known facts, doubling and halving to multiply"
+  },
+  {
+   "id": "B4.1.2.2.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 2,
+   "description": "Multiply mentally with zeros, halving and doubling"
+  },
+  {
+   "id": "B4.1.2.3.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Multiply 2- and 3-digit numbers by 1 or 2 digits"
+  },
+  {
+   "id": "B4.1.2.4.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Recall division facts up to 81 ÷ 9"
+  },
+  {
+   "id": "B4.1.2.5.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.5",
+   "cs_key": "1.2.5",
+   "indicator_no": 1,
+   "description": "Divide 2- and 3-digit numbers by 1 digit"
+  },
+  {
+   "id": "B4.1.2.6.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B4.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 1,
+   "description": "Solve word problems with more than one step"
+  },
+  {
+   "id": "B4.1.3.1.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Show unit fractions on a number line from 0 to 1"
+  },
+  {
+   "id": "B4.1.3.1.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Find and name equivalent fractions"
+  },
+  {
+   "id": "B4.1.3.1.3",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 3,
+   "description": "Write a fraction in its simplest form"
+  },
+  {
+   "id": "B4.1.3.1.4",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 4,
+   "description": "Name improper fractions and mixed numbers"
+  },
+  {
+   "id": "B4.1.3.2.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.2",
+   "cs_key": "1.3.2",
+   "indicator_no": 1,
+   "description": "Skill B4.1.3.2.1"
+  },
+  {
+   "id": "B4.1.3.2.3",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B4.1.3.2",
+   "cs_key": "1.3.2",
+   "indicator_no": 3,
+   "description": "Spot fractions in everyday life"
+  },
+  {
+   "id": "B4.1.4.1.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B4.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Read and write tenths and hundredths as decimals"
+  },
+  {
+   "id": "B4.1.4.1.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B4.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 2,
+   "description": "Skill B4.1.4.1.2"
+  },
+  {
+   "id": "B4.1.4.1.3",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B4.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 3,
+   "description": "Add and subtract decimals to hundredths"
+  },
+  {
+   "id": "B4.1.5.1.1",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 5,
+   "content_standard": "B4.1.5.1",
+   "cs_key": "1.5.1",
+   "indicator_no": 1,
+   "description": "Show percent as parts out of 100"
+  },
+  {
+   "id": "B4.1.5.1.2",
+   "grade": 4,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 5,
+   "content_standard": "B4.1.5.1",
+   "cs_key": "1.5.1",
+   "indicator_no": 2,
+   "description": "Compare fractions, decimals and percents"
+  },
+  {
+   "id": "B4.2.1.1.1",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 1,
+   "description": "Describe the pattern in a table or chart"
+  },
+  {
+   "id": "B4.2.1.1.2",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 2,
+   "description": "Find missing numbers in a table or chart"
+  },
+  {
+   "id": "B4.2.1.1.3",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 3,
+   "description": "Spot the mistake in a table or chart"
+  },
+  {
+   "id": "B4.2.1.2.1",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.2",
+   "cs_key": "2.1.2",
+   "indicator_no": 1,
+   "description": "Build a pattern shown in a table"
+  },
+  {
+   "id": "B4.2.1.2.2",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.2",
+   "cs_key": "2.1.2",
+   "indicator_no": 2,
+   "description": "Record a pattern of objects in a table"
+  },
+  {
+   "id": "B4.2.1.3.1",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.3",
+   "cs_key": "2.1.3",
+   "indicator_no": 1,
+   "description": "Put the facts of a problem into a table"
+  },
+  {
+   "id": "B4.2.1.3.2",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B4.2.1.3",
+   "cs_key": "2.1.3",
+   "indicator_no": 2,
+   "description": "Extend a table pattern to solve a problem"
+  },
+  {
+   "id": "B4.2.2.1.1",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.1",
+   "cs_key": "2.2.1",
+   "indicator_no": 1,
+   "description": "Write a problem as an equation with a symbol"
+  },
+  {
+   "id": "B4.2.2.1.2",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.1",
+   "cs_key": "2.2.1",
+   "indicator_no": 2,
+   "description": "Turn a picture of an equation into symbols"
+  },
+  {
+   "id": "B4.2.2.2.1",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 1,
+   "description": "Solve one-step equations with objects"
+  },
+  {
+   "id": "B4.2.2.2.2",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 2,
+   "description": "Explain what a one-step equation means"
+  },
+  {
+   "id": "B4.2.2.2.3",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 3,
+   "description": "Solve equations with the unknown on either side"
+  },
+  {
+   "id": "B4.2.2.2.4",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 4,
+   "description": "Solve equations by guess and check"
+  },
+  {
+   "id": "B4.2.2.2.5",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 5,
+   "description": "Find the unknown, write the equation and solve"
+  },
+  {
+   "id": "B4.2.2.2.6",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 6,
+   "description": "Solve part-whole and comparison problems"
+  },
+  {
+   "id": "B4.2.2.2.7",
+   "grade": 4,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B4.2.2.2",
+   "cs_key": "2.2.2",
+   "indicator_no": 7,
+   "description": "Make up a story problem for an equation"
+  },
+  {
+   "id": "B4.3.1.1.1",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B4.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Complete a shape to make it symmetrical"
+  },
+  {
+   "id": "B4.3.1.1.2",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B4.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Find lines of symmetry in triangles and 4-sided shapes"
+  },
+  {
+   "id": "B4.3.2.1.1",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B4.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 1,
+   "description": "Describe position with north, south, east, west"
+  },
+  {
+   "id": "B4.3.3.1.1",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 1,
+   "description": "Estimate perimeter using a body or object measure"
+  },
+  {
+   "id": "B4.3.3.1.2",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 2,
+   "description": "Measure and add sides to find perimeter"
+  },
+  {
+   "id": "B4.3.3.1.3",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 3,
+   "description": "Use a rule for perimeter of squares and rectangles"
+  },
+  {
+   "id": "B4.3.3.1.4",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.1",
+   "cs_key": "3.3.1",
+   "indicator_no": 4,
+   "description": "Draw different rectangles with the same perimeter"
+  },
+  {
+   "id": "B4.3.3.2.1",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 1,
+   "description": "Know that area is counted in square units"
+  },
+  {
+   "id": "B4.3.3.2.2",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 2,
+   "description": "Choose cm² or m² and say why"
+  },
+  {
+   "id": "B4.3.3.2.3",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 3,
+   "description": "Estimate area in cm² or m²"
+  },
+  {
+   "id": "B4.3.3.2.4",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 4,
+   "description": "Use length × width to find area"
+  },
+  {
+   "id": "B4.3.3.2.5",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 5,
+   "description": "Draw different rectangles with the same area"
+  },
+  {
+   "id": "B4.3.3.3.1",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 1,
+   "description": "Tell time on analogue, digital and 24-hour clocks"
+  },
+  {
+   "id": "B4.3.3.3.2",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 2,
+   "description": "Time events in minutes and seconds"
+  },
+  {
+   "id": "B4.3.3.3.3",
+   "grade": 4,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B4.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 3,
+   "description": "Write dates in different formats"
+  },
+  {
+   "id": "B4.4.1.1.1",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 1,
+   "description": "Read graphs where one picture means one item"
+  },
+  {
+   "id": "B4.4.1.1.2",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 2,
+   "description": "Draw graphs where one picture means many"
+  },
+  {
+   "id": "B4.4.1.1.3",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 3,
+   "description": "Compare two graphs of the same data"
+  },
+  {
+   "id": "B4.4.1.1.4",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 4,
+   "description": "Find graphs in the news and read their key"
+  },
+  {
+   "id": "B4.4.1.2.1",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 1,
+   "description": "Draw a full bar graph or pictograph with a key"
+  },
+  {
+   "id": "B4.4.1.2.2",
+   "grade": 4,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B4.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 2,
+   "description": "Solve problems from bar graphs and pictographs"
+  },
+  {
+   "id": "B5.1.1.1.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Model numbers up to 1,000,000 with blocks or squares"
+  },
+  {
+   "id": "B5.1.1.1.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Read and write numbers up to 1,000,000"
+  },
+  {
+   "id": "B5.1.1.1.3",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Find numbers around a given number on a number chart"
+  },
+  {
+   "id": "B5.1.1.1.4",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Compare and order numbers up to 100,000"
+  },
+  {
+   "id": "B5.1.1.1.5",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 5,
+   "description": "Round whole numbers to the nearest 10, 100, 1,000 or 10,000"
+  },
+  {
+   "id": "B5.1.1.1.6",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 6,
+   "description": "Skip count in 500s and 1,000s up to 100,000"
+  },
+  {
+   "id": "B5.1.1.2.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 1,
+   "description": "Recognise Roman numerals up to C (100)"
+  },
+  {
+   "id": "B5.1.1.2.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 2,
+   "description": "Change numbers to Roman numerals up to 100 and back"
+  },
+  {
+   "id": "B5.1.1.3.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 1,
+   "description": "Find all the factors of a number up to 100"
+  },
+  {
+   "id": "B5.1.1.3.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 2,
+   "description": "Tell prime numbers from composite numbers up to 100"
+  },
+  {
+   "id": "B5.1.1.3.3",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 3,
+   "description": "Identify odd and even numbers up to 100 by pairing"
+  },
+  {
+   "id": "B5.1.1.3.4",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 4,
+   "description": "Find the HCF of two or three numbers by prime factors"
+  },
+  {
+   "id": "B5.1.1.3.5",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B5.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 5,
+   "description": "Link factors and multiples of numbers up to 100"
+  },
+  {
+   "id": "B5.1.2.1.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Use mental strategies for times tables and division facts"
+  },
+  {
+   "id": "B5.1.2.1.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 2,
+   "description": "Multiply mentally using zeros, doubling and splitting"
+  },
+  {
+   "id": "B5.1.2.2.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Multiply a 2 or 3-digit number by a 2-digit number"
+  },
+  {
+   "id": "B5.1.2.3.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Recall division facts up to 81 ÷ 9"
+  },
+  {
+   "id": "B5.1.2.4.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Divide a 3-digit number by a 1-digit number"
+  },
+  {
+   "id": "B5.1.2.5.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.5",
+   "cs_key": "1.2.5",
+   "indicator_no": 1,
+   "description": "Solve word problems that need more than one step"
+  },
+  {
+   "id": "B5.1.2.6.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B5.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 1,
+   "description": "Add and subtract simple positive and negative numbers"
+  },
+  {
+   "id": "B5.1.3.1.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Find equivalent fractions with a common denominator"
+  },
+  {
+   "id": "B5.1.3.1.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Compare and order fractions with unlike denominators"
+  },
+  {
+   "id": "B5.1.3.1.3",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 3,
+   "description": "Add and subtract fractions using a common denominator"
+  },
+  {
+   "id": "B5.1.3.1.4",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 4,
+   "description": "Add and subtract mixed numbers and improper fractions"
+  },
+  {
+   "id": "B5.1.3.1.5",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 5,
+   "description": "Multiply a whole number by a fraction using models"
+  },
+  {
+   "id": "B5.1.3.1.6",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B5.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 6,
+   "description": "Find a fraction of a whole number using models"
+  },
+  {
+   "id": "B5.1.4.1.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B5.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Show decimals to thousandths and link them to fractions"
+  },
+  {
+   "id": "B5.1.4.1.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B5.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 2,
+   "description": "Compare and order decimals and fractions to thousandths"
+  },
+  {
+   "id": "B5.1.4.1.3",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B5.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 3,
+   "description": "Round decimals to the nearest tenth or hundredth"
+  },
+  {
+   "id": "B5.1.4.1.4",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B5.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 4,
+   "description": "Add and subtract decimals up to thousandths"
+  },
+  {
+   "id": "B5.1.4.1.5",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B5.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 5,
+   "description": "Multiply a decimal by a whole number"
+  },
+  {
+   "id": "B5.1.5.1.1",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 5,
+   "content_standard": "B5.1.5.1",
+   "cs_key": "1.5.1",
+   "indicator_no": 1,
+   "description": "Find a percentage of a 2-digit number, and the reverse"
+  },
+  {
+   "id": "B5.1.5.1.2",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 5,
+   "content_standard": "B5.1.5.1",
+   "cs_key": "1.5.1",
+   "indicator_no": 2,
+   "description": "Use benchmark percentages to estimate amounts"
+  },
+  {
+   "id": "B5.1.5.1.3",
+   "grade": 5,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 5,
+   "content_standard": "B5.1.5.1",
+   "cs_key": "1.5.1",
+   "indicator_no": 3,
+   "description": "Solve everyday problems that use percentages"
+  },
+  {
+   "id": "B5.2.1.1.1",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 1,
+   "description": "Extend a pattern and say how each term changes"
+  },
+  {
+   "id": "B5.2.1.1.2",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 2,
+   "description": "Describe a pattern rule in mathematical words"
+  },
+  {
+   "id": "B5.2.1.1.3",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 3,
+   "description": "Predict the next terms in a pattern"
+  },
+  {
+   "id": "B5.2.1.1.4",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 4,
+   "description": "Draw or build a pattern to check a prediction"
+  },
+  {
+   "id": "B5.2.1.1.5",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 5,
+   "description": "Use a pattern rule to solve a problem"
+  },
+  {
+   "id": "B5.2.1.1.6",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 6,
+   "description": "Explain why a number does or does not fit a pattern"
+  },
+  {
+   "id": "B5.2.1.1.7",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 7,
+   "description": "Write a pattern rule in words and with a letter"
+  },
+  {
+   "id": "B5.2.1.1.8",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B5.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 8,
+   "description": "Describe a table's rule with an expression"
+  },
+  {
+   "id": "B5.2.2.1.1",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 2,
+   "content_standard": "B5.2.2.1",
+   "cs_key": "2.2.1",
+   "indicator_no": 1,
+   "description": "Write, simplify and work out algebraic expressions"
+  },
+  {
+   "id": "B5.2.3.1.1",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 3,
+   "content_standard": "B5.2.3.1",
+   "cs_key": "2.3.1",
+   "indicator_no": 1,
+   "description": "Write a word problem as an equation with a letter"
+  },
+  {
+   "id": "B5.2.3.1.2",
+   "grade": 5,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 3,
+   "content_standard": "B5.2.3.1",
+   "cs_key": "2.3.1",
+   "indicator_no": 2,
+   "description": "Find the unknown in a problem by solving an equation"
+  },
+  {
+   "id": "B5.3.1.1.1",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B5.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Tell the properties of squares and rectangles"
+  },
+  {
+   "id": "B5.3.1.1.2",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B5.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Fold paper squares and rectangles to test properties"
+  },
+  {
+   "id": "B5.3.1.1.3",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B5.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 3,
+   "description": "Check if a polygon is regular by measuring or folding"
+  },
+  {
+   "id": "B5.3.2.1.1",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B5.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 1,
+   "description": "Estimate a perimeter, then measure and compare"
+  },
+  {
+   "id": "B5.3.2.1.2",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B5.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 2,
+   "description": "Calculate the perimeter of shapes in cm and m"
+  },
+  {
+   "id": "B5.3.2.1.3",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B5.3.2.1",
+   "cs_key": "3.2.1",
+   "indicator_no": 3,
+   "description": "Find the area of shapes made from rectangles"
+  },
+  {
+   "id": "B5.3.2.2.1",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 2,
+   "content_standard": "B5.3.2.2",
+   "cs_key": "3.2.2",
+   "indicator_no": 1,
+   "description": "Choose everyday objects to stand for 1 cm³ and 1 m³"
+  },
+  {
+   "id": "B5.3.3.2.2",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B5.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 2,
+   "description": "Find the volume of a box by counting 1 cm³ cubes"
+  },
+  {
+   "id": "B5.3.3.2.4",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B5.3.3.2",
+   "cs_key": "3.3.2",
+   "indicator_no": 4,
+   "description": "Link volume and capacity: 1 litre is 1,000 cm³"
+  },
+  {
+   "id": "B5.3.3.3.1",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B5.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 1,
+   "description": "Compare angles around you with a right angle"
+  },
+  {
+   "id": "B5.3.3.3.2",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B5.3.3.3",
+   "cs_key": "3.3.3",
+   "indicator_no": 2,
+   "description": "Measure angles with a protractor and name their type"
+  },
+  {
+   "id": "B5.3.4.2.2",
+   "grade": 5,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 4,
+   "content_standard": "B5.3.4.2",
+   "cs_key": "3.4.2",
+   "indicator_no": 2,
+   "description": "Identify the mirror image of a shape after reflection"
+  },
+  {
+   "id": "B5.4.1.1.2",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B5.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 2,
+   "description": "Find and read second-hand data in papers and online"
+  },
+  {
+   "id": "B5.4.1.2.1",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B5.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 1,
+   "description": "Draw a double bar graph and use it to answer questions"
+  },
+  {
+   "id": "B5.4.1.2.2",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B5.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 2,
+   "description": "Read double bar graphs from newspapers and other media"
+  },
+  {
+   "id": "B5.4.2.1.1",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 2,
+   "content_standard": "B5.4.2.1",
+   "cs_key": "4.2.1",
+   "indicator_no": 1,
+   "description": "Say if an outcome is impossible, possible or certain"
+  },
+  {
+   "id": "B5.4.2.1.2",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 2,
+   "content_standard": "B5.4.2.1",
+   "cs_key": "4.2.1",
+   "indicator_no": 2,
+   "description": "Plan a chance experiment with likely and unlikely outcomes"
+  },
+  {
+   "id": "B5.4.2.1.3",
+   "grade": 5,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 2,
+   "content_standard": "B5.4.2.1",
+   "cs_key": "4.2.1",
+   "indicator_no": 3,
+   "description": "Repeat a chance experiment, record and explain results"
+  },
+  {
+   "id": "B6.1.1.1.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 1,
+   "description": "Model numbers up to 1,000,000 with blocks or grids"
+  },
+  {
+   "id": "B6.1.1.1.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 2,
+   "description": "Read and write numbers up to one billion"
+  },
+  {
+   "id": "B6.1.1.1.3",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 3,
+   "description": "Find the numbers around a number on a number chart"
+  },
+  {
+   "id": "B6.1.1.1.4",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 4,
+   "description": "Compare and order large whole numbers using <, > and ="
+  },
+  {
+   "id": "B6.1.1.1.5",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 5,
+   "description": "Round whole numbers off, up or down to a given place"
+  },
+  {
+   "id": "B6.1.1.1.6",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.1",
+   "cs_key": "1.1.1",
+   "indicator_no": 6,
+   "description": "Skip count in 5,000s and 10,000s up to 1,000,000"
+  },
+  {
+   "id": "B6.1.1.2.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 1,
+   "description": "Recognise Roman numerals from I to C (1 to 100)"
+  },
+  {
+   "id": "B6.1.1.2.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.2",
+   "cs_key": "1.1.2",
+   "indicator_no": 2,
+   "description": "Change numbers to Roman numerals up to 100 and back"
+  },
+  {
+   "id": "B6.1.1.3.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.3",
+   "cs_key": "1.1.3",
+   "indicator_no": 1,
+   "description": "Find the HCF and LCM of numbers using prime factors"
+  },
+  {
+   "id": "B6.1.1.4.3",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.4",
+   "cs_key": "1.1.4",
+   "indicator_no": 3,
+   "description": "Multiply integers using hops on a number line"
+  },
+  {
+   "id": "B6.1.1.6.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 1,
+   "content_standard": "B6.1.1.6",
+   "cs_key": "1.1.6",
+   "indicator_no": 1,
+   "description": "Place, compare and order integers on a number line"
+  },
+  {
+   "id": "B6.1.2.1.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 1,
+   "description": "Use mental tricks for times-table and division facts"
+  },
+  {
+   "id": "B6.1.2.1.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.1",
+   "cs_key": "1.2.1",
+   "indicator_no": 2,
+   "description": "Multiply mentally with zeros, doubling and splitting"
+  },
+  {
+   "id": "B6.1.2.2.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.2",
+   "cs_key": "1.2.2",
+   "indicator_no": 1,
+   "description": "Multiply big numbers by 2-digit and 3-digit numbers"
+  },
+  {
+   "id": "B6.1.2.3.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.3",
+   "cs_key": "1.2.3",
+   "indicator_no": 1,
+   "description": "Recall division facts and test if a number divides"
+  },
+  {
+   "id": "B6.1.2.4.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.4",
+   "cs_key": "1.2.4",
+   "indicator_no": 1,
+   "description": "Divide a 3-digit number by a 1-digit number"
+  },
+  {
+   "id": "B6.1.2.5.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.5",
+   "cs_key": "1.2.5",
+   "indicator_no": 1,
+   "description": "Solve word problems that need more than one step"
+  },
+  {
+   "id": "B6.1.2.6.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 2,
+   "content_standard": "B6.1.2.6",
+   "cs_key": "1.2.6",
+   "indicator_no": 2,
+   "description": "Add and subtract positive and negative integers"
+  },
+  {
+   "id": "B6.1.3.1.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B6.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 1,
+   "description": "Compare and order fractions, decimals and percentages"
+  },
+  {
+   "id": "B6.1.3.1.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B6.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 2,
+   "description": "Add and subtract unlike fractions and mixed numbers"
+  },
+  {
+   "id": "B6.1.3.1.3",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 3,
+   "content_standard": "B6.1.3.1",
+   "cs_key": "1.3.1",
+   "indicator_no": 3,
+   "description": "Multiply fractions by whole numbers and by fractions"
+  },
+  {
+   "id": "B6.1.4.1.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B6.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 1,
+   "description": "Explain a ratio and write it in its simplest form"
+  },
+  {
+   "id": "B6.1.4.1.2",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B6.1.4.1",
+   "cs_key": "1.4.1",
+   "indicator_no": 2,
+   "description": "Find equal ratios and compare or order ratios"
+  },
+  {
+   "id": "B6.1.4.2.1",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B6.1.4.2",
+   "cs_key": "1.4.2",
+   "indicator_no": 1,
+   "description": "Explain proportion as two sets of equal ratios"
+  },
+  {
+   "id": "B6.1.4.2.3",
+   "grade": 6,
+   "strand": 1,
+   "strand_name": "Number",
+   "sub_strand": 4,
+   "content_standard": "B6.1.4.2",
+   "cs_key": "1.4.2",
+   "indicator_no": 3,
+   "description": "Solve rate and scale problems using proportion"
+  },
+  {
+   "id": "B6.2.1.1.4",
+   "grade": 6,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B6.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 4,
+   "description": "Draw or build a pattern to check a prediction"
+  },
+  {
+   "id": "B6.2.1.1.7",
+   "grade": 6,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B6.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 7,
+   "description": "Write a pattern rule in words and in algebra"
+  },
+  {
+   "id": "B6.2.1.1.8",
+   "grade": 6,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 1,
+   "content_standard": "B6.2.1.1",
+   "cs_key": "2.1.1",
+   "indicator_no": 8,
+   "description": "Describe a table's pattern with a maths expression"
+  },
+  {
+   "id": "B6.2.3.1.2",
+   "grade": 6,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 3,
+   "content_standard": "B6.2.3.1",
+   "cs_key": "2.3.1",
+   "indicator_no": 2,
+   "description": "Write and solve a one-step equation for a problem"
+  },
+  {
+   "id": "B6.2.3.1.3",
+   "grade": 6,
+   "strand": 2,
+   "strand_name": "Algebra",
+   "sub_strand": 3,
+   "content_standard": "B6.2.3.1",
+   "cs_key": "2.3.1",
+   "indicator_no": 3,
+   "description": "Make up a word problem that fits a given equation"
+  },
+  {
+   "id": "B6.3.1.1.1",
+   "grade": 6,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B6.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 1,
+   "description": "Spot rectangular and triangular prisms around you"
+  },
+  {
+   "id": "B6.3.1.1.2",
+   "grade": 6,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 1,
+   "content_standard": "B6.3.1.1",
+   "cs_key": "3.1.1",
+   "indicator_no": 2,
+   "description": "Make rectangular and triangular prisms from nets"
+  },
+  {
+   "id": "B6.3.3.5.1",
+   "grade": 6,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B6.3.3.5",
+   "cs_key": "3.3.5",
+   "indicator_no": 1,
+   "description": "Give positions using NE, NW, SE and SW directions"
+  },
+  {
+   "id": "B6.3.3.5.2",
+   "grade": 6,
+   "strand": 3,
+   "strand_name": "Geometry and Measurement",
+   "sub_strand": 3,
+   "content_standard": "B6.3.3.5",
+   "cs_key": "3.3.5",
+   "indicator_no": 2,
+   "description": "Tell whether an image is a reflection or a slide"
+  },
+  {
+   "id": "B6.4.1.1.1",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B6.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 1,
+   "description": "Set up and draw a line graph from a table of values"
+  },
+  {
+   "id": "B6.4.1.1.2",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B6.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 2,
+   "description": "Decide if data needs a joined line or separate points"
+  },
+  {
+   "id": "B6.4.1.1.3",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B6.4.1.1",
+   "cs_key": "4.1.1",
+   "indicator_no": 3,
+   "description": "Draw a line graph and answer questions from it"
+  },
+  {
+   "id": "B6.4.1.2.1",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B6.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 1,
+   "description": "Choose a way to collect data and say why it fits"
+  },
+  {
+   "id": "B6.4.1.2.3",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 1,
+   "content_standard": "B6.4.1.2",
+   "cs_key": "4.1.2",
+   "indicator_no": 3,
+   "description": "Run a survey, then tally, graph and use the results"
+  },
+  {
+   "id": "B6.4.2.2.1",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 2,
+   "content_standard": "B6.4.2.2",
+   "cs_key": "4.2.2",
+   "indicator_no": 1,
+   "description": "List all outcomes and find theoretical probability"
+  },
+  {
+   "id": "B6.4.2.2.2",
+   "grade": 6,
+   "strand": 4,
+   "strand_name": "Data",
+   "sub_strand": 2,
+   "content_standard": "B6.4.2.2",
+   "cs_key": "4.2.2",
+   "indicator_no": 2,
+   "description": "Predict how likely an outcome is using probability"
+  }
+ ],
+ "edges": [
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.1.1.1",
+   "target": "B1.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.1.1.2",
+   "target": "B1.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.1.1.3",
+   "target": "B1.1.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.1.1.4",
+   "target": "B1.1.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.1.1.5",
+   "target": "B1.1.1.1.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.1.1.6",
+   "target": "B2.1.1.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.2.1.1",
+   "target": "B2.1.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B1.1.2.1.1",
+   "target": "B1.1.2.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.2.2.1",
+   "target": "B1.1.2.2.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.2.2.2",
+   "target": "B1.1.2.2.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.2.2.3",
+   "target": "B2.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B1.1.2.2.3",
+   "target": "B1.1.2.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.2.3.1",
+   "target": "B2.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B1.1.2.3.1",
+   "target": "B1.1.2.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.2.4.1",
+   "target": "B1.1.2.4.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.2.4.2",
+   "target": "B2.1.2.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.1.3.1.1",
+   "target": "B1.1.3.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.3.1.2",
+   "target": "B2.1.3.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.1.4.1.1",
+   "target": "B2.1.4.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.2.1.1.1",
+   "target": "B2.2.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.3.1.1.1",
+   "target": "B1.3.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.3.1.1.2",
+   "target": "B1.3.1.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.3.1.1.3",
+   "target": "B2.3.1.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.3.2.1.1",
+   "target": "B3.3.2.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.3.3.1.1",
+   "target": "B2.3.3.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B1.4.1.1.1",
+   "target": "B1.4.1.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B1.4.1.1.2",
+   "target": "B2.4.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.1.1.1",
+   "target": "B2.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.1.1.2",
+   "target": "B2.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.1.1.3",
+   "target": "B2.1.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.1.1.4",
+   "target": "B2.1.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.1.1.5",
+   "target": "B2.1.1.1.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.1.1.6",
+   "target": "B3.1.1.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.2.1.1",
+   "target": "B3.1.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.1.2.1.1",
+   "target": "B2.1.2.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.2.2.1",
+   "target": "B3.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.1.2.2.1",
+   "target": "B2.1.2.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.2.3.1",
+   "target": "B3.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.1.2.3.1",
+   "target": "B2.1.2.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.2.4.1",
+   "target": "B2.1.2.4.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.2.4.2",
+   "target": "B2.1.2.4.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.2.4.3",
+   "target": "B3.1.2.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.3.1.1",
+   "target": "B2.1.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.1.3.1.2",
+   "target": "B2.1.3.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.3.1.3",
+   "target": "B3.1.3.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.1.4.1.1",
+   "target": "B3.1.4.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.2.1.1.1",
+   "target": "B2.2.1.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.2.1.1.2",
+   "target": "B3.2.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.3.1.1.1",
+   "target": "B2.3.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.3.1.1.2",
+   "target": "B2.3.1.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.3.1.1.3",
+   "target": "B3.3.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.3.3.1.1",
+   "target": "B2.3.3.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.3.3.1.2",
+   "target": "B3.3.3.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.3.3.1.2",
+   "target": "B2.3.3.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.3.3.2.1",
+   "target": "B3.3.3.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.3.3.2.1",
+   "target": "B2.3.3.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B2.3.3.3.1",
+   "target": "B2.3.3.3.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.3.3.3.2",
+   "target": "B3.3.3.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.4.1.1.1",
+   "target": "B3.4.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B2.4.1.1.1",
+   "target": "B2.4.1.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B2.4.1.2.1",
+   "target": "B3.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.1.1.1",
+   "target": "B3.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.1.1.2",
+   "target": "B3.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.1.1.3",
+   "target": "B3.1.1.1.4"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.1.1.4",
+   "target": "B4.1.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.1.1.4",
+   "target": "B3.1.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.1.2.1",
+   "target": "B3.1.1.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.1.2.2",
+   "target": "B4.1.1.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.1.2.2",
+   "target": "B3.1.1.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.1.3.1",
+   "target": "B4.1.1.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.1.1",
+   "target": "B4.1.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.2.1.1",
+   "target": "B3.1.2.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.2.1",
+   "target": "B4.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.2.2.1",
+   "target": "B3.1.2.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.3.1",
+   "target": "B4.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.2.3.1",
+   "target": "B3.1.2.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.4.1",
+   "target": "B3.1.2.4.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.4.2",
+   "target": "B3.1.2.4.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.4.3",
+   "target": "B3.1.2.4.4"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.4.4",
+   "target": "B4.1.2.4.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.2.4.4",
+   "target": "B3.1.2.5.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.5.1",
+   "target": "B3.1.2.5.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.5.2",
+   "target": "B4.1.2.5.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.1.2.5.2",
+   "target": "B3.1.2.6.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.6.1",
+   "target": "B3.1.2.6.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.2.6.2",
+   "target": "B3.1.2.6.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.2.6.3",
+   "target": "B4.1.2.6.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.3.1.1",
+   "target": "B3.1.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.1.3.1.2",
+   "target": "B3.1.3.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.3.1.3",
+   "target": "B4.1.3.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.1.4.1.1",
+   "target": "B4.1.4.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.2.1.1.1",
+   "target": "B4.2.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.1.1.1",
+   "target": "B3.3.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.1.1.2",
+   "target": "B3.3.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.1.1.3",
+   "target": "B3.3.1.1.4"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.3.1.1.4",
+   "target": "B4.3.1.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.3.2.1.1",
+   "target": "B4.3.2.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.3.1.1",
+   "target": "B3.3.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.3.1.2",
+   "target": "B3.3.3.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.3.3.1.3",
+   "target": "B4.3.3.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.3.3.1.3",
+   "target": "B3.3.3.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.3.2.1",
+   "target": "B3.3.3.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.3.3.2.2",
+   "target": "B4.3.3.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.3.3.2.2",
+   "target": "B3.3.3.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.3.3.1",
+   "target": "B3.3.3.3.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B3.3.3.3.2",
+   "target": "B3.3.3.3.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.3.3.3.3",
+   "target": "B4.3.3.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.4.1.1.1",
+   "target": "B4.4.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B3.4.1.1.1",
+   "target": "B3.4.1.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B3.4.1.2.1",
+   "target": "B4.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.1.1",
+   "target": "B4.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.1.2",
+   "target": "B4.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.1.3",
+   "target": "B4.1.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.1.4",
+   "target": "B4.1.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.1.5",
+   "target": "B4.1.1.1.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.1.1.6",
+   "target": "B5.1.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.1.1.6",
+   "target": "B4.1.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.2.1",
+   "target": "B4.1.1.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.1.2.2",
+   "target": "B5.1.1.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.1.2.2",
+   "target": "B4.1.1.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.3.1",
+   "target": "B4.1.1.3.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.3.2",
+   "target": "B4.1.1.3.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.3.3",
+   "target": "B4.1.1.3.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.3.4",
+   "target": "B4.1.1.3.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.3.5",
+   "target": "B4.1.1.3.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.1.3.6",
+   "target": "B5.1.1.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.1.3.6",
+   "target": "B4.1.1.4.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.1.4.1",
+   "target": "B4.1.1.4.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.1.4.2",
+   "target": "B6.1.1.4.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.1.1",
+   "target": "B5.1.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.2.1.1",
+   "target": "B4.1.2.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.2.2.1",
+   "target": "B4.1.2.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.2.2",
+   "target": "B5.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.2.2.2",
+   "target": "B4.1.2.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.3.1",
+   "target": "B5.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.2.3.1",
+   "target": "B4.1.2.4.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.4.1",
+   "target": "B5.1.2.4.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.2.4.1",
+   "target": "B4.1.2.5.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.5.1",
+   "target": "B5.1.2.5.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.2.5.1",
+   "target": "B4.1.2.6.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.2.6.1",
+   "target": "B5.1.2.6.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.3.1.1",
+   "target": "B4.1.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.3.1.2",
+   "target": "B4.1.3.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.3.1.3",
+   "target": "B4.1.3.1.4"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.3.1.4",
+   "target": "B5.1.3.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.1.3.1.4",
+   "target": "B4.1.3.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.3.2.1",
+   "target": "B4.1.3.2.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.4.1.1",
+   "target": "B4.1.4.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.4.1.2",
+   "target": "B4.1.4.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.4.1.3",
+   "target": "B5.1.4.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.1.5.1.1",
+   "target": "B4.1.5.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.1.5.1.2",
+   "target": "B5.1.5.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.1.1.1",
+   "target": "B4.2.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.1.1.2",
+   "target": "B4.2.1.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.2.1.1.3",
+   "target": "B5.2.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.2.1.1.3",
+   "target": "B4.2.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.1.2.1",
+   "target": "B4.2.1.2.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.2.1.2.2",
+   "target": "B4.2.1.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.1.3.1",
+   "target": "B4.2.1.3.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.1.1",
+   "target": "B4.2.2.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.2.2.1.2",
+   "target": "B5.2.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.2.2.1.2",
+   "target": "B4.2.2.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.1",
+   "target": "B4.2.2.2.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.2",
+   "target": "B4.2.2.2.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.3",
+   "target": "B4.2.2.2.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.4",
+   "target": "B4.2.2.2.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.5",
+   "target": "B4.2.2.2.6"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.2.2.2.6",
+   "target": "B4.2.2.2.7"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.1.1.1",
+   "target": "B4.3.1.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.3.1.1.2",
+   "target": "B5.3.1.1.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.3.2.1.1",
+   "target": "B5.3.2.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.1.1",
+   "target": "B4.3.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.1.2",
+   "target": "B4.3.3.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.1.3",
+   "target": "B4.3.3.1.4"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.3.3.1.4",
+   "target": "B4.3.3.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.2.1",
+   "target": "B4.3.3.2.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.2.2",
+   "target": "B4.3.3.2.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.2.3",
+   "target": "B4.3.3.2.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.2.4",
+   "target": "B4.3.3.2.5"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.3.3.2.5",
+   "target": "B5.3.3.2.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.3.3.2.5",
+   "target": "B4.3.3.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.3.1",
+   "target": "B4.3.3.3.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.3.3.3.2",
+   "target": "B4.3.3.3.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.3.3.3.3",
+   "target": "B5.3.3.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.4.1.1.1",
+   "target": "B4.4.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.4.1.1.2",
+   "target": "B4.4.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.4.1.1.3",
+   "target": "B4.4.1.1.4"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.4.1.1.4",
+   "target": "B5.4.1.1.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B4.4.1.1.4",
+   "target": "B4.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B4.4.1.2.1",
+   "target": "B4.4.1.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B4.4.1.2.2",
+   "target": "B5.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.1.1",
+   "target": "B5.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.1.2",
+   "target": "B5.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.1.3",
+   "target": "B5.1.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.1.4",
+   "target": "B5.1.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.1.5",
+   "target": "B5.1.1.1.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.1.1.6",
+   "target": "B6.1.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.1.1.6",
+   "target": "B5.1.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.2.1",
+   "target": "B5.1.1.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.1.2.2",
+   "target": "B6.1.1.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.1.2.2",
+   "target": "B5.1.1.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.3.1",
+   "target": "B5.1.1.3.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.3.2",
+   "target": "B5.1.1.3.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.3.3",
+   "target": "B5.1.1.3.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.1.3.4",
+   "target": "B5.1.1.3.5"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.1.3.5",
+   "target": "B6.1.1.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.2.1.1",
+   "target": "B5.1.2.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.1.2",
+   "target": "B6.1.2.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.2.1.2",
+   "target": "B5.1.2.2.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.2.1",
+   "target": "B6.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.2.2.1",
+   "target": "B5.1.2.3.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.3.1",
+   "target": "B6.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.2.3.1",
+   "target": "B5.1.2.4.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.4.1",
+   "target": "B6.1.2.4.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.2.4.1",
+   "target": "B5.1.2.5.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.5.1",
+   "target": "B6.1.2.5.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.1.2.5.1",
+   "target": "B5.1.2.6.1"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.2.6.1",
+   "target": "B6.1.2.6.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.3.1.1",
+   "target": "B5.1.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.3.1.2",
+   "target": "B5.1.3.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.3.1.3",
+   "target": "B5.1.3.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.3.1.4",
+   "target": "B5.1.3.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.3.1.5",
+   "target": "B5.1.3.1.6"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.3.1.6",
+   "target": "B6.1.3.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.4.1.1",
+   "target": "B5.1.4.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.4.1.2",
+   "target": "B5.1.4.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.4.1.3",
+   "target": "B5.1.4.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.4.1.4",
+   "target": "B5.1.4.1.5"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.1.4.1.5",
+   "target": "B6.1.4.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.5.1.1",
+   "target": "B5.1.5.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.1.5.1.2",
+   "target": "B5.1.5.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.1",
+   "target": "B5.2.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.2",
+   "target": "B5.2.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.3",
+   "target": "B5.2.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.4",
+   "target": "B5.2.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.5",
+   "target": "B5.2.1.1.6"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.6",
+   "target": "B5.2.1.1.7"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.1.1.7",
+   "target": "B5.2.1.1.8"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.2.1.1.8",
+   "target": "B6.2.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.2.3.1.1",
+   "target": "B5.2.3.1.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.2.3.1.2",
+   "target": "B6.2.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.1.1.1",
+   "target": "B5.3.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.1.1.2",
+   "target": "B5.3.1.1.3"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.3.1.1.3",
+   "target": "B6.3.1.1.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.2.1.1",
+   "target": "B5.3.2.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.2.1.2",
+   "target": "B5.3.2.1.3"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.3.2.1.3",
+   "target": "B5.3.2.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.3.2.2",
+   "target": "B5.3.3.2.4"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.3.3.2.4",
+   "target": "B5.3.3.3.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.3.3.3.1",
+   "target": "B5.3.3.3.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.4.1.1.2",
+   "target": "B6.4.1.1.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B5.4.1.1.2",
+   "target": "B5.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.4.1.2.1",
+   "target": "B5.4.1.2.2"
+  },
+  {
+   "type": "vertical",
+   "weight": 1.0,
+   "source": "B5.4.1.2.2",
+   "target": "B6.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.4.2.1.1",
+   "target": "B5.4.2.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B5.4.2.1.2",
+   "target": "B5.4.2.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.1.1",
+   "target": "B6.1.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.1.2",
+   "target": "B6.1.1.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.1.3",
+   "target": "B6.1.1.1.4"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.1.4",
+   "target": "B6.1.1.1.5"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.1.5",
+   "target": "B6.1.1.1.6"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.1.1.6",
+   "target": "B6.1.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.1.2.1",
+   "target": "B6.1.1.2.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.1.2.2",
+   "target": "B6.1.1.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.1.3.1",
+   "target": "B6.1.1.4.3"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.1.4.3",
+   "target": "B6.1.1.6.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.2.1.1",
+   "target": "B6.1.2.1.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.2.1.2",
+   "target": "B6.1.2.2.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.2.2.1",
+   "target": "B6.1.2.3.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.2.3.1",
+   "target": "B6.1.2.4.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.2.4.1",
+   "target": "B6.1.2.5.1"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.2.5.1",
+   "target": "B6.1.2.6.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.3.1.1",
+   "target": "B6.1.3.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.3.1.2",
+   "target": "B6.1.3.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.4.1.1",
+   "target": "B6.1.4.1.2"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.1.4.1.2",
+   "target": "B6.1.4.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.1.4.2.1",
+   "target": "B6.1.4.2.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.2.1.1.4",
+   "target": "B6.2.1.1.7"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.2.1.1.7",
+   "target": "B6.2.1.1.8"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.2.3.1.2",
+   "target": "B6.2.3.1.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.3.1.1.1",
+   "target": "B6.3.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.3.3.5.1",
+   "target": "B6.3.3.5.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.4.1.1.1",
+   "target": "B6.4.1.1.2"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.4.1.1.2",
+   "target": "B6.4.1.1.3"
+  },
+  {
+   "type": "bridge",
+   "weight": 0.5,
+   "source": "B6.4.1.1.3",
+   "target": "B6.4.1.2.1"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.4.1.2.1",
+   "target": "B6.4.1.2.3"
+  },
+  {
+   "type": "sequence",
+   "weight": 1.0,
+   "source": "B6.4.2.2.1",
+   "target": "B6.4.2.2.2"
+  }
+ ]
+}

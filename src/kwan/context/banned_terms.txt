@@ -1,0 +1,272 @@
+# Kwan: words that must not appear in a practice setting.
+#
+# Used by the automatic checks (kwan.context.checks). A setting that holds one of these terms fails
+# the "banned" check and cannot be imported from a review sheet.
+#
+# This list catches the obvious cases only. It does not replace the teacher review: a stereotype or
+# an unsafe idea can be written with harmless words, and only a person can see that.
+#
+# Format
+#   - One term per line. A term may be several words.
+#   - A line that starts with "#" is a comment. "# [name]" starts a category.
+#   - Terms match whole words, in any case ("milo" also catches "Milo").
+#   - "=" in front makes the match exact, capitals included. Use it for a brand that is also an
+#     everyday word ("=Peak" catches the brand and leaves "the peak of the hill" alone).
+#   - "*" at the end matches any ending ("gambl*" catches gamble, gambling, gambler).
+#
+# Rules for editing this file
+#   - Before you add a word, think of the honest sentences that use it. "smoked fish", "sugar cane",
+#     "a ludo die" and "she pounds fufu" are all good Ghanaian maths settings.
+#   - Brand names: add the product, shop, bank, phone network, transport company, app or sports club
+#     that writers reach for. Write what the thing is instead ("a tin of chocolate drink").
+
+# [brand]
+milo
+bournvita
+ovaltine
+nido
+cerelac
+indomie
+coca-cola
+coke
+fanta
+sprite
+pepsi
+malta guinness
+guinness
+lucozade
+kalyppo
+tampico
+voltic
+bel-aqua
+fanice
+fan ice
+fanyogo
+fan yogo
+nescafe
+lipton
+maggi
+royco
+onga
+frytol
+gino
+tasty tom
+blue band
+kingsbite
+golden tree
+cadbury
+=Peak milk
+=Ideal milk
+=Key Soap
+=Omo
+mtn
+vodafone
+telecel
+airteltigo
+=Glo
+momo
+shoprite
+melcom
+=Game store
+kfc
+papaye
+=VIP bus
+=STC
+metro mass
+uber
+yango
+=Bolt
+toyota
+nissan
+hyundai
+mercedes
+samsung
+nokia
+tecno
+infinix
+iphone
+google
+facebook
+whatsapp
+tiktok
+youtube
+instagram
+nike
+adidas
+ecobank
+=GCB
+stanbic
+absa
+calbank
+fidelity bank
+zenith bank
+asante kotoko
+kotoko
+hearts of oak
+chelsea
+arsenal
+manchester united
+manchester city
+liverpool
+barcelona
+real madrid
+
+# [unsafe]
+alcohol
+beer
+wine
+whisky
+akpeteshie
+pito
+palm wine
+schnapps
+drunk
+cigarette*
+tobacco
+cigar
+drugs
+marijuana
+cocaine
+tramadol
+bet
+bets
+betting
+lottery
+lotteries
+lotto
+raffle*
+gambl*
+casino
+jackpot
+gun
+guns
+rifle
+pistol
+bullet
+bullets
+bomb*
+weapon*
+fight
+fights
+fighting
+fought
+at war
+civil war
+world war
+kill*
+murder*
+steal*
+stole
+stolen
+thief
+thieves
+robber*
+crime*
+prison
+jail
+kidnap*
+blood
+dead
+death
+died
+dying
+funeral*
+corpse
+coffin
+accident*
+crash*
+injur*
+wound*
+sick
+illness*
+disease*
+malaria
+cholera
+=HIV
+=AIDS
+galamsey
+illegal mining
+=NPP
+=NDC
+political party
+chieftaincy
+land dispute
+witch*
+juju
+curse*
+ghost*
+devil*
+demon
+demons
+caned
+caning
+flog*
+slave*
+stupid
+foolish
+fool
+idiot
+ugly
+lazy
+bleach*
+
+# [stereotype]
+like a girl
+for a girl
+for a boy
+girls cannot
+girls can't
+boys cannot
+boys can't
+boys are better
+girls are better
+a woman's job
+a man's job
+instead of going to school
+instead of school
+does not go to school
+drop out
+dropped out
+child labour
+house girl
+houseboy
+house boy
+house help
+maidservant
+kayayo
+kayayei
+street child
+street children
+beggar*
+mud hut
+primitive people
+primitive village
+backward people
+backward village
+backward area
+backward region
+savage*
+tribal
+villager*
+
+# [not_ghana]
+dollar*
+euro
+euros
+pound sterling
+naira
+mile
+miles
+inch
+inches
+ounce
+ounces
+gallon*
+fahrenheit
+snow*
+winter
+autumn
+baseball
+hot dog*
+thanksgiving
+halloween

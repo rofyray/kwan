@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kwan"
+dynamic = ["version"]
+description = "Open-source learning path engine for Ghanaian primary maths (NaCCA B1 to B6): the next skill to learn, the reason, and a practice setting from everyday Ghanaian life."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["education", "adaptive learning", "knowledge tracing", "curriculum", "Ghana", "NaCCA", "mathematics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Typing :: Typed",
+]
+dependencies = ["networkx>=3.2"]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27"]
+demo = ["streamlit>=1.36", "pyvis>=0.3"]
+eval = ["pandas>=2.0", "numpy>=1.24", "scikit-learn>=1.3", "pyarrow>=14", "gdown>=5", "rarfile>=4", "pyyaml>=6"]
+kt = ["pykt-toolkit", "torch"]
+graph-ai = ["httpx>=0.27", "sentence-transformers>=2.2", "pyyaml>=6"]
+curriculum = ["pdfplumber>=0.10", "pyyaml>=6"]
+postgres = ["psycopg[binary]>=3.1"]
+dev = ["ruff>=0.6", "mypy>=1.10", "pytest>=8.0", "build>=1.0", "twine>=5.0", "pyyaml>=6"]
+
+[project.scripts]
+kwan = "kwan.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rofyray/kwan"
+Repository = "https://github.com/rofyray/kwan"
+Issues = "https://github.com/rofyray/kwan/issues"
+Demo = "https://huggingface.co/spaces/rofyray/kwan"
+
+[tool.hatch.version]
+path = "src/kwan/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kwan"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src/kwan", "README.md", "LICENSE", "pyproject.toml"]

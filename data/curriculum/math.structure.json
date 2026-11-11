@@ -1,0 +1,4976 @@
+[
+ {
+  "id": "math:B1.1.1.1.1",
+  "subject": "math",
+  "code": "B1.1.1.1.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Count up to 100 objects and say how many",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.1.1.2",
+  "subject": "math",
+  "code": "B1.1.1.1.2",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Find numbers around a number on a chart to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B1.1.1.1.3",
+  "subject": "math",
+  "code": "B1.1.1.1.3",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Measure with hand-spans, feet or cups and count",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B1.1.1.1.4",
+  "subject": "math",
+  "code": "B1.1.1.1.4",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Compare groups to 100 using more, less or same",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B1.1.1.1.5",
+  "subject": "math",
+  "code": "B1.1.1.1.5",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 5,
+  "short_label": "Compare two numbers with >, < or =",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B1.1.1.1.6",
+  "subject": "math",
+  "code": "B1.1.1.1.6",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Number: Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B1.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 6,
+  "short_label": "Say how two numbers to 100 are related",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.1.1",
+  "subject": "math",
+  "code": "B1.1.2.1.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Add by joining and subtract by taking away to 20",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.2.1",
+  "subject": "math",
+  "code": "B1.1.2.2.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Find the missing number in sums within 20",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.2.2",
+  "subject": "math",
+  "code": "B1.1.2.2.2",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 2,
+  "short_label": "Turn a take-away into an adding sum within 20",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.2.2"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.2.3",
+  "subject": "math",
+  "code": "B1.1.2.2.3",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 3,
+  "short_label": "Make up a story for an adding or take-away sum",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.2.3"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.3.1",
+  "subject": "math",
+  "code": "B1.1.2.3.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Use doubles and making 10 for facts to 10",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.4.1",
+  "subject": "math",
+  "code": "B1.1.2.4.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Count on or count back to add and subtract to 20",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.2.4.2",
+  "subject": "math",
+  "code": "B1.1.2.4.2",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B1.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 2,
+  "short_label": "Solve one-step story sums within 20",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.2.4.2"
+  ]
+ },
+ {
+  "id": "math:B1.1.3.1.1",
+  "subject": "math",
+  "code": "B1.1.3.1.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B1.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Show one half as 1 of 2 equal parts",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.1.3.1.2",
+  "subject": "math",
+  "code": "B1.1.3.1.2",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B1.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Count halves: one half, two halves, three halves",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B1.1.4.1.1",
+  "subject": "math",
+  "code": "B1.1.4.1.1",
+  "grade": 1,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Money",
+  "content_standard": "B1.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Name Ghana coins and say how they relate",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.2.1.1.1",
+  "subject": "math",
+  "code": "B1.2.1.1.1",
+  "grade": 1,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationship",
+  "content_standard": "B1.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 1,
+  "short_label": "Copy, extend and fix repeating patterns",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.2.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.3.1.1.1",
+  "subject": "math",
+  "code": "B1.3.1.1.1",
+  "grade": 1,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B1.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Tell what makes a shape that shape",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.3.1.1.2",
+  "subject": "math",
+  "code": "B1.3.1.1.2",
+  "grade": 1,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B1.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Name and sort balls, tins, boxes and other solids",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B1.3.1.1.3",
+  "subject": "math",
+  "code": "B1.3.1.1.3",
+  "grade": 1,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B1.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 3,
+  "short_label": "Name and sort flat shapes by sides and corners",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.3.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B1.3.2.1.1",
+  "subject": "math",
+  "code": "B1.3.2.1.1",
+  "grade": 1,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Position / Transformation",
+  "content_standard": "B1.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 1,
+  "short_label": "Say where things are: above, below, left, right",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.3.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.3.3.1.1",
+  "subject": "math",
+  "code": "B1.3.3.1.1",
+  "grade": 1,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass and Capacity",
+  "content_standard": "B1.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 1,
+  "short_label": "Compare two things: longer, taller, heavier",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.3.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.4.1.1.1",
+  "subject": "math",
+  "code": "B1.4.1.1.1",
+  "grade": 1,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Interpretation, Presentation and Analysis",
+  "content_standard": "B1.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Show data in up to three groups with pictures",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B1.4.1.1.2",
+  "subject": "math",
+  "code": "B1.4.1.1.2",
+  "grade": 1,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Interpretation, Presentation and Analysis",
+  "content_standard": "B1.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 2,
+  "short_label": "Sort data into three groups, count and compare",
+  "label_reviewed": false,
+  "aliases": [
+   "B1.4.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.1",
+  "subject": "math",
+  "code": "B2.1.1.1.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Count and skip count by 2s, 5s and 10s to 1000",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.2",
+  "subject": "math",
+  "code": "B2.1.1.1.2",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Find numbers around a number on a chart to 1000",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.3",
+  "subject": "math",
+  "code": "B2.1.1.1.3",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Measure with sticks, strides or cups and count",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.4",
+  "subject": "math",
+  "code": "B2.1.1.1.4",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Show tens and ones in a 2-digit number",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.5",
+  "subject": "math",
+  "code": "B2.1.1.1.5",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 5,
+  "short_label": "Describe a number to 1000 in different ways",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B2.1.1.1.6",
+  "subject": "math",
+  "code": "B2.1.1.1.6",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B2.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 6,
+  "short_label": "Compare and order numbers to 100 with >, < or =",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.1.1",
+  "subject": "math",
+  "code": "B2.1.2.1.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Add in any order and use zero in sums to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.2.1",
+  "subject": "math",
+  "code": "B2.1.2.2.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Use = and ≠ to check sums within 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.3.1",
+  "subject": "math",
+  "code": "B2.1.2.3.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Use mental tricks for adding and subtracting to 19",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.4.1",
+  "subject": "math",
+  "code": "B2.1.2.4.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Add and subtract in tens and ones columns to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.4.2",
+  "subject": "math",
+  "code": "B2.1.2.4.2",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 2,
+  "short_label": "Add and subtract to 100 in your own easy way",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.4.2"
+  ]
+ },
+ {
+  "id": "math:B2.1.2.4.3",
+  "subject": "math",
+  "code": "B2.1.2.4.3",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B2.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 3,
+  "short_label": "Solve one-step and two-step story sums to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.2.4.3"
+  ]
+ },
+ {
+  "id": "math:B2.1.3.1.1",
+  "subject": "math",
+  "code": "B2.1.3.1.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B2.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Show one half and one quarter of a whole",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.1.3.1.2",
+  "subject": "math",
+  "code": "B2.1.3.1.2",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B2.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Count in halves and in quarters",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.1.3.1.3",
+  "subject": "math",
+  "code": "B2.1.3.1.3",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B2.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 3,
+  "short_label": "Tell how many halves and quarters make a whole",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B2.1.4.1.1",
+  "subject": "math",
+  "code": "B2.1.4.1.1",
+  "grade": 2,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Money",
+  "content_standard": "B2.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Count Ghana coins and notes up to GH₵ 50",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.2.1.1.1",
+  "subject": "math",
+  "code": "B2.2.1.1.1",
+  "grade": 2,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B2.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 1,
+  "short_label": "Find the rule in number patterns that grow or shrink",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.2.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.2.1.1.2",
+  "subject": "math",
+  "code": "B2.2.1.1.2",
+  "grade": 2,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B2.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 2,
+  "short_label": "Describe and make skip-counting patterns",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.2.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.3.1.1.1",
+  "subject": "math",
+  "code": "B2.3.1.1.1",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B2.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Name solids and tell what features they share",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.3.1.1.2",
+  "subject": "math",
+  "code": "B2.3.1.1.2",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B2.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Name flat shapes by their sides and corners",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.3.1.1.3",
+  "subject": "math",
+  "code": "B2.3.1.1.3",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B2.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 3,
+  "short_label": "Draw flat shapes from a given number of sides",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B2.3.2.1.1",
+  "subject": "math",
+  "code": "B2.3.2.1.1",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Position / Transformation",
+  "content_standard": "B2.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 1,
+  "short_label": "Show that moving a thing does not change its length",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.3.3.1.1",
+  "subject": "math",
+  "code": "B2.3.3.1.1",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement- Length, Capacity, Mass and Time",
+  "content_standard": "B2.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 1,
+  "short_label": "Pick a unit, estimate and measure without a ruler",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.3.3.1.2",
+  "subject": "math",
+  "code": "B2.3.3.1.2",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement- Length, Capacity, Mass and Time",
+  "content_standard": "B2.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 2,
+  "short_label": "Compare three or more things by size or weight",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B2.3.3.2.1",
+  "subject": "math",
+  "code": "B2.3.3.2.1",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement- Length, Capacity, Mass and Time",
+  "content_standard": "B2.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 1,
+  "short_label": "Explain why we need the same unit to measure",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.3.2.1"
+  ]
+ },
+ {
+  "id": "math:B2.3.3.3.1",
+  "subject": "math",
+  "code": "B2.3.3.3.1",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement- Length, Capacity, Mass and Time",
+  "content_standard": "B2.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 1,
+  "short_label": "Read a calendar and count days and months",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.3.3.1"
+  ]
+ },
+ {
+  "id": "math:B2.3.3.3.2",
+  "subject": "math",
+  "code": "B2.3.3.3.2",
+  "grade": 2,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement- Length, Capacity, Mass and Time",
+  "content_standard": "B2.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 2,
+  "short_label": "Time events with claps and with the hour",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.3.3.3.2"
+  ]
+ },
+ {
+  "id": "math:B2.4.1.1.1",
+  "subject": "math",
+  "code": "B2.4.1.1.1",
+  "grade": 2,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B2.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Collect data with tally marks and ask about it",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B2.4.1.2.1",
+  "subject": "math",
+  "code": "B2.4.1.2.1",
+  "grade": 2,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B2.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 1,
+  "short_label": "Draw and read picture graphs",
+  "label_reviewed": false,
+  "aliases": [
+   "B2.4.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.1.1",
+  "subject": "math",
+  "code": "B3.1.1.1.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Count and skip count in 10s, 100s, 1000s to 10,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.1.2",
+  "subject": "math",
+  "code": "B3.1.1.1.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Find numbers around a number on a chart to 10,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.1.3",
+  "subject": "math",
+  "code": "B3.1.1.1.3",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Break numbers to 10,000 into place values",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.1.4",
+  "subject": "math",
+  "code": "B3.1.1.1.4",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Compare and order numbers to 10,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.2.1",
+  "subject": "math",
+  "code": "B3.1.1.2.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 1,
+  "short_label": "Describe things that go in opposite ways",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.2.2",
+  "subject": "math",
+  "code": "B3.1.1.2.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 2,
+  "short_label": "Use + and - numbers for above and below a level",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.3.1",
+  "subject": "math",
+  "code": "B3.1.1.3.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 1,
+  "short_label": "Show positive and negative numbers on a number line",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.3.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.1.3.2",
+  "subject": "math",
+  "code": "B3.1.1.3.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B3.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 2,
+  "short_label": "Count forwards and backwards through zero",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.1.3.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.1.1",
+  "subject": "math",
+  "code": "B3.1.2.1.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Add and subtract within 1000 in columns",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.2.1",
+  "subject": "math",
+  "code": "B3.1.2.2.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Use = and ≠ to compare sums within 1000",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.3.1",
+  "subject": "math",
+  "code": "B3.1.2.3.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Add and subtract in your head within 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.4.1",
+  "subject": "math",
+  "code": "B3.1.2.4.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Add within 1000 using hundreds, tens and ones",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.4.2",
+  "subject": "math",
+  "code": "B3.1.2.4.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 2,
+  "short_label": "Solve sums within 1000 with a missing number",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.4.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.4.3",
+  "subject": "math",
+  "code": "B3.1.2.4.3",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 3,
+  "short_label": "Estimate sums and differences up to 1000",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.4.3"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.4.4",
+  "subject": "math",
+  "code": "B3.1.2.4.4",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 4,
+  "short_label": "Show that adding in any order gives the same sum",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.4.4"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.5.1",
+  "subject": "math",
+  "code": "B3.1.2.5.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.5",
+  "cs_key": "1.2.5",
+  "indicator_no": 1,
+  "short_label": "Show multiplication as equal groups",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.5.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.5.2",
+  "subject": "math",
+  "code": "B3.1.2.5.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.5",
+  "cs_key": "1.2.5",
+  "indicator_no": 2,
+  "short_label": "Show multiplication with rows and columns",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.5.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.6.1",
+  "subject": "math",
+  "code": "B3.1.2.6.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 1,
+  "short_label": "Divide by sharing equally",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.6.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.6.2",
+  "subject": "math",
+  "code": "B3.1.2.6.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 2,
+  "short_label": "Divide by making equal groups",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.6.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.2.6.3",
+  "subject": "math",
+  "code": "B3.1.2.6.3",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+  "content_standard": "B3.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 3,
+  "short_label": "Use times facts to work out division",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.2.6.3"
+  ]
+ },
+ {
+  "id": "math:B3.1.3.1.1",
+  "subject": "math",
+  "code": "B3.1.3.1.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B3.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Name and write fractions of one whole",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.1.3.1.2",
+  "subject": "math",
+  "code": "B3.1.3.1.2",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B3.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Find fractions of a group and on a number line",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B3.1.3.1.3",
+  "subject": "math",
+  "code": "B3.1.3.1.3",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B3.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 3,
+  "short_label": "Compare and order simple fractions",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B3.1.4.1.1",
+  "subject": "math",
+  "code": "B3.1.4.1.1",
+  "grade": 3,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Money",
+  "content_standard": "B3.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Pay with cedi notes and coins and work out change",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.2.1.1.1",
+  "subject": "math",
+  "code": "B3.2.1.1.1",
+  "grade": 3,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationship",
+  "content_standard": "B3.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 1,
+  "short_label": "Extend number patterns and spot mistakes",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.2.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.1.1.1",
+  "subject": "math",
+  "code": "B3.3.1.1.1",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D & 3D Shapes",
+  "content_standard": "B3.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Count faces, edges and corners of solids",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.1.1.2",
+  "subject": "math",
+  "code": "B3.3.1.1.2",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D & 3D Shapes",
+  "content_standard": "B3.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Find and draw angles where two lines meet",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B3.3.1.1.3",
+  "subject": "math",
+  "code": "B3.3.1.1.3",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D & 3D Shapes",
+  "content_standard": "B3.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 3,
+  "short_label": "Test for right angles with a paper square corner",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B3.3.1.1.4",
+  "subject": "math",
+  "code": "B3.3.1.1.4",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D & 3D Shapes",
+  "content_standard": "B3.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 4,
+  "short_label": "Name four-sided shapes by their features",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B3.3.2.1.1",
+  "subject": "math",
+  "code": "B3.3.2.1.1",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Position / Transformation",
+  "content_standard": "B3.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 1,
+  "short_label": "Use a number line to find how long something is",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.1.1",
+  "subject": "math",
+  "code": "B3.3.3.1.1",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 1,
+  "short_label": "Relate metres and centimetres and choose a unit",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.1.2",
+  "subject": "math",
+  "code": "B3.3.3.1.2",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 2,
+  "short_label": "Choose everyday objects that show 1 cm and 1 m",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.1.3",
+  "subject": "math",
+  "code": "B3.3.3.1.3",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 3,
+  "short_label": "Estimate and measure lengths and distance around",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.2.1",
+  "subject": "math",
+  "code": "B3.3.3.2.1",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 1,
+  "short_label": "Relate kilograms and grams, litres and millilitres",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.2.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.2.2",
+  "subject": "math",
+  "code": "B3.3.3.2.2",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 2,
+  "short_label": "Estimate mass and capacity, then measure to check",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.2.2"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.3.1",
+  "subject": "math",
+  "code": "B3.3.3.3.1",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 1,
+  "short_label": "Work out how long an event takes",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.3.1"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.3.2",
+  "subject": "math",
+  "code": "B3.3.3.3.2",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 2,
+  "short_label": "Read dates and count days, weeks and months",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.3.2"
+  ]
+ },
+ {
+  "id": "math:B3.3.3.3.3",
+  "subject": "math",
+  "code": "B3.3.3.3.3",
+  "grade": 3,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement – Length, Mass, Time",
+  "content_standard": "B3.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 3,
+  "short_label": "Use seconds, minutes, hours and days in problems",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.3.3.3.3"
+  ]
+ },
+ {
+  "id": "math:B3.4.1.1.1",
+  "subject": "math",
+  "code": "B3.4.1.1.1",
+  "grade": 3,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B3.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Collect data with tallies and tables to answer questions",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B3.4.1.2.1",
+  "subject": "math",
+  "code": "B3.4.1.2.1",
+  "grade": 3,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B3.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 1,
+  "short_label": "Draw and read graphs where one picture means many",
+  "label_reviewed": false,
+  "aliases": [
+   "B3.4.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.1",
+  "subject": "math",
+  "code": "B4.1.1.1.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Model numbers up to 100,000 with place value",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.2",
+  "subject": "math",
+  "code": "B4.1.1.1.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Read and write numbers up to 100,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.3",
+  "subject": "math",
+  "code": "B4.1.1.1.3",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Find numbers around a given number on a chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.4",
+  "subject": "math",
+  "code": "B4.1.1.1.4",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Compare and order numbers using <, = and >",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.5",
+  "subject": "math",
+  "code": "B4.1.1.1.5",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 5,
+  "short_label": "Round numbers to the nearest 10, 100 or 1,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.1.6",
+  "subject": "math",
+  "code": "B4.1.1.1.6",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 6,
+  "short_label": "Skip count in 50s and 100s up to 10,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.2.1",
+  "subject": "math",
+  "code": "B4.1.1.2.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 1,
+  "short_label": "Know Roman numerals up to XXX (30)",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.2.2",
+  "subject": "math",
+  "code": "B4.1.1.2.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 2,
+  "short_label": "Change numbers to Roman numerals and back, to 30",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.1",
+  "subject": "math",
+  "code": "B4.1.1.3.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 1,
+  "short_label": "List all the factors of a number up to 50",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.2",
+  "subject": "math",
+  "code": "B4.1.1.3.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 2,
+  "short_label": "Find the HCF of two numbers up to 50",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.3",
+  "subject": "math",
+  "code": "B4.1.1.3.3",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 3,
+  "short_label": "Find the LCM of two numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.3"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.4",
+  "subject": "math",
+  "code": "B4.1.1.3.4",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 4,
+  "short_label": "Link factors and multiples; test for 2, 3, 4, 5",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.4"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.5",
+  "subject": "math",
+  "code": "B4.1.1.3.5",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 5,
+  "short_label": "Make and study patterns in square numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.5"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.3.6",
+  "subject": "math",
+  "code": "B4.1.1.3.6",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 6,
+  "short_label": "Write square numbers as a number times itself",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.3.6"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.4.1",
+  "subject": "math",
+  "code": "B4.1.1.4.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.4",
+  "cs_key": "1.1.4",
+  "indicator_no": 1,
+  "short_label": "Use positive and negative numbers for real life",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.4.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.1.4.2",
+  "subject": "math",
+  "code": "B4.1.1.4.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B4.1.1.4",
+  "cs_key": "1.1.4",
+  "indicator_no": 2,
+  "short_label": "Count forwards and backwards through zero",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.1.4.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.1.1",
+  "subject": "math",
+  "code": "B4.1.2.1.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Recall multiplication facts up to 12 × 12",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.2.1",
+  "subject": "math",
+  "code": "B4.1.2.2.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Use known facts, doubling and halving to multiply",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.2.2",
+  "subject": "math",
+  "code": "B4.1.2.2.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 2,
+  "short_label": "Multiply mentally with zeros, halving and doubling",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.2.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.3.1",
+  "subject": "math",
+  "code": "B4.1.2.3.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Multiply 2- and 3-digit numbers by 1 or 2 digits",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.4.1",
+  "subject": "math",
+  "code": "B4.1.2.4.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Recall division facts up to 81 ÷ 9",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.5.1",
+  "subject": "math",
+  "code": "B4.1.2.5.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.5",
+  "cs_key": "1.2.5",
+  "indicator_no": 1,
+  "short_label": "Divide 2- and 3-digit numbers by 1 digit",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.5.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.2.6.1",
+  "subject": "math",
+  "code": "B4.1.2.6.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B4.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 1,
+  "short_label": "Solve word problems with more than one step",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.2.6.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.1.1",
+  "subject": "math",
+  "code": "B4.1.3.1.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Show unit fractions on a number line from 0 to 1",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.1.2",
+  "subject": "math",
+  "code": "B4.1.3.1.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Find and name equivalent fractions",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.1.3",
+  "subject": "math",
+  "code": "B4.1.3.1.3",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 3,
+  "short_label": "Write a fraction in its simplest form",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.1.4",
+  "subject": "math",
+  "code": "B4.1.3.1.4",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 4,
+  "short_label": "Name improper fractions and mixed numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.1.4"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.2.1",
+  "subject": "math",
+  "code": "B4.1.3.2.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.2",
+  "cs_key": "1.3.2",
+  "indicator_no": 1,
+  "short_label": "Put fractions in order from smallest to largest",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.3.2.3",
+  "subject": "math",
+  "code": "B4.1.3.2.3",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B4.1.3.2",
+  "cs_key": "1.3.2",
+  "indicator_no": 3,
+  "short_label": "Spot fractions in everyday life",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.3.2.3"
+  ]
+ },
+ {
+  "id": "math:B4.1.4.1.1",
+  "subject": "math",
+  "code": "B4.1.4.1.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B4.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Read and write tenths and hundredths as decimals",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.4.1.2",
+  "subject": "math",
+  "code": "B4.1.4.1.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B4.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 2,
+  "short_label": "Round a decimal number to one decimal place",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.4.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.1.4.1.3",
+  "subject": "math",
+  "code": "B4.1.4.1.3",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B4.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 3,
+  "short_label": "Add and subtract decimals to hundredths",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.4.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.1.5.1.1",
+  "subject": "math",
+  "code": "B4.1.5.1.1",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 5,
+  "sub_strand_name": "Percentages",
+  "content_standard": "B4.1.5.1",
+  "cs_key": "1.5.1",
+  "indicator_no": 1,
+  "short_label": "Show percent as parts out of 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.5.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.1.5.1.2",
+  "subject": "math",
+  "code": "B4.1.5.1.2",
+  "grade": 4,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 5,
+  "sub_strand_name": "Percentages",
+  "content_standard": "B4.1.5.1",
+  "cs_key": "1.5.1",
+  "indicator_no": 2,
+  "short_label": "Compare fractions, decimals and percents",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.1.5.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.1.1",
+  "subject": "math",
+  "code": "B4.2.1.1.1",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 1,
+  "short_label": "Describe the pattern in a table or chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.1.2",
+  "subject": "math",
+  "code": "B4.2.1.1.2",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 2,
+  "short_label": "Find missing numbers in a table or chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.1.3",
+  "subject": "math",
+  "code": "B4.2.1.1.3",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 3,
+  "short_label": "Spot the mistake in a table or chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.2.1",
+  "subject": "math",
+  "code": "B4.2.1.2.1",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.2",
+  "cs_key": "2.1.2",
+  "indicator_no": 1,
+  "short_label": "Build a pattern shown in a table",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.2.2",
+  "subject": "math",
+  "code": "B4.2.1.2.2",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.2",
+  "cs_key": "2.1.2",
+  "indicator_no": 2,
+  "short_label": "Record a pattern of objects in a table",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.3.1",
+  "subject": "math",
+  "code": "B4.2.1.3.1",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.3",
+  "cs_key": "2.1.3",
+  "indicator_no": 1,
+  "short_label": "Put the facts of a problem into a table",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.3.1"
+  ]
+ },
+ {
+  "id": "math:B4.2.1.3.2",
+  "subject": "math",
+  "code": "B4.2.1.3.2",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B4.2.1.3",
+  "cs_key": "2.1.3",
+  "indicator_no": 2,
+  "short_label": "Extend a table pattern to solve a problem",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.1.3.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.1.1",
+  "subject": "math",
+  "code": "B4.2.2.1.1",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.1",
+  "cs_key": "2.2.1",
+  "indicator_no": 1,
+  "short_label": "Write a problem as an equation with a symbol",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.1.2",
+  "subject": "math",
+  "code": "B4.2.2.1.2",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.1",
+  "cs_key": "2.2.1",
+  "indicator_no": 2,
+  "short_label": "Turn a picture of an equation into symbols",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.1",
+  "subject": "math",
+  "code": "B4.2.2.2.1",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 1,
+  "short_label": "Solve one-step equations with objects",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.2",
+  "subject": "math",
+  "code": "B4.2.2.2.2",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 2,
+  "short_label": "Explain what a one-step equation means",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.2"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.3",
+  "subject": "math",
+  "code": "B4.2.2.2.3",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 3,
+  "short_label": "Solve equations with the unknown on either side",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.3"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.4",
+  "subject": "math",
+  "code": "B4.2.2.2.4",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 4,
+  "short_label": "Solve equations by guess and check",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.4"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.5",
+  "subject": "math",
+  "code": "B4.2.2.2.5",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 5,
+  "short_label": "Find the unknown, write the equation and solve",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.5"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.6",
+  "subject": "math",
+  "code": "B4.2.2.2.6",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 6,
+  "short_label": "Solve part-whole and comparison problems",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.6"
+  ]
+ },
+ {
+  "id": "math:B4.2.2.2.7",
+  "subject": "math",
+  "code": "B4.2.2.2.7",
+  "grade": 4,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Unknowns, Expressions and Equations",
+  "content_standard": "B4.2.2.2",
+  "cs_key": "2.2.2",
+  "indicator_no": 7,
+  "short_label": "Make up a story problem for an equation",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.2.2.2.7"
+  ]
+ },
+ {
+  "id": "math:B4.3.1.1.1",
+  "subject": "math",
+  "code": "B4.3.1.1.1",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B4.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Complete a shape to make it symmetrical",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.3.1.1.2",
+  "subject": "math",
+  "code": "B4.3.1.1.2",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "2D and 3D Shapes",
+  "content_standard": "B4.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Find lines of symmetry in triangles and 4-sided shapes",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.3.2.1.1",
+  "subject": "math",
+  "code": "B4.3.2.1.1",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Position / Transformation",
+  "content_standard": "B4.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 1,
+  "short_label": "Describe position with north, south, east, west",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.1.1",
+  "subject": "math",
+  "code": "B4.3.3.1.1",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 1,
+  "short_label": "Estimate perimeter using a body or object measure",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.1.2",
+  "subject": "math",
+  "code": "B4.3.3.1.2",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 2,
+  "short_label": "Measure and add sides to find perimeter",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.1.3",
+  "subject": "math",
+  "code": "B4.3.3.1.3",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 3,
+  "short_label": "Use a rule for perimeter of squares and rectangles",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.1.4",
+  "subject": "math",
+  "code": "B4.3.3.1.4",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.1",
+  "cs_key": "3.3.1",
+  "indicator_no": 4,
+  "short_label": "Draw different rectangles with the same perimeter",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.1.4"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.2.1",
+  "subject": "math",
+  "code": "B4.3.3.2.1",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 1,
+  "short_label": "Know that area is counted in square units",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.2.2",
+  "subject": "math",
+  "code": "B4.3.3.2.2",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 2,
+  "short_label": "Choose cm² or m² and say why",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.2.2"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.2.3",
+  "subject": "math",
+  "code": "B4.3.3.2.3",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 3,
+  "short_label": "Estimate area in cm² or m²",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.2.3"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.2.4",
+  "subject": "math",
+  "code": "B4.3.3.2.4",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 4,
+  "short_label": "Use length × width to find area",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.2.4"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.2.5",
+  "subject": "math",
+  "code": "B4.3.3.2.5",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.2",
+  "cs_key": "3.3.2",
+  "indicator_no": 5,
+  "short_label": "Draw different rectangles with the same area",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.2.5"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.3.1",
+  "subject": "math",
+  "code": "B4.3.3.3.1",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 1,
+  "short_label": "Tell time on analogue, digital and 24-hour clocks",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.3.1"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.3.2",
+  "subject": "math",
+  "code": "B4.3.3.3.2",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 2,
+  "short_label": "Time events in minutes and seconds",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.3.2"
+  ]
+ },
+ {
+  "id": "math:B4.3.3.3.3",
+  "subject": "math",
+  "code": "B4.3.3.3.3",
+  "grade": 4,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement (Perimeter, Area and Time)",
+  "content_standard": "B4.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 3,
+  "short_label": "Write dates in different formats",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.3.3.3.3"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.1.1",
+  "subject": "math",
+  "code": "B4.4.1.1.1",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Read graphs where one picture means one item",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.1.2",
+  "subject": "math",
+  "code": "B4.4.1.1.2",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 2,
+  "short_label": "Draw graphs where one picture means many",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.1.3",
+  "subject": "math",
+  "code": "B4.4.1.1.3",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 3,
+  "short_label": "Compare two graphs of the same data",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.1.4",
+  "subject": "math",
+  "code": "B4.4.1.1.4",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 4,
+  "short_label": "Find graphs in the news and read their key",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.2.1",
+  "subject": "math",
+  "code": "B4.4.1.2.1",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 1,
+  "short_label": "Draw a full bar graph or pictograph with a key",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B4.4.1.2.2",
+  "subject": "math",
+  "code": "B4.4.1.2.2",
+  "grade": 4,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B4.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 2,
+  "short_label": "Solve problems from bar graphs and pictographs",
+  "label_reviewed": false,
+  "aliases": [
+   "B4.4.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.1",
+  "subject": "math",
+  "code": "B5.1.1.1.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Model numbers up to 1,000,000 with blocks or squares",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.2",
+  "subject": "math",
+  "code": "B5.1.1.1.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Read and write numbers up to 1,000,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.3",
+  "subject": "math",
+  "code": "B5.1.1.1.3",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Find numbers around a given number on a number chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.4",
+  "subject": "math",
+  "code": "B5.1.1.1.4",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Compare and order numbers up to 100,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.5",
+  "subject": "math",
+  "code": "B5.1.1.1.5",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 5,
+  "short_label": "Round whole numbers to the nearest 10, 100, 1,000 or 10,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.1.6",
+  "subject": "math",
+  "code": "B5.1.1.1.6",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 6,
+  "short_label": "Skip count in 500s and 1,000s up to 100,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.2.1",
+  "subject": "math",
+  "code": "B5.1.1.2.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 1,
+  "short_label": "Recognise Roman numerals up to C (100)",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.2.2",
+  "subject": "math",
+  "code": "B5.1.1.2.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 2,
+  "short_label": "Change numbers to Roman numerals up to 100 and back",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.3.1",
+  "subject": "math",
+  "code": "B5.1.1.3.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 1,
+  "short_label": "Find all the factors of a number up to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.3.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.3.2",
+  "subject": "math",
+  "code": "B5.1.1.3.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 2,
+  "short_label": "Tell prime numbers from composite numbers up to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.3.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.3.3",
+  "subject": "math",
+  "code": "B5.1.1.3.3",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 3,
+  "short_label": "Identify odd and even numbers up to 100 by pairing",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.3.3"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.3.4",
+  "subject": "math",
+  "code": "B5.1.1.3.4",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 4,
+  "short_label": "Find the HCF of two or three numbers by prime factors",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.3.4"
+  ]
+ },
+ {
+  "id": "math:B5.1.1.3.5",
+  "subject": "math",
+  "code": "B5.1.1.3.5",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation & Cardinality",
+  "content_standard": "B5.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 5,
+  "short_label": "Link factors and multiples of numbers up to 100",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.1.3.5"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.1.1",
+  "subject": "math",
+  "code": "B5.1.2.1.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Use mental strategies for times tables and division facts",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.1.2",
+  "subject": "math",
+  "code": "B5.1.2.1.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 2,
+  "short_label": "Multiply mentally using zeros, doubling and splitting",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.2.1",
+  "subject": "math",
+  "code": "B5.1.2.2.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Multiply a 2 or 3-digit number by a 2-digit number",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.3.1",
+  "subject": "math",
+  "code": "B5.1.2.3.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Recall division facts up to 81 ÷ 9",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.4.1",
+  "subject": "math",
+  "code": "B5.1.2.4.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Divide a 3-digit number by a 1-digit number",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.5.1",
+  "subject": "math",
+  "code": "B5.1.2.5.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.5",
+  "cs_key": "1.2.5",
+  "indicator_no": 1,
+  "short_label": "Solve word problems that need more than one step",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.5.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.2.6.1",
+  "subject": "math",
+  "code": "B5.1.2.6.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B5.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 1,
+  "short_label": "Add and subtract simple positive and negative numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.2.6.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.1",
+  "subject": "math",
+  "code": "B5.1.3.1.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Find equivalent fractions with a common denominator",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.2",
+  "subject": "math",
+  "code": "B5.1.3.1.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Compare and order fractions with unlike denominators",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.3",
+  "subject": "math",
+  "code": "B5.1.3.1.3",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 3,
+  "short_label": "Add and subtract fractions using a common denominator",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.4",
+  "subject": "math",
+  "code": "B5.1.3.1.4",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 4,
+  "short_label": "Add and subtract mixed numbers and improper fractions",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.4"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.5",
+  "subject": "math",
+  "code": "B5.1.3.1.5",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 5,
+  "short_label": "Multiply a whole number by a fraction using models",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.5"
+  ]
+ },
+ {
+  "id": "math:B5.1.3.1.6",
+  "subject": "math",
+  "code": "B5.1.3.1.6",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Number: Fractions",
+  "content_standard": "B5.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 6,
+  "short_label": "Find a fraction of a whole number using models",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.3.1.6"
+  ]
+ },
+ {
+  "id": "math:B5.1.4.1.1",
+  "subject": "math",
+  "code": "B5.1.4.1.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B5.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Show decimals to thousandths and link them to fractions",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.4.1.2",
+  "subject": "math",
+  "code": "B5.1.4.1.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B5.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 2,
+  "short_label": "Compare and order decimals and fractions to thousandths",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.4.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.4.1.3",
+  "subject": "math",
+  "code": "B5.1.4.1.3",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B5.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 3,
+  "short_label": "Round decimals to the nearest tenth or hundredth",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.4.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.1.4.1.4",
+  "subject": "math",
+  "code": "B5.1.4.1.4",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B5.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 4,
+  "short_label": "Add and subtract decimals up to thousandths",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.4.1.4"
+  ]
+ },
+ {
+  "id": "math:B5.1.4.1.5",
+  "subject": "math",
+  "code": "B5.1.4.1.5",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Decimals",
+  "content_standard": "B5.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 5,
+  "short_label": "Multiply a decimal by a whole number",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.4.1.5"
+  ]
+ },
+ {
+  "id": "math:B5.1.5.1.1",
+  "subject": "math",
+  "code": "B5.1.5.1.1",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 5,
+  "sub_strand_name": "Percentages",
+  "content_standard": "B5.1.5.1",
+  "cs_key": "1.5.1",
+  "indicator_no": 1,
+  "short_label": "Find a percentage of a 2-digit number, and the reverse",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.5.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.1.5.1.2",
+  "subject": "math",
+  "code": "B5.1.5.1.2",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 5,
+  "sub_strand_name": "Percentages",
+  "content_standard": "B5.1.5.1",
+  "cs_key": "1.5.1",
+  "indicator_no": 2,
+  "short_label": "Use benchmark percentages to estimate amounts",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.5.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.1.5.1.3",
+  "subject": "math",
+  "code": "B5.1.5.1.3",
+  "grade": 5,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 5,
+  "sub_strand_name": "Percentages",
+  "content_standard": "B5.1.5.1",
+  "cs_key": "1.5.1",
+  "indicator_no": 3,
+  "short_label": "Solve everyday problems that use percentages",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.1.5.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.1",
+  "subject": "math",
+  "code": "B5.2.1.1.1",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 1,
+  "short_label": "Extend a pattern and say how each term changes",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.2",
+  "subject": "math",
+  "code": "B5.2.1.1.2",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 2,
+  "short_label": "Describe a pattern rule in mathematical words",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.3",
+  "subject": "math",
+  "code": "B5.2.1.1.3",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 3,
+  "short_label": "Predict the next terms in a pattern",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.4",
+  "subject": "math",
+  "code": "B5.2.1.1.4",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 4,
+  "short_label": "Draw or build a pattern to check a prediction",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.5",
+  "subject": "math",
+  "code": "B5.2.1.1.5",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 5,
+  "short_label": "Use a pattern rule to solve a problem",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.6",
+  "subject": "math",
+  "code": "B5.2.1.1.6",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 6,
+  "short_label": "Explain why a number does or does not fit a pattern",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.7",
+  "subject": "math",
+  "code": "B5.2.1.1.7",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 7,
+  "short_label": "Write a pattern rule in words and with a letter",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.7"
+  ]
+ },
+ {
+  "id": "math:B5.2.1.1.8",
+  "subject": "math",
+  "code": "B5.2.1.1.8",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Patterns and Relationships",
+  "content_standard": "B5.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 8,
+  "short_label": "Describe a table's rule with an expression",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.1.1.8"
+  ]
+ },
+ {
+  "id": "math:B5.2.2.1.1",
+  "subject": "math",
+  "code": "B5.2.2.1.1",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Algebraic Expressions",
+  "content_standard": "B5.2.2.1",
+  "cs_key": "2.2.1",
+  "indicator_no": 1,
+  "short_label": "Write, simplify and work out algebraic expressions",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.2.3.1.1",
+  "subject": "math",
+  "code": "B5.2.3.1.1",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 3,
+  "sub_strand_name": "Variables and Equations",
+  "content_standard": "B5.2.3.1",
+  "cs_key": "2.3.1",
+  "indicator_no": 1,
+  "short_label": "Write a word problem as an equation with a letter",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.2.3.1.2",
+  "subject": "math",
+  "code": "B5.2.3.1.2",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 3,
+  "sub_strand_name": "Variables and Equations",
+  "content_standard": "B5.2.3.1",
+  "cs_key": "2.3.1",
+  "indicator_no": 2,
+  "short_label": "Find the unknown in a problem by solving an equation",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.2.3.1.3",
+  "subject": "math",
+  "code": "B5.2.3.1.3",
+  "grade": 5,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 3,
+  "sub_strand_name": "Variables and Equations",
+  "content_standard": "B5.2.3.1",
+  "cs_key": "2.3.1",
+  "indicator_no": 3,
+  "short_label": "Make up a story problem for a given equation",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.2.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.3.1.1.1",
+  "subject": "math",
+  "code": "B5.3.1.1.1",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "Lines and Shapes",
+  "content_standard": "B5.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Tell the properties of squares and rectangles",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.3.1.1.2",
+  "subject": "math",
+  "code": "B5.3.1.1.2",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "Lines and Shapes",
+  "content_standard": "B5.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Fold paper squares and rectangles to test properties",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.3.1.1.3",
+  "subject": "math",
+  "code": "B5.3.1.1.3",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "Lines and Shapes",
+  "content_standard": "B5.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 3,
+  "short_label": "Check if a polygon is regular by measuring or folding",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.1.1",
+  "subject": "math",
+  "code": "B5.3.2.1.1",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 1,
+  "short_label": "Estimate a perimeter, then measure and compare",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.1.2",
+  "subject": "math",
+  "code": "B5.3.2.1.2",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 2,
+  "short_label": "Calculate the perimeter of shapes in cm and m",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.1.3",
+  "subject": "math",
+  "code": "B5.3.2.1.3",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.1",
+  "cs_key": "3.2.1",
+  "indicator_no": 3,
+  "short_label": "Find the area of shapes made from rectangles",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.1.3"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.2.1",
+  "subject": "math",
+  "code": "B5.3.2.2.1",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.2",
+  "cs_key": "3.2.2",
+  "indicator_no": 1,
+  "short_label": "Choose everyday objects to stand for 1 cm³ and 1 m³",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.2.2",
+  "subject": "math",
+  "code": "B5.3.2.2.2",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.2",
+  "cs_key": "3.2.2",
+  "indicator_no": 2,
+  "short_label": "Find the volume of a box by counting 1 cm³ cubes",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.2.2",
+   "B5.3.3.2.2"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.2.3",
+  "subject": "math",
+  "code": "B5.3.2.2.3",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.2",
+  "cs_key": "3.2.2",
+  "indicator_no": 3,
+  "short_label": "Find different boxes that have the same volume",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.2.3"
+  ]
+ },
+ {
+  "id": "math:B5.3.2.2.4",
+  "subject": "math",
+  "code": "B5.3.2.2.4",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 2,
+  "sub_strand_name": "Measurement",
+  "content_standard": "B5.3.2.2",
+  "cs_key": "3.2.2",
+  "indicator_no": 4,
+  "short_label": "Link volume and capacity: 1 litre is 1,000 cm³",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.2.2.4",
+   "B5.3.3.2.4"
+  ]
+ },
+ {
+  "id": "math:B5.3.3.3.1",
+  "subject": "math",
+  "code": "B5.3.3.3.1",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement - Angles",
+  "content_standard": "B5.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 1,
+  "short_label": "Compare angles around you with a right angle",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.3.3.1"
+  ]
+ },
+ {
+  "id": "math:B5.3.3.3.2",
+  "subject": "math",
+  "code": "B5.3.3.3.2",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Measurement - Angles",
+  "content_standard": "B5.3.3.3",
+  "cs_key": "3.3.3",
+  "indicator_no": 2,
+  "short_label": "Measure angles with a protractor and name their type",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.3.3.2"
+  ]
+ },
+ {
+  "id": "math:B5.3.4.1.1",
+  "subject": "math",
+  "code": "B5.3.4.1.1",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 4,
+  "sub_strand_name": "Geometric Reasoning",
+  "content_standard": "B5.3.4.1",
+  "cs_key": "3.4.1",
+  "indicator_no": 1,
+  "short_label": "Give positions and directions using N, S, E and W",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.3.4.2.2",
+  "subject": "math",
+  "code": "B5.3.4.2.2",
+  "grade": 5,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 4,
+  "sub_strand_name": "Geometric Reasoning",
+  "content_standard": "B5.3.4.2",
+  "cs_key": "3.4.2",
+  "indicator_no": 2,
+  "short_label": "Identify the mirror image of a shape after reflection",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.3.4.2.2"
+  ]
+ },
+ {
+  "id": "math:B5.4.1.1.1",
+  "subject": "math",
+  "code": "B5.4.1.1.1",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B5.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Tell first-hand data from second-hand data",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.4.1.1.2",
+  "subject": "math",
+  "code": "B5.4.1.1.2",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B5.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 2,
+  "short_label": "Find and read second-hand data in papers and online",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.4.1.2.1",
+  "subject": "math",
+  "code": "B5.4.1.2.1",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B5.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 1,
+  "short_label": "Draw a double bar graph and use it to answer questions",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B5.4.1.2.2",
+  "subject": "math",
+  "code": "B5.4.1.2.2",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+  "content_standard": "B5.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 2,
+  "short_label": "Read double bar graphs from newspapers and other media",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B5.4.2.1.1",
+  "subject": "math",
+  "code": "B5.4.2.1.1",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance (Probability)",
+  "content_standard": "B5.4.2.1",
+  "cs_key": "4.2.1",
+  "indicator_no": 1,
+  "short_label": "Say if an outcome is impossible, possible or certain",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B5.4.2.1.2",
+  "subject": "math",
+  "code": "B5.4.2.1.2",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance (Probability)",
+  "content_standard": "B5.4.2.1",
+  "cs_key": "4.2.1",
+  "indicator_no": 2,
+  "short_label": "Plan a chance experiment with likely and unlikely outcomes",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.2.1.2"
+  ]
+ },
+ {
+  "id": "math:B5.4.2.1.3",
+  "subject": "math",
+  "code": "B5.4.2.1.3",
+  "grade": 5,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance (Probability)",
+  "content_standard": "B5.4.2.1",
+  "cs_key": "4.2.1",
+  "indicator_no": 3,
+  "short_label": "Repeat a chance experiment, record and explain results",
+  "label_reviewed": false,
+  "aliases": [
+   "B5.4.2.1.3"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.1",
+  "subject": "math",
+  "code": "B6.1.1.1.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 1,
+  "short_label": "Model numbers up to 1,000,000 with blocks or grids",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.2",
+  "subject": "math",
+  "code": "B6.1.1.1.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 2,
+  "short_label": "Read and write numbers up to one billion",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.3",
+  "subject": "math",
+  "code": "B6.1.1.1.3",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 3,
+  "short_label": "Find the numbers around a number on a number chart",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.4",
+  "subject": "math",
+  "code": "B6.1.1.1.4",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 4,
+  "short_label": "Compare and order large whole numbers using <, > and =",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.5",
+  "subject": "math",
+  "code": "B6.1.1.1.5",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 5,
+  "short_label": "Round whole numbers off, up or down to a given place",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.5"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.1.6",
+  "subject": "math",
+  "code": "B6.1.1.1.6",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.1",
+  "cs_key": "1.1.1",
+  "indicator_no": 6,
+  "short_label": "Skip count in 5,000s and 10,000s up to 1,000,000",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.1.6"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.2.1",
+  "subject": "math",
+  "code": "B6.1.1.2.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 1,
+  "short_label": "Recognise Roman numerals from I to C (1 to 100)",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.2.2",
+  "subject": "math",
+  "code": "B6.1.1.2.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.2",
+  "cs_key": "1.1.2",
+  "indicator_no": 2,
+  "short_label": "Change numbers to Roman numerals up to 100 and back",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.1.3.1",
+  "subject": "math",
+  "code": "B6.1.1.3.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 1,
+  "sub_strand_name": "Counting, Representation, Cardinality & Ordinality",
+  "content_standard": "B6.1.1.3",
+  "cs_key": "1.1.3",
+  "indicator_no": 1,
+  "short_label": "Find the HCF and LCM of numbers using prime factors",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.1.3.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.1.1",
+  "subject": "math",
+  "code": "B6.1.2.1.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 1,
+  "short_label": "Use mental tricks for times-table and division facts",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.1.2",
+  "subject": "math",
+  "code": "B6.1.2.1.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.1",
+  "cs_key": "1.2.1",
+  "indicator_no": 2,
+  "short_label": "Multiply mentally with zeros, doubling and splitting",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.2.1",
+  "subject": "math",
+  "code": "B6.1.2.2.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.2",
+  "cs_key": "1.2.2",
+  "indicator_no": 1,
+  "short_label": "Multiply big numbers by 2-digit and 3-digit numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.3.1",
+  "subject": "math",
+  "code": "B6.1.2.3.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.3",
+  "cs_key": "1.2.3",
+  "indicator_no": 1,
+  "short_label": "Recall division facts and test if a number divides",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.3.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.4.1",
+  "subject": "math",
+  "code": "B6.1.2.4.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.4",
+  "cs_key": "1.2.4",
+  "indicator_no": 1,
+  "short_label": "Divide a 3-digit number by a 1-digit number",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.4.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.5.1",
+  "subject": "math",
+  "code": "B6.1.2.5.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.5",
+  "cs_key": "1.2.5",
+  "indicator_no": 1,
+  "short_label": "Solve word problems that need more than one step",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.5.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.6.1",
+  "subject": "math",
+  "code": "B6.1.2.6.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 1,
+  "short_label": "Place, compare and order integers on a number line",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.6.1",
+   "B6.1.1.6.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.6.2",
+  "subject": "math",
+  "code": "B6.1.2.6.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 2,
+  "short_label": "Add and subtract positive and negative integers",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.6.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.2.6.3",
+  "subject": "math",
+  "code": "B6.1.2.6.3",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 2,
+  "sub_strand_name": "Number Operations",
+  "content_standard": "B6.1.2.6",
+  "cs_key": "1.2.6",
+  "indicator_no": 3,
+  "short_label": "Multiply integers using hops on a number line",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.2.6.3",
+   "B6.1.1.4.3"
+  ]
+ },
+ {
+  "id": "math:B6.1.3.1.1",
+  "subject": "math",
+  "code": "B6.1.3.1.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B6.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 1,
+  "short_label": "Compare and order fractions, decimals and percentages",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.3.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.3.1.2",
+  "subject": "math",
+  "code": "B6.1.3.1.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B6.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 2,
+  "short_label": "Add and subtract unlike fractions and mixed numbers",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.3.1.3",
+  "subject": "math",
+  "code": "B6.1.3.1.3",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 3,
+  "sub_strand_name": "Fractions",
+  "content_standard": "B6.1.3.1",
+  "cs_key": "1.3.1",
+  "indicator_no": 3,
+  "short_label": "Multiply fractions by whole numbers and by fractions",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B6.1.4.1.1",
+  "subject": "math",
+  "code": "B6.1.4.1.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Ratios and Proportion",
+  "content_standard": "B6.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 1,
+  "short_label": "Explain a ratio and write it in its simplest form",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.4.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.4.1.2",
+  "subject": "math",
+  "code": "B6.1.4.1.2",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Ratios and Proportion",
+  "content_standard": "B6.1.4.1",
+  "cs_key": "1.4.1",
+  "indicator_no": 2,
+  "short_label": "Find equal ratios and compare or order ratios",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.4.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.1.4.2.1",
+  "subject": "math",
+  "code": "B6.1.4.2.1",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Ratios and Proportion",
+  "content_standard": "B6.1.4.2",
+  "cs_key": "1.4.2",
+  "indicator_no": 1,
+  "short_label": "Explain proportion as two sets of equal ratios",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.4.2.1"
+  ]
+ },
+ {
+  "id": "math:B6.1.4.2.3",
+  "subject": "math",
+  "code": "B6.1.4.2.3",
+  "grade": 6,
+  "strand": 1,
+  "strand_name": "Number",
+  "sub_strand": 4,
+  "sub_strand_name": "Ratios and Proportion",
+  "content_standard": "B6.1.4.2",
+  "cs_key": "1.4.2",
+  "indicator_no": 3,
+  "short_label": "Solve rate and scale problems using proportion",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.1.4.2.3"
+  ]
+ },
+ {
+  "id": "math:B6.2.1.1.4",
+  "subject": "math",
+  "code": "B6.2.1.1.4",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Pattern and Relationships",
+  "content_standard": "B6.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 4,
+  "short_label": "Draw or build a pattern to check a prediction",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.1.1.4"
+  ]
+ },
+ {
+  "id": "math:B6.2.1.1.7",
+  "subject": "math",
+  "code": "B6.2.1.1.7",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Pattern and Relationships",
+  "content_standard": "B6.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 7,
+  "short_label": "Write a pattern rule in words and in algebra",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.1.1.7"
+  ]
+ },
+ {
+  "id": "math:B6.2.1.1.8",
+  "subject": "math",
+  "code": "B6.2.1.1.8",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 1,
+  "sub_strand_name": "Pattern and Relationships",
+  "content_standard": "B6.2.1.1",
+  "cs_key": "2.1.1",
+  "indicator_no": 8,
+  "short_label": "Describe a table's pattern with a maths expression",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.1.1.8"
+  ]
+ },
+ {
+  "id": "math:B6.2.2.1.1",
+  "subject": "math",
+  "code": "B6.2.2.1.1",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 2,
+  "sub_strand_name": "Algebraic Expressions",
+  "content_standard": "B6.2.2.1",
+  "cs_key": "2.2.1",
+  "indicator_no": 1,
+  "short_label": "Write, simplify and work out algebraic expressions",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.2.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.2.3.1.2",
+  "subject": "math",
+  "code": "B6.2.3.1.2",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 3,
+  "sub_strand_name": "Variables and Equations",
+  "content_standard": "B6.2.3.1",
+  "cs_key": "2.3.1",
+  "indicator_no": 2,
+  "short_label": "Write and solve a one-step equation for a problem",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.3.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.2.3.1.3",
+  "subject": "math",
+  "code": "B6.2.3.1.3",
+  "grade": 6,
+  "strand": 2,
+  "strand_name": "Algebra",
+  "sub_strand": 3,
+  "sub_strand_name": "Variables and Equations",
+  "content_standard": "B6.2.3.1",
+  "cs_key": "2.3.1",
+  "indicator_no": 3,
+  "short_label": "Make up a word problem that fits a given equation",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.2.3.1.3"
+  ]
+ },
+ {
+  "id": "math:B6.3.1.1.1",
+  "subject": "math",
+  "code": "B6.3.1.1.1",
+  "grade": 6,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "Lines and Shapes",
+  "content_standard": "B6.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 1,
+  "short_label": "Spot rectangular and triangular prisms around you",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.3.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.3.1.1.2",
+  "subject": "math",
+  "code": "B6.3.1.1.2",
+  "grade": 6,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 1,
+  "sub_strand_name": "Lines and Shapes",
+  "content_standard": "B6.3.1.1",
+  "cs_key": "3.1.1",
+  "indicator_no": 2,
+  "short_label": "Make rectangular and triangular prisms from nets",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.3.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.3.3.5.1",
+  "subject": "math",
+  "code": "B6.3.3.5.1",
+  "grade": 6,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Geometric Reasoning",
+  "content_standard": "B6.3.3.5",
+  "cs_key": "3.3.5",
+  "indicator_no": 1,
+  "short_label": "Give positions using NE, NW, SE and SW directions",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.3.3.5.1"
+  ]
+ },
+ {
+  "id": "math:B6.3.3.6.1",
+  "subject": "math",
+  "code": "B6.3.3.6.1",
+  "grade": 6,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Geometric Reasoning",
+  "content_standard": "B6.3.3.6",
+  "cs_key": "3.3.6",
+  "indicator_no": 1,
+  "short_label": "Reflect or slide a 2D shape and find its image",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.3.3.6.1"
+  ]
+ },
+ {
+  "id": "math:B6.3.3.6.2",
+  "subject": "math",
+  "code": "B6.3.3.6.2",
+  "grade": 6,
+  "strand": 3,
+  "strand_name": "Geometry and Measurement",
+  "sub_strand": 3,
+  "sub_strand_name": "Geometric Reasoning",
+  "content_standard": "B6.3.3.6",
+  "cs_key": "3.3.6",
+  "indicator_no": 2,
+  "short_label": "Tell whether an image is a reflection or a slide",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.3.3.6.2",
+   "B6.3.3.5.2"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.1.1",
+  "subject": "math",
+  "code": "B6.4.1.1.1",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 1,
+  "short_label": "Set up and draw a line graph from a table of values",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.1.1"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.1.2",
+  "subject": "math",
+  "code": "B6.4.1.1.2",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 2,
+  "short_label": "Decide if data needs a joined line or separate points",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.1.2"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.1.3",
+  "subject": "math",
+  "code": "B6.4.1.1.3",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.1",
+  "cs_key": "4.1.1",
+  "indicator_no": 3,
+  "short_label": "Draw a line graph and answer questions from it",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.1.3"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.2.1",
+  "subject": "math",
+  "code": "B6.4.1.2.1",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 1,
+  "short_label": "Choose a way to collect data and say why it fits",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.2.1"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.2.2",
+  "subject": "math",
+  "code": "B6.4.1.2.2",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 2,
+  "short_label": "Design a questionnaire, use it and record the answers",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.2.2"
+  ]
+ },
+ {
+  "id": "math:B6.4.1.2.3",
+  "subject": "math",
+  "code": "B6.4.1.2.3",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 1,
+  "sub_strand_name": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+  "content_standard": "B6.4.1.2",
+  "cs_key": "4.1.2",
+  "indicator_no": 3,
+  "short_label": "Run a survey, then tally, graph and use the results",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.1.2.3"
+  ]
+ },
+ {
+  "id": "math:B6.4.2.2.1",
+  "subject": "math",
+  "code": "B6.4.2.2.1",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance or Probability",
+  "content_standard": "B6.4.2.2",
+  "cs_key": "4.2.2",
+  "indicator_no": 1,
+  "short_label": "List all outcomes and find theoretical probability",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.2.2.1"
+  ]
+ },
+ {
+  "id": "math:B6.4.2.2.2",
+  "subject": "math",
+  "code": "B6.4.2.2.2",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance or Probability",
+  "content_standard": "B6.4.2.2",
+  "cs_key": "4.2.2",
+  "indicator_no": 2,
+  "short_label": "Predict how likely an outcome is using probability",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.2.2.2"
+  ]
+ },
+ {
+  "id": "math:B6.4.2.2.3",
+  "subject": "math",
+  "code": "B6.4.2.2.3",
+  "grade": 6,
+  "strand": 4,
+  "strand_name": "Data",
+  "sub_strand": 2,
+  "sub_strand_name": "Chance or Probability",
+  "content_standard": "B6.4.2.2",
+  "cs_key": "4.2.2",
+  "indicator_no": 3,
+  "short_label": "Explain why more trials bring results near the theory",
+  "label_reviewed": false,
+  "aliases": [
+   "B6.4.2.2.3",
+   "P6.4.2.2.3"
+  ]
+ }
+]

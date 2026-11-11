@@ -1,0 +1,176 @@
+{
+ "schema_version": 1,
+ "subject": "math",
+ "about": "Misprints in the NaCCA Mathematics PDFs (B1 to B3 = m13, B4 to B6 = m46) and what the curriculum parser does about each. The corrected code is canonical. The printed code is kept as an alias only when 'alias' is true, which is never the case when another indicator really owns the printed code. 'occurrence' counts uses of the printed code within one document. 'page' is the position of the page in the PDF file (not the number printed at the foot of the page). Draft files under data/contexts/drafts/ are keyed by the printed code: map their keys with 'draft_keys' (or kwan.curriculum.corrections.draft_key_map()); a key that is not listed is already canonical or is an alias.",
+ "actions": {
+  "recode": "the statement is a real indicator; its canonical code is 'corrected'",
+  "merge": "the statement repeats the indicator 'corrected' (duplicated page); its exemplars are merged into that indicator",
+  "drop_heading": "the line is not an indicator; the text under it stays with the indicator that the page continues"
+ },
+ "corrections": [
+  {
+   "printed": "B4.1.1.3.2",
+   "corrected": "B3.1.1.3.2",
+   "action": "recode",
+   "doc": "m13",
+   "occurrence": 1,
+   "page": 66,
+   "alias": false,
+   "draft_key": "B3.1.1.3.2",
+   "source": "raw/m13.txt line 2129; m13.pdf page 66",
+   "reason": "Wrong grade digit. The statement is in the Basic 3 part, directly after B3.1.1.3.1 and beside content standard B3.1.1.3. No alias: B4.1.1.3.2 is the real code of a different Basic 4 indicator (m46.pdf page 28). v1 gave this Basic 3 statement to B4.1.1.3.2 and so lost B3.1.1.3.2."
+  },
+  {
+   "printed": "B3.1.2.3",
+   "corrected": null,
+   "action": "drop_heading",
+   "doc": "m13",
+   "occurrence": 1,
+   "page": 70,
+   "source": "raw/m13.txt line 2282; m13.pdf page 70",
+   "reason": "A four-part code followed by the title of B3.1.2.3.1 again, at the top of a page that carries on the exemplars of content standard B3.1.2.3. Not a new indicator."
+  },
+  {
+   "printed": "B3.3.3.3.1",
+   "corrected": "B3.3.3.3.1",
+   "action": "merge",
+   "doc": "m13",
+   "occurrence": 2,
+   "page": 89,
+   "source": "raw/m13.txt lines 2859 and 2892; m13.pdf pages 88 and 89",
+   "reason": "The same statement with the same code is printed on two pages in a row. One indicator; the exemplars of both pages are kept once."
+  },
+  {
+   "printed": "B4.3.3.1.1",
+   "corrected": "B4.3.2.1.1",
+   "action": "merge",
+   "doc": "m46",
+   "occurrence": 2,
+   "page": 64,
+   "source": "raw/m46.txt line 2076; m46.pdf page 64 (compare page 56, line 1813)",
+   "reason": "A repeated page under the heading 'Sub-strand 3: Position/Transformation': the statement and exemplars of B4.3.2.1.1 printed again with the code of the perimeter indicator. The real B4.3.3.1.1 is on page 57. Not a new indicator."
+  },
+  {
+   "printed": "B5.1.2.1.1",
+   "corrected": null,
+   "action": "drop_heading",
+   "doc": "m46",
+   "occurrence": 2,
+   "page": 95,
+   "source": "raw/m46.txt line 3010; m46.pdf page 95",
+   "reason": "A stray heading that repeats the code B5.1.2.1.1 with the title of B5.1.2.2.1, in the middle of the exemplars of the decimals standard B5.1.4.1. The real B5.1.2.1.1 is on page 83. Not a new indicator; the exemplars under it stay with B5.1.4.1.1."
+  },
+  {
+   "printed": "B5.3.3.2.2",
+   "corrected": "B5.3.2.2.2",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 119,
+   "alias": true,
+   "draft_key": "B5.3.3.2.2",
+   "source": "raw/m46.txt line 3753; m46.pdf page 119",
+   "reason": "Sub-strand digit misprinted. It sits beside content standard B5.3.2.2, between B5.3.2.2.1 and B5.3.2.2.3. Sub-strand B5.3.3 has only content standard B5.3.3.3, so nothing else uses the printed code."
+  },
+  {
+   "printed": "B5.3.3.2.4",
+   "corrected": "B5.3.2.2.4",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 120,
+   "alias": true,
+   "draft_key": "B5.3.3.2.4",
+   "source": "raw/m46.txt line 3799; m46.pdf page 120",
+   "reason": "Sub-strand digit misprinted. It sits beside content standard B5.3.2.2, directly after B5.3.2.2.3."
+  },
+  {
+   "printed": "B6.1.1.6.1",
+   "corrected": "B6.1.2.6.1",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 146,
+   "alias": true,
+   "draft_key": "B6.1.1.6.1",
+   "source": "raw/m46.txt line 4558; m46.pdf page 146",
+   "reason": "Sub-strand digit misprinted. It sits beside content standard B6.1.2.6, directly before B6.1.2.6.2. Sub-strand B6.1.1 ends at content standard B6.1.1.3."
+  },
+  {
+   "printed": "B6.1.1.4.3",
+   "corrected": "B6.1.2.6.3",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 148,
+   "alias": true,
+   "draft_key": "B6.1.1.4.3",
+   "source": "raw/m46.txt line 4616; m46.pdf page 148",
+   "reason": "Two digits misprinted. It sits beside content standard B6.1.2.6, directly after B6.1.2.6.2, and is the third integer indicator of that standard."
+  },
+  {
+   "printed": "B6.3.3.5.1",
+   "corrected": "B6.3.3.6.1",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 2,
+   "page": 165,
+   "alias": false,
+   "draft_key": "B6.3.3.5.1_dup",
+   "source": "raw/m46.txt line 5133; m46.pdf page 165 (first use: line 5109, page 164)",
+   "reason": "The code B6.3.3.5.1 is printed for two different indicators. The first (page 164, compass directions) keeps it. The second (page 165, performing a reflection or translation) starts a NEW content-standard cell: from page 165 the left column prints a different standard statement (about performing a single transformation), still under the code B6.3.3.5. So the document has two content standards here and the code of the second is a misprint. Basic 5 has the same pair as two consecutive standards (B5.3.4.1 compass directions, B5.3.4.2 transformations). The second standard therefore takes the next free number in the sub-strand, B6.3.3.6, and its two indicators keep their printed indicator numbers: .1 and .2. No alias, because B6.3.3.5.1 belongs to the first indicator. This is a Kwan decision from position; NaCCA prints no code for it."
+  },
+  {
+   "printed": "B6.3.3.5.2",
+   "corrected": "B6.3.3.6.2",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 168,
+   "alias": true,
+   "draft_key": "B6.3.3.5.2",
+   "source": "raw/m46.txt line 5210; m46.pdf page 168",
+   "reason": "Second indicator of the transformation standard described in the entry above (the left column beside it prints the transformation standard). It moves with its standard to B6.3.3.6 so that the two transformation indicators stay together and in order. The printed code B6.3.3.5.2 stays as an alias."
+  },
+  {
+   "printed": "B6.5.2.2",
+   "corrected": "B6.4.1.2.2",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 173,
+   "alias": false,
+   "draft_key": "B6.4.1.2.2",
+   "source": "raw/m46.txt line 5380; m46.pdf page 173",
+   "reason": "A four-part misprint. It sits beside content standard B6.4.1.2, between B6.4.1.2.1 (page 172) and B6.4.1.2.3 (page 175). No alias: the printed form is not a five-part indicator code."
+  },
+  {
+   "printed": "P6.4.2.2.3",
+   "corrected": "B6.4.2.2.3",
+   "action": "recode",
+   "doc": "m46",
+   "occurrence": 1,
+   "page": 179,
+   "alias": true,
+   "draft_key": "B6.4.2.2.3",
+   "source": "raw/m46.txt line 5560; m46.pdf page 179",
+   "reason": "First letter misprinted (P for B). It sits beside content standard B6.4.2.2, after B6.4.2.2.2."
+  }
+ ],
+ "draft_keys": {
+  "B5.3.3.2.2": "B5.3.2.2.2",
+  "B5.3.3.2.4": "B5.3.2.2.4",
+  "B6.1.1.6.1": "B6.1.2.6.1",
+  "B6.1.1.4.3": "B6.1.2.6.3",
+  "B6.3.3.5.1_dup": "B6.3.3.6.1",
+  "B6.3.3.5.2": "B6.3.3.6.2"
+ },
+ "sub_strand_names": {
+  "B4.1.4": "Decimals",
+  "B4.1.5": "Percentages",
+  "B5.1.4": "Decimals",
+  "B5.1.5": "Percentages",
+  "B4.3.3": "Measurement (Perimeter, Area and Time)"
+ },
+ "sub_strand_names_about": "Sub-strand names that the PDF does not print cleanly. B4.1.4, B4.1.5, B5.1.4 and B5.1.5 have no sub-strand heading at all in m46.pdf (the decimals and percentage standards follow the fractions pages without a heading), so Kwan names them. B4.3.3 has two headings ('Measurement- (Perimeter and Area)' on page 57 and 'Measurement -Time' on page 61) for one sub-strand number, so Kwan joins them. Every other name is the heading printed in the PDF, or, where a grade prints no heading (B2.1.2, B5.1.2, B6.3.1), the heading of the same sub-strand in the nearest grade."
+}

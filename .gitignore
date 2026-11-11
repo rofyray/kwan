@@ -15,5 +15,12 @@ demo.png
 .DS_Store
 .claude/
 
-# assembled Hugging Face Space bundle (scripts/build_space.sh)
+# build outputs and tool caches
 build/
+dist/
+site/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.venv-kt/
+.venv-ai/

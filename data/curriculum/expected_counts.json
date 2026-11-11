@@ -1,0 +1,231 @@
+{
+ "schema_version": 1,
+ "subject": "math",
+ "family": "nacca-math-primary",
+ "counted_on": "2026-11-10",
+ "about": "Number of distinct indicators in the NaCCA Mathematics curriculum for Basic 1 to 6, counted from the PDFs page by page and independently of the parser. The parser must match these counts exactly (tests/test_curriculum_counts.py). Keys of 'counts': grade, then strand, then sub-strand. Codes are the corrected (canonical) codes: see corrections.json.",
+ "method": "Every table page of both PDFs (m13.pdf pages 21 to 92, m46.pdf pages 20 to 179) was read in two independent forms: the 'pdftotext -layout' dump, listing every line that carries anything shaped like a code, and a font-based listing of every bold line in the middle column (indicator statements are printed in bold, so a statement with a damaged or missing code still shows). Each statement was tallied by hand under its grade, strand and sub-strand. Statements printed twice (a duplicated page) count once. Pages where the numbering jumps were then checked as page images (m46.pdf pages 124, 157 and 161) to make sure no statement hides in a picture. A second person should repeat this count before release: see 'open_checks'.",
+ "sources": {
+  "m13": "MATHEMATICS-BASIC-B1-B3-2.pdf (95 pages)",
+  "m46": "MATHEMATICS-BASIC-B4-B6-1.pdf (182 pages)"
+ },
+ "total": 276,
+ "per_grade": {
+  "1": 24,
+  "2": 29,
+  "3": 40,
+  "4": 71,
+  "5": 67,
+  "6": 45
+ },
+ "counts": {
+  "1": {
+   "1": {
+    "1": 6,
+    "2": 7,
+    "3": 2,
+    "4": 1
+   },
+   "2": {
+    "1": 1
+   },
+   "3": {
+    "1": 3,
+    "2": 1,
+    "3": 1
+   },
+   "4": {
+    "1": 2
+   }
+  },
+  "2": {
+   "1": {
+    "1": 6,
+    "2": 6,
+    "3": 3,
+    "4": 1
+   },
+   "2": {
+    "1": 2
+   },
+   "3": {
+    "1": 3,
+    "2": 1,
+    "3": 5
+   },
+   "4": {
+    "1": 2
+   }
+  },
+  "3": {
+   "1": {
+    "1": 8,
+    "2": 12,
+    "3": 3,
+    "4": 1
+   },
+   "2": {
+    "1": 1
+   },
+   "3": {
+    "1": 4,
+    "2": 1,
+    "3": 8
+   },
+   "4": {
+    "1": 2
+   }
+  },
+  "4": {
+   "1": {
+    "1": 16,
+    "2": 7,
+    "3": 6,
+    "4": 3,
+    "5": 2
+   },
+   "2": {
+    "1": 7,
+    "2": 9
+   },
+   "3": {
+    "1": 2,
+    "2": 1,
+    "3": 12
+   },
+   "4": {
+    "1": 6
+   }
+  },
+  "5": {
+   "1": {
+    "1": 13,
+    "2": 7,
+    "3": 6,
+    "4": 5,
+    "5": 3
+   },
+   "2": {
+    "1": 8,
+    "2": 1,
+    "3": 3
+   },
+   "3": {
+    "1": 3,
+    "2": 7,
+    "3": 2,
+    "4": 2
+   },
+   "4": {
+    "1": 4,
+    "2": 3
+   }
+  },
+  "6": {
+   "1": {
+    "1": 9,
+    "2": 9,
+    "3": 3,
+    "4": 4
+   },
+   "2": {
+    "1": 3,
+    "2": 1,
+    "3": 2
+   },
+   "3": {
+    "1": 2,
+    "3": 3
+   },
+   "4": {
+    "1": 6,
+    "2": 3
+   }
+  }
+ },
+ "notes": [
+  {
+   "where": "B1.2 (Basic 1 Algebra)",
+   "note": "The PDF has exactly one Algebra indicator for Basic 1, B1.2.1.1.1 (m13.pdf page 33). The v1 README said this strand was under-counted; it is not."
+  },
+  {
+   "where": "B4.1.3.2",
+   "gap": [
+    "B4.1.3.2.2"
+   ],
+   "note": "The PDF goes from B4.1.3.2.1 (m46.pdf page 41) to B4.1.3.2.3 (page 42). No indicator is invented for the missing number."
+  },
+  {
+   "where": "B5.3.3",
+   "gap": [
+    "B5.3.3.1",
+    "B5.3.3.2"
+   ],
+   "note": "Sub-strand B5.3.3 starts at content standard B5.3.3.3 (page 121). The two codes printed as B5.3.3.2.2 and B5.3.3.2.4 are misprints of B5.3.2.2.2 and B5.3.2.2.4 and are counted under B5.3.2."
+  },
+  {
+   "where": "B5.3.4.2",
+   "gap": [
+    "B5.3.4.2.1"
+   ],
+   "note": "Content standard B5.3.4.2 has only B5.3.4.2.2 (page 124, checked as an image). B5.3.4.2.1 is not in the PDF."
+  },
+  {
+   "where": "B6.1.4.2",
+   "gap": [
+    "B6.1.4.2.2"
+   ],
+   "note": "The PDF goes from B6.1.4.2.1 (page 154) to B6.1.4.2.3 (page 155)."
+  },
+  {
+   "where": "B6.2.1.1",
+   "gap": [
+    "B6.2.1.1.1",
+    "B6.2.1.1.2",
+    "B6.2.1.1.3",
+    "B6.2.1.1.5",
+    "B6.2.1.1.6"
+   ],
+   "note": "Only B6.2.1.1.4, .7 and .8 are printed (pages 156 to 158; page 157 checked as an image). The Basic 5 standard B5.2.1.1 has all eight."
+  },
+  {
+   "where": "B6.2.3.1",
+   "gap": [
+    "B6.2.3.1.1"
+   ],
+   "note": "The sub-strand starts at B6.2.3.1.2 (page 161, checked as an image)."
+  },
+  {
+   "where": "B6.3.2",
+   "gap": [
+    "B6.3.2"
+   ],
+   "note": "Basic 6 strand 3 goes from B6.3.1 (prisms, pages 162 to 163) straight to B6.3.3 (page 164). No measurement sub-strand is printed for Basic 6."
+  },
+  {
+   "where": "B6.3.3",
+   "gap": [
+    "B6.3.3.1",
+    "B6.3.3.2",
+    "B6.3.3.3",
+    "B6.3.3.4"
+   ],
+   "note": "The only content-standard code printed in this sub-strand is B6.3.3.5, used for two different standards. Kwan numbers the second one B6.3.3.6 (see corrections.json). 3 indicators in all."
+  },
+  {
+   "where": "B6.4.2",
+   "gap": [
+    "B6.4.2.1"
+   ],
+   "note": "Sub-strand B6.4.2 starts at content standard B6.4.2.2 (page 176)."
+  },
+  {
+   "where": "duplicated pages",
+   "note": "B3.3.3.3.1 is printed on two pages (m13.pdf pages 88 and 89) and counts once. m46.pdf page 64 repeats B4.3.2.1.1 under the code B4.3.3.1.1 and adds nothing. m13.pdf page 70 and m46.pdf page 95 carry stray headings that are not indicators."
+  }
+ ],
+ "open_checks": [
+  "A second person should recount at least Basic 6 from the PDF, because that grade has the most misprints.",
+  "The PDF gaps listed above may be filled in a later NaCCA edition; `kwan curriculum fetch` fails when a PDF changes, which is the signal to recount."
+ ]
+}

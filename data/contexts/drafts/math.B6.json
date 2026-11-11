@@ -1,0 +1,435 @@
+{
+ "meta": {
+  "subject": "math",
+  "grades": [
+   6
+  ],
+  "drafted_by": "claude-fable-5-2 (offline draft, not yet reviewed)",
+  "drafted_on": "2026-11-10",
+  "prompt": "For every Basic 6 indicator code found in the NaCCA mathematics curriculum text (including codes the parser missed), write one short_label of at most 60 characters in plain English that says what the pupil can do, and two or three practice settings of at most 220 characters each. Each setting is a short task a teacher can pose, set accurately in everyday Ghanaian life (real towns across the 16 regions, names from many groups, local foods, markets, farming, transport, games, cedi amounts written like GH₵ 7.50), and it must practise exactly that indicator with correct, solvable maths. Use the curriculum exemplars only to understand the maths and never copy or closely paraphrase them. Use short sentences and common words (reading level about grade 7 or lower), no brand names, no stereotypes, nothing unsafe, no em dash, and vary names and scenarios across the file. Written offline by the model itself with no external API or model call; these are unreviewed drafts for later teacher review.",
+  "source_file": "raw/m46.txt",
+  "not_in_indicators_json": [
+   {
+    "code": "B6.1.2.6.1",
+    "line": 4558,
+    "note": "Printed in the PDF as B6.1.1.6.1 (typo: it sits under content standard B6.1.2.6, just before B6.1.2.6.2). Keyed in this file by the printed code B6.1.1.6.1; see data/curriculum/corrections.json."
+   },
+   {
+    "code": "B6.1.2.6.3",
+    "line": 4616,
+    "note": "Printed in the PDF as B6.1.1.4.3 (typo: it sits under content standard B6.1.2.6, right after B6.1.2.6.2). Keyed in this file by the printed code B6.1.1.4.3; see data/curriculum/corrections.json."
+   },
+   {
+    "code": "B6.2.2.1.1",
+    "line": 4950,
+    "note": "The code stands alone on its line and the statement follows on lines 4952 to 4954, so the v1 parser missed it."
+   },
+   {
+    "code": "B6.3.3.5.1_dup",
+    "line": 5133,
+    "note": "A second, different indicator printed with the same code B6.3.3.5.1 (the first, at line 5109, is the cardinal-points one). Keyed here with the suffix _dup; data/curriculum/corrections.json maps it to B6.3.3.6.1."
+   },
+   {
+    "code": "B6.4.1.2.2",
+    "line": 5380,
+    "note": "Printed in the PDF as B6.5.2.2 (typo: it sits under content standard B6.4.1.2, between B6.4.1.2.1 and B6.4.1.2.3)."
+   },
+   {
+    "code": "B6.4.2.2.3",
+    "line": 5560,
+    "note": "Printed in the PDF as P6.4.2.2.3 (typo: P for B; it follows B6.4.2.2.2 under content standard B6.4.2.2)."
+   }
+  ],
+  "auto_check_fixes": [
+   {
+    "code": "B6.2.1.1.8",
+    "setting": 2,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B6.4.1.1.1",
+    "setting": 0,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   },
+   {
+    "code": "B6.4.2.2.1",
+    "setting": 2,
+    "failed": [
+     "reading_level"
+    ],
+    "rewritten_by": "claude-fable-5-2",
+    "rewritten_on": "2026-11-10"
+   }
+  ]
+ },
+ "indicators": {
+  "B6.1.1.1.1": {
+   "short_label": "Model numbers up to 1,000,000 with blocks or grids",
+   "settings": [
+    "A cocoa depot in Sefwi Wiawso counted 352,000 beans. With base blocks, a flat stands for 100,000, a rod for 10,000 and a small cube for 1,000. Which pieces would you lay out to show this number?",
+    "The people of Yendi raised GH₵ 240,000 for a new clinic. On a graph sheet, one small square stands for GH₵ 1,000. How many squares must you shade to show the amount?",
+    "A bank in Takoradi pays out GH₵ 123,400 using only GH₵ 100 notes. How many notes is that? How many GH₵ 200 notes would make GH₵ 600,000?"
+   ]
+  },
+  "B6.1.1.1.2": {
+   "short_label": "Read and write numbers up to one billion",
+   "settings": [
+    "The 2021 census counted 30,832,019 people in Ghana. Write this number in words. What is the value of the digit 8 in it?",
+    "A radio presenter in Koforidua says a new road will cost two hundred and five million, sixty thousand cedis. Write this amount in figures.",
+    "A water factory in Tema filled 4,075,300 sachets last year. Write this number in expanded form to show the value of each digit."
+   ]
+  },
+  "B6.1.1.1.3": {
+   "short_label": "Find the numbers around a number on a number chart",
+   "settings": [
+    "Elikem in Hohoe makes a number chart that goes up by 1,500 along each row and by 10,000 down each column. He points to 24,500. Which numbers are to its left, to its right, above it and below it?",
+    "On a chart in Azara's class in Walewale, numbers go up by 2,000 across and by 20,000 down. What number is two steps to the right of 46,000? What number is one step below 46,000?",
+    "Kojo of Saltpond covers one number on a chart. The number on its left is 58,500 and the number on its right is 61,500. Numbers go up by 1,500 across. Which number did he cover?"
+   ]
+  },
+  "B6.1.1.1.4": {
+   "short_label": "Compare and order large whole numbers using <, > and =",
+   "settings": [
+    "A football match in Kumasi drew 38,450 fans and one in Accra drew 38,540 fans. Write the two numbers with < or > between them. Which city had the bigger crowd?",
+    "Four farmer groups near Techiman harvested 72,300 kg, 27,900 kg, 72,030 kg and 70,950 kg of maize. Put the harvests in order from the smallest to the largest.",
+    "Dzifa's shop in Keta sold goods worth GH₵ 84,600 last year. Senyo's shop sold GH₵ 10,000 less. How much did Senyo's shop sell? Compare the two amounts using < or >."
+   ]
+  },
+  "B6.1.1.1.5": {
+   "short_label": "Round whole numbers off, up or down to a given place",
+   "settings": [
+    "A festival in Winneba drew 46,738 visitors. Round this number off to the nearest ten, hundred, thousand and ten thousand.",
+    "A yam trader in Bimbilla has 23,460 tubers. Round this number up to the nearest thousand, then round it down to the nearest thousand. Which answer is closer to the real number?",
+    "Bawku market had 18,790 shoppers on Friday and 21,240 on Saturday. Round each number off to the nearest thousand, then estimate the total for the two days."
+   ]
+  },
+  "B6.1.1.1.6": {
+   "short_label": "Skip count in 5,000s and 10,000s up to 1,000,000",
+   "settings": [
+    "A poultry farm at Dormaa Ahenkro packs 5,000 eggs each day. It has packed 285,000 so far. Count on in 5,000s to find the total after each of the next five days.",
+    "A water tank in Tumu holds 830,000 litres. The town uses 10,000 litres a day and no water is added. Count back in 10,000s for six days. How much water is left?",
+    "Naa Dei of Teshie counts in 5,000s: 615,000, 620,000, 625,000, 635,000, 640,000. She has left out one number. Which number is missing?"
+   ]
+  },
+  "B6.1.1.2.1": {
+   "short_label": "Recognise Roman numerals from I to C (1 to 100)",
+   "settings": [
+    "The clock on an old church tower in Cape Coast shows the hour IX. A stone on the wall has the number XL. Which numbers do these two Roman numerals stand for?",
+    "The chapters of a storybook at a school in Obuasi have Roman numerals. Yaw is on chapter XVI and Akua is on chapter XIX. Write both chapters as ordinary numbers. Who has read further?",
+    "Mrs Lamptey in Nungua writes I, V, X, L and C on the board. What number does each letter stand for? Which letter stands for 50?"
+   ]
+  },
+  "B6.1.1.2.2": {
+   "short_label": "Change numbers to Roman numerals up to 100 and back",
+   "settings": [
+    "On 6 March 2026 Ghana marked 69 years of independence. Write 69 in Roman numerals. Then write the Roman numeral for 70.",
+    "Awuni's grandmother in Zebilla is LXXIV years old and his little sister is VIII. Write both ages in ordinary numbers. How many years older is the grandmother?",
+    "Efua in Komenda sets a puzzle for her friend: XXIV + ? = XL. Find the missing number and write it as a Roman numeral."
+   ]
+  },
+  "B6.1.1.3.1": {
+   "short_label": "Find the HCF and LCM of numbers using prime factors",
+   "settings": [
+    "Adwoa in Nkawkaw has 42 oranges and 70 mangoes. She packs them into baskets that all hold the same mix, with no fruit left. Use prime factors to find the largest number of baskets she can make.",
+    "At Sunyani station, a trotro leaves for Berekum every 12 minutes. One leaves for Techiman every 18 minutes. Both leave at 6:00 a.m. Use prime factors to find when they next leave together.",
+    "Tiyumba in Savelugu has ropes of 24 m, 60 m and 84 m. She cuts all of them into equal pieces, as long as possible, with nothing left over. Use prime factors to find the length of one piece."
+   ]
+  },
+  "B6.1.2.1.1": {
+   "short_label": "Use mental tricks for times-table and division facts",
+   "settings": [
+    "Kelewele is sold in packs of 7 pieces at a stall in Osu. Maku knows that 5 packs hold 35 pieces. How can she use this fact to find the number of pieces in 6 packs and in 7 packs?",
+    "A bag of oranges costs GH₵ 9 at Agbogbloshie market. For 6 bags, Kwei thinks: 10 sixes, then take away 6. Show his working. Use the same idea to find 9 × 8.",
+    "Apoka in Navrongo has 72 pieces of kulikuli to share equally among 8 friends. She thinks, '8 times what makes 72?' How many pieces does each friend get?"
+   ]
+  },
+  "B6.1.2.1.2": {
+   "short_label": "Multiply mentally with zeros, doubling and splitting",
+   "settings": [
+    "A crate holds 30 eggs. A shop in Koforidua buys 400 crates. Work out 4 × 3 first, then add the zeros to find 400 × 30 in your head. How many eggs is that?",
+    "Mawuli sells 32 balls of kenkey at GH₵ 5 each in Aflao. To work it out in his head, he halves 32 and doubles 5. Show how this works and find the money he collects.",
+    "A bowl of tuo zaafi costs GH₵ 16 at a chop bar in Tamale. Find the cost of 7 bowls by splitting 16 into 10 and 6. If a bowl cost GH₵ 19, how would 20 - 1 help you?"
+   ]
+  },
+  "B6.1.2.2.1": {
+   "short_label": "Multiply big numbers by 2-digit and 3-digit numbers",
+   "settings": [
+    "A school in Goaso buys 245 maths books at GH₵ 36 each. How much does the school pay altogether?",
+    "A cocoa farm near Enchi has 128 rows with 235 trees in each row. How many cocoa trees are on the farm?",
+    "A bus makes 46 trips in a month between Wa and Tamale. Each trip is about 310 km. About how many kilometres does the bus travel in the month?"
+   ]
+  },
+  "B6.1.2.3.1": {
+   "short_label": "Recall division facts and test if a number divides",
+   "settings": [
+    "Ayine in Bolgatanga weaves 63 baskets and ties them in bundles of 9 for the market. How many bundles does he make? Which times-table fact helps you?",
+    "In a game of oware in Offinso, Akosua has 48 seeds to drop equally into 6 pits. How many seeds go into each pit? How many would go into each of 8 pits?",
+    "A baker in Kasoa has 78 loaves of bread. Can she pack all of them in trays of 6 with none left over? Use a divisibility rule, not long division, to decide."
+   ]
+  },
+  "B6.1.2.4.1": {
+   "short_label": "Divide a 3-digit number by a 1-digit number",
+   "settings": [
+    "A farmer in Kete Krachi packs 864 yams into crates of 6. How many crates does he fill?",
+    "Seven friends in Half Assini earn GH₵ 945 from selling coconuts and share it equally. How much does each friend get?",
+    "A school in Jasikan has 500 exercise books to share equally among 8 classes. How many books does each class get, and how many are left over?"
+   ]
+  },
+  "B6.1.2.5.1": {
+   "short_label": "Solve word problems that need more than one step",
+   "settings": [
+    "Esi buys 3 balls of kenkey at GH₵ 6 each and fried fish for GH₵ 15 in Mankessim. She pays with a GH₵ 50 note. How much change does she get?",
+    "A farmer in Wenchi picks 480 mangoes. He keeps 30 for his family and packs the rest equally into 9 boxes. How many mangoes go into each box?",
+    "A trotro mate in Ashaiman collects GH₵ 8 from each of 15 riders on every trip. After 4 trips the driver spends GH₵ 220 on fuel. How much money is left?"
+   ]
+  },
+  "B6.1.1.6.1": {
+   "short_label": "Place, compare and order integers on a number line",
+   "settings": [
+    "A cold store at Tema harbour keeps fish at -18°C. The room next to it is at -5°C. Mark both numbers on a number line. Which room is colder? Write the comparison using < or >.",
+    "In a quiz in Lawra, each wrong answer takes away a point. The scores are Dery 3, Ziem -2, Bayor -5 and Tengan 0. Put the scores in order from the lowest to the highest.",
+    "Kafui in Ho marks -7 and 4 on a number line. Which integer is the opposite of 4? Which is greater, -7 or -4? How many steps is it from -7 to 4?"
+   ]
+  },
+  "B6.1.2.6.2": {
+   "short_label": "Add and subtract positive and negative integers",
+   "settings": [
+    "Nii Lante of La owes his friend GH₵ 8, so he writes -8. Then he earns GH₵ 5 for washing a taxi and pays it to his friend. Work out -8 + 5. Does he still owe money?",
+    "A cold room for fish in Sekondi is at -6°C. A worker turns it down by 7 degrees. Work out -6 - 7 to find the new temperature.",
+    "In a spelling game in Kpando, Akpene has 4 points and then loses 9 points. Work out 4 - 9. Next, find the number you must add to 6 to get -10."
+   ]
+  },
+  "B6.1.1.4.3": {
+   "short_label": "Multiply integers using hops on a number line",
+   "settings": [
+    "Fuseini in Sagnarigu borrows GH₵ 4 from his sister on each of 3 days. Show each loan as -4. Use hops on a number line to work out 3 × (-4). What does the answer tell you?",
+    "A cold store in Apam starts at 0°C and gets 2 degrees colder every hour. Work out 5 × (-2) to find the temperature after 5 hours.",
+    "In a quiz in Bechem, each wrong answer scores -3. Abena gets 6 answers wrong. Write a multiplication sentence and find her score from these answers."
+   ]
+  },
+  "B6.1.3.1.1": {
+   "short_label": "Compare and order fractions, decimals and percentages",
+   "settings": [
+    "Three farmers at Asesewa sold part of their maize. Tetteh sold 3/5 of his, Dede sold 65% of hers and Korkor sold 0.58 of hers. Change all three to one form. Who sold the largest share?",
+    "In a test in Salaga, Mariama got 7/8 of the marks, Issah got 85% and Zenabu got 0.9 of the marks. Put the three scores in order from the lowest to the highest.",
+    "Three equal water tanks in Nkwanta are 0.625 full, 3/4 full and 70% full. Place the three amounts on a number line from 0 to 1. Which tank holds the least water?"
+   ]
+  },
+  "B6.1.3.1.2": {
+   "short_label": "Add and subtract unlike fractions and mixed numbers",
+   "settings": [
+    "Yaa in Ejisu mixes 2 1/2 cups of gari with 1 2/3 cups of cooked beans. How many cups of food does she have altogether?",
+    "A tailor in Dzodze has 5 1/4 yards of cloth. She uses 2 2/3 yards to sew a dress. How many yards of cloth are left?",
+    "Sulemana walks 3/4 km from home to the mosque in Yendi and then 5/6 km to school. How far does he walk in all? How much longer is the second part than the first?"
+   ]
+  },
+  "B6.1.3.1.3": {
+   "short_label": "Multiply fractions by whole numbers and by fractions",
+   "settings": [
+    "Each of 5 children in Dodowa gets 3/4 of a ball of banku. Draw a picture to show 5 × 3/4. How many balls of banku is that altogether?",
+    "Araba has 12 pineapples at her stall near Nsawam. She sells 2/3 of them before noon. Use a drawing to find 2/3 of 12.",
+    "Half of a school garden in Jirapa is for vegetables. Okro takes up 3/4 of the vegetable part. Shade a paper rectangle to find what fraction of the whole garden grows okro."
+   ]
+  },
+  "B6.1.4.1.1": {
+   "short_label": "Explain a ratio and write it in its simplest form",
+   "settings": [
+    "A class in Bibiani has 18 girls and 12 boys. Write the ratio of girls to boys, then give it in its simplest form.",
+    "Amihere in Axim mixes 2 cups of pineapple juice with 6 cups of water. Write the ratio of juice to water in its simplest form. What fraction of the whole drink is juice?",
+    "A small drum at a borehole in Nadowli holds 40 litres and a big drum holds 200 litres. How many small drums fill the big one? Write the ratio of small to big in the form 1 : n."
+   ]
+  },
+  "B6.1.4.1.2": {
+   "short_label": "Find equal ratios and compare or order ratios",
+   "settings": [
+    "Selorm in Kpeve stirs 2 spoons of cocoa powder into 5 cups of water. Enyonam stirs 3 spoons into 8 cups. Whose drink has the stronger cocoa taste? Use equal ratios to explain.",
+    "The ratio of goats to sheep on a farm near Tumu is 3 : 5. There are 27 goats. How many sheep are there? How many animals are there altogether?",
+    "A waakye seller at Kejetia cooks rice and beans in the ratio 4 : 1. How many cups of beans does she need for 12 cups of rice? Complete 4 : 1 = 12 : ?"
+   ]
+  },
+  "B6.1.4.2.1": {
+   "short_label": "Explain proportion as two sets of equal ratios",
+   "settings": [
+    "One oware board has 12 pits. Draw a mapping from 1, 2, 3 and 5 boards to their number of pits. Write two of the pairs as equal ratios. Is the number of pits proportional to the number of boards?",
+    "At a stall in Atebubu, 2 tubers of yam cost GH₵ 30, 4 tubers cost GH₵ 60 and 6 tubers cost GH₵ 80. Check the ratio of cost to tubers each time. Is the cost proportional? Explain.",
+    "At a store in Ejura, 40 equal sacks hold 2,000 kg of maize. How much maize is in one sack? How much maize would 7 sacks hold?"
+   ]
+  },
+  "B6.1.4.2.3": {
+   "short_label": "Solve rate and scale problems using proportion",
+   "settings": [
+    "At Makola market, 3 kg of rice costs GH₵ 54. What is the cost of 1 kg? Use this rate to find the cost of 5 kg and of 12 kg.",
+    "On a map of Ghana, 1 cm stands for 50 km. Tamale and Bolgatanga are about 3 cm apart on the map. About how far apart are the two towns?",
+    "Adongo draws a plan of his classroom in Bongo with a scale of 1 : 100. On the plan the room is 8 cm long and 6 cm wide. What are the real length and width in metres?"
+   ]
+  },
+  "B6.2.1.1.4": {
+   "short_label": "Draw or build a pattern to check a prediction",
+   "settings": [
+    "Kwame in Akim Oda makes a row of squares with matchsticks: 4 sticks for 1 square, 7 for 2 and 10 for 3. He predicts 16 sticks for 5 squares. Draw or build the pattern to check. Is he right?",
+    "Pupils in Paga set out bottle tops in triangle shapes using 1, then 3, then 6, then 10 tops. Predict the number of tops in the 6th shape. Draw the shapes to check your answer.",
+    "Adinkra stamps on a cloth at Ntonso follow a pattern: row 1 has 2 stamps, row 2 has 5 and row 3 has 8. Predict the number of stamps in row 7, then sketch the rows to check."
+   ]
+  },
+  "B6.2.1.1.7": {
+   "short_label": "Write a pattern rule in words and in algebra",
+   "settings": [
+    "A taxi in Takoradi charges GH₵ 5 to start plus GH₵ 3 for each kilometre. Trips of 1, 2 and 3 km cost GH₵ 8, GH₵ 11 and GH₵ 14. Write the rule for a trip of n km in words and in algebra.",
+    "Bags of charcoal are stacked by the road at Buipe: 6 in the first row, 12 in the second and 18 in the third. Write the rule for row n in words and as an algebra expression.",
+    "Asibi in Bawku starts with 40 guinea fowl eggs and sells 4 each day. After days 1, 2 and 3 she has 36, 32 and 28 eggs. Write a rule in words and in algebra for the eggs left after day n."
+   ]
+  },
+  "B6.2.1.1.8": {
+   "short_label": "Describe a table's pattern with a maths expression",
+   "settings": [
+    "A price table at a canteen in Akosombo shows jollof: 1 bowl GH₵ 12, 2 bowls GH₵ 24, 3 bowls GH₵ 36. Write an expression for the cost of n bowls. How many bowls cost GH₵ 180?",
+    "An okada rider in Damongo keeps a table: 2 trips earn GH₵ 14, 3 trips earn GH₵ 21 and 5 trips earn GH₵ 35. Say how earnings change with trips. Write an expression for t trips.",
+    "A tank at Gushegu holds 500 litres. A table shows the water left as buckets are drawn. It is 480 litres after 1 bucket, 460 after 2 and 440 after 3. Write an expression for the litres left after b buckets."
+   ]
+  },
+  "B6.2.2.1.1": {
+   "short_label": "Write, simplify and work out algebraic expressions",
+   "settings": [
+    "A ball of kenkey costs k cedis at Chorkor and a fried fish costs GH₵ 10 more than that. Write an expression for the price of the fish. Write another for 3 balls of kenkey and 1 fish.",
+    "Naa Adjeley sells mangoes at Madina market. She sells m in the morning, m + 4 in the afternoon and 2m in the evening. Write the total as one expression and simplify it.",
+    "A trotro fare is t cedis and a taxi fare is x cedis. In one week Edem of Anloga pays 5t + 2x. Find how much he pays when t = 6 and x = 15."
+   ]
+  },
+  "B6.2.3.1.2": {
+   "short_label": "Write and solve a one-step equation for a problem",
+   "settings": [
+    "Ekow in Anomabo had some oranges. After he bought 14 more he had 41. Let x be the number he had at first. Write an equation for this story and solve it.",
+    "Four friends in Bole share the cost of a football equally and each pays GH₵ 35. Let c be the cost of the ball. Write an equation with c and solve it.",
+    "Six bowls of koko cost GH₵ 30 at a stall in Nima. Let p be the price of one bowl. Write an equation and find the value of p."
+   ]
+  },
+  "B6.2.3.1.3": {
+   "short_label": "Make up a word problem that fits a given equation",
+   "settings": [
+    "Make up a story about buying waakye at a stall in Dansoman that fits the equation 3w = 45. Say what w stands for, then solve the equation.",
+    "Write two different stories for the equation x - 12 = 30. One can be about mangoes on a tree in Yeji and the other about riders on a trotro. Solve it to check that your stories make sense.",
+    "Tell a story about sharing groundnuts among 5 friends in Gambaga that fits the equation n ÷ 5 = 8. What does n stand for? Find n."
+   ]
+  },
+  "B6.3.1.1.1": {
+   "short_label": "Spot rectangular and triangular prisms around you",
+   "settings": [
+    "In a shop at Dunkwa-on-Offin, Serwaa sees a box of matches, a tin of milk, a football and a carton of soap. Which of these are rectangular prisms? What shape is the cross-section of each prism?",
+    "A long bar of washing soap from Konongo market is cut straight across in three places. What shape is each cut face? Is it the same each time? What does this tell you about the shape of the bar?",
+    "The roof space of a house in Aburi looks like a triangle from the front and keeps that shape all the way to the back. What 3D shape is it? Name the shapes of its faces."
+   ]
+  },
+  "B6.3.1.1.2": {
+   "short_label": "Make rectangular and triangular prisms from nets",
+   "settings": [
+    "Open up an empty carton from a shop in Tarkwa and lay it flat. How many rectangles are in its net? Draw the net on card, cut it out and fold it back into a rectangular prism.",
+    "Narteh in Somanya wants a card box for beads that is 8 cm long, 6 cm wide and 4 cm high. Draw its net with tabs, cut it out and fold it. What are the sizes of its six faces?",
+    "Make a model tent for a class display in Sandema: a triangular prism 12 cm long whose ends are triangles with 6 cm sides. Draw the net. How many triangles and rectangles does it need?"
+   ]
+  },
+  "B6.3.3.5.1": {
+   "short_label": "Give positions using NE, NW, SE and SW directions",
+   "settings": [
+    "On a map of Ghana, find Accra and Ho. Is Ho to the north-east or to the north-west of Accra? In which direction do you travel to go from Ho back to Accra?",
+    "On a grid map of a village near Nalerigu, the school is 3 squares east and 3 squares north of Wuni's house. In which direction is the school from his house? And his house from the school?",
+    "Adzo starts at the chief's palace on a grid map of a town near Dambai. She goes 2 squares west and 2 squares south to the market. In which direction is the market from the palace? Describe the way back."
+   ]
+  },
+  "B6.3.3.5.1_dup": {
+   "short_label": "Reflect or slide a 2D shape and find its image",
+   "settings": [
+    "On squared paper, draw the sail of a fishing canoe at Elmina as a triangle with corners (1, 1), (4, 1) and (1, 5). Reflect it in the y-axis. Write the corners of the image.",
+    "A kente weaver at Bonwire repeats a square shape by sliding it 5 squares right and 2 squares down on a grid. Write this slide as a translation vector. Where does the corner at (1, 4) move to?",
+    "Suhuyini in Kumbungu draws a flag shape 2 squares to the left of a mirror line on squared paper and reflects it. Where is the image? Are its size and shape the same as the flag?"
+   ]
+  },
+  "B6.3.3.5.2": {
+   "short_label": "Tell whether an image is a reflection or a slide",
+   "settings": [
+    "On a kente strip from Agotime Kpetoe, shape B looks like shape A flipped over a line. Shape C looks like A moved along without turning. Which one is a reflection and which is a translation? How can you tell?",
+    "A floor tile design in Cape Coast has triangle P at (2, 1), (4, 1), (2, 3) and triangle Q at (2, -1), (4, -1), (2, -3). Is Q a reflection or a translation of P? Name the mirror line or the vector.",
+    "Nyameke in Esiama moves a square with corners (0, 0), (2, 0), (2, 2), (0, 2) to (3, -4), (5, -4), (5, -2), (3, -2). Which single transformation is this? Write its vector."
+   ]
+  },
+  "B6.4.1.1.1": {
+   "short_label": "Set up and draw a line graph from a table of values",
+   "settings": [
+    "Ama in Sunyani takes the temperature in the school yard. It is 24°C at 7 a.m., 27°C at 9 a.m., 31°C at 11 a.m., 33°C at 1 p.m. and 30°C at 3 p.m. Choose a title, axes and a scale. Draw a line graph.",
+    "A school tank in Wechiau held 900 litres on Monday, then 750, 600, 480 and 300 litres on the next four days. Pick a scale for each axis, add a title and draw a line graph.",
+    "At a clinic in Agona Swedru, Kwabena's baby brother weighed 4 kg, 5 kg, 5.5 kg, 6.5 kg and 7 kg in months 1 to 5. What goes on each axis? What scale fits? Draw the line graph."
+   ]
+  },
+  "B6.4.1.1.2": {
+   "short_label": "Decide if data needs a joined line or separate points",
+   "settings": [
+    "Mawusi in Kadjebi measures the height of her maize plant every day. Lamisi in Karaga counts the pupils in each class. Whose data is continuous and suits a line graph? Explain why.",
+    "A station master at Kaneshie counts the trotros that leave each hour. Can 7.5 trotros leave? Should the points on his graph be joined with a line? Give a reason.",
+    "A farmer in Pusiga weighs a growing goat each week. A Berekum team counts its goals in each match. Which data set is continuous and which is discrete? Which one should be drawn as a joined line?"
+   ]
+  },
+  "B6.4.1.1.3": {
+   "short_label": "Draw a line graph and answer questions from it",
+   "settings": [
+    "A class in Kumasi recorded rainfall in mm: March 140, April 150, May 190, June 230, July 130, August 80. Draw a line graph. Which month was wettest? Between which two months did rain drop most?",
+    "A kiosk in Hohoe sold 20, 35, 30, 50, 65 and 80 bottles of water from Monday to Saturday. Draw a line graph. On which day did sales fall? What does the graph tell you about the week?",
+    "A tuber of yam at Kintampo market cost GH₵ 30 in March, GH₵ 28 in May, GH₵ 20 in July, GH₵ 15 in September and GH₵ 18 in November. Draw a line graph. When was yam cheapest? Suggest why."
+   ]
+  },
+  "B6.4.1.2.1": {
+   "short_label": "Choose a way to collect data and say why it fits",
+   "settings": [
+    "Your class in Mampong must choose a drink for the end-of-term party: sobolo, asaana or fruit juice. Would you use a questionnaire, an interview or observation to find out? Give a reason.",
+    "A head teacher in Kpandai wants to know how many pupils come to school on foot, by bicycle or by okada. Would you watch at the gate or hand out a question form? Explain your choice.",
+    "You need the total rainfall in Wa for each month of last year. Would you measure it yourself, interview a farmer or look up weather records? Say which is best and why."
+   ]
+  },
+  "B6.4.1.2.2": {
+   "short_label": "Design a questionnaire, use it and record the answers",
+   "settings": [
+    "Write five questions to find out how pupils in your class in Sefwi Bekwai get to school and how much they pay for trotro or okada each day. Ask ten classmates and record their answers in a table.",
+    "Design a short question form on favourite foods such as fufu, banku, tuo zaafi and waakye. Use it with 12 pupils in your school. Record each pupil's answers in one row of a table.",
+    "Your class in Nandom wants to know which game pupils play most: ampe, oware, football or chaskele. Write the questions, choose whom to ask, collect the answers and record them neatly."
+   ]
+  },
+  "B6.4.1.2.3": {
+   "short_label": "Run a survey, then tally, graph and use the results",
+   "settings": [
+    "A class in Asamankese asked 30 pupils to pick a fruit for break time: orange 12, mango 9, banana 6, pawpaw 3. Make a frequency table, draw a bar graph and say which fruit the school should buy most.",
+    "Abiba's group in Tolon asked 24 pupils their shoe size for sports shoes: 6 wear size 5, 10 wear size 6 and 8 wear size 7. Draw a bar graph. How many pairs of each size are needed for 48 pupils?",
+    "Plan a survey for a class food sale in Sogakope: kelewele, bofrot or roasted groundnuts? Ask 25 pupils, tally the answers, draw a bar graph and write down what your class should sell."
+   ]
+  },
+  "B6.4.2.2.1": {
+   "short_label": "List all outcomes and find theoretical probability",
+   "settings": [
+    "Before a football match in Dormaa Ahenkro, the referee tosses a 50 pesewas coin. List all the possible outcomes. What is the probability that the coin lands on heads?",
+    "Ludo is played in many homes in Bekwai. List all the outcomes when the die is rolled once. What is the probability of rolling a 6? Of rolling a number greater than 4?",
+    "Delali in Denu tosses a 20 pesewas coin 50 times. It shows heads 27 times. Write the experimental probability of heads as a fraction. Is it more or less than the theoretical one?"
+   ]
+  },
+  "B6.4.2.2.2": {
+   "short_label": "Predict how likely an outcome is using probability",
+   "settings": [
+    "A spinner at a school fun fair in Drobo has 8 equal parts numbered 1 to 8. What is the probability of landing on a number greater than 5? In 80 spins, about how many times would you expect this?",
+    "A bag at a kiosk in Prampram holds 5 toffees of the same size: 2 red, 2 yellow and 1 green. Ayeley picks one without looking. Predict the probability that it is red. Which colour is least likely?",
+    "Atanga in Tongo makes a spinner with 5 equal parts named kenkey, banku, fufu, waakye and jollof. What is the probability that it stops on banku or fufu? Predict the number of such results in 100 spins."
+   ]
+  },
+  "B6.4.2.2.3": {
+   "short_label": "Explain why more trials bring results near the theory",
+   "settings": [
+    "Six groups in Agogo each toss a GH₵ 1 coin 20 times and get 8, 13, 9, 12, 11 and 7 heads. Find each group's fraction of heads, then the fraction for all 120 tosses. Which is closer to 1/2? Why?",
+    "Esinam in Akatsi rolls a ludo die 12 times and gets only one 6. After 600 rolls she has 97 sixes. Compare 1/12 and 97/600 with the theoretical 1/6. What happens as the number of rolls grows?",
+    "Kwaku in Nkoranza says, 'I tossed a coin 4 times and got 4 heads, so heads always wins.' Explain why 4 tosses are too few. About how many heads would you expect in 1,000 tosses?"
+   ]
+  }
+ }
+}

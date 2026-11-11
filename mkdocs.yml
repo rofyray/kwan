@@ -1,0 +1,88 @@
+site_name: Kwan
+site_description: An open-source learning path engine for Ghanaian primary maths. It tells a pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+site_url: https://rofyray.github.io/kwan/
+repo_url: https://github.com/rofyray/kwan
+repo_name: rofyray/kwan
+edit_uri: edit/main/docs/
+copyright: >-
+  Kwan uses the NaCCA Standards-Based Curriculum to organise skills.
+  Kwan is not reviewed, approved or endorsed by NaCCA or the Ministry of Education.
+  Code: MIT. Kwan-written content: CC BY 4.0.
+
+docs_dir: docs
+strict: false
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+
+nav:
+  - Overview: index.md
+  - Quickstart: quickstart.md
+  - How Kwan works:
+      - Method: method.md
+      - Evidence: evidence.md
+      - Data card: data-card.md
+      - Model card: model-card.md
+  - For teachers and writers:
+      - Context style guide: context-style-guide.md
+      - Teacher review guide: teacher-review-guide.md
+  - Project:
+      - Governance: governance.md
+      - Roadmap: roadmap.md
+  - QA reports:
+      - Curriculum report: qa/curriculum-math.html
+      - Skill map report: qa/graph-math.md
+
+# The QA reports are written by build steps and committed with the site:
+#   docs/qa/curriculum-math.html   by  kwan curriculum qa
+#   docs/qa/graph-math.md          by  kwan graph validate
+# The curriculum report is a finished HTML page and is copied as it is.
+# docs/history/ holds planning documents and is not published.
+exclude_docs: |
+  /history/
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn

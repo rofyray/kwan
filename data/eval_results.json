@@ -1,10 +1,44 @@
 {
  "assistments_2009": {
   "dataset": "ASSISTments 2009 skill-builder (corrected)",
+  "licence": "research use; cite Feng, Heffernan & Koedinger (2009)",
   "rows": 259399,
   "students": 4163,
+  "items": 15925,
   "skills": 111,
   "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4729,
+    "ACC": 0.6626,
+    "ECE": 0.0058
+   },
+   "skill-mean": {
+    "AUC": 0.6244,
+    "RMSE": 0.4617,
+    "ACC": 0.6718,
+    "ECE": 0.0075
+   },
+   "elo": {
+    "AUC": 0.6682,
+    "RMSE": 0.4551,
+    "ACC": 0.6898,
+    "ECE": 0.0532
+   },
+   "bkt": {
+    "AUC": 0.7001,
+    "RMSE": 0.4438,
+    "ACC": 0.7087,
+    "ECE": 0.0315
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7545,
+    "RMSE": 0.4271,
+    "ACC": 0.73,
+    "ECE": 0.0254
+   }
+  },
   "AUC": {
    "global-mean": 0.5,
    "skill-mean": 0.6244,
@@ -22,11 +56,39 @@
  },
  "eedi_2020_task34": {
   "dataset": "Eedi NeurIPS 2020 Education Challenge, task 3/4 subset",
+  "licence": "research use; cite Wang et al. (2020) arXiv:2007.12061",
   "rows": 1382727,
   "students": 4918,
+  "items": 948,
   "questions": 948,
   "skills": 57,
   "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.499,
+    "ACC": 0.5318,
+    "ECE": 0.007
+   },
+   "skill-mean": {
+    "AUC": 0.5762,
+    "RMSE": 0.4944,
+    "ACC": 0.5626,
+    "ECE": 0.0075
+   },
+   "elo": {
+    "AUC": 0.6842,
+    "RMSE": 0.4747,
+    "ACC": 0.6264,
+    "ECE": 0.0418
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7764,
+    "RMSE": 0.439,
+    "ACC": 0.708,
+    "ECE": 0.0402
+   }
+  },
   "AUC": {
    "global-mean": 0.5,
    "skill-mean": 0.5762,
@@ -44,21 +106,3841 @@
   "setup": "30 simulated learners x 150 practice steps, NaCCA B1-B6 graph",
   "new_skills_mastered": {
    "beginner_p1": {
-    "kwan": 25.6,
-    "syllabus": 24.0,
-    "random": 10.4
+    "kwan": 25.2,
+    "syllabus": 23.7,
+    "random": 9.7
    },
    "gapped_p4": {
-    "kwan": 14.0,
+    "kwan": 13.5,
     "syllabus": 8.8,
-    "random": 10.9
+    "random": 10.7
+   }
+  },
+  "v2": {
+   "setup": "30 simulated learners per profile and policy (seeds 0 to 29), 150 practice steps at 5 a day, then 30 days without practice; goal runs stop at 300 steps",
+   "graph": {
+    "nodes": 276,
+    "edges": 295,
+    "ids": "namespaced"
+   },
+   "n_learners": 30,
+   "steps": 150,
+   "retention_days": 30,
+   "goal_max_steps": 300,
+   "assumptions": {
+    "p_learn": 0.35,
+    "p_learn_blocked": 0.03,
+    "slip": 0.1,
+    "guess": 0.2,
+    "steps_per_day": 5,
+    "stability_new_days": 45.0,
+    "stability_max_days": 365.0,
+    "stability_growth": 2.0,
+    "text": "Each simulated pupil has a hidden true state for every skill. One practice step on a skill the pupil does not know teaches it with probability 0.35 when every prerequisite is truly known and 0.03 otherwise. A known skill is answered wrongly 10% of the time and an unknown one is guessed right 20% of the time. The pupil does 5 steps a day. Each night every known skill can be forgotten: a skill with memory strength S days survives one day with probability exp(-1/S). S is 45 days for a skill just learned and 365 days for what the pupil knew at the start; practising a known skill again on a later day doubles S, up to 365 days. Practising a skill does not refresh its prerequisites. These are modelling assumptions, not measurements of Ghanaian pupils."
+   },
+   "profiles": {
+    "beginner_p1": "ASSUMPTION, not data. A pupil starting Basic 1: knows 15% of the B1 and B2 skills (from home and kindergarten) and 3% of everything later. Same as the v1.0 profile.",
+    "gapped_p4": "ASSUMPTION, not data. A Basic 4 pupil with foundational gaps: knows 75% of the B1 to B3 skills, so one lower-primary skill in four is missing, and 5% of B4 to B6. Same as the v1.0 profile.",
+    "gapped_p6": "ASSUMPTION, not data. A Basic 6 pupil with gaps that grew over the years: knows 80% of B1 to B3, 50% of B4 and B5, and 5% of B6.",
+    "uneven_strands": "ASSUMPTION, not data. A Basic 4 pupil who is strong in Number and weak in Geometry and Measurement: of the B1 to B4 skills, knows 85% in Number, 15% in Geometry and Measurement and 50% in Algebra and Data; knows 5% of B5 and B6 in every strand."
+   },
+   "policies": {
+    "kwan-strict": "Kwan with the library defaults (strict goal mode, no exploration, variety 0.05, review slot on). The pupil gets a list of 3 skills, practises each once in the order given, then gets a new list.",
+    "kwan-explore": "The same as kwan-strict with exploration switched on (eps 0.05, as in the demo).",
+    "kwan-top1": "Kwan used as in the v1.0 simulator, added as a sensitivity check: the pupil practises only the top pick and asks again after every answer. With a list of 1 there is no review slot.",
+    "syllabus": "Syllabus order from Basic 1: always the first skill, by class and then by code, that the learner model does not count as mastered. It does not use the prerequisite map.",
+    "random": "A skill drawn at random from the whole curriculum at every step.",
+    "remedial-first": "The pupil's class syllabus with remediation first: take the first skill of the pupil's class (then later classes, then earlier ones) that is not mastered; if any skill that leads to it is below 70%, practise the earliest such skill, otherwise practise the skill itself. It uses the prerequisite map but none of Kwan's scoring. With a goal, the goal is the skill it works towards."
+   },
+   "new_skills_mastered": {
+    "beginner_p1": {
+     "kwan-strict": {
+      "mean": 23.2,
+      "sd": 2.7
+     },
+     "kwan-explore": {
+      "mean": 22.0,
+      "sd": 3.8
+     },
+     "kwan-top1": {
+      "mean": 19.9,
+      "sd": 3.1
+     },
+     "syllabus": {
+      "mean": 17.6,
+      "sd": 4.2
+     },
+     "random": {
+      "mean": 6.9,
+      "sd": 3.4
+     },
+     "remedial-first": {
+      "mean": 19.1,
+      "sd": 3.3
+     }
+    },
+    "gapped_p4": {
+     "kwan-strict": {
+      "mean": 11.1,
+      "sd": 3.5
+     },
+     "kwan-explore": {
+      "mean": 10.4,
+      "sd": 2.8
+     },
+     "kwan-top1": {
+      "mean": 12.7,
+      "sd": 3.5
+     },
+     "syllabus": {
+      "mean": 6.3,
+      "sd": 2.1
+     },
+     "random": {
+      "mean": 7.2,
+      "sd": 2.7
+     },
+     "remedial-first": {
+      "mean": 15.4,
+      "sd": 3.8
+     }
+    },
+    "gapped_p6": {
+     "kwan-strict": {
+      "mean": 9.4,
+      "sd": 2.5
+     },
+     "kwan-explore": {
+      "mean": 8.4,
+      "sd": 2.5
+     },
+     "kwan-top1": {
+      "mean": 8.6,
+      "sd": 2.8
+     },
+     "syllabus": {
+      "mean": 5.6,
+      "sd": 2.1
+     },
+     "random": {
+      "mean": 8.1,
+      "sd": 2.2
+     },
+     "remedial-first": {
+      "mean": 12.9,
+      "sd": 2.5
+     }
+    },
+    "uneven_strands": {
+     "kwan-strict": {
+      "mean": 10.1,
+      "sd": 2.7
+     },
+     "kwan-explore": {
+      "mean": 9.9,
+      "sd": 2.3
+     },
+     "kwan-top1": {
+      "mean": 8.6,
+      "sd": 2.9
+     },
+     "syllabus": {
+      "mean": 8.0,
+      "sd": 2.0
+     },
+     "random": {
+      "mean": 7.6,
+      "sd": 2.4
+     },
+     "remedial-first": {
+      "mean": 5.0,
+      "sd": 2.7
+     }
+    }
+   },
+   "skills_retained": {
+    "beginner_p1": {
+     "kwan-strict": {
+      "mean": 17.7,
+      "sd": 2.5
+     },
+     "kwan-explore": {
+      "mean": 17.4,
+      "sd": 3.4
+     },
+     "kwan-top1": {
+      "mean": 14.1,
+      "sd": 3.5
+     },
+     "syllabus": {
+      "mean": 10.4,
+      "sd": 3.0
+     },
+     "random": {
+      "mean": 4.1,
+      "sd": 2.1
+     },
+     "remedial-first": {
+      "mean": 11.6,
+      "sd": 3.1
+     }
+    },
+    "gapped_p4": {
+     "kwan-strict": {
+      "mean": 8.2,
+      "sd": 3.2
+     },
+     "kwan-explore": {
+      "mean": 7.5,
+      "sd": 2.0
+     },
+     "kwan-top1": {
+      "mean": 9.1,
+      "sd": 2.7
+     },
+     "syllabus": {
+      "mean": 4.4,
+      "sd": 1.9
+     },
+     "random": {
+      "mean": 3.6,
+      "sd": 1.9
+     },
+     "remedial-first": {
+      "mean": 9.5,
+      "sd": 3.0
+     }
+    },
+    "gapped_p6": {
+     "kwan-strict": {
+      "mean": 7.2,
+      "sd": 1.9
+     },
+     "kwan-explore": {
+      "mean": 6.0,
+      "sd": 2.3
+     },
+     "kwan-top1": {
+      "mean": 5.9,
+      "sd": 2.3
+     },
+     "syllabus": {
+      "mean": 3.2,
+      "sd": 1.6
+     },
+     "random": {
+      "mean": 4.4,
+      "sd": 1.8
+     },
+     "remedial-first": {
+      "mean": 7.3,
+      "sd": 2.4
+     }
+    },
+    "uneven_strands": {
+     "kwan-strict": {
+      "mean": 7.7,
+      "sd": 2.2
+     },
+     "kwan-explore": {
+      "mean": 7.1,
+      "sd": 2.1
+     },
+     "kwan-top1": {
+      "mean": 6.1,
+      "sd": 2.1
+     },
+     "syllabus": {
+      "mean": 5.3,
+      "sd": 1.8
+     },
+     "random": {
+      "mean": 4.3,
+      "sd": 1.7
+     },
+     "remedial-first": {
+      "mean": 3.3,
+      "sd": 1.8
+     }
+    }
+   },
+   "steps_to_goal": {
+    "beginner_p1": {
+     "kwan-strict": {
+      "mean": 79.7,
+      "sd": 65.9,
+      "reached": 1.0
+     },
+     "kwan-explore": {
+      "mean": 82.2,
+      "sd": 57.2,
+      "reached": 1.0
+     },
+     "kwan-top1": {
+      "mean": 28.4,
+      "sd": 19.7,
+      "reached": 1.0
+     },
+     "syllabus": {
+      "mean": 264.7,
+      "sd": 66.9,
+      "reached": 0.27
+     },
+     "random": {
+      "mean": 290.2,
+      "sd": 53.7,
+      "reached": 0.03
+     },
+     "remedial-first": {
+      "mean": 27.1,
+      "sd": 19.0,
+      "reached": 1.0
+     }
+    },
+    "gapped_p4": {
+     "kwan-strict": {
+      "mean": 170.1,
+      "sd": 85.0,
+      "reached": 0.83
+     },
+     "kwan-explore": {
+      "mean": 155.8,
+      "sd": 81.1,
+      "reached": 0.9
+     },
+     "kwan-top1": {
+      "mean": 85.2,
+      "sd": 63.4,
+      "reached": 0.97
+     },
+     "syllabus": {
+      "mean": 300.0,
+      "sd": 0.0,
+      "reached": 0.0
+     },
+     "random": {
+      "mean": 300.0,
+      "sd": 0.0,
+      "reached": 0.0
+     },
+     "remedial-first": {
+      "mean": 75.7,
+      "sd": 48.7,
+      "reached": 1.0
+     }
+    },
+    "gapped_p6": {
+     "kwan-strict": {
+      "mean": 197.4,
+      "sd": 89.7,
+      "reached": 0.73
+     },
+     "kwan-explore": {
+      "mean": 201.2,
+      "sd": 95.5,
+      "reached": 0.67
+     },
+     "kwan-top1": {
+      "mean": 101.0,
+      "sd": 73.5,
+      "reached": 0.93
+     },
+     "syllabus": {
+      "mean": 300.0,
+      "sd": 0.0,
+      "reached": 0.0
+     },
+     "random": {
+      "mean": 299.2,
+      "sd": 4.2,
+      "reached": 0.03
+     },
+     "remedial-first": {
+      "mean": 84.3,
+      "sd": 48.5,
+      "reached": 1.0
+     }
+    },
+    "uneven_strands": {
+     "kwan-strict": {
+      "mean": 194.6,
+      "sd": 71.8,
+      "reached": 0.83
+     },
+     "kwan-explore": {
+      "mean": 194.9,
+      "sd": 72.2,
+      "reached": 0.83
+     },
+     "kwan-top1": {
+      "mean": 87.4,
+      "sd": 37.2,
+      "reached": 1.0
+     },
+     "syllabus": {
+      "mean": 300.0,
+      "sd": 0.0,
+      "reached": 0.0
+     },
+     "random": {
+      "mean": 296.1,
+      "sd": 21.2,
+      "reached": 0.03
+     },
+     "remedial-first": {
+      "mean": 102.9,
+      "sd": 68.2,
+      "reached": 0.93
+     }
+    }
+   },
+   "review_steps": {
+    "beginner_p1": {
+     "kwan-strict": {
+      "mean": 0.0,
+      "sd": 0.0
+     },
+     "kwan-explore": {
+      "mean": 0.0,
+      "sd": 0.0
+     },
+     "kwan-top1": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "gapped_p4": {
+     "kwan-strict": {
+      "mean": 1.8,
+      "sd": 2.0
+     },
+     "kwan-explore": {
+      "mean": 1.9,
+      "sd": 2.2
+     },
+     "kwan-top1": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "gapped_p6": {
+     "kwan-strict": {
+      "mean": 2.3,
+      "sd": 1.8
+     },
+     "kwan-explore": {
+      "mean": 3.7,
+      "sd": 2.4
+     },
+     "kwan-top1": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    },
+    "uneven_strands": {
+     "kwan-strict": {
+      "mean": 1.4,
+      "sd": 1.5
+     },
+     "kwan-explore": {
+      "mean": 1.2,
+      "sd": 1.5
+     },
+     "kwan-top1": {
+      "mean": 0.0,
+      "sd": 0.0
+     }
+    }
+   },
+   "acceptance": {
+    "kwan_strict_beats_syllabus_and_random_on_gapped_profiles": true,
+    "kwan_strict_within_1_skill_of_syllabus_on_every_profile": true,
+    "met": true,
+    "failed": []
    }
   }
  },
  "latency": {
-  "recommend_top3_mean_ms": 0.18,
-  "recommend_top3_p95_ms": 0.2,
+  "recommend_top3_mean_ms": 0.1,
+  "recommend_top3_p95_ms": 0.13,
   "calls": 3000,
   "hardware": "single CPU core, pure Python"
+ },
+ "ammore_2024": {
+  "dataset": "AMMORE (Rori WhatsApp maths tutor, Rising Academies), Jan to Apr 2024",
+  "licence": "CC BY-NC 4.0",
+  "all": {
+   "rows": 50507,
+   "students": 2388,
+   "items": 1601,
+   "questions": 1601,
+   "skills": 151,
+   "split": "80/20 by student, seed 42",
+   "metrics": {
+    "global-mean": {
+     "AUC": 0.5,
+     "RMSE": 0.4572,
+     "ACC": 0.7028,
+     "ECE": 0.0103
+    },
+    "skill-mean": {
+     "AUC": 0.6314,
+     "RMSE": 0.4472,
+     "ACC": 0.7046,
+     "ECE": 0.0233
+    },
+    "elo": {
+     "AUC": 0.6904,
+     "RMSE": 0.4341,
+     "ACC": 0.7223,
+     "ECE": 0.0093
+    },
+    "elo-multi (Kwan)": {
+     "AUC": 0.774,
+     "RMSE": 0.4103,
+     "ACC": 0.7513,
+     "ECE": 0.0312
+    }
+   },
+   "AUC": {
+    "global-mean": 0.5,
+    "skill-mean": 0.6314,
+    "elo": 0.6904,
+    "elo-multi (Kwan)": 0.774
+   },
+   "RMSE": {
+    "global-mean": 0.4572,
+    "skill-mean": 0.4472,
+    "elo": 0.4341,
+    "elo-multi (Kwan)": 0.4103
+   }
+  },
+  "ghana": {
+   "rows": 16706,
+   "students": 730,
+   "items": 1463,
+   "questions": 1463,
+   "skills": 144,
+   "split": "80/20 by student, seed 42",
+   "metrics": {
+    "global-mean": {
+     "AUC": 0.5,
+     "RMSE": 0.4527,
+     "ACC": 0.7123,
+     "ECE": 0.0012
+    },
+    "skill-mean": {
+     "AUC": 0.6388,
+     "RMSE": 0.4447,
+     "ACC": 0.7011,
+     "ECE": 0.0285
+    },
+    "elo": {
+     "AUC": 0.6902,
+     "RMSE": 0.4324,
+     "ACC": 0.7363,
+     "ECE": 0.0552
+    },
+    "elo-multi (Kwan)": {
+     "AUC": 0.7639,
+     "RMSE": 0.4109,
+     "ACC": 0.7577,
+     "ECE": 0.0509
+    }
+   },
+   "AUC": {
+    "global-mean": 0.5,
+    "skill-mean": 0.6388,
+    "elo": 0.6902,
+    "elo-multi (Kwan)": 0.7639
+   },
+   "RMSE": {
+    "global-mean": 0.4527,
+    "skill-mean": 0.4447,
+    "elo": 0.4324,
+    "elo-multi (Kwan)": 0.4109
+   }
+  }
+ },
+ "assistments_2015": {
+  "dataset": "ASSISTments 2015 (100 skill builders, main problems)",
+  "licence": "research use",
+  "rows": 683801,
+  "students": 19840,
+  "items": 100,
+  "skills": 100,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4409,
+    "ACC": 0.7358,
+    "ECE": 0.005
+   },
+   "skill-mean": {
+    "AUC": 0.6401,
+    "RMSE": 0.4304,
+    "ACC": 0.7358,
+    "ECE": 0.0044
+   },
+   "elo": {
+    "AUC": 0.6567,
+    "RMSE": 0.4287,
+    "ACC": 0.7361,
+    "ECE": 0.0316
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.6835,
+    "RMSE": 0.4235,
+    "ACC": 0.7382,
+    "ECE": 0.0236
+   }
+  },
+  "note": "This release has no question ids: the skill builder is both the skill and the item."
+ },
+ "curriculum": {
+  "family": "nacca-math-primary",
+  "subject": "math",
+  "generated_on": "2026-11-11",
+  "engine": "pdfplumber",
+  "indicators": 276,
+  "expected": 276,
+  "counts_match": true,
+  "per_grade": {
+   "1": 24,
+   "2": 29,
+   "3": 40,
+   "4": 71,
+   "5": 67,
+   "6": 45
+  },
+  "per_grade_strand": {
+   "1": {
+    "1": 16,
+    "2": 1,
+    "3": 5,
+    "4": 2
+   },
+   "2": {
+    "1": 16,
+    "2": 2,
+    "3": 9,
+    "4": 2
+   },
+   "3": {
+    "1": 24,
+    "2": 1,
+    "3": 13,
+    "4": 2
+   },
+   "4": {
+    "1": 34,
+    "2": 16,
+    "3": 15,
+    "4": 6
+   },
+   "5": {
+    "1": 34,
+    "2": 12,
+    "3": 14,
+    "4": 7
+   },
+   "6": {
+    "1": 25,
+    "2": 6,
+    "3": 5,
+    "4": 9
+   }
+  },
+  "truncated": 1,
+  "truncation_rate": 0.0036,
+  "truncated_codes": [
+   "B3.1.2.2.1"
+  ],
+  "with_exemplar": 276,
+  "share_with_exemplar": 1.0,
+  "without_exemplar_codes": [],
+  "exemplars": 673,
+  "exemplars_ghana_context": 43,
+  "indicators_with_ghana_exemplar": 32,
+  "duplicate_ids": 0,
+  "corrections_applied": 13,
+  "labels": {
+   "draft": 276,
+   "reviewed": 0,
+   "missing": 0,
+   "over_60_characters": 0
+  },
+  "extraction": {
+   "pdfplumber": {
+    "indicators": 276,
+    "truncated": 1,
+    "with_exemplar": 276,
+    "exemplars": 673
+   },
+   "pdftotext": {
+    "indicators": 276,
+    "truncated": 2,
+    "with_exemplar": 276,
+    "exemplars": 678
+   },
+   "same_ids": true,
+   "descriptions_equal": 260,
+   "descriptions_differ": 16,
+   "exemplar_counts_differ": 7
+  },
+  "sources": [
+   {
+    "id": "m13",
+    "file": "MATHEMATICS-BASIC-B1-B3-2.pdf",
+    "size_bytes": 1731688,
+    "sha256": "8912379bc2d80175dd2de542fc4ec8e16a0eb413276985b303fa2128edc7873a",
+    "fetched_at": "2026-11-10"
+   },
+   {
+    "id": "m46",
+    "file": "MATHEMATICS-BASIC-B4-B6-1.pdf",
+    "size_bytes": 4573986,
+    "sha256": "2157c2b62d96824b4f8fc1b4c9d6c83bd4e596013678b179ef680ad9e4987b30",
+    "fetched_at": "2026-11-10"
+   }
+  ],
+  "nacca_text_committed": false
+ },
+ "assistments_2017": {
+  "dataset": "ASSISTments 2017 (Longitudinal Data Mining Competition)",
+  "licence": "research use",
+  "rows": 942816,
+  "students": 1709,
+  "items": 3162,
+  "skills": 102,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4864,
+    "ACC": 0.6164,
+    "ECE": 0.0135
+   },
+   "skill-mean": {
+    "AUC": 0.5856,
+    "RMSE": 0.4809,
+    "ACC": 0.6219,
+    "ECE": 0.0135
+   },
+   "elo": {
+    "AUC": 0.6278,
+    "RMSE": 0.4734,
+    "ACC": 0.6473,
+    "ECE": 0.0242
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7103,
+    "RMSE": 0.451,
+    "ACC": 0.6931,
+    "ECE": 0.0223
+   }
+  }
+ },
+ "graph": {
+  "graph_file": "data/graph/math.graph.json",
+  "report": "docs/qa/graph-math.md",
+  "subject": "math",
+  "schema_version": 2,
+  "text_mode": "labels",
+  "ok": true,
+  "is_dag": true,
+  "nodes": 276,
+  "edges": 295,
+  "edges_by_type": {
+   "bridge": 54,
+   "sequence": 159,
+   "vertical": 82
+  },
+  "edges_by_provenance": {
+   "rule:bridge": 54,
+   "rule:sequence": 159,
+   "rule:vertical": 82
+  },
+  "orphan_edges": 0,
+  "roots": 16,
+  "leaves": 20,
+  "isolated_nodes": 0,
+  "unreachable_from_a_root": 0,
+  "components": 16,
+  "longest_path_edges": 36,
+  "longest_path_weighted": 35.0,
+  "edges_to_an_earlier_grade": 0,
+  "nodes_by_grade": {
+   "1": 24,
+   "2": 29,
+   "3": 40,
+   "4": 71,
+   "5": 67,
+   "6": 45
+  },
+  "nodes_by_strand": {
+   "1": 149,
+   "2": 38,
+   "3": 61,
+   "4": 28
+  }
+ },
+ "xes3g5m": {
+  "dataset": "XES3G5M (Grade 3 maths, China), question level",
+  "licence": "MIT",
+  "rows": 5549184,
+  "students": 18066,
+  "items": 7651,
+  "skills": 798,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4027,
+    "ACC": 0.7964,
+    "ECE": 0.0021
+   },
+   "skill-mean": {
+    "AUC": 0.6189,
+    "RMSE": 0.3958,
+    "ACC": 0.7974,
+    "ECE": 0.0019
+   },
+   "elo": {
+    "AUC": 0.6468,
+    "RMSE": 0.3933,
+    "ACC": 0.7979,
+    "ECE": 0.0206
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.8008,
+    "RMSE": 0.358,
+    "ACC": 0.8221,
+    "ECE": 0.0224
+   }
+  }
+ },
+ "assistments_2012": {
+  "dataset": "ASSISTments 2012-2013 (rows with a skill)",
+  "licence": "research use",
+  "rows": 2711602,
+  "students": 29018,
+  "items": 53086,
+  "skills": 265,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4611,
+    "ACC": 0.6933,
+    "ECE": 0.0026
+   },
+   "skill-mean": {
+    "AUC": 0.6093,
+    "RMSE": 0.4532,
+    "ACC": 0.6956,
+    "ECE": 0.0025
+   },
+   "elo": {
+    "AUC": 0.6541,
+    "RMSE": 0.4472,
+    "ACC": 0.6993,
+    "ECE": 0.0275
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7472,
+    "RMSE": 0.4204,
+    "ACC": 0.7411,
+    "ECE": 0.0248
+   }
+  }
+ },
+ "kt_deep": {
+  "task": "PRD 5.6 and 5.7: deep knowledge tracing (pyKT) against elo-multi on the same folds",
+  "implementation": "Real pyKT model classes (DKT, SAKT, simpleKT, AKT), built by pykt.models.init_model with pyKT default hyperparameters and fed by pyKT's KTDataset; not re-implementations. On CPU or CUDA they are trained by pyKT's own train_model. On Apple MPS, which has no float64, they are trained by Kwan's float32 copy of that loop (same loss, model selection and early stopping). The trainer used is recorded per model under datasets.<name>.models.<model>.trainer.",
+  "protocol": {
+   "folds": 5,
+   "split": "5 folds by student, seed 42; each fold is held out once and no student is in two folds",
+   "validation": "10% of each fold's training students (seed 42 + fold) are used only to pick the best epoch of the deep models; the held-out fold is never used for model selection",
+   "max_seq_len": 200,
+   "min_seq_len": 3,
+   "sequence_format": "pyKT: each student's answers are cut into pieces of at most 200, padded with -1; a last piece shorter than 3 answers is dropped; a deep model sees one piece at a time",
+   "scored_answers": "every answer of a held-out sequence except its first (pyKT's next-answer scoring); elo-multi is scored on exactly these answers, after reading each held-out student's full history in order",
+   "elo_multi": "kwan.eval.kt.Elo2: item difficulty fitted on the training students (two passes), held-out students predicted online",
+   "metrics": "AUC, RMSE, accuracy at 0.5; mean and sample standard deviation (n - 1) across folds",
+   "seed": 42
+  },
+  "budget": {
+   "epochs_max_per_fit": [
+    1,
+    3,
+    8,
+    12,
+    15,
+    20,
+    25,
+    40,
+    50
+   ],
+   "device": [
+    "mps"
+   ],
+   "train_minutes_total": 285.0,
+   "pykt_reference_budget": "200 epochs with early stopping (patience 10) on a GPU",
+   "note": "Reduced budget: every fit was capped at far fewer epochs than pyKT's reference runs. Where a fit was stopped by the cap, the model's AUC is likely below what full training would reach. The cap, the epochs run and the count of folds stopped by the cap are under datasets.<name>.models.<model>. train_minutes_total adds up fits that ran side by side on one shared GPU."
+  },
+  "hyperparameters": {
+   "dkt": {
+    "learning_rate": 0.001,
+    "batch_size": 256,
+    "model_config": {
+     "dropout": 0.2,
+     "emb_size": 200
+    }
+   },
+   "sakt": {
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "model_config": {
+     "dropout": 0.2,
+     "emb_size": 256,
+     "num_attn_heads": 8,
+     "num_en": 1
+    }
+   },
+   "simplekt": {
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "model_config": {
+     "dropout": 0.1,
+     "final_fc_dim": 256,
+     "final_fc_dim2": 256,
+     "num_layers": 2,
+     "nheads": 4,
+     "loss1": 0.5,
+     "loss2": 0.5,
+     "loss3": 0.5,
+     "start": 50,
+     "d_model": 256,
+     "d_ff": 256,
+     "num_attn_heads": 4,
+     "n_blocks": 2
+    }
+   },
+   "akt": {
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "model_config": {
+     "dropout": 0.2,
+     "d_model": 256,
+     "d_ff": 512,
+     "num_attn_heads": 8,
+     "n_blocks": 4
+    }
+   }
+  },
+  "latency_protocol": {
+   "clock": "ms_per_update_cpu is process CPU time, so that other work on a shared machine does not inflate it; ms_per_update_wall is the wall-time median of the same passes",
+   "deep_models": "one forward pass for one learner over a full window (199 past answers plus the item to predict), batch size 1, CPU, 1 thread, no gradients; median of 200 timed passes after 20 warm-up passes",
+   "elo_multi": "one prediction and one update per answer, pure Python, 1 thread: CPU time of a pass over up to 50,000 held-out answers of fold 0 divided by their number; median of 5 passes",
+   "note": "The deep figure is the most favourable serving case: one next-answer prediction. Kwan needs mastery for every candidate skill after each answer, which costs the attention models one pass per candidate.",
+   "machine_load_average_1min_when_timed": 4.5
+  },
+  "versions": {
+   "python": "3.11.15",
+   "platform": "Darwin arm64",
+   "pykt-toolkit": "0.0.38",
+   "torch": "2.15.0",
+   "numpy": "2.4.6",
+   "pandas": "3.1.1",
+   "scikit-learn": "1.9.1",
+   "pykt-toolkit_source": "https://github.com/pykt-team/pykt-toolkit@ccbaf37b07e3e7ff7b2415475b2faacb967d54ea"
+  },
+  "datasets": {
+   "assistments_2009": {
+    "dataset": "ASSISTments 2009 skill-builder (corrected)",
+    "licence": "Research use",
+    "rows": 259399,
+    "students": 4163,
+    "items": 15925,
+    "skills": 111,
+    "sequences": 4351,
+    "answers_dropped_by_min_seq_len": 509,
+    "models": {
+     "elo-multi (Kwan)": {
+      "AUC_mean": 0.7583,
+      "AUC_sd": 0.0047,
+      "RMSE_mean": 0.4264,
+      "RMSE_sd": 0.0036,
+      "ACC_mean": 0.7296,
+      "ACC_sd": 0.0058,
+      "folds": 5,
+      "AUC_folds": [
+       0.7631,
+       0.758,
+       0.7512,
+       0.7571,
+       0.7621
+      ],
+      "scored_answers": 254539,
+      "ms_per_update_cpu": 0.0005,
+      "ms_per_update_wall": 0.0005,
+      "AUC_mean_all_heldout_answers": 0.7567,
+      "all_heldout_answers": 259399
+     },
+     "dkt": {
+      "AUC_mean": 0.7496,
+      "AUC_sd": 0.0088,
+      "RMSE_mean": 0.4275,
+      "RMSE_sd": 0.0033,
+      "ACC_mean": 0.7303,
+      "ACC_sd": 0.0054,
+      "folds": 5,
+      "AUC_folds": [
+       0.7607,
+       0.7468,
+       0.7388,
+       0.7455,
+       0.7565
+      ],
+      "scored_answers": 254539,
+      "ms_per_update_cpu": 1.738,
+      "ms_per_update_cpu_p95": 1.815,
+      "ms_per_update_cpu_min": 1.621,
+      "ms_per_update_wall": 1.74,
+      "epochs_max": 40,
+      "epochs_run": [
+       23,
+       24,
+       26,
+       26,
+       27
+      ],
+      "best_epoch": [
+       13,
+       14,
+       16,
+       16,
+       17
+      ],
+      "folds_stopped_by_epoch_cap": 0,
+      "train_minutes": 14.1,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "sakt": {
+      "AUC_mean": 0.7128,
+      "AUC_sd": 0.0075,
+      "RMSE_mean": 0.4417,
+      "RMSE_sd": 0.0039,
+      "ACC_mean": 0.7083,
+      "ACC_sd": 0.0074,
+      "folds": 5,
+      "AUC_folds": [
+       0.7249,
+       0.7132,
+       0.7092,
+       0.7047,
+       0.712
+      ],
+      "scored_answers": 254539,
+      "ms_per_update_cpu": 0.759,
+      "ms_per_update_cpu_p95": 1.412,
+      "ms_per_update_cpu_min": 0.724,
+      "ms_per_update_wall": 0.765,
+      "epochs_max": 15,
+      "epochs_run": [
+       15,
+       15,
+       15,
+       15,
+       15
+      ],
+      "best_epoch": [
+       6,
+       7,
+       8,
+       6,
+       7
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 16.2,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "simplekt": {
+      "AUC_mean": 0.739,
+      "AUC_sd": 0.0095,
+      "RMSE_mean": 0.4329,
+      "RMSE_sd": 0.0035,
+      "ACC_mean": 0.7236,
+      "ACC_sd": 0.006,
+      "folds": 5,
+      "AUC_folds": [
+       0.7516,
+       0.7374,
+       0.7286,
+       0.732,
+       0.7453
+      ],
+      "scored_answers": 254539,
+      "ms_per_update_cpu": 1.331,
+      "ms_per_update_cpu_p95": 1.44,
+      "ms_per_update_cpu_min": 1.275,
+      "ms_per_update_wall": 1.339,
+      "epochs_max": 12,
+      "epochs_run": [
+       12,
+       12,
+       12,
+       12,
+       12
+      ],
+      "best_epoch": [
+       12,
+       12,
+       12,
+       12,
+       12
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 27.1,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "akt": {
+      "AUC_mean": 0.7118,
+      "AUC_sd": 0.0098,
+      "RMSE_mean": 0.4417,
+      "RMSE_sd": 0.0035,
+      "ACC_mean": 0.7161,
+      "ACC_sd": 0.0058,
+      "folds": 5,
+      "AUC_folds": [
+       0.725,
+       0.7082,
+       0.7006,
+       0.7067,
+       0.7183
+      ],
+      "scored_answers": 254539,
+      "ms_per_update_cpu": 21.698,
+      "ms_per_update_cpu_p95": 29.186,
+      "ms_per_update_cpu_min": 21.265,
+      "ms_per_update_wall": 21.715,
+      "epochs_max": 1,
+      "epochs_run": [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "best_epoch": [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 33.0,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     }
+    }
+   },
+   "eedi_34": {
+    "dataset": "Eedi NeurIPS 2020 Education Challenge, task 3/4 subset",
+    "licence": "Research use, cite",
+    "rows": 1382727,
+    "students": 4918,
+    "items": 948,
+    "skills": 57,
+    "sequences": 9305,
+    "answers_dropped_by_min_seq_len": 66,
+    "models": {
+     "elo-multi (Kwan)": {
+      "AUC_mean": 0.7795,
+      "AUC_sd": 0.0035,
+      "RMSE_mean": 0.4373,
+      "RMSE_sd": 0.0019,
+      "ACC_mean": 0.7104,
+      "ACC_sd": 0.0029,
+      "folds": 5,
+      "AUC_folds": [
+       0.7751,
+       0.7771,
+       0.7808,
+       0.7841,
+       0.7806
+      ],
+      "scored_answers": 1373356,
+      "ms_per_update_cpu": 0.0005,
+      "ms_per_update_wall": 0.0005,
+      "AUC_mean_all_heldout_answers": 0.7795,
+      "all_heldout_answers": 1382727
+     },
+     "dkt": {
+      "AUC_mean": 0.7591,
+      "AUC_sd": 0.0041,
+      "RMSE_mean": 0.4444,
+      "RMSE_sd": 0.002,
+      "ACC_mean": 0.6945,
+      "ACC_sd": 0.0029,
+      "folds": 5,
+      "AUC_folds": [
+       0.7541,
+       0.7565,
+       0.7597,
+       0.7648,
+       0.7607
+      ],
+      "scored_answers": 1373356,
+      "ms_per_update_cpu": 1.728,
+      "ms_per_update_cpu_p95": 2.403,
+      "ms_per_update_cpu_min": 1.553,
+      "ms_per_update_wall": 1.74,
+      "epochs_max": 15,
+      "epochs_run": [
+       15,
+       15,
+       15,
+       15,
+       15
+      ],
+      "best_epoch": [
+       12,
+       12,
+       10,
+       11,
+       12
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 16.4,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "sakt": {
+      "AUC_mean": 0.739,
+      "AUC_sd": 0.0047,
+      "RMSE_mean": 0.4531,
+      "RMSE_sd": 0.0022,
+      "ACC_mean": 0.677,
+      "ACC_sd": 0.0033,
+      "folds": 5,
+      "AUC_folds": [
+       0.7332,
+       0.7356,
+       0.742,
+       0.7449,
+       0.7391
+      ],
+      "scored_answers": 1373356,
+      "ms_per_update_cpu": 0.769,
+      "ms_per_update_cpu_p95": 1.202,
+      "ms_per_update_cpu_min": 0.728,
+      "ms_per_update_wall": 0.78,
+      "epochs_max": 8,
+      "epochs_run": [
+       8,
+       8,
+       8,
+       8,
+       8
+      ],
+      "best_epoch": [
+       6,
+       6,
+       8,
+       5,
+       6
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 23.5,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "simplekt": {
+      "AUC_mean": 0.7884,
+      "AUC_sd": 0.004,
+      "RMSE_mean": 0.4302,
+      "RMSE_sd": 0.0021,
+      "ACC_mean": 0.7208,
+      "ACC_sd": 0.003,
+      "folds": 5,
+      "AUC_folds": [
+       0.7834,
+       0.7857,
+       0.7888,
+       0.7938,
+       0.7902
+      ],
+      "scored_answers": 1373356,
+      "ms_per_update_cpu": 1.323,
+      "ms_per_update_cpu_p95": 1.461,
+      "ms_per_update_cpu_min": 1.288,
+      "ms_per_update_wall": 1.326,
+      "epochs_max": 8,
+      "epochs_run": [
+       8,
+       8,
+       8,
+       8,
+       8
+      ],
+      "best_epoch": [
+       7,
+       7,
+       7,
+       7,
+       7
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 41.8,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "akt": {
+      "AUC_mean": 0.7299,
+      "AUC_sd": 0.0048,
+      "RMSE_mean": 0.4579,
+      "RMSE_sd": 0.0023,
+      "ACC_mean": 0.6716,
+      "ACC_sd": 0.0039,
+      "folds": 5,
+      "AUC_folds": [
+       0.724,
+       0.7264,
+       0.7321,
+       0.736,
+       0.7311
+      ],
+      "scored_answers": 1373356,
+      "ms_per_update_cpu": 21.756,
+      "ms_per_update_cpu_p95": 26.791,
+      "ms_per_update_cpu_min": 21.448,
+      "ms_per_update_wall": 21.784,
+      "epochs_max": 1,
+      "epochs_run": [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "best_epoch": [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 39.1,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     }
+    }
+   },
+   "ammore": {
+    "dataset": "AMMORE (Rori WhatsApp maths tutor, Rising Academies), Jan to Apr 2024",
+    "licence": "CC BY-NC 4.0 (evaluation only)",
+    "rows": 50507,
+    "students": 2388,
+    "items": 1601,
+    "skills": 151,
+    "sequences": 2129,
+    "answers_dropped_by_min_seq_len": 384,
+    "models": {
+     "elo-multi (Kwan)": {
+      "AUC_mean": 0.7734,
+      "AUC_sd": 0.009,
+      "RMSE_mean": 0.4074,
+      "RMSE_sd": 0.004,
+      "ACC_mean": 0.7577,
+      "ACC_sd": 0.0051,
+      "folds": 5,
+      "AUC_folds": [
+       0.7661,
+       0.7662,
+       0.7881,
+       0.7722,
+       0.7743
+      ],
+      "scored_answers": 47994,
+      "ms_per_update_cpu": 0.0004,
+      "ms_per_update_wall": 0.0005,
+      "AUC_mean_all_heldout_answers": 0.7712,
+      "all_heldout_answers": 50507
+     },
+     "dkt": {
+      "AUC_mean": 0.7245,
+      "AUC_sd": 0.0122,
+      "RMSE_mean": 0.4225,
+      "RMSE_sd": 0.0052,
+      "ACC_mean": 0.7316,
+      "ACC_sd": 0.0062,
+      "folds": 5,
+      "AUC_folds": [
+       0.7269,
+       0.7191,
+       0.7446,
+       0.7141,
+       0.7177
+      ],
+      "scored_answers": 47994,
+      "ms_per_update_cpu": 1.76,
+      "ms_per_update_cpu_p95": 2.046,
+      "ms_per_update_cpu_min": 1.656,
+      "ms_per_update_wall": 1.768,
+      "epochs_max": 50,
+      "epochs_run": [
+       29,
+       21,
+       28,
+       24,
+       21
+      ],
+      "best_epoch": [
+       19,
+       11,
+       18,
+       14,
+       11
+      ],
+      "folds_stopped_by_epoch_cap": 0,
+      "train_minutes": 8.0,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "sakt": {
+      "AUC_mean": 0.6957,
+      "AUC_sd": 0.0118,
+      "RMSE_mean": 0.4312,
+      "RMSE_sd": 0.0055,
+      "ACC_mean": 0.7257,
+      "ACC_sd": 0.0078,
+      "folds": 5,
+      "AUC_folds": [
+       0.6989,
+       0.6936,
+       0.7137,
+       0.6821,
+       0.69
+      ],
+      "scored_answers": 47994,
+      "ms_per_update_cpu": 0.759,
+      "ms_per_update_cpu_p95": 0.901,
+      "ms_per_update_cpu_min": 0.726,
+      "ms_per_update_wall": 0.76,
+      "epochs_max": 25,
+      "epochs_run": [
+       14,
+       14,
+       15,
+       14,
+       16
+      ],
+      "best_epoch": [
+       4,
+       4,
+       5,
+       4,
+       6
+      ],
+      "folds_stopped_by_epoch_cap": 0,
+      "train_minutes": 8.8,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "simplekt": {
+      "AUC_mean": 0.7369,
+      "AUC_sd": 0.0095,
+      "RMSE_mean": 0.4193,
+      "RMSE_sd": 0.0049,
+      "ACC_mean": 0.7387,
+      "ACC_sd": 0.0067,
+      "folds": 5,
+      "AUC_folds": [
+       0.7382,
+       0.7327,
+       0.7529,
+       0.7318,
+       0.729
+      ],
+      "scored_answers": 47994,
+      "ms_per_update_cpu": 1.36,
+      "ms_per_update_cpu_p95": 1.732,
+      "ms_per_update_cpu_min": 1.284,
+      "ms_per_update_wall": 1.372,
+      "epochs_max": 20,
+      "epochs_run": [
+       20,
+       20,
+       20,
+       20,
+       20
+      ],
+      "best_epoch": [
+       20,
+       20,
+       20,
+       20,
+       12
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 18.4,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     },
+     "akt": {
+      "AUC_mean": 0.7166,
+      "AUC_sd": 0.0091,
+      "RMSE_mean": 0.4261,
+      "RMSE_sd": 0.0049,
+      "ACC_mean": 0.731,
+      "ACC_sd": 0.0046,
+      "folds": 5,
+      "AUC_folds": [
+       0.7098,
+       0.7114,
+       0.7325,
+       0.715,
+       0.7142
+      ],
+      "scored_answers": 47994,
+      "ms_per_update_cpu": 21.869,
+      "ms_per_update_cpu_p95": 27.349,
+      "ms_per_update_cpu_min": 21.441,
+      "ms_per_update_wall": 21.903,
+      "epochs_max": 3,
+      "epochs_run": [
+       3,
+       3,
+       3,
+       3,
+       3
+      ],
+      "best_epoch": [
+       3,
+       3,
+       3,
+       3,
+       3
+      ],
+      "folds_stopped_by_epoch_cap": 5,
+      "train_minutes": 38.6,
+      "device": "mps",
+      "trainer": "kwan minimal loop over pyKT model classes (float32)"
+     }
+    }
+   },
+   "xes3g5m": {
+    "dataset": "XES3G5M (Grade 3 maths, China)",
+    "licence": "MIT",
+    "rows": 5549184,
+    "students": 18066,
+    "items": 7651,
+    "skills": 798,
+    "sequences": 38676,
+    "answers_dropped_by_min_seq_len": 109,
+    "models": {
+     "elo-multi (Kwan)": {
+      "AUC_mean": 0.8008,
+      "AUC_sd": 0.0009,
+      "RMSE_mean": 0.3591,
+      "RMSE_sd": 0.0012,
+      "ACC_mean": 0.8205,
+      "ACC_sd": 0.0015,
+      "folds": 5,
+      "AUC_folds": [
+       0.8004,
+       0.8004,
+       0.7999,
+       0.8014,
+       0.802
+      ],
+      "scored_answers": 5510399,
+      "ms_per_update_cpu": 0.0005,
+      "ms_per_update_wall": 0.0006,
+      "AUC_mean_all_heldout_answers": 0.8006,
+      "all_heldout_answers": 5549184
+     }
+    }
+   }
+  },
+  "skipped": {
+   "xes3g5m/dkt": "Dropped for time: XES3G5M (5.5M answers) is four times the Eedi subset and the training budget went to the three D7 datasets. Only elo-multi was run on it.",
+   "xes3g5m/sakt": "Dropped for time: XES3G5M (5.5M answers) is four times the Eedi subset and the training budget went to the three D7 datasets. Only elo-multi was run on it.",
+   "xes3g5m/simplekt": "Dropped for time: XES3G5M (5.5M answers) is four times the Eedi subset and the training budget went to the three D7 datasets. Only elo-multi was run on it.",
+   "xes3g5m/akt": "Dropped for time: XES3G5M (5.5M answers) is four times the Eedi subset and the training budget went to the three D7 datasets. Only elo-multi was run on it.",
+   "onnx_backend": "not built: no deep model met rule D7, so Elo stays the only learner model"
+  },
+  "decision": {
+   "rule": "D7: a deep model is adopted only if it beats elo-multi by at least 0.03 AUC on at least two of AMMORE, Eedi and ASSISTments 2009, and stays under 20 ms per update on CPU.",
+   "thresholds": {
+    "min_auc_margin": 0.03,
+    "min_datasets": 2,
+    "max_ms_per_update_cpu": 20.0
+   },
+   "baseline": "elo-multi (Kwan)",
+   "datasets_in_rule": [
+    "assistments_2009",
+    "eedi_34",
+    "ammore"
+   ],
+   "datasets_evaluated": [
+    "assistments_2009",
+    "eedi_34",
+    "ammore"
+   ],
+   "adopt": false,
+   "model": null,
+   "conclusive": true,
+   "per_model": {
+    "akt": {
+     "margins": {
+      "assistments_2009": -0.0465,
+      "eedi_34": -0.0496,
+      "ammore": -0.0568
+     },
+     "datasets_won": [],
+     "datasets_not_run": [],
+     "accuracy_ok": false,
+     "ms_per_update_cpu": 21.869,
+     "latency_ok": false,
+     "meets_rule": false,
+     "conclusive": true
+    },
+    "dkt": {
+     "margins": {
+      "assistments_2009": -0.0087,
+      "eedi_34": -0.0204,
+      "ammore": -0.0489
+     },
+     "datasets_won": [],
+     "datasets_not_run": [],
+     "accuracy_ok": false,
+     "ms_per_update_cpu": 1.76,
+     "latency_ok": true,
+     "meets_rule": false,
+     "conclusive": true
+    },
+    "sakt": {
+     "margins": {
+      "assistments_2009": -0.0455,
+      "eedi_34": -0.0405,
+      "ammore": -0.0777
+     },
+     "datasets_won": [],
+     "datasets_not_run": [],
+     "accuracy_ok": false,
+     "ms_per_update_cpu": 0.769,
+     "latency_ok": true,
+     "meets_rule": false,
+     "conclusive": true
+    },
+    "simplekt": {
+     "margins": {
+      "assistments_2009": -0.0193,
+      "eedi_34": 0.0089,
+      "ammore": -0.0365
+     },
+     "datasets_won": [],
+     "datasets_not_run": [],
+     "accuracy_ok": false,
+     "ms_per_update_cpu": 1.36,
+     "latency_ok": true,
+     "meets_rule": false,
+     "conclusive": true
+    }
+   },
+   "reason": "No deep model meets rule D7. The closest is simplekt: at least 0.03 AUC ahead of elo-multi (Kwan) on 0 of the 3 D7 datasets it was run on (needs 2); its best margin is +0.0089 on eedi_34. Elo stays the only learner model."
+  }
+ },
+ "eedi_2020_task12": {
+  "dataset": "Eedi NeurIPS 2020 Education Challenge, task 1/2 (full training set)",
+  "licence": "research use; cite Wang et al. (2020) arXiv:2007.12061",
+  "rows": 15867850,
+  "students": 118971,
+  "items": 27613,
+  "skills": 296,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.4789,
+    "ACC": 0.6437,
+    "ECE": 0.001
+   },
+   "skill-mean": {
+    "AUC": 0.5716,
+    "RMSE": 0.4753,
+    "ACC": 0.6441,
+    "ECE": 0.0016
+   },
+   "elo": {
+    "AUC": 0.678,
+    "RMSE": 0.458,
+    "ACC": 0.6702,
+    "ECE": 0.0266
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7946,
+    "RMSE": 0.4185,
+    "ACC": 0.7375,
+    "ECE": 0.0292
+   }
+  }
+ },
+ "junyi_2015": {
+  "dataset": "Junyi Academy Math Practicing Log (2015), problem log",
+  "licence": "non-commercial; cite Chang, Hsu & Chen (EDM 2015)",
+  "rows": 25925992,
+  "students": 247606,
+  "items": 2835,
+  "skills": 722,
+  "split": "80/20 by student, seed 42",
+  "metrics": {
+   "global-mean": {
+    "AUC": 0.5,
+    "RMSE": 0.3756,
+    "ACC": 0.8301,
+    "ECE": 0.0027
+   },
+   "skill-mean": {
+    "AUC": 0.7188,
+    "RMSE": 0.3583,
+    "ACC": 0.8319,
+    "ECE": 0.0018
+   },
+   "elo": {
+    "AUC": 0.7542,
+    "RMSE": 0.3476,
+    "ACC": 0.8413,
+    "ECE": 0.0052
+   },
+   "elo-multi (Kwan)": {
+    "AUC": 0.7899,
+    "RMSE": 0.3369,
+    "ACC": 0.8497,
+    "ECE": 0.0163
+   }
+  },
+  "note": "Skill = exercise; item = exercise and problem template. Evaluation only (non-commercial data)."
+ },
+ "goal_path": {
+  "setup": "50 seeded pupils, each with up to 60 answers on B1 to B3 skills (85% right) and a goal drawn from B4 to B6; share of the top 3 recommendations that are on the path to the goal",
+  "pupils": 50,
+  "k": 3,
+  "on_path_share": {
+   "strict": 0.767,
+   "soft": 0.36
+  }
+ },
+ "graph_augment": {
+  "question": "Must a pupil be able to do A before they can learn B?",
+  "provider": "local-encoder",
+  "model": "all-MiniLM-L6-v2+logreg@50721cd7",
+  "model_licence": "Apache-2.0 (encoder sentence-transformers/all-MiniLM-L6-v2); classifier fitted on Junyi (non-commercial), kept under build/",
+  "threshold": 0.2533,
+  "precision_bar": 0.8,
+  "meets_precision_bar": false,
+  "junyi_benchmark": {
+   "dataset": "Junyi Academy 2015 (exercise table and relationship annotations)",
+   "licence": "non-commercial use only",
+   "cite": "Chang, Hsu and Chen, Modeling Exercise Relationships in E-Learning: A Unified Approach, EDM 2015",
+   "provider": "local-encoder",
+   "model": "all-MiniLM-L6-v2+logreg@50721cd7",
+   "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+   "text": "exercise name and topic",
+   "exercises": 837,
+   "expert_links": 981,
+   "rule_edges_series": 161,
+   "expert_links_already_given_by_rules": 104,
+   "expert_links_scored": 877,
+   "split": "by target exercise, 30% held out (hash of the exercise name)",
+   "targets": {
+    "train": 590,
+    "held_out": 245
+   },
+   "candidates_per_target": 20,
+   "candidate_pairs": {
+    "train": 11609,
+    "held_out": 4865
+   },
+   "expert_links_scored_by_split": {
+    "train": 629,
+    "held_out": 248
+   },
+   "candidate_recall_ceiling_held_out": 0.7258,
+   "threshold_choice": {
+    "where": "out-of-fold scores of the training targets",
+    "rule": "lowest threshold with precision >= 0.8 and at least 20 proposals; if none, the threshold with the best precision that leaves that many proposals",
+    "threshold": 0.25333775285851784,
+    "proposed": 24,
+    "correct": 6,
+    "precision": 0.25,
+    "meets_bar": false
+   },
+   "held_out": {
+    "threshold": 0.2533,
+    "proposed": 13,
+    "correct": 4,
+    "precision": 0.3077,
+    "recall": 0.0161,
+    "precision_transitive": 0.5385,
+    "precision_ignoring_direction": 0.4615,
+    "meets_precision_bar": false,
+    "note": "precision counts direct expert links only; precision_transitive also counts a source that is an earlier prerequisite of the target on the expert map (a true prerequisite, not the immediate one)"
+   },
+   "held_out_average_precision": 0.1646,
+   "held_out_curve": [
+    {
+     "threshold": 0.05,
+     "proposed": 1132,
+     "correct": 108,
+     "precision": 0.0954,
+     "recall": 0.4355
+    },
+    {
+     "threshold": 0.1,
+     "proposed": 398,
+     "correct": 62,
+     "precision": 0.1558,
+     "recall": 0.25
+    },
+    {
+     "threshold": 0.15,
+     "proposed": 148,
+     "correct": 36,
+     "precision": 0.2432,
+     "recall": 0.1452
+    },
+    {
+     "threshold": 0.2,
+     "proposed": 41,
+     "correct": 15,
+     "precision": 0.3659,
+     "recall": 0.0605
+    },
+    {
+     "threshold": 0.25,
+     "proposed": 13,
+     "correct": 4,
+     "precision": 0.3077,
+     "recall": 0.0161
+    },
+    {
+     "threshold": 0.2533,
+     "proposed": 13,
+     "correct": 4,
+     "precision": 0.3077,
+     "recall": 0.0161
+    },
+    {
+     "threshold": 0.3,
+     "proposed": 5,
+     "correct": 3,
+     "precision": 0.6,
+     "recall": 0.0121
+    },
+    {
+     "threshold": 0.35,
+     "proposed": 3,
+     "correct": 2,
+     "precision": 0.6667,
+     "recall": 0.0081
+    },
+    {
+     "threshold": 0.4,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.45,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.5,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.55,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.6,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.65,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.7,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.75,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.8,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.85,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.9,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    {
+     "threshold": 0.95,
+     "proposed": 0,
+     "correct": 0,
+     "precision": null,
+     "recall": 0.0
+    }
+   ],
+   "held_out_best_precision_point": {
+    "threshold": 0.23409777752567598,
+    "proposed": 22,
+    "correct": 9,
+    "precision": 0.4091,
+    "meets_bar": false
+   },
+   "held_out_top": [
+    {
+     "top": 10,
+     "precision": 0.4
+    },
+    {
+     "top": 20,
+     "precision": 0.35
+    },
+    {
+     "top": 50,
+     "precision": 0.32
+    },
+    {
+     "top": 100,
+     "precision": 0.29
+    },
+    {
+     "top": 200,
+     "precision": 0.215
+    }
+   ],
+   "annotations_held_out": {
+    "pairs_scored": 525,
+    "direction": "Exercise_B -> Exercise_A",
+    "spearman_probability_vs_mean_opinion": 0.7344,
+    "mean_opinion_all_pairs": 4.51,
+    "at_threshold": {
+     "proposed": 5,
+     "mean_opinion": 6.532,
+     "share_at_or_above_5": 0.8
+    },
+    "base_share_at_or_above_5": 0.4267
+   },
+   "cost_usd": 0.0,
+   "compute_seconds": 35.6,
+   "same_model_as_nacca_run": true
+  },
+  "nacca": {
+   "run_at": "2026-11-11",
+   "text": "descriptions and one exemplar",
+   "graph_nodes": 276,
+   "candidate_pairs": 5403,
+   "at_or_above_threshold": 4,
+   "skipped_at_insertion": {},
+   "proposed_edges": 4,
+   "proposed_edges_by_strand_pair": {
+    "Geometry and Measurement -> Geometry and Measurement": 4
+   },
+   "below_acceptance_bar": true,
+   "acyclic": true
+  },
+  "review": {
+   "pending": 4,
+   "accepted": 0,
+   "rejected": 0,
+   "reviewed": 0,
+   "teacher_acceptance": null,
+   "status": "not yet measured: no teacher has reviewed an edge"
+  },
+  "impact_in_simulator": {
+   "status": "no accepted edges yet",
+   "accepted_edges": 0,
+   "merged_edges": 0
+  },
+  "spend": {
+   "at": "2026-11-11T17:31:08+00:00",
+   "run": "math proposals",
+   "provider": "local-encoder",
+   "model": "all-MiniLM-L6-v2+logreg@50721cd7",
+   "calls": 5403,
+   "cache_hits": 0,
+   "cost_usd": 0.0,
+   "compute_seconds": 0.17
+  }
+ },
+ "contexts": {
+  "subject": "math",
+  "generated_on": "2026-11-11",
+  "indicators": 276,
+  "indicators_counted_from": "structure file",
+  "indicators_with_a_setting": 276,
+  "settings": 828,
+  "draft_settings_unreviewed": 828,
+  "draft_sources": [
+   "draft:claude-fable-5-2"
+  ],
+  "settings_passing_automatic_checks": 828,
+  "settings_failing_automatic_checks": 0,
+  "check_failures": {
+   "form": 0,
+   "length": 0,
+   "em_dash": 0,
+   "reading_level": 0,
+   "banned": 0,
+   "currency": 0,
+   "ghana_term": 0,
+   "duplicate": 0
+  },
+  "reviewed_settings": 0,
+  "teacher_edited_settings": 0,
+  "rejected_settings": 0,
+  "indicators_with_reviewed_setting": 0,
+  "reviewed_coverage_pct": 0.0,
+  "reviewers": 0,
+  "short_labels": 276,
+  "short_labels_failing_checks": 0,
+  "reviewed_labels": 0,
+  "translations": {
+   "tw": {
+    "indicators_b1_b3": 93,
+    "unreviewed_drafts": 0,
+    "reviewed_translations": 0,
+    "shipping_translations": 0,
+    "stale_translations": 0,
+    "indicators_with_shipping_translation": 0,
+    "coverage_pct": 0.0
+   },
+   "ee": {
+    "indicators_b1_b3": 93,
+    "unreviewed_drafts": 0,
+    "reviewed_translations": 0,
+    "shipping_translations": 0,
+    "stale_translations": 0,
+    "indicators_with_shipping_translation": 0,
+    "coverage_pct": 0.0
+   },
+   "gaa": {
+    "indicators_b1_b3": 93,
+    "unreviewed_drafts": 0,
+    "reviewed_translations": 0,
+    "shipping_translations": 0,
+    "stale_translations": 0,
+    "indicators_with_shipping_translation": 0,
+    "coverage_pct": 0.0
+   }
+  },
+  "note": "Reviewed means a teacher's decision was imported from a review sheet. Drafts are not shown by default."
+ },
+ "learner_fit": {
+  "schema": 1,
+  "written_at": "2026-11-11T18:20:56+00:00",
+  "protocol": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+  "engine": "kwan.learner.scoring engine='fast' (graph-free multi-level Elo, the arithmetic of EloLearner without a graph)",
+  "tau_grid": [
+   7.0,
+   14.0,
+   30.0,
+   45.0,
+   60.0,
+   90.0,
+   120.0,
+   180.0,
+   null
+  ],
+  "grid": {
+   "k_s": [
+    0.2,
+    0.3,
+    0.5
+   ],
+   "k_k": [
+    0.3,
+    0.4,
+    0.6
+   ],
+   "decay": [
+    0.02,
+    0.05,
+    0.1
+   ]
+  },
+  "v1_defaults": {
+   "k_s": 0.3,
+   "k_k": 0.4,
+   "decay": 0.05,
+   "grade_step": 0.4,
+   "transfer": 0.5,
+   "streak_to_master": 3,
+   "tau_days": null,
+   "streak_expiry_days": null
+  },
+  "datasets": {
+   "assistments_2009": {
+    "licence": "research use; cite Feng, Heffernan & Koedinger (2009)",
+    "commercial_params_ok": true,
+    "rows": 259399,
+    "students": 4163,
+    "items": 15925,
+    "skills": 111,
+    "timestamps": false,
+    "subsample": null,
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 165523,
+     "val": 41627,
+     "train": 207150,
+     "test": 52249
+    },
+    "tau_grid": [],
+    "tau_curve": [
+     {
+      "tau_days": null,
+      "val_auc": 0.75086,
+      "test_auc": 0.75239
+     }
+    ],
+    "tau_chosen": null,
+    "auc_without_forgetting": 0.75239,
+    "auc_with_forgetting": 0.75239,
+    "auc_change_from_forgetting": 0.0,
+    "forgetting_check": "tau_days=45 with use_time=True on rows without times",
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.3,
+     "decay": 0.05,
+     "tau_days": null
+    },
+    "auc_v1_defaults": 0.75239,
+    "auc_chosen": 0.75369,
+    "rmse_v1_defaults": 0.428,
+    "rmse_chosen": 0.42701,
+    "val_auc_v1_defaults": 0.75086,
+    "val_auc_chosen": 0.75176,
+    "seconds": {
+     "grid": 12.1,
+     "item_bank": 0.5,
+     "total": 14.0
+    },
+    "fitted_at": "2026-11-11T18:14:06+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.05,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.75176,
+       "rmse": 0.42852,
+       "log_loss": 0.54719,
+       "accuracy": 0.72669
+      },
+      "test": {
+       "auc": 0.75369,
+       "rmse": 0.42701,
+       "log_loss": 0.54407,
+       "accuracy": 0.72935
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.05,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.75149,
+       "rmse": 0.42861,
+       "log_loss": 0.54736,
+       "accuracy": 0.72664
+      },
+      "test": {
+       "auc": 0.75297,
+       "rmse": 0.42728,
+       "log_loss": 0.54465,
+       "accuracy": 0.72903
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.3,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.7512,
+       "rmse": 0.42869,
+       "log_loss": 0.54781,
+       "accuracy": 0.7278
+      },
+      "test": {
+       "auc": 0.75318,
+       "rmse": 0.42724,
+       "log_loss": 0.54469,
+       "accuracy": 0.72989
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.1,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.75106,
+       "rmse": 0.42939,
+       "log_loss": 0.54906,
+       "accuracy": 0.72472
+      },
+      "test": {
+       "auc": 0.75263,
+       "rmse": 0.42781,
+       "log_loss": 0.54589,
+       "accuracy": 0.72903
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.75098,
+       "rmse": 0.42841,
+       "log_loss": 0.5471,
+       "accuracy": 0.72703
+      },
+      "test": {
+       "auc": 0.75281,
+       "rmse": 0.42704,
+       "log_loss": 0.54421,
+       "accuracy": 0.72972
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 15607,
+     "skills": 111,
+     "test_rows_with_known_item": 51819,
+     "test_rows": 52249,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": null
+     },
+     "auc_without_bank": 0.69295,
+     "auc_skill_betas_only": 0.65473,
+     "auc_with_bank": 0.75447,
+     "rmse_without_bank": 0.44607,
+     "rmse_with_bank": 0.42714,
+     "saved": true
+    }
+   },
+   "eedi_2020_task34": {
+    "licence": "research use; cite Wang et al. (2020) arXiv:2007.12061",
+    "commercial_params_ok": true,
+    "rows": 1382727,
+    "students": 4918,
+    "items": 948,
+    "skills": 57,
+    "timestamps": true,
+    "subsample": null,
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 877125,
+     "val": 222750,
+     "train": 1099875,
+     "test": 282852
+    },
+    "tau_grid": [
+     7.0,
+     14.0,
+     30.0,
+     45.0,
+     60.0,
+     90.0,
+     120.0,
+     180.0,
+     null
+    ],
+    "tau_curve": [
+     {
+      "tau_days": 7.0,
+      "val_auc": 0.78725,
+      "test_auc": 0.77758
+     },
+     {
+      "tau_days": 14.0,
+      "val_auc": 0.78772,
+      "test_auc": 0.77787
+     },
+     {
+      "tau_days": 30.0,
+      "val_auc": 0.78791,
+      "test_auc": 0.77789
+     },
+     {
+      "tau_days": 45.0,
+      "val_auc": 0.78784,
+      "test_auc": 0.77775
+     },
+     {
+      "tau_days": 60.0,
+      "val_auc": 0.78775,
+      "test_auc": 0.7776
+     },
+     {
+      "tau_days": 90.0,
+      "val_auc": 0.78758,
+      "test_auc": 0.77737
+     },
+     {
+      "tau_days": 120.0,
+      "val_auc": 0.78744,
+      "test_auc": 0.7772
+     },
+     {
+      "tau_days": 180.0,
+      "val_auc": 0.78726,
+      "test_auc": 0.77697
+     },
+     {
+      "tau_days": null,
+      "val_auc": 0.78665,
+      "test_auc": 0.77626
+     }
+    ],
+    "tau_chosen": 30.0,
+    "auc_without_forgetting": 0.77626,
+    "auc_with_forgetting": 0.77789,
+    "auc_change_from_forgetting": 0.00163,
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.3,
+     "decay": 0.02,
+     "tau_days": 14.0
+    },
+    "auc_v1_defaults": 0.77626,
+    "auc_chosen": 0.78034,
+    "rmse_v1_defaults": 0.43911,
+    "rmse_chosen": 0.43702,
+    "val_auc_v1_defaults": 0.78665,
+    "val_auc_chosen": 0.79073,
+    "seconds": {
+     "grid": 308.4,
+     "item_bank": 4.1,
+     "total": 315.7
+    },
+    "fitted_at": "2026-11-11T18:19:08+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": 14.0
+      },
+      "val": {
+       "auc": 0.79073,
+       "rmse": 0.43135,
+       "log_loss": 0.55064,
+       "accuracy": 0.71921
+      },
+      "test": {
+       "auc": 0.78034,
+       "rmse": 0.43702,
+       "log_loss": 0.56353,
+       "accuracy": 0.71138
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": 30.0
+      },
+      "val": {
+       "auc": 0.79073,
+       "rmse": 0.43135,
+       "log_loss": 0.55062,
+       "accuracy": 0.71932
+      },
+      "test": {
+       "auc": 0.78026,
+       "rmse": 0.43705,
+       "log_loss": 0.56365,
+       "accuracy": 0.71148
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": 45.0
+      },
+      "val": {
+       "auc": 0.79066,
+       "rmse": 0.43139,
+       "log_loss": 0.55069,
+       "accuracy": 0.71906
+      },
+      "test": {
+       "auc": 0.78015,
+       "rmse": 0.43711,
+       "log_loss": 0.56379,
+       "accuracy": 0.71146
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": 60.0
+      },
+      "val": {
+       "auc": 0.7906,
+       "rmse": 0.43143,
+       "log_loss": 0.55077,
+       "accuracy": 0.71891
+      },
+      "test": {
+       "auc": 0.78005,
+       "rmse": 0.43716,
+       "log_loss": 0.56391,
+       "accuracy": 0.7112
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": 7.0
+      },
+      "val": {
+       "auc": 0.79058,
+       "rmse": 0.43143,
+       "log_loss": 0.55082,
+       "accuracy": 0.71943
+      },
+      "test": {
+       "auc": 0.78025,
+       "rmse": 0.43706,
+       "log_loss": 0.5636,
+       "accuracy": 0.7115
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 948,
+     "skills": 57,
+     "test_rows_with_known_item": 282852,
+     "test_rows": 282852,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": 30.0
+     },
+     "auc_without_bank": 0.71553,
+     "auc_skill_betas_only": 0.63173,
+     "auc_with_bank": 0.77806,
+     "rmse_without_bank": 0.46285,
+     "rmse_with_bank": 0.43839,
+     "saved": true
+    }
+   },
+   "eedi_2020_task12": {
+    "licence": "research use; cite Wang et al. (2020) arXiv:2007.12061",
+    "commercial_params_ok": true,
+    "rows": 1500214,
+    "students": 10955,
+    "items": 27557,
+    "skills": 296,
+    "timestamps": true,
+    "subsample": {
+     "max_rows": 1500000,
+     "rows_before": 15867850,
+     "students_before": 118971,
+     "seed": 42
+    },
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 959830,
+     "val": 238426,
+     "train": 1198256,
+     "test": 301958
+    },
+    "tau_grid": [
+     7.0,
+     14.0,
+     30.0,
+     45.0,
+     60.0,
+     90.0,
+     120.0,
+     180.0,
+     null
+    ],
+    "tau_curve": [
+     {
+      "tau_days": 7.0,
+      "val_auc": 0.78907,
+      "test_auc": 0.78629
+     },
+     {
+      "tau_days": 14.0,
+      "val_auc": 0.78936,
+      "test_auc": 0.78662
+     },
+     {
+      "tau_days": 30.0,
+      "val_auc": 0.78958,
+      "test_auc": 0.78688
+     },
+     {
+      "tau_days": 45.0,
+      "val_auc": 0.78959,
+      "test_auc": 0.78691
+     },
+     {
+      "tau_days": 60.0,
+      "val_auc": 0.78956,
+      "test_auc": 0.78688
+     },
+     {
+      "tau_days": 90.0,
+      "val_auc": 0.78948,
+      "test_auc": 0.7868
+     },
+     {
+      "tau_days": 120.0,
+      "val_auc": 0.7894,
+      "test_auc": 0.78672
+     },
+     {
+      "tau_days": 180.0,
+      "val_auc": 0.78928,
+      "test_auc": 0.7866
+     },
+     {
+      "tau_days": null,
+      "val_auc": 0.78859,
+      "test_auc": 0.7859
+     }
+    ],
+    "tau_chosen": 45.0,
+    "auc_without_forgetting": 0.7859,
+    "auc_with_forgetting": 0.78691,
+    "auc_change_from_forgetting": 0.00101,
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.4,
+     "decay": 0.02,
+     "tau_days": 30.0
+    },
+    "auc_v1_defaults": 0.7859,
+    "auc_chosen": 0.79084,
+    "rmse_v1_defaults": 0.42012,
+    "rmse_chosen": 0.41746,
+    "val_auc_v1_defaults": 0.78859,
+    "val_auc_chosen": 0.79386,
+    "seconds": {
+     "grid": 328.2,
+     "item_bank": 2.8,
+     "total": 388.4
+    },
+    "fitted_at": "2026-11-11T18:20:47+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 30.0
+      },
+      "val": {
+       "auc": 0.79386,
+       "rmse": 0.41946,
+       "log_loss": 0.52569,
+       "accuracy": 0.7364
+      },
+      "test": {
+       "auc": 0.79084,
+       "rmse": 0.41746,
+       "log_loss": 0.5217,
+       "accuracy": 0.73943
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 14.0
+      },
+      "val": {
+       "auc": 0.79382,
+       "rmse": 0.41948,
+       "log_loss": 0.52571,
+       "accuracy": 0.73627
+      },
+      "test": {
+       "auc": 0.79075,
+       "rmse": 0.41749,
+       "log_loss": 0.52178,
+       "accuracy": 0.73957
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 45.0
+      },
+      "val": {
+       "auc": 0.79382,
+       "rmse": 0.41949,
+       "log_loss": 0.52574,
+       "accuracy": 0.73635
+      },
+      "test": {
+       "auc": 0.79081,
+       "rmse": 0.41748,
+       "log_loss": 0.52172,
+       "accuracy": 0.73926
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 60.0
+      },
+      "val": {
+       "auc": 0.79377,
+       "rmse": 0.41951,
+       "log_loss": 0.5258,
+       "accuracy": 0.73634
+      },
+      "test": {
+       "auc": 0.79077,
+       "rmse": 0.4175,
+       "log_loss": 0.52177,
+       "accuracy": 0.73924
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 7.0
+      },
+      "val": {
+       "auc": 0.7937,
+       "rmse": 0.41953,
+       "log_loss": 0.52582,
+       "accuracy": 0.73623
+      },
+      "test": {
+       "auc": 0.79059,
+       "rmse": 0.41755,
+       "log_loss": 0.52192,
+       "accuracy": 0.73947
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 27520,
+     "skills": 296,
+     "test_rows_with_known_item": 301908,
+     "test_rows": 301958,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": 45.0
+     },
+     "auc_without_bank": 0.73151,
+     "auc_skill_betas_only": 0.63624,
+     "auc_with_bank": 0.7886,
+     "rmse_without_bank": 0.43989,
+     "rmse_with_bank": 0.41914,
+     "saved": true
+    }
+   },
+   "ammore_2024": {
+    "licence": "CC BY-NC 4.0",
+    "commercial_params_ok": false,
+    "rows": 50507,
+    "students": 2388,
+    "items": 1601,
+    "skills": 151,
+    "timestamps": true,
+    "subsample": null,
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 32316,
+     "val": 7815,
+     "train": 40131,
+     "test": 10376
+    },
+    "tau_grid": [
+     7.0,
+     14.0,
+     30.0,
+     45.0,
+     60.0,
+     90.0,
+     120.0,
+     180.0,
+     null
+    ],
+    "tau_curve": [
+     {
+      "tau_days": 7.0,
+      "val_auc": 0.76993,
+      "test_auc": 0.77073
+     },
+     {
+      "tau_days": 14.0,
+      "val_auc": 0.77004,
+      "test_auc": 0.77082
+     },
+     {
+      "tau_days": 30.0,
+      "val_auc": 0.77004,
+      "test_auc": 0.77086
+     },
+     {
+      "tau_days": 45.0,
+      "val_auc": 0.77004,
+      "test_auc": 0.77086
+     },
+     {
+      "tau_days": 60.0,
+      "val_auc": 0.77003,
+      "test_auc": 0.77085
+     },
+     {
+      "tau_days": 90.0,
+      "val_auc": 0.77001,
+      "test_auc": 0.77084
+     },
+     {
+      "tau_days": 120.0,
+      "val_auc": 0.77,
+      "test_auc": 0.77083
+     },
+     {
+      "tau_days": 180.0,
+      "val_auc": 0.76998,
+      "test_auc": 0.77082
+     },
+     {
+      "tau_days": null,
+      "val_auc": 0.76994,
+      "test_auc": 0.77077
+     }
+    ],
+    "tau_chosen": 14.0,
+    "auc_without_forgetting": 0.77077,
+    "auc_with_forgetting": 0.77082,
+    "auc_change_from_forgetting": 5e-05,
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.2,
+     "k_k": 0.6,
+     "decay": 0.05,
+     "tau_days": 14.0
+    },
+    "auc_v1_defaults": 0.77077,
+    "auc_chosen": 0.76894,
+    "rmse_v1_defaults": 0.41157,
+    "rmse_chosen": 0.41276,
+    "val_auc_v1_defaults": 0.76994,
+    "val_auc_chosen": 0.77091,
+    "seconds": {
+     "grid": 8.0,
+     "item_bank": 0.1,
+     "total": 9.0
+    },
+    "fitted_at": "2026-11-11T18:14:01+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.6,
+       "decay": 0.05,
+       "tau_days": 14.0
+      },
+      "val": {
+       "auc": 0.77091,
+       "rmse": 0.411,
+       "log_loss": 0.51033,
+       "accuracy": 0.74319
+      },
+      "test": {
+       "auc": 0.76894,
+       "rmse": 0.41276,
+       "log_loss": 0.51483,
+       "accuracy": 0.74499
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.6,
+       "decay": 0.05,
+       "tau_days": 30.0
+      },
+      "val": {
+       "auc": 0.77086,
+       "rmse": 0.41102,
+       "log_loss": 0.51039,
+       "accuracy": 0.74306
+      },
+      "test": {
+       "auc": 0.76896,
+       "rmse": 0.41275,
+       "log_loss": 0.5148,
+       "accuracy": 0.74518
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.6,
+       "decay": 0.05,
+       "tau_days": 45.0
+      },
+      "val": {
+       "auc": 0.77083,
+       "rmse": 0.41103,
+       "log_loss": 0.51042,
+       "accuracy": 0.74319
+      },
+      "test": {
+       "auc": 0.76897,
+       "rmse": 0.41275,
+       "log_loss": 0.51479,
+       "accuracy": 0.74528
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.6,
+       "decay": 0.05,
+       "tau_days": 7.0
+      },
+      "val": {
+       "auc": 0.77082,
+       "rmse": 0.411,
+       "log_loss": 0.51032,
+       "accuracy": 0.7437
+      },
+      "test": {
+       "auc": 0.76886,
+       "rmse": 0.41278,
+       "log_loss": 0.51487,
+       "accuracy": 0.7446
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.6,
+       "decay": 0.05,
+       "tau_days": 60.0
+      },
+      "val": {
+       "auc": 0.77079,
+       "rmse": 0.41103,
+       "log_loss": 0.51044,
+       "accuracy": 0.74331
+      },
+      "test": {
+       "auc": 0.76896,
+       "rmse": 0.41275,
+       "log_loss": 0.51479,
+       "accuracy": 0.74537
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 1580,
+     "skills": 150,
+     "test_rows_with_known_item": 10354,
+     "test_rows": 10376,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": 14.0
+     },
+     "auc_without_bank": 0.69324,
+     "auc_skill_betas_only": 0.70848,
+     "auc_with_bank": 0.77406,
+     "rmse_without_bank": 0.4393,
+     "rmse_with_bank": 0.41033,
+     "saved": false,
+     "note": "not saved: the dataset is evaluation only (not commercial-OK)"
+    }
+   },
+   "assistments_2015": {
+    "licence": "research use",
+    "commercial_params_ok": true,
+    "rows": 683801,
+    "students": 19840,
+    "items": 100,
+    "skills": 100,
+    "timestamps": false,
+    "subsample": null,
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 439463,
+     "val": 111453,
+     "train": 550916,
+     "test": 132885
+    },
+    "tau_grid": [],
+    "tau_curve": [
+     {
+      "tau_days": null,
+      "val_auc": 0.69292,
+      "test_auc": 0.68358
+     }
+    ],
+    "tau_chosen": null,
+    "auc_without_forgetting": 0.68358,
+    "auc_with_forgetting": 0.68358,
+    "auc_change_from_forgetting": 0.0,
+    "forgetting_check": "tau_days=45 with use_time=True on rows without times",
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.3,
+     "decay": 0.02,
+     "tau_days": null
+    },
+    "auc_v1_defaults": 0.68358,
+    "auc_chosen": 0.68724,
+    "rmse_v1_defaults": 0.42352,
+    "rmse_chosen": 0.42354,
+    "val_auc_v1_defaults": 0.69292,
+    "val_auc_chosen": 0.69596,
+    "seconds": {
+     "grid": 25.6,
+     "item_bank": 1.7,
+     "total": 29.5
+    },
+    "fitted_at": "2026-11-11T18:14:21+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.69596,
+       "rmse": 0.42464,
+       "log_loss": 0.5383,
+       "accuracy": 0.73468
+      },
+      "test": {
+       "auc": 0.68724,
+       "rmse": 0.42354,
+       "log_loss": 0.53643,
+       "accuracy": 0.73762
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.05,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.69563,
+       "rmse": 0.42408,
+       "log_loss": 0.53729,
+       "accuracy": 0.73559
+      },
+      "test": {
+       "auc": 0.68658,
+       "rmse": 0.423,
+       "log_loss": 0.53542,
+       "accuracy": 0.73895
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.3,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.69562,
+       "rmse": 0.42385,
+       "log_loss": 0.53684,
+       "accuracy": 0.73592
+      },
+      "test": {
+       "auc": 0.68659,
+       "rmse": 0.42271,
+       "log_loss": 0.53487,
+       "accuracy": 0.73916
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.3,
+       "k_k": 0.3,
+       "decay": 0.05,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.69461,
+       "rmse": 0.42378,
+       "log_loss": 0.53692,
+       "accuracy": 0.73626
+      },
+      "test": {
+       "auc": 0.68523,
+       "rmse": 0.42265,
+       "log_loss": 0.53493,
+       "accuracy": 0.73969
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.2,
+       "k_k": 0.3,
+       "decay": 0.02,
+       "tau_days": null
+      },
+      "val": {
+       "auc": 0.69451,
+       "rmse": 0.42384,
+       "log_loss": 0.53705,
+       "accuracy": 0.73623
+      },
+      "test": {
+       "auc": 0.68515,
+       "rmse": 0.4227,
+       "log_loss": 0.53506,
+       "accuracy": 0.73961
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 100,
+     "skills": 100,
+     "test_rows_with_known_item": 132885,
+     "test_rows": 132885,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": null
+     },
+     "auc_without_bank": 0.64658,
+     "auc_skill_betas_only": 0.61646,
+     "auc_with_bank": 0.68351,
+     "rmse_without_bank": 0.44237,
+     "rmse_with_bank": 0.42353,
+     "saved": true
+    }
+   },
+   "assistments_2017": {
+    "licence": "research use",
+    "commercial_params_ok": true,
+    "rows": 942816,
+    "students": 1709,
+    "items": 3162,
+    "skills": 102,
+    "timestamps": true,
+    "subsample": null,
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 602909,
+     "val": 159442,
+     "train": 762351,
+     "test": 180465
+    },
+    "tau_grid": [
+     7.0,
+     14.0,
+     30.0,
+     45.0,
+     60.0,
+     90.0,
+     120.0,
+     180.0,
+     null
+    ],
+    "tau_curve": [
+     {
+      "tau_days": 7.0,
+      "val_auc": 0.70531,
+      "test_auc": 0.71114
+     },
+     {
+      "tau_days": 14.0,
+      "val_auc": 0.70553,
+      "test_auc": 0.71133
+     },
+     {
+      "tau_days": 30.0,
+      "val_auc": 0.70572,
+      "test_auc": 0.71152
+     },
+     {
+      "tau_days": 45.0,
+      "val_auc": 0.70574,
+      "test_auc": 0.71153
+     },
+     {
+      "tau_days": 60.0,
+      "val_auc": 0.70571,
+      "test_auc": 0.71149
+     },
+     {
+      "tau_days": 90.0,
+      "val_auc": 0.70558,
+      "test_auc": 0.71137
+     },
+     {
+      "tau_days": 120.0,
+      "val_auc": 0.70545,
+      "test_auc": 0.71123
+     },
+     {
+      "tau_days": 180.0,
+      "val_auc": 0.70522,
+      "test_auc": 0.71099
+     },
+     {
+      "tau_days": null,
+      "val_auc": 0.70399,
+      "test_auc": 0.7097
+     }
+    ],
+    "tau_chosen": 45.0,
+    "auc_without_forgetting": 0.7097,
+    "auc_with_forgetting": 0.71153,
+    "auc_change_from_forgetting": 0.00183,
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.3,
+     "decay": 0.1,
+     "tau_days": 45.0
+    },
+    "auc_v1_defaults": 0.7097,
+    "auc_chosen": 0.71509,
+    "rmse_v1_defaults": 0.45121,
+    "rmse_chosen": 0.44973,
+    "val_auc_v1_defaults": 0.70399,
+    "val_auc_chosen": 0.71007,
+    "seconds": {
+     "grid": 203.7,
+     "item_bank": 3.5,
+     "total": 209.1
+    },
+    "fitted_at": "2026-11-11T18:17:21+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.1,
+       "tau_days": 45.0
+      },
+      "val": {
+       "auc": 0.71007,
+       "rmse": 0.44773,
+       "log_loss": 0.58722,
+       "accuracy": 0.6978
+      },
+      "test": {
+       "auc": 0.71509,
+       "rmse": 0.44973,
+       "log_loss": 0.59134,
+       "accuracy": 0.69405
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.1,
+       "tau_days": 60.0
+      },
+      "val": {
+       "auc": 0.71007,
+       "rmse": 0.44774,
+       "log_loss": 0.58724,
+       "accuracy": 0.69765
+      },
+      "test": {
+       "auc": 0.7151,
+       "rmse": 0.44972,
+       "log_loss": 0.59133,
+       "accuracy": 0.69397
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.1,
+       "tau_days": 30.0
+      },
+      "val": {
+       "auc": 0.71002,
+       "rmse": 0.44774,
+       "log_loss": 0.58724,
+       "accuracy": 0.69789
+      },
+      "test": {
+       "auc": 0.71504,
+       "rmse": 0.44975,
+       "log_loss": 0.59138,
+       "accuracy": 0.69411
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.1,
+       "tau_days": 90.0
+      },
+      "val": {
+       "auc": 0.71002,
+       "rmse": 0.44777,
+       "log_loss": 0.58731,
+       "accuracy": 0.69777
+      },
+      "test": {
+       "auc": 0.71505,
+       "rmse": 0.44974,
+       "log_loss": 0.59136,
+       "accuracy": 0.69396
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.3,
+       "decay": 0.1,
+       "tau_days": 120.0
+      },
+      "val": {
+       "auc": 0.70994,
+       "rmse": 0.44781,
+       "log_loss": 0.58738,
+       "accuracy": 0.69771
+      },
+      "test": {
+       "auc": 0.71498,
+       "rmse": 0.44976,
+       "log_loss": 0.59141,
+       "accuracy": 0.69391
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 3098,
+     "skills": 101,
+     "test_rows_with_known_item": 180313,
+     "test_rows": 180465,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": 45.0
+     },
+     "auc_without_bank": 0.63819,
+     "auc_skill_betas_only": 0.60708,
+     "auc_with_bank": 0.71215,
+     "rmse_without_bank": 0.4702,
+     "rmse_with_bank": 0.45027,
+     "saved": true
+    }
+   },
+   "xes3g5m": {
+    "licence": "MIT",
+    "commercial_params_ok": true,
+    "rows": 1500292,
+    "students": 4890,
+    "items": 7186,
+    "skills": 773,
+    "timestamps": true,
+    "subsample": {
+     "max_rows": 1500000,
+     "rows_before": 5549184,
+     "students_before": 18066,
+     "seed": 42
+    },
+    "split": "outer 80/20 by student (seed 42); chosen on an inner 80/20 by student split (seed 43) of the training students",
+    "split_rows": {
+     "fit": 962333,
+     "val": 241314,
+     "train": 1203647,
+     "test": 296645
+    },
+    "tau_grid": [
+     7.0,
+     14.0,
+     30.0,
+     45.0,
+     60.0,
+     90.0,
+     120.0,
+     180.0,
+     null
+    ],
+    "tau_curve": [
+     {
+      "tau_days": 7.0,
+      "val_auc": 0.80204,
+      "test_auc": 0.79849
+     },
+     {
+      "tau_days": 14.0,
+      "val_auc": 0.80195,
+      "test_auc": 0.79841
+     },
+     {
+      "tau_days": 30.0,
+      "val_auc": 0.8018,
+      "test_auc": 0.79826
+     },
+     {
+      "tau_days": 45.0,
+      "val_auc": 0.80173,
+      "test_auc": 0.79817
+     },
+     {
+      "tau_days": 60.0,
+      "val_auc": 0.80169,
+      "test_auc": 0.79811
+     },
+     {
+      "tau_days": 90.0,
+      "val_auc": 0.80162,
+      "test_auc": 0.79802
+     },
+     {
+      "tau_days": 120.0,
+      "val_auc": 0.80158,
+      "test_auc": 0.79797
+     },
+     {
+      "tau_days": 180.0,
+      "val_auc": 0.80151,
+      "test_auc": 0.7979
+     },
+     {
+      "tau_days": null,
+      "val_auc": 0.80119,
+      "test_auc": 0.79761
+     }
+    ],
+    "tau_chosen": 7.0,
+    "auc_without_forgetting": 0.79761,
+    "auc_with_forgetting": 0.79849,
+    "auc_change_from_forgetting": 0.00088,
+    "grid": {
+     "k_s": [
+      0.2,
+      0.3,
+      0.5
+     ],
+     "k_k": [
+      0.3,
+      0.4,
+      0.6
+     ],
+     "decay": [
+      0.02,
+      0.05,
+      0.1
+     ]
+    },
+    "grid_chosen_params": {
+     "k_s": 0.5,
+     "k_k": 0.6,
+     "decay": 0.02,
+     "tau_days": 7.0
+    },
+    "auc_v1_defaults": 0.79761,
+    "auc_chosen": 0.80405,
+    "rmse_v1_defaults": 0.36042,
+    "rmse_chosen": 0.35703,
+    "val_auc_v1_defaults": 0.80119,
+    "val_auc_chosen": 0.80688,
+    "seconds": {
+     "grid": 342.5,
+     "item_bank": 4.4,
+     "total": 353.5
+    },
+    "fitted_at": "2026-11-11T18:20:12+00:00",
+    "grid_top": [
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.6,
+       "decay": 0.02,
+       "tau_days": 7.0
+      },
+      "val": {
+       "auc": 0.80688,
+       "rmse": 0.35356,
+       "log_loss": 0.3976,
+       "accuracy": 0.82667
+      },
+      "test": {
+       "auc": 0.80405,
+       "rmse": 0.35703,
+       "log_loss": 0.40379,
+       "accuracy": 0.82254
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.6,
+       "decay": 0.02,
+       "tau_days": 14.0
+      },
+      "val": {
+       "auc": 0.80657,
+       "rmse": 0.35371,
+       "log_loss": 0.39785,
+       "accuracy": 0.8265
+      },
+      "test": {
+       "auc": 0.80375,
+       "rmse": 0.35716,
+       "log_loss": 0.40402,
+       "accuracy": 0.82242
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 7.0
+      },
+      "val": {
+       "auc": 0.80655,
+       "rmse": 0.35369,
+       "log_loss": 0.39793,
+       "accuracy": 0.82678
+      },
+      "test": {
+       "auc": 0.80366,
+       "rmse": 0.35715,
+       "log_loss": 0.40412,
+       "accuracy": 0.82248
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 14.0
+      },
+      "val": {
+       "auc": 0.8064,
+       "rmse": 0.35376,
+       "log_loss": 0.39805,
+       "accuracy": 0.8267
+      },
+      "test": {
+       "auc": 0.80352,
+       "rmse": 0.35721,
+       "log_loss": 0.40423,
+       "accuracy": 0.82241
+      }
+     },
+     {
+      "params": {
+       "k_s": 0.5,
+       "k_k": 0.4,
+       "decay": 0.02,
+       "tau_days": 30.0
+      },
+      "val": {
+       "auc": 0.80623,
+       "rmse": 0.35384,
+       "log_loss": 0.39819,
+       "accuracy": 0.82653
+      },
+      "test": {
+       "auc": 0.80333,
+       "rmse": 0.35729,
+       "log_loss": 0.40436,
+       "accuracy": 0.82239
+      }
+     }
+    ],
+    "item_bank": {
+     "items": 7152,
+     "skills": 772,
+     "test_rows_with_known_item": 296608,
+     "test_rows": 296645,
+     "params": {
+      "k_s": 0.3,
+      "k_k": 0.4,
+      "decay": 0.05,
+      "tau_days": 7.0
+     },
+     "auc_without_bank": 0.70072,
+     "auc_skill_betas_only": 0.57572,
+     "auc_with_bank": 0.79917,
+     "rmse_without_bank": 0.38819,
+     "rmse_with_bank": 0.35978,
+     "saved": true
+    }
+   }
+  },
+  "shipped": {
+   "params": {
+    "k_s": 0.5,
+    "k_k": 0.3,
+    "decay": 0.02,
+    "grade_step": 0.4,
+    "transfer": 0.5,
+    "streak_to_master": 3,
+    "tau_days": 30.0,
+    "streak_expiry_days": 30.0
+   },
+   "candidate_before_guard": {
+    "k_s": 0.5,
+    "k_k": 0.3,
+    "decay": 0.02,
+    "grade_step": 0.4,
+    "transfer": 0.5,
+    "streak_to_master": 3,
+    "tau_days": 30.0,
+    "streak_expiry_days": 30.0
+   },
+   "rule": "tau: the value with the best mean validation AUC at the v1 step sizes on eedi_2020_task34, eedi_2020_task12; k_s, k_k, decay: the triple with the best mean validation AUC across assistments_2009, eedi_2020_task34, eedi_2020_task12 at that tau; then never worse than the v1 defaults by more than 0.002 AUC on the held-out students of assistments_2009, eedi_2020_task34 (a parameter that breaks this goes back to its v1 value); grade_step and transfer keep the v1 values because the public datasets have no prerequisite graph; streak_to_master and streak_expiry_days are not fitted (PRD defaults)",
+   "chosen_on": [
+    "assistments_2009",
+    "eedi_2020_task34",
+    "eedi_2020_task12"
+   ],
+   "tau_chosen_on": [
+    "eedi_2020_task34",
+    "eedi_2020_task12"
+   ],
+   "tau_mean_val_auc": {
+    "7.0": 0.78816,
+    "14.0": 0.78854,
+    "30.0": 0.78875,
+    "45.0": 0.78872,
+    "60.0": 0.78865,
+    "90.0": 0.78853,
+    "120.0": 0.78842,
+    "180.0": 0.78827,
+    "None": 0.78762
+   },
+   "step_mean_val_auc": {
+    "[0.2, 0.3, 0.02]": 0.77626,
+    "[0.2, 0.3, 0.05]": 0.77295,
+    "[0.2, 0.3, 0.1]": 0.76758,
+    "[0.2, 0.4, 0.02]": 0.77642,
+    "[0.2, 0.4, 0.05]": 0.77357,
+    "[0.2, 0.4, 0.1]": 0.76877,
+    "[0.2, 0.6, 0.02]": 0.77513,
+    "[0.2, 0.6, 0.05]": 0.77293,
+    "[0.2, 0.6, 0.1]": 0.76906,
+    "[0.3, 0.3, 0.02]": 0.77779,
+    "[0.3, 0.3, 0.05]": 0.77569,
+    "[0.3, 0.3, 0.1]": 0.7719,
+    "[0.3, 0.4, 0.02]": 0.7778,
+    "[0.3, 0.4, 0.05]": 0.77612,
+    "[0.3, 0.4, 0.1]": 0.77278,
+    "[0.3, 0.6, 0.02]": 0.77643,
+    "[0.3, 0.6, 0.05]": 0.77535,
+    "[0.3, 0.6, 0.1]": 0.77272,
+    "[0.5, 0.3, 0.02]": 0.7784,
+    "[0.5, 0.3, 0.05]": 0.77753,
+    "[0.5, 0.3, 0.1]": 0.77515,
+    "[0.5, 0.4, 0.02]": 0.77823,
+    "[0.5, 0.4, 0.05]": 0.77775,
+    "[0.5, 0.4, 0.1]": 0.77578,
+    "[0.5, 0.6, 0.02]": 0.77676,
+    "[0.5, 0.6, 0.05]": 0.77687,
+    "[0.5, 0.6, 0.1]": 0.77554
+   },
+   "held_out": {
+    "assistments_2009": {
+     "auc_v1_defaults": 0.75239,
+     "auc_shipped": 0.75281,
+     "gain": 0.00042
+    },
+    "eedi_2020_task12": {
+     "auc_v1_defaults": 0.7859,
+     "auc_shipped": 0.79045,
+     "gain": 0.00455
+    },
+    "eedi_2020_task34": {
+     "auc_v1_defaults": 0.77626,
+     "auc_shipped": 0.78026,
+     "gain": 0.004
+    }
+   },
+   "informing_only": {
+    "ammore_2024": {
+     "would_choose_tau_days": 14.0
+    }
+   },
+   "notes": [],
+   "params_file": "/Users/rofy/Documents/side-quests/kwan/data/params/math.params.json"
+  },
+  "acceptance": {
+   "rule": "forgetting never lowers AUC by more than 0.002 on datasets without timestamps",
+   "datasets_without_timestamps": [
+    "assistments_2009",
+    "assistments_2015"
+   ],
+   "largest_auc_drop_from_forgetting": 0.0,
+   "passed": true
+  },
+  "item_banks": {
+   "assistments_2009": {
+    "saved": true,
+    "path": "build/fit/assistments_2009.itembank.json",
+    "items": 15607,
+    "auc_without_bank": 0.69295,
+    "auc_with_bank": 0.75447
+   },
+   "eedi_2020_task34": {
+    "saved": true,
+    "path": "build/fit/eedi_2020_task34.itembank.json",
+    "items": 948,
+    "auc_without_bank": 0.71553,
+    "auc_with_bank": 0.77806
+   },
+   "eedi_2020_task12": {
+    "saved": true,
+    "path": "build/fit/eedi_2020_task12.itembank.json",
+    "items": 27520,
+    "auc_without_bank": 0.73151,
+    "auc_with_bank": 0.7886
+   },
+   "ammore_2024": {
+    "saved": false,
+    "path": null,
+    "items": 1580,
+    "auc_without_bank": 0.69324,
+    "auc_with_bank": 0.77406
+   },
+   "assistments_2015": {
+    "saved": true,
+    "path": "build/fit/assistments_2015.itembank.json",
+    "items": 100,
+    "auc_without_bank": 0.64658,
+    "auc_with_bank": 0.68351
+   },
+   "assistments_2017": {
+    "saved": true,
+    "path": "build/fit/assistments_2017.itembank.json",
+    "items": 3098,
+    "auc_without_bank": 0.63819,
+    "auc_with_bank": 0.71215
+   },
+   "xes3g5m": {
+    "saved": true,
+    "path": "build/fit/xes3g5m.itembank.json",
+    "items": 7152,
+    "auc_without_bank": 0.70072,
+    "auc_with_bank": 0.79917
+   }
+  },
+  "notes": [
+   "grade_step and transfer act only through a prerequisite graph; the public datasets have none, so they keep the v1 values",
+   "the grid's banks are fitted on the inner fit students; the saved banks on all the training students",
+   "the maths bundle ships without an item bank: Eedi and ASSISTments item ids do not map to Kwan items"
+  ]
  }
 }

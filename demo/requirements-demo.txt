@@ -1,0 +1,5 @@
+# Pinned Streamlit stack for the demo image. `kwan[demo]` itself is installed from the wheel that
+# space-deploy.yml puts under wheels/ (or built from the repository); its demo extra resolves against these pins.
+streamlit==1.67.0
+pyvis==0.3.2
+pandas==3.1.1

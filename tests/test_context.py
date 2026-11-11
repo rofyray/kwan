@@ -1,10 +1,11 @@
 """Ghana-context bank (PRD 1.2 and 5.3): 21 settings by strand and primary band, picked by CRC32 of the indicator id."""
+
 import zlib
 from collections import Counter
 
 import pytest
 
-import context
+from kwan.context import bank as context
 
 EM_DASH = chr(0x2014)
 CELLS = [(strand, band) for strand in (1, 2, 3, 4) for band in ("lower", "upper")]
@@ -16,11 +17,18 @@ def all_settings():
 
 # ----------------------------------------------------------------------------- the bank
 
+
 def test_bank_has_exactly_21_settings():
     assert len(all_settings()) == 21
     assert {key: len(v) for key, v in context.CONTEXTS.items()} == {
-        (1, "lower"): 3, (1, "upper"): 3, (2, "lower"): 2, (2, "upper"): 2,
-        (3, "lower"): 3, (3, "upper"): 3, (4, "lower"): 2, (4, "upper"): 3,
+        (1, "lower"): 3,
+        (1, "upper"): 3,
+        (2, "lower"): 2,
+        (2, "upper"): 2,
+        (3, "lower"): 3,
+        (3, "upper"): 3,
+        (4, "lower"): 2,
+        (4, "upper"): 3,
     }
 
 
@@ -56,13 +64,16 @@ def test_settings_are_recognisably_ghanaian():
 
 # ----------------------------------------------------------------------------- band
 
-@pytest.mark.parametrize("grade, expected", [(1, "lower"), (2, "lower"), (3, "lower"),
-                                             (4, "upper"), (5, "upper"), (6, "upper")])
+
+@pytest.mark.parametrize(
+    "grade, expected", [(1, "lower"), (2, "lower"), (3, "lower"), (4, "upper"), (5, "upper"), (6, "upper")]
+)
 def test_band_boundary_is_between_grade_3_and_4(grade, expected):
     assert context.band(grade) == expected
 
 
 # ----------------------------------------------------------------------------- practice_setting
+
 
 def test_pick_is_crc32_of_the_indicator_id_modulo_the_cell_size():
     for strand, band in CELLS:
@@ -83,16 +94,22 @@ def test_known_picks():
     """Pinned values: CRC32 is a fixed function, so these never change between runs, machines or Python versions."""
     assert zlib.crc32(b"B1.1.1.1.1") == 1008541236
     assert context.practice_setting("B1.1.1.1.1", 1, 1) == context.CONTEXTS[(1, "lower")][1008541236 % 3]
-    assert context.practice_setting("B1.1.1.1.3", 1, 1) == \
-        "Use 1 cedi and 2 cedi coins to make 5 cedis in as many ways as you can."
-    assert context.practice_setting("B1.3.3.1.1", 3, 1) == \
-        "Find circles, squares and triangles in Adinkra symbols printed on cloth at home."
+    assert (
+        context.practice_setting("B1.1.1.1.3", 1, 1)
+        == "Use 1 cedi and 2 cedi coins to make 5 cedis in as many ways as you can."
+    )
+    assert (
+        context.practice_setting("B1.3.3.1.1", 3, 1)
+        == "Find circles, squares and triangles in Adinkra symbols printed on cloth at home."
+    )
 
 
 def test_setting_comes_from_the_cell_of_the_strand_and_band():
     for strand, band in CELLS:
-        for grade in ((1, 2, 3) if band == "lower" else (4, 5, 6)):
-            assert context.practice_setting(f"B{grade}.{strand}.9.9.9", strand, grade) in context.CONTEXTS[(strand, band)]
+        for grade in (1, 2, 3) if band == "lower" else (4, 5, 6):
+            assert (
+                context.practice_setting(f"B{grade}.{strand}.9.9.9", strand, grade) in context.CONTEXTS[(strand, band)]
+            )
 
 
 def test_the_band_not_the_id_decides_the_cell():
@@ -113,6 +130,7 @@ def test_an_emptied_cell_returns_an_empty_string(monkeypatch):
 
 
 # ----------------------------------------------------------------------------- on the real curriculum graph
+
 
 def test_every_indicator_in_the_graph_gets_a_setting_from_its_own_cell(G):
     assert G.number_of_nodes() >= 250

@@ -1,0 +1,69 @@
+Kwan content licence
+====================
+
+Copyright (c) 2026 Raymond Okyere-Forson and the Kwan contributors.
+
+The written content made for Kwan is licensed under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+    Licence summary:  https://creativecommons.org/licenses/by/4.0/
+    Full legal text:  https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may copy, share and adapt this content for any purpose, including
+commercial use, as long as you give credit, link to the licence and say
+whether you changed anything. The full legal text at the address above is
+the licence. This file is only a notice.
+
+
+What this licence covers
+------------------------
+
+Content written by Kwan contributors, wherever it sits in this repository:
+
+  * "Try it in Ghana" practice settings (for example data/contexts/)
+  * short skill labels (the "short_label" of each indicator)
+  * translations of practice settings and of Kwan's own text
+    (for example Twi, Ewe and Ga)
+  * the text templates Kwan uses to explain a recommendation (data/i18n/)
+  * documentation (docs/, README.md, CONTRIBUTING.md and similar files)
+
+
+What this licence does NOT cover
+--------------------------------
+
+  * Source code and tests. These are under the MIT licence. See LICENSE.
+
+  * NaCCA curriculum text. The indicator descriptions, content standards,
+    exemplars and any other text taken from the NaCCA Standards-Based
+    Curriculum are (c) NaCCA, Ministry of Education, Ghana. They are not
+    Kwan's to license. Kwan downloads them from the official PDFs at build
+    time and does not publish them in this repository unless NaCCA gives
+    written permission. See docs/governance.md for the permission status.
+
+  * Third-party datasets. ASSISTments, Eedi, AMMORE, XES3G5M, Junyi Academy
+    and any other learner dataset keep their own licences. Kwan does not
+    store them in this repository. See docs/data-card.md.
+
+  * The Contributor Covenant text in CODE_OF_CONDUCT.md, which keeps its own
+    licence (CC BY 4.0, by the Contributor Covenant authors).
+
+  * Names, logos and trademarks of NaCCA, the Ministry of Education or any
+    other organisation.
+
+
+How to give credit
+------------------
+
+A line like this is enough:
+
+    Practice settings from Kwan (https://github.com/rofyray/kwan),
+    by the Kwan contributors, licensed under CC BY 4.0.
+
+If you changed the content, say so.
+
+
+Not an endorsement
+------------------
+
+Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is
+not reviewed, approved or endorsed by NaCCA or the Ministry of Education.

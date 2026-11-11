@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the documentation
+    url: https://rofyray.github.io/kwan/
+    about: How Kwan works, the quickstart, the style guide and the teacher review guide.
+  - name: Read the contributor guide
+    url: https://github.com/rofyray/kwan/blob/main/CONTRIBUTING.md
+    about: Two ways to help, the teacher track and the developer track, and the rules that keep Kwan honest.
+  - name: Report a conduct or security problem in private
+    url: https://github.com/rofyray/kwan/security/advisories/new
+    about: Only the maintainers can read these reports. Please do not use a public issue.

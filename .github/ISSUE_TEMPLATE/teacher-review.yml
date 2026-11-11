@@ -1,0 +1,108 @@
+name: Teacher review
+description: For teachers and education specialists who want to review skill links, practice settings, short labels or translations. No coding needed.
+title: "review: "
+labels: ["teacher-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Kwan gets better when people who teach in Ghana shape it.
+
+        Fill in this short form and a maintainer will reply here and send you a review sheet (a spreadsheet you can open in Google Sheets or Excel).
+        The teacher review guide explains each column: https://rofyray.github.io/kwan/teacher-review-guide/
+
+        This issue is public. **Please do not write your phone number or email address here.**
+  - type: checkboxes
+    id: what
+    attributes:
+      label: What would you like to review?
+      description: Tick as many as you like.
+      options:
+        - label: Skill links ("Would a pupil really need A before B?")
+        - label: Practice settings ("Try it in Ghana")
+        - label: Short skill labels
+        - label: Twi translations (Basic 1 to Basic 3)
+        - label: Ewe translations (Basic 1 to Basic 3)
+        - label: Ga translations (Basic 1 to Basic 3)
+  - type: checkboxes
+    id: classes
+    attributes:
+      label: Which classes do you teach or know best?
+      options:
+        - label: Basic 1
+        - label: Basic 2
+        - label: Basic 3
+        - label: Basic 4
+        - label: Basic 5
+        - label: Basic 6
+  - type: dropdown
+    id: region
+    attributes:
+      label: Region where you teach
+      description: This helps us get reviewers from all over Ghana. It is also recorded on the review sheet.
+      options:
+        - Ahafo
+        - Ashanti
+        - Bono
+        - Bono East
+        - Central
+        - Eastern
+        - Greater Accra
+        - North East
+        - Northern
+        - Oti
+        - Savannah
+        - Upper East
+        - Upper West
+        - Volta
+        - Western
+        - Western North
+        - I do not teach in Ghana at the moment
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Your role
+      placeholder: Class teacher, head teacher, teacher trainer, curriculum lead, tutor
+    validations:
+      required: true
+  - type: input
+    id: languages
+    attributes:
+      label: Ghanaian languages you read and write well
+      description: Needed only if you want to review translations.
+      placeholder: Twi, Ewe, Ga
+  - type: dropdown
+    id: amount
+    attributes:
+      label: How much would you like to review in your first sheet?
+      options:
+        - About 25 rows
+        - About 50 rows
+        - About 100 rows
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: How should we credit you in CONTRIBUTORS.md?
+      description: Write the name as you want it shown, or write "do not list me".
+      placeholder: Your name as you want it shown, and your town if you wish
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know?
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Before you submit
+      options:
+        - label: I have read the Code of Conduct and will follow it.
+          required: true
+        - label: I agree that the settings, labels and translations I write or edit are shared under the CC BY 4.0 licence (see LICENSE-CONTENT).
+          required: true
+        - label: I understand the review sheet may contain NaCCA curriculum text and I will not publish the sheet.
+          required: true

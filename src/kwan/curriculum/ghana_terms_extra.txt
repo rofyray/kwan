@@ -1,0 +1,27 @@
+# Extra terms for flagging Ghanaian context in curriculum exemplars.
+#
+# The main list is kwan/context/ghana_terms.txt (owned by the context package). This file adds the
+# currency signs the curriculum PDFs print, and a small fallback list used when the main file is absent.
+# Same format: one term per line, "#" starts a comment.
+
+# [currency signs as printed in the PDFs]
+¢
+GH¢
+Gh¢
+
+# [fallback]
+cedi
+pesewa
+Ghana
+Ghanaian
+Accra
+Kumasi
+Tamale
+Kofi
+Ama
+Kojo
+Adwoa
+Akosua
+Kwame
+Yaw
+Esi

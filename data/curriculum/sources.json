@@ -1,0 +1,27 @@
+{
+ "schema_version": 1,
+ "sources": [
+  {
+   "id": "m13",
+   "family": "nacca-math-primary",
+   "subject": "math",
+   "url": "https://curriculumresources.edu.gh/basic/wp-content/uploads/2026/05/MATHEMATICS-BASIC-B1-B3-2.pdf",
+   "file": "MATHEMATICS-BASIC-B1-B3-2.pdf",
+   "path": "raw/curriculum/MATHEMATICS-BASIC-B1-B3-2.pdf",
+   "size_bytes": 1731688,
+   "sha256": "8912379bc2d80175dd2de542fc4ec8e16a0eb413276985b303fa2128edc7873a",
+   "fetched_at": "2026-11-10"
+  },
+  {
+   "id": "m46",
+   "family": "nacca-math-primary",
+   "subject": "math",
+   "url": "https://curriculumresources.edu.gh/basic/wp-content/uploads/2026/05/MATHEMATICS-BASIC-B4-B6-1.pdf",
+   "file": "MATHEMATICS-BASIC-B4-B6-1.pdf",
+   "path": "raw/curriculum/MATHEMATICS-BASIC-B4-B6-1.pdf",
+   "size_bytes": 4573986,
+   "sha256": "2157c2b62d96824b4f8fc1b4c9d6c83bd4e596013678b179ef680ad9e4987b30",
+   "fetched_at": "2026-11-10"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+# Document families for the curriculum pipeline (PRD task 2.9).
+#
+# One entry describes one set of curriculum PDFs that share a layout: where to download them, how the
+# indicator codes look, where the three table columns sit and which headings mark the start and the end
+# of the part to read. Another subject drops in by adding an entry here; no code changes are needed.
+#
+# Patterns are Python regular expressions. `code_pattern` must define the named groups
+# grade, strand, sub_strand, cs and no. Column boxes are x positions in PDF points (left, right); when
+# `snap_to_rulings` is true each page's own table rulings replace them whenever four are found.
+
+families:
+  nacca-math-primary:
+    subject: math
+    title: NaCCA Mathematics curriculum for primary schools, Basic 1 to 6 (2019)
+    grades: [1, 2, 3, 4, 5, 6]
+    strands:
+      1: Number
+      2: Algebra
+      3: Geometry and Measurement
+      4: Data
+    code_prefix: "B"
+    code_pattern: '[BP]\s?(?P<grade>[1-6])\s?\.\s?(?P<strand>[1-4])\s?\.\s?(?P<sub_strand>\d)\s?\.\s?(?P<cs>\d)\s?\.\s?(?P<no>\d{1,2})(?!\d)'
+    short_code_pattern: '[BP]\s?(?P<grade>[1-6])\s?\.\s?(?P<strand>\d)\s?\.\s?(?P<sub_strand>\d)\s?\.\s?(?P<cs>\d)(?![\d.]*\d)'
+    grade_heading: '^\s*BASIC\s+(?P<grade>[1-6])\s*$'
+    end_heading: 'SUBJECT\s+PANEL\s+MEMBERS'
+    strand_heading: '^\s*Strand\s*(?P<no>\d)\s*[:.\-]\s*(?P<name>.+)$'
+    sub_strand_heading: '^\s*Sub-?\s?strand\s*(?P<no>\d)\s*:\s*(?P<name>.+)$'
+    header_anchor: 'INDICATORS\s+AND\s+EXEMPL'
+    header_words: [CONTENT, STANDARD, STANDARDS, INDICATORS, AND, EXEMPLARS, SUBJECT, SPECIFIC, PRACTICES, CORE, COMPETENCIES]
+    footer_pattern: '©\s*NaCCA'
+    exemplar_marker: '^\s*(?:E\s?\.?\s?g\b\s?[.,:]?|Example(?=\s*\d))\s*\.?\s*(?:(?P<label>\d{1,2})(?!\d|,\d))?\s*[.:),]?\s*'
+    competency_words: [Learners develop, Problem Solving, Critical Thinking, Justification of, Collaborative, Leadership, Attention to, Cultural Identity, Personal Development, Global Citizenship]
+    columns:
+      content_standard: [40, 208]
+      indicators: [208, 600]
+      competencies: [600, 800]
+    snap_to_rulings: true
+    documents:
+      - id: m13
+        grades: [1, 2, 3]
+        url: https://curriculumresources.edu.gh/basic/wp-content/uploads/2026/05/MATHEMATICS-BASIC-B1-B3-2.pdf
+        file: MATHEMATICS-BASIC-B1-B3-2.pdf
+        local_copies: [raw/m13.pdf]
+        text_copies: [raw/m13.txt]
+      - id: m46
+        grades: [4, 5, 6]
+        url: https://curriculumresources.edu.gh/basic/wp-content/uploads/2026/05/MATHEMATICS-BASIC-B4-B6-1.pdf
+        file: MATHEMATICS-BASIC-B4-B6-1.pdf
+        local_copies: [raw/m46.pdf]
+        text_copies: [raw/m46.txt]
+    corrections: data/curriculum/corrections.json
+    expected_counts: data/curriculum/expected_counts.json
+    label_drafts: data/contexts/drafts/math.*.json
+    label_reviews: data/contexts/label_reviews.json
+    structure_file: data/curriculum/math.structure.json
+    full_file: build/curriculum/math.full.json
+    committed_full_file: data/curriculum/math.full.json
+    qa_report: docs/qa/curriculum-math.html

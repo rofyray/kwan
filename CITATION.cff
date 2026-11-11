@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use Kwan in your work, please cite it using the details below."
+type: software
+title: "Kwan: an open-source learning path engine for Ghanaian primary maths"
+abstract: >-
+  Kwan (Twi for "the path") tells a pupil which maths skill to learn next,
+  explains why, and sets the practice in everyday Ghanaian life. It organises
+  skills with the learning indicator codes of the NaCCA Standards-Based
+  Curriculum for Mathematics, Basic 1 to Basic 6, links them in a prerequisite
+  map, tracks each pupil with a multi-level Elo learner model that passes
+  evidence along the map and allows for forgetting, and recommends the next
+  skills with reasons a teacher can read. Kwan is not reviewed, approved or
+  endorsed by NaCCA or the Ministry of Education.
+authors:
+  - family-names: "Okyere-Forson"
+    given-names: "Raymond"
+repository-code: "https://github.com/rofyray/kwan"
+url: "https://github.com/rofyray/kwan"
+license: MIT
+version: "1.0.0rc1"
+keywords:
+  - education
+  - adaptive learning
+  - learning path recommendation
+  - knowledge tracing
+  - prerequisite graph
+  - mathematics
+  - primary school
+  - Ghana
+  - NaCCA curriculum

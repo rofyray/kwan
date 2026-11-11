@@ -1,0 +1,159 @@
+# Learner datasets Kwan is validated on (PRD Section 5.2, Appendix B.1).
+#
+# Every dataset downloads without an account. Raw rows are never committed: `make data`
+# (scripts/download_data.sh) fetches them into raw/, which git ignores.
+#
+#   name                  what the dataset is
+#   url                   where it is downloaded from
+#   size                  size of the download
+#   licence               the terms it is shared under
+#   citation              what to cite when results on it are published
+#   role                  what Kwan uses it for
+#   commercial_params_ok  true when parameters fitted on it may ship in a Kwan bundle.
+#                         false means evaluation only: fitted values never leave build/.
+#   raw                   where it lives under raw/ after `make data`
+#   files                 the files the loader reads, relative to `raw`
+#   results_keys          the blocks it owns in data/eval_results.json
+#   fetch                 how scripts/download_data.sh gets it
+#
+# kwan/data/registry.py carries `licence` and `commercial_params_ok` again as a small Python
+# table, so the bundle builder can check them without PyYAML. A test keeps the two in step.
+
+assistments_2009:
+  name: ASSISTments 2009 skill-builder (corrected)
+  url: http://base.ustc.edu.cn/data/ASSISTment/2009_skill_builder_data_corrected.zip
+  size: 9 MB
+  licence: research use; cite Feng, Heffernan & Koedinger (2009)
+  citation: >-
+    Feng, M., Heffernan, N. T. & Koedinger, K. R. (2009). Addressing the assessment challenge with an
+    online system that tutors as it assesses. User Modeling and User-Adapted Interaction, 19(3), 243-266.
+  role: [kt_eval]
+  commercial_params_ok: true
+  raw: skill_builder_data_corrected.csv
+  files: [skill_builder_data_corrected.csv]
+  results_keys: [assistments_2009]
+  fetch: {method: zip, archive: a09.zip}
+
+eedi_2020:
+  name: Eedi NeurIPS 2020 Education Challenge
+  url: https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip
+  size: 657 MB
+  licence: research use; cite Wang et al. (2020) arXiv:2007.12061
+  citation: >-
+    Wang, Z., Lamb, A., Saveliev, E., Cameron, P., Zaykov, Y., Hernandez-Lobato, J. M., Turner, R. E.,
+    Baraniuk, R. G., Barton, C., Peyton Jones, S., Woodhead, S. & Zhang, C. (2020). Instructions and guide
+    for Diagnostic Questions: the NeurIPS 2020 Education Challenge. arXiv:2007.12061.
+  role: [kt_eval, item_bank]
+  commercial_params_ok: true
+  raw: eedi/data
+  subsets: {task34: train_data/train_task_3_4.csv, task12: train_data/train_task_1_2.csv}
+  files:
+    - train_data/train_task_3_4.csv
+    - metadata/answer_metadata_task_3_4.csv
+    - metadata/question_metadata_task_3_4.csv
+    - train_data/train_task_1_2.csv
+    - metadata/answer_metadata_task_1_2.csv
+    - metadata/question_metadata_task_1_2.csv
+    - metadata/subject_metadata.csv
+  results_keys: [eedi_2020_task34, eedi_2020_task12]
+  fetch: {method: zip, archive: eedi.zip}
+
+ammore_2024:
+  name: AMMORE (Rori WhatsApp maths tutor, Rising Academies), Jan to Apr 2024
+  url: https://github.com/owenhenkel/ammore_dataset
+  size: 13 MB
+  licence: CC BY-NC 4.0
+  citation: >-
+    Henkel, O., Horne-Robinson, H., Dyshel, M., Ch, N., Moreau-Pernet, B. & Abood, R. (2024). Learning to
+    love edge cases in formative math assessment: using the AMMORE dataset and chain-of-thought prompting
+    to improve grading accuracy. arXiv:2409.17904.
+  role: [kt_eval, ghana_eval, gpf_crosswalk]
+  commercial_params_ok: false
+  raw: ammore
+  subsets: {all: every country, ghana: pupils whose country is Ghana}
+  files: [AMMORE_student_answers.csv, AMMORE_demographic_data.csv]
+  results_keys: [ammore_2024]
+  fetch: {method: git}
+
+assistments_2012:
+  name: ASSISTments 2012-2013 (with affect predictions)
+  url: http://base.ustc.edu.cn/data/ASSISTment/2012-2013-data-with-predictions-4-final.zip
+  size: 576 MB
+  licence: research use
+  citation: >-
+    Feng, M., Heffernan, N. T. & Koedinger, K. R. (2009). Addressing the assessment challenge with an
+    online system that tutors as it assesses. User Modeling and User-Adapted Interaction, 19(3), 243-266.
+    Data: ASSISTments 2012-13 School Data with Affect.
+  role: [kt_eval]
+  commercial_params_ok: true
+  raw: assist2012
+  files: [2012-2013-data-with-predictions-4-final.csv]
+  results_keys: [assistments_2012]
+  fetch: {method: zip, archive: 2012-2013-data-with-predictions-4-final.zip}
+
+assistments_2015:
+  name: ASSISTments 2015 (100 skill builders, main problems)
+  url: http://base.ustc.edu.cn/data/ASSISTment/2015_100_skill_builders_main_problems.zip
+  size: 3 MB
+  licence: research use
+  citation: >-
+    Feng, M., Heffernan, N. T. & Koedinger, K. R. (2009). Addressing the assessment challenge with an
+    online system that tutors as it assesses. User Modeling and User-Adapted Interaction, 19(3), 243-266.
+    Data: ASSISTments 2015 Skill Builder Data.
+  role: [kt_eval]
+  commercial_params_ok: true
+  raw: assist2015
+  files: [2015_100_skill_builders_main_problems.csv]
+  results_keys: [assistments_2015]
+  fetch: {method: zip, archive: 2015_100_skill_builders_main_problems.zip}
+
+assistments_2017:
+  name: ASSISTments 2017 (Longitudinal Data Mining Competition)
+  url: http://base.ustc.edu.cn/data/ASSISTment/anonymized_full_release_competition_dataset.zip
+  size: 68 MB
+  licence: research use
+  citation: >-
+    Patikorn, T., Heffernan, N. T. & Baker, R. S. (2018). ASSISTments Longitudinal Data Mining Competition
+    2017: a preface. Data: ASSISTments 2017 competition dataset (anonymized full release).
+  role: [kt_eval]
+  commercial_params_ok: true
+  raw: assist2017
+  files: [anonymized_full_release_competition_dataset.csv]
+  results_keys: [assistments_2017]
+  fetch: {method: zip, archive: anonymized_full_release_competition_dataset.zip}
+
+xes3g5m:
+  name: XES3G5M (Grade 3 maths, China)
+  url: https://github.com/ai4ed/XES3G5M   # Google Drive id in the README; fetched with gdown
+  size: 373 MB
+  licence: MIT
+  citation: >-
+    Liu, Z. et al. (2023). XES3G5M: a knowledge tracing benchmark dataset with auxiliary information.
+    Advances in Neural Information Processing Systems 36 (Datasets and Benchmarks track).
+  role: [kt_eval, kt_deep]
+  commercial_params_ok: true
+  raw: xes3g5m
+  files:
+    - XES3G5M/question_level/train_valid_sequences_quelevel.csv
+    - XES3G5M/question_level/test_quelevel.csv
+  results_keys: [xes3g5m]
+  fetch: {method: gdown, drive_id: 1eFiIYyh5O2V90RA0brammGH6EpHvPDQe, archive: XES3G5M.tar.gz, fragile: true}
+
+junyi_2015:
+  name: Junyi Academy Math Practicing Log (2015)
+  url: http://base.ustc.edu.cn/data/JunyiAcademy_Math_Practicing_Log/junyi.rar
+  size: 1.3 GB
+  licence: non-commercial; cite Chang, Hsu & Chen (EDM 2015)
+  citation: >-
+    Chang, H.-S., Hsu, H.-J. & Chen, K.-T. (2015). Modeling exercise relationships in e-learning: a unified
+    approach. Proceedings of the 8th International Conference on Educational Data Mining (EDM 2015).
+  role: [graph_benchmark, kt_eval]
+  commercial_params_ok: false
+  raw: junyi
+  files:
+    - junyi_ProblemLog_original.csv
+    - junyi_Exercise_table.csv
+    - relationship_annotation_training.csv
+    - relationship_annotation_testing.csv
+  results_keys: [junyi_2015]
+  fetch: {method: rar, archive: junyi.rar, fragile: true}

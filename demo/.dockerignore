@@ -1,0 +1,7 @@
+# Used when the build context is the uploaded Space folder (the contents of demo/ plus wheels/ and data/).
+.git
+.gitattributes
+__pycache__/
+*.pyc
+smoke_test.py
+Dockerfile.dockerignore

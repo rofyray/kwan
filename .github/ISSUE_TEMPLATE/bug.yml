@@ -1,0 +1,85 @@
+name: Bug report
+description: Something in the Kwan package, API, CLI or demo does not work as it should.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this.
+        If Kwan has a curriculum skill wrong, please use the "Curriculum error" template.
+        Please do not paste any pupil's name or other personal data.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Say what you did and what Kwan did.
+      placeholder: I called recommend with k=3 and a goal, and got an empty list.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The shortest code or command that shows the problem. Use made-up learner ids.
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Kwan?
+      options:
+        - Python package
+        - Command line (kwan ...)
+        - REST API
+        - Demo
+        - Curriculum parsing
+        - Skill map (graph)
+        - Evaluation or simulation
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: kwan-version
+    attributes:
+      label: Kwan version
+      description: The output of `kwan --version`, or the commit you are on.
+      placeholder: kwan 1.0.0rc1
+    validations:
+      required: true
+  - type: input
+    id: bundle-version
+    attributes:
+      label: Bundle version
+      description: The `bundle_version` in your bundle file, if you use one.
+      placeholder: math-1.0.0
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version and operating system
+      placeholder: Python 3.12 on Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message or log
+      description: Paste the full error text if there is one.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open issues and did not find this bug.
+          required: true
+        - label: My report contains no personal data about any pupil.
+          required: true

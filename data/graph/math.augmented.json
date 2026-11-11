@@ -1,0 +1,11 @@
+{
+ "schema_version": 1,
+ "subject": "math",
+ "run": {"provider": "local-encoder", "model": "all-MiniLM-L6-v2+logreg@50721cd7", "licence": "Apache-2.0 (encoder sentence-transformers/all-MiniLM-L6-v2); classifier fitted on Junyi (non-commercial), kept under build/", "embedder": "sentence-transformers/all-MiniLM-L6-v2", "at": "2026-11-11", "question": "Must a pupil be able to do A before they can learn B?", "threshold": 0.2533, "text": "descriptions and one exemplar", "graph_nodes": 276, "candidate_pairs": 5403, "at_or_above_threshold": 4, "skipped_at_insertion": {}, "benchmarked_on_junyi": true, "below_acceptance_bar": true, "review_note": "Every edge is a proposal. Only a teacher's review can mark an edge accepted."},
+ "edges": [
+  {"source": "math:B4.3.2.1.1", "target": "math:B5.3.4.1.1", "type": "augmented", "weight": 0.2599, "provenance": {"by": "model:local-encoder/all-MiniLM-L6-v2+logreg@50721cd7", "at": "2026-11-11", "review": {"status": "pending", "by": null, "at": null}}},
+  {"source": "math:B5.3.4.2.2", "target": "math:B6.3.3.6.2", "type": "augmented", "weight": 0.2599, "provenance": {"by": "model:local-encoder/all-MiniLM-L6-v2+logreg@50721cd7", "at": "2026-11-11", "review": {"status": "pending", "by": null, "at": null}}},
+  {"source": "math:B4.3.3.1.1", "target": "math:B5.3.2.1.1", "type": "augmented", "weight": 0.2552, "provenance": {"by": "model:local-encoder/all-MiniLM-L6-v2+logreg@50721cd7", "at": "2026-11-11", "review": {"status": "pending", "by": null, "at": null}}},
+  {"source": "math:B5.3.4.2.2", "target": "math:B6.3.3.6.1", "type": "augmented", "weight": 0.254, "provenance": {"by": "model:local-encoder/all-MiniLM-L6-v2+logreg@50721cd7", "at": "2026-11-11", "review": {"status": "pending", "by": null, "at": null}}}
+ ]
+}

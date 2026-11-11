@@ -5,6 +5,7 @@ The real-dataset acceptance tests (Kwan elo-multi AUC >= 0.72) are skipped when 
 ASSISTments takes about 2 s and runs by default. Eedi takes longer, carries the `slow` marker and
 only runs when the environment has KWAN_RUN_SLOW=1.
 """
+
 import json
 import math
 import os
@@ -17,18 +18,20 @@ import numpy as np
 import pandas as pd
 import pytest
 
-import eval_eedi
-import eval_kt
-from eval_kt import BKT, Elo, Elo2
+from kwan.eval import eedi as eval_eedi
+from kwan.eval import kt as eval_kt
+from kwan.eval.kt import BKT, Elo, Elo2
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "raw"
 ASSIST_CSV = RAW / "skill_builder_data_corrected.csv"
 EEDI_ROOT = RAW / "eedi" / "data"
-EEDI_FILES = [EEDI_ROOT / "train_data" / "train_task_3_4.csv",
-              EEDI_ROOT / "metadata" / "answer_metadata_task_3_4.csv",
-              EEDI_ROOT / "metadata" / "question_metadata_task_3_4.csv",
-              EEDI_ROOT / "metadata" / "subject_metadata.csv"]
+EEDI_FILES = [
+    EEDI_ROOT / "train_data" / "train_task_3_4.csv",
+    EEDI_ROOT / "metadata" / "answer_metadata_task_3_4.csv",
+    EEDI_ROOT / "metadata" / "question_metadata_task_3_4.csv",
+    EEDI_ROOT / "metadata" / "subject_metadata.csv",
+]
 RUN_SLOW = os.environ.get("KWAN_RUN_SLOW") == "1"
 
 MODELS = ["global-mean", "skill-mean", "elo", "elo-multi (Kwan)"]
@@ -64,6 +67,7 @@ def logs():
 
 # ---------------------------------------------------------------- split
 
+
 def test_split_is_80_20_by_student_with_no_overlap(logs):
     tr, te = eval_kt.split(logs)
     train_u, test_u = set(tr.user_id), set(te.user_id)
@@ -81,7 +85,7 @@ def test_split_is_deterministic_for_seed_42(logs):
     tr2, te2 = eval_kt.split(logs, seed=42)
     pd.testing.assert_frame_equal(tr1, tr2)
     pd.testing.assert_frame_equal(te1, te2)
-    pd.testing.assert_frame_equal(logs, before)                 # the input frame is not mutated
+    pd.testing.assert_frame_equal(logs, before)  # the input frame is not mutated
     assert set(eval_kt.split(logs, seed=7)[1].user_id) != set(te1.user_id)
 
 
@@ -107,23 +111,24 @@ ASSIST_ROWS = """order_id,user_id,problem_id,skill_id,correct,original,skill_nam
 
 def test_load_filters_dedupes_and_sorts(tmp_path):
     path = tmp_path / "tiny.csv"
-    path.write_bytes(ASSIST_ROWS.encode("latin-1"))             # the real file is latin-1, not UTF-8
+    path.write_bytes(ASSIST_ROWS.encode("latin-1"))  # the real file is latin-1, not UTF-8
     df = eval_kt.load(path)
 
     assert df.index.tolist() == list(range(5))
-    assert df.user_id.tolist() == [1, 1, 2, 2, 3]               # sorted by user_id, then order_id
+    assert df.user_id.tolist() == [1, 1, 2, 2, 3]  # sorted by user_id, then order_id
     assert df.order_id.tolist() == [20, 30, 10, 50, 80]
-    assert df.order_id.is_unique                                # order_id deduped
-    assert 40 not in set(df.order_id)                           # missing skill dropped
-    assert 60 not in set(df.order_id)                           # original == 0 dropped
+    assert df.order_id.is_unique  # order_id deduped
+    assert 40 not in set(df.order_id)  # missing skill dropped
+    assert 60 not in set(df.order_id)  # original == 0 dropped
     assert (df.original == 1).all()
-    assert df.skill_id.tolist() == [2, 2, 3, 1, 4]              # first row of a duplicated order_id wins
+    assert df.skill_id.tolist() == [2, 2, 3, 1, 4]  # first row of a duplicated order_id wins
     assert pd.api.types.is_integer_dtype(df.skill_id)
-    assert df.correct.tolist() == [1, 0, 1, 1, 1]               # the original == 1 row of order 80 is kept
+    assert df.correct.tolist() == [1, 0, 1, 1, 1]  # the original == 1 row of order 80 is kept
     assert set(df.columns) == {"order_id", "user_id", "problem_id", "skill_id", "correct", "original"}
 
 
 # ---------------------------------------------------------------- Elo
+
 
 def test_elo_probabilities_are_strictly_between_0_and_1(logs):
     tr, te = eval_kt.split(logs)
@@ -146,7 +151,7 @@ def test_elo_moves_up_after_correct_and_down_after_wrong():
 
 def test_elo_ability_is_per_student_and_skill():
     preds = Elo().run(frame([(1, 9, 5, 1), (1, 9, 6, 1), (2, 9, 5, 1)]), learn_beta=False)
-    assert preds.tolist() == [0.5, 0.5, 0.5]                    # new skill or new student starts from 0
+    assert preds.tolist() == [0.5, 0.5, 0.5]  # new skill or new student starts from 0
 
 
 def test_elo_learns_difficulty_only_when_asked():
@@ -156,13 +161,14 @@ def test_elo_learns_difficulty_only_when_asked():
     assert frozen.beta == {}
     learner = Elo()
     learner.run(df[:1], learn_beta=True)
-    assert learner.beta == {5: pytest.approx(-0.025)}           # 0 - 0.05 * (1 - 0.5): the skill looks easier
+    assert learner.beta == {5: pytest.approx(-0.025)}  # 0 - 0.05 * (1 - 0.5): the skill looks easier
     snapshot = dict(learner.beta)
     learner.run(df, learn_beta=False)
     assert learner.beta == snapshot
 
 
 # ---------------------------------------------------------------- Elo2 (Kwan's model)
+
 
 def test_elo2_probabilities_are_strictly_between_0_and_1(logs):
     tr, te = eval_kt.split(logs)
@@ -184,8 +190,8 @@ def test_elo2_moves_up_after_correct_and_down_after_wrong():
 
 def test_elo2_student_level_ability_transfers_across_skills():
     preds = Elo2().run(frame([(1, 9, 5, 1), (1, 8, 6, 1), (2, 9, 5, 1)]), learn=False)
-    assert preds[1] == pytest.approx(sigmoid(0.15))             # other skill: only the student-level term
-    assert preds[2] == 0.5                                      # other student: nothing transfers
+    assert preds[1] == pytest.approx(sigmoid(0.15))  # other skill: only the student-level term
+    assert preds[2] == 0.5  # other student: nothing transfers
 
 
 def test_elo2_does_not_learn_item_difficulty_when_learn_is_false():
@@ -195,8 +201,8 @@ def test_elo2_does_not_learn_item_difficulty_when_learn_is_false():
     assert m.b_item == {} and m.b_skill == {} and m.n_item == {}
 
     m.run(df[:1], learn=True)
-    assert m.b_item == {9: pytest.approx(-0.15)}                # 0 - 0.3 * (1 - 0.5)
-    assert m.b_skill == {5: pytest.approx(-0.005)}              # 0 - 0.01 * (1 - 0.5)
+    assert m.b_item == {9: pytest.approx(-0.15)}  # 0 - 0.3 * (1 - 0.5)
+    assert m.b_skill == {5: pytest.approx(-0.005)}  # 0 - 0.01 * (1 - 0.5)
     assert m.n_item == {9: 1}
     snapshot = (dict(m.b_item), dict(m.b_skill), dict(m.n_item))
     m.run(df, learn=False)
@@ -207,9 +213,9 @@ def test_elo2_unseen_item_falls_back_to_skill_difficulty():
     m = Elo2()
     m.b_item, m.b_skill = {9: 1.0}, {5: -2.0}
     preds = m.run(frame([(1, 9, 5, 1), (2, 77, 5, 1), (3, 77, 6, 1)]), learn=False)
-    assert preds[0] == pytest.approx(sigmoid(-1.0))             # known item
-    assert preds[1] == pytest.approx(sigmoid(2.0))              # unseen item, known skill
-    assert preds[2] == 0.5                                      # unseen item, unseen skill
+    assert preds[0] == pytest.approx(sigmoid(-1.0))  # known item
+    assert preds[1] == pytest.approx(sigmoid(2.0))  # unseen item, known skill
+    assert preds[2] == 0.5  # unseen item, unseen skill
 
 
 def test_elo2_beats_the_global_mean_on_synthetic_logs():
@@ -219,6 +225,7 @@ def test_elo2_beats_the_global_mean_on_synthetic_logs():
 
 
 # ---------------------------------------------------------------- BKT
+
 
 def test_bkt_seq_preds_matches_hand_computation():
     # pi=0.4, pt=0.1, ps=0.1, pg=0.2
@@ -235,8 +242,8 @@ def test_bkt_seq_preds_matches_hand_computation():
 def bkt_toy():
     rows = []
     for u in (1, 2, 3):
-        rows += [(u, 1, 10, 1)] * 5                             # skill 10: everyone always right
-        rows += [(u, 2, 20, 0)] * 5                             # skill 20: everyone always wrong
+        rows += [(u, 1, 10, 1)] * 5  # skill 10: everyone always right
+        rows += [(u, 2, 20, 0)] * 5  # skill 20: everyone always wrong
     return frame(rows)
 
 
@@ -246,26 +253,27 @@ def test_bkt_fit_picks_grid_params_that_match_the_data():
     assert set(b.params) == {10, 20}
     assert all(prm in BKT.GRID for prm in b.params.values())
     pi, pt, ps, pg = b.params[10]
-    assert (pi, pt, ps) == (0.6, 0.3, 0.05)                     # known early, learned fast, few slips
+    assert (pi, pt, ps) == (0.6, 0.3, 0.05)  # known early, learned fast, few slips
     pi, pt, ps, pg = b.params[20]
-    assert (pi, pt, pg) == (0.2, 0.05, 0.1)                     # not known, learned slowly, few guesses
+    assert (pi, pt, pg) == (0.2, 0.05, 0.1)  # not known, learned slowly, few guesses
 
 
 def test_bkt_predict_is_aligned_to_rows_and_uses_default_for_unseen_skill():
     b = BKT()
     b.fit(bkt_toy())
     te = frame([(7, 1, 10, 1), (8, 2, 20, 0), (7, 3, 99, 1), (7, 1, 10, 1), (8, 2, 20, 0), (7, 3, 99, 0)])
-    te.index = [40, 10, 30, 60, 20, 50]                         # predictions must follow row order, not index
+    te.index = [40, 10, 30, 60, 20, 50]  # predictions must follow row order, not index
     preds = b.predict(te)
     assert preds.shape == (6,) and ((preds > 0) & (preds < 1)).all()
     assert preds[[0, 3]] == pytest.approx(BKT.seq_preds([1, 1], *b.params[10]))
     assert preds[[1, 4]] == pytest.approx(BKT.seq_preds([0, 0], *b.params[20]))
     assert preds[[2, 5]] == pytest.approx(BKT.seq_preds([1, 0], 0.4, 0.1, 0.1, 0.2))
     assert preds[2] == pytest.approx(0.48)
-    assert preds[0] > 0.5 > preds[1]                            # always-right skill vs always-wrong skill
+    assert preds[0] > 0.5 > preds[1]  # always-right skill vs always-wrong skill
 
 
 # ---------------------------------------------------------------- load_eedi
+
 
 def make_eedi_dir(root):
     (root / "train_data").mkdir(parents=True)
@@ -278,7 +286,9 @@ def make_eedi_dir(root):
         "0,5,103,0,2,4\n"
         "1,5,104,1,3,3\n"
         "2,7,105,1,1,1\n"
-        "0,9,106,1,2,2\n", encoding="utf-8")
+        "0,9,106,1,2,2\n",
+        encoding="utf-8",
+    )
     (root / "metadata" / "answer_metadata_task_3_4.csv").write_text(
         "AnswerId,DateAnswered,Confidence,GroupId,QuizId,SchemeOfWorkId\n"
         "100,2020-01-06 18:53:00.000,75.0,1,1,52562.0\n"
@@ -286,18 +296,19 @@ def make_eedi_dir(root):
         "102,2020-02-01 09:00:00.000,,1,1,52562.0\n"
         "103,2020-02-01 09:00:00.000,,1,1,52562.0\n"
         "104,2020-01-01 09:00:00.000,,1,1,52562.0\n"
-        "105,2020-03-01 09:00:00.000,,1,1,52562.0\n", encoding="utf-8")     # answer 106 has no metadata
+        "105,2020-03-01 09:00:00.000,,1,1,52562.0\n",
+        encoding="utf-8",
+    )  # answer 106 has no metadata
     (root / "metadata" / "question_metadata_task_3_4.csv").write_text(
-        'QuestionId,SubjectId\n'
-        '0,"[3, 32, 49, 33]"\n'
-        '1,"[3, 32]"\n'
-        '2,"[3, 999, 49]"\n', encoding="utf-8")
-    (root / "metadata" / "subject_metadata.csv").write_bytes(               # UTF-8 with BOM and CRLF, like the real file
+        'QuestionId,SubjectId\n0,"[3, 32, 49, 33]"\n1,"[3, 32]"\n2,"[3, 999, 49]"\n', encoding="utf-8"
+    )
+    (root / "metadata" / "subject_metadata.csv").write_bytes(  # UTF-8 with BOM and CRLF, like the real file
         "\ufeffSubjectId,Name,ParentId,Level\r\n"
         "3,Maths,NULL,0\r\n"
         "32,Number,3,1\r\n"
         "49,BIDMAS,32,2\r\n"
-        "33,Basic Arithmetic,49,3\r\n".encode("utf-8"))
+        "33,Basic Arithmetic,49,3\r\n".encode("utf-8")
+    )
     return root
 
 
@@ -308,8 +319,8 @@ def test_load_eedi_picks_deepest_subject_and_handles_bom(tmp_path):
 
     assert {"user_id", "problem_id", "skill_id", "correct"} <= set(df.columns)
     skill = dict(zip(df.problem_id, df.skill_id))
-    assert skill == {0: 33, 1: 32, 2: 49}                       # deepest Level wins; unknown subject 999 never wins
-    assert 106 not in set(df.AnswerId) and len(df) == 6         # answers without metadata are dropped
+    assert skill == {0: 33, 1: 32, 2: 49}  # deepest Level wins; unknown subject 999 never wins
+    assert 106 not in set(df.AnswerId) and len(df) == 6  # answers without metadata are dropped
     # sorted by student, then time answered, then AnswerId as the tie-break
     assert df.user_id.tolist() == [5, 5, 5, 7, 7, 7]
     assert df.AnswerId.tolist() == [104, 102, 103, 101, 100, 105]
@@ -320,6 +331,7 @@ def test_load_eedi_picks_deepest_subject_and_handles_bom(tmp_path):
 
 # ---------------------------------------------------------------- evaluate, console format, --out writer
 
+
 def parse_console(text):
     lines = text.strip().splitlines()
     return lines[0], {m.group(1): (float(m.group(2)), float(m.group(3))) for m in map(LINE.match, lines[1:])}
@@ -327,7 +339,7 @@ def parse_console(text):
 
 def check_block_matches_console(block, console, bkt):
     printed = dict(console)
-    printed["elo-multi (Kwan)"] = printed.pop("elo-multi")      # console name vs results-file name
+    printed["elo-multi (Kwan)"] = printed.pop("elo-multi")  # console name vs results-file name
     expected = MODELS[:3] + (["bkt"] if bkt else []) + MODELS[3:]
     assert list(block["AUC"]) == list(block["RMSE"]) == expected
     for model in expected:
@@ -335,6 +347,18 @@ def check_block_matches_console(block, console, bkt):
         for metric in ("AUC", "RMSE"):
             value = block[metric][model]
             assert isinstance(value, float) and value == round(value, 4) and 0 <= value <= 1
+
+
+V2_FIELDS = ["dataset", "licence", "rows", "students", "items", "skills", "split", "metrics"]
+
+
+def check_metrics_match_v1_fields(block):
+    """`metrics` is {model: {AUC, RMSE, ACC, ECE}} and repeats the v1 `AUC` and `RMSE` tables exactly."""
+    assert list(block["metrics"]) == list(block["AUC"]) == list(block["RMSE"])
+    for model, got in block["metrics"].items():
+        assert list(got) == ["AUC", "RMSE", "ACC", "ECE"]
+        assert (got["AUC"], got["RMSE"]) == (block["AUC"][model], block["RMSE"][model])
+        assert all(isinstance(v, float) and v == round(v, 4) and 0 <= v <= 1 for v in got.values())
 
 
 def test_evaluate_prints_the_prd_console_format(logs, capsys):
@@ -349,8 +373,8 @@ def test_evaluate_prints_the_prd_console_format(logs, capsys):
     assert lines[0].startswith("global-mean  AUC=0.5000 RMSE=")
     assert lines[2].startswith("elo          AUC=")
     assert lines[3].startswith("elo-multi    AUC=")
-    assert set(scores) == {"AUC", "RMSE"}
-    assert set(scores["AUC"]) == set(scores["RMSE"]) == set(MODELS) | {"bkt"}
+    assert list(scores) == ["AUC", "RMSE", "ACC", "ECE"]  # v2: accuracy and calibration error beside AUC and RMSE
+    assert all(set(scores[metric]) == set(MODELS) | {"bkt"} for metric in scores)
     check_block_matches_console(eval_kt.make_block(logs, scores), console, bkt=True)
 
 
@@ -362,14 +386,16 @@ def test_evaluate_without_bkt_has_no_bkt_entry(logs, capsys):
 
 def write_assist_csv(path, df):
     out = df.copy()
-    out["order_id"] = np.arange(len(out))[::-1] + 1000          # sort order must come from load(), not the file
+    out["order_id"] = np.arange(len(out))[::-1] + 1000  # sort order must come from load(), not the file
     out["original"] = 1
     out.sample(frac=1, random_state=1).to_csv(path, index=False, encoding="latin-1")
     return path
 
 
-OTHER_BLOCKS = {"simulation": {"setup": "kept as is", "new_skills_mastered": {"gapped_p4": {"kwan": 14.0}}},
-                "latency": {"recommend_top3_mean_ms": 0.24}}
+OTHER_BLOCKS = {
+    "simulation": {"setup": "kept as is", "new_skills_mastered": {"gapped_p4": {"kwan": 14.0}}},
+    "latency": {"recommend_top3_mean_ms": 0.24},
+}
 
 
 def test_out_writes_assistments_block_and_preserves_other_keys(tmp_path, capsys):
@@ -387,19 +413,22 @@ def test_out_writes_assistments_block_and_preserves_other_keys(tmp_path, capsys)
     assert {k: saved[k] for k in OTHER_BLOCKS} == OTHER_BLOCKS
     got = saved["assistments_2009"]
     assert got == block
-    assert list(got) == ["dataset", "rows", "students", "skills", "split", "AUC", "RMSE"]
+    assert list(got) == V2_FIELDS + ["AUC", "RMSE"]  # schema v2, with the v1 fields kept for the demo
+    check_metrics_match_v1_fields(got)
+    assert got["items"] == logs.problem_id.nunique()
+    assert got["licence"] == "research use; cite Feng, Heffernan & Koedinger (2009)"
     assert got["dataset"] == "ASSISTments 2009 skill-builder (corrected)"
     assert got["split"] == "80/20 by student, seed 42"
     assert (got["rows"], got["students"], got["skills"]) == (len(logs), 40, 5)
     assert all(type(got[k]) is int for k in ("rows", "students", "skills"))
     assert header.startswith(f"rows={len(logs)} students=40 skills=5 train=")
     check_block_matches_console(got, console, bkt=True)
-    assert [p.name for p in out.parent.iterdir()] == ["eval_results.json"]      # no temp file left behind
+    assert [p.name for p in out.parent.iterdir()] == ["eval_results.json"]  # no temp file left behind
 
 
 def test_out_without_bkt_omits_bkt_and_creates_the_file(tmp_path, capsys):
     csv = write_assist_csv(tmp_path / "assist.csv", synthetic_logs(n_users=40, per_user=20, seed=5))
-    out = tmp_path / "new" / "eval_results.json"                # neither the folder nor the file exists yet
+    out = tmp_path / "new" / "eval_results.json"  # neither the folder nor the file exists yet
     eval_kt.main([str(csv), "--out", str(out)])
     _, console = parse_console(capsys.readouterr().out)
     saved = json.loads(out.read_text(encoding="utf-8"))
@@ -420,16 +449,32 @@ def big_eedi_dir(root, logs):
     make_eedi_dir(root)
     n = len(logs)
     stamps = pd.Timestamp("2020-01-01") + pd.to_timedelta(np.arange(n), unit="min")
-    answers = pd.DataFrame({"QuestionId": logs.problem_id, "UserId": logs.user_id, "AnswerId": np.arange(n) + 1,
-                            "IsCorrect": logs.correct, "CorrectAnswer": 1, "AnswerValue": 1})
+    answers = pd.DataFrame(
+        {
+            "QuestionId": logs.problem_id,
+            "UserId": logs.user_id,
+            "AnswerId": np.arange(n) + 1,
+            "IsCorrect": logs.correct,
+            "CorrectAnswer": 1,
+            "AnswerValue": 1,
+        }
+    )
     answers.sample(frac=1, random_state=2).to_csv(root / "train_data" / "train_task_3_4.csv", index=False)
-    pd.DataFrame({"AnswerId": answers.AnswerId, "DateAnswered": stamps.strftime("%Y-%m-%d %H:%M:%S.000"),
-                  "Confidence": "", "GroupId": 1, "QuizId": 1, "SchemeOfWorkId": 52562.0}
-                 ).to_csv(root / "metadata" / "answer_metadata_task_3_4.csv", index=False)
+    pd.DataFrame(
+        {
+            "AnswerId": answers.AnswerId,
+            "DateAnswered": stamps.strftime("%Y-%m-%d %H:%M:%S.000"),
+            "Confidence": "",
+            "GroupId": 1,
+            "QuizId": 1,
+            "SchemeOfWorkId": 52562.0,
+        }
+    ).to_csv(root / "metadata" / "answer_metadata_task_3_4.csv", index=False)
     subjects = {0: "[3, 32]", 1: "[3, 32, 49]", 2: "[3, 32, 49, 33]"}
     qids = sorted(logs.problem_id.unique())
-    pd.DataFrame({"QuestionId": qids, "SubjectId": [subjects[q % 3] for q in qids]}
-                 ).to_csv(root / "metadata" / "question_metadata_task_3_4.csv", index=False)
+    pd.DataFrame({"QuestionId": qids, "SubjectId": [subjects[q % 3] for q in qids]}).to_csv(
+        root / "metadata" / "question_metadata_task_3_4.csv", index=False
+    )
     return root
 
 
@@ -449,7 +494,10 @@ def test_out_writes_eedi_block_and_preserves_other_keys(tmp_path, capsys):
     assert {k: saved[k] for k in OTHER_BLOCKS} == OTHER_BLOCKS
     got = saved["eedi_2020_task34"]
     assert got == block
-    assert list(got) == ["dataset", "rows", "students", "questions", "skills", "split", "AUC", "RMSE"]
+    assert list(got) == [*V2_FIELDS[:5], "questions", *V2_FIELDS[5:], "AUC", "RMSE"]
+    check_metrics_match_v1_fields(got)
+    assert got["items"] == got["questions"]
+    assert got["licence"] == "research use; cite Wang et al. (2020) arXiv:2007.12061"
     assert got["dataset"] == "Eedi NeurIPS 2020 Education Challenge, task 3/4 subset"
     assert got["split"] == "80/20 by student, seed 42"
     assert (got["rows"], got["students"], got["questions"], got["skills"]) == (800, 40, logs.problem_id.nunique(), 3)
@@ -468,10 +516,15 @@ def test_both_scripts_merge_into_one_file(tmp_path, capsys):
 def test_cli_runs_as_a_script_from_another_directory(tmp_path):
     csv = write_assist_csv(tmp_path / "assist.csv", synthetic_logs(n_users=40, per_user=20, seed=5))
     out = tmp_path / "eval_results.json"
-    run = subprocess.run([sys.executable, str(ROOT / "eval_kt.py"), str(csv), "--out", str(out)],
-                         cwd=tmp_path, capture_output=True, text=True, timeout=120)
+    run = subprocess.run(
+        [sys.executable, "-m", "kwan.eval.kt", str(csv), "--out", str(out)],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
     assert run.returncode == 0, run.stderr
-    header, console = parse_console(run.stdout)                 # stdout carries only the PRD console lines
+    header, console = parse_console(run.stdout)  # stdout carries only the PRD console lines
     assert list(console) == ["global-mean", "skill-mean", "elo", "elo-multi"]
     check_block_matches_console(json.loads(out.read_text(encoding="utf-8"))["assistments_2009"], console, bkt=False)
 
@@ -492,8 +545,8 @@ needs_slow = pytest.mark.skipif(not RUN_SLOW, reason="slow: set KWAN_RUN_SLOW=1 
 
 @pytest.mark.skipif(not ASSIST_CSV.exists(), reason="raw/skill_builder_data_corrected.csv is absent (run make data)")
 def test_real_assistments_kwan_auc_meets_acceptance(capsys):
-    df = eval_kt.load(ASSIST_CSV)                               # about 2 s in total, so it runs by default
-    scores = eval_kt.evaluate(df)                               # no BKT: the grid search takes minutes
+    df = eval_kt.load(ASSIST_CSV)  # about 2 s in total, so it runs by default
+    scores = eval_kt.evaluate(df)  # no BKT: the grid search takes minutes
     header, _ = parse_console(capsys.readouterr().out)
     assert header == "rows=259399 students=4163 skills=111 train=207150 test=52249"
     assert scores["AUC"]["elo-multi (Kwan)"] >= 0.72

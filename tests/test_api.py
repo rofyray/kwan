@@ -1,4 +1,5 @@
 """REST API tests (PRD Section 5.4, Phase 7). Each test starts from an empty learner store."""
+
 import statistics
 import threading
 import time
@@ -8,13 +9,19 @@ import networkx as nx
 import pytest
 from fastapi.testclient import TestClient
 
-import api
-import engine
+from kwan.api import app as api
+from kwan.learner.elo import MASTERY, READY, LearnerState
 
-ROOT_SKILL = "B1.1.1.1.1"          # a starting skill with no prerequisites
-GOAL = "B4.1.1.3.3"                # the goal used in the PRD examples
-EM_DASH = chr(0x2014)               # banned from user-facing text
+ROOT_SKILL = "B1.1.1.1.1"  # a starting skill with no prerequisites
+GOAL = "B4.1.1.3.3"  # the goal used in the PRD examples
+EM_DASH = chr(0x2014)  # banned from user-facing text
 REC_KEYS = {"indicator", "score", "mastery", "grade", "strand", "description", "rationale", "ghana_context"}
+
+
+@pytest.fixture(scope="module")
+def G():
+    """The graph the v0 routes serve, seen with bare codes as the v0 routes send and return them."""
+    return nx.relabel_nodes(api.G, {n: api._bare(n) for n in api.G}, copy=True)
 
 
 @pytest.fixture()
@@ -41,6 +48,7 @@ def on_path(G, goal):
 
 # --------------------------------------------------------------------------- module surface
 
+
 def test_module_exposes_app_graph_and_store():
     assert api.app.title == "Kwan Learning Path Engine"
     assert api.G.number_of_nodes() > 0
@@ -49,14 +57,16 @@ def test_module_exposes_app_graph_and_store():
 
 # --------------------------------------------------------------------------- /health
 
+
 def test_health_counts_match_graph(client, G):
     r = client.get("/health")
     assert r.status_code == 200
     assert r.json() == {"ok": True, "nodes": G.number_of_nodes(), "edges": G.number_of_edges()}
-    assert r.json() == {"ok": True, "nodes": 266, "edges": 287}
+    assert r.json() == {"ok": True, "nodes": api.G.number_of_nodes(), "edges": api.G.number_of_edges()}
 
 
 # --------------------------------------------------------------------------- /attempt
+
 
 def test_attempt_first_correct_gives_contract_numbers(client):
     r = post(client)
@@ -102,26 +112,29 @@ def test_unknown_indicator_is_404_with_the_id_in_the_message(client):
     r = post(client, indicator="B9.9.9.9.9")
     assert r.status_code == 404
     assert "B9.9.9.9.9" in r.json()["detail"]
-    assert api.STATES == {}                                   # a rejected attempt stores nothing
+    assert api.STATES == {}  # a rejected attempt stores nothing
 
 
-@pytest.mark.parametrize("body", [
-    {"indicator": ROOT_SKILL, "correct": True},                                    # missing learner_id
-    {"learner_id": "a", "correct": True},                                          # missing indicator
-    {"learner_id": "a", "indicator": ROOT_SKILL},                                  # missing correct
-    {"learner_id": "a", "indicator": ROOT_SKILL, "correct": "yes"},                # correct is a string
-    {"learner_id": "a", "indicator": ROOT_SKILL, "correct": "true"},
-    {"learner_id": "a", "indicator": ROOT_SKILL, "correct": 1},                    # correct is a number
-    {"learner_id": "a", "indicator": ROOT_SKILL, "correct": None},
-    {"learner_id": "", "indicator": ROOT_SKILL, "correct": True},                  # empty learner id
-    {"learner_id": "   ", "indicator": ROOT_SKILL, "correct": True},               # blank learner id
-    {"learner_id": "x" * 129, "indicator": ROOT_SKILL, "correct": True},           # learner id too long
-    {"learner_id": 7, "indicator": ROOT_SKILL, "correct": True},                   # learner id is a number
-    {"learner_id": "a", "indicator": "", "correct": True},                         # empty indicator
-    {"learner_id": "a", "indicator": 5, "correct": True},
-    {"learner_id": "a", "indicator": ROOT_SKILL, "correct": True, "item_id": 9},   # item id is a number
-    [],                                                                            # not an object
-])
+@pytest.mark.parametrize(
+    "body",
+    [
+        {"indicator": ROOT_SKILL, "correct": True},  # missing learner_id
+        {"learner_id": "a", "correct": True},  # missing indicator
+        {"learner_id": "a", "indicator": ROOT_SKILL},  # missing correct
+        {"learner_id": "a", "indicator": ROOT_SKILL, "correct": "yes"},  # correct is a string
+        {"learner_id": "a", "indicator": ROOT_SKILL, "correct": "true"},
+        {"learner_id": "a", "indicator": ROOT_SKILL, "correct": 1},  # correct is a number
+        {"learner_id": "a", "indicator": ROOT_SKILL, "correct": None},
+        {"learner_id": "", "indicator": ROOT_SKILL, "correct": True},  # empty learner id
+        {"learner_id": "   ", "indicator": ROOT_SKILL, "correct": True},  # blank learner id
+        {"learner_id": "x" * 129, "indicator": ROOT_SKILL, "correct": True},  # learner id too long
+        {"learner_id": 7, "indicator": ROOT_SKILL, "correct": True},  # learner id is a number
+        {"learner_id": "a", "indicator": "", "correct": True},  # empty indicator
+        {"learner_id": "a", "indicator": 5, "correct": True},
+        {"learner_id": "a", "indicator": ROOT_SKILL, "correct": True, "item_id": 9},  # item id is a number
+        [],  # not an object
+    ],
+)
 def test_malformed_attempt_bodies_are_422(client, body):
     r = client.post("/attempt", json=body)
     assert r.status_code == 422, r.text
@@ -139,6 +152,7 @@ def test_learner_id_at_the_length_limit_is_accepted(client):
 
 
 # --------------------------------------------------------------------------- /recommend
+
 
 def test_recommend_default_k_is_3(client):
     r = client.get("/recommend/a")
@@ -172,7 +186,7 @@ def test_recommend_k_bounds_are_accepted(client):
 
 
 def test_every_recommendation_has_the_prd_keys_and_a_reason(client, G):
-    post(client)                                              # a learner with some history
+    post(client)  # a learner with some history
     for r in recs(client, k=50) + recs(client, "fresh", k=50):
         assert set(r) == REC_KEYS
         assert r["indicator"] in G
@@ -188,7 +202,7 @@ def test_every_recommendation_has_the_prd_keys_and_a_reason(client, G):
 def test_recommend_latency_is_reported_and_under_5ms(client):
     samples = [client.get("/recommend/a").json()["latency_ms"] for _ in range(21)]
     assert all(isinstance(s, float) and s >= 0 for s in samples)
-    assert statistics.median(samples) < 5                     # NFR1; the median keeps a busy CI box from flaking
+    assert statistics.median(samples) < 5  # NFR1; the median keeps a busy CI box from flaking
 
 
 def test_recommend_goal_is_honoured(client, G):
@@ -196,9 +210,9 @@ def test_recommend_goal_is_honoured(client, G):
     with_goal = recs(client, goal=GOAL)
     without = recs(client)
     assert with_goal, "a new pupil always has starting skills"
-    assert with_goal[0]["indicator"] in path                  # the best next step leads to the goal
+    assert with_goal[0]["indicator"] in path  # the best next step leads to the goal
     hits = lambda out: sum(r["indicator"] in path for r in out)
-    assert hits(with_goal) >= hits(without)                   # a goal never pushes on-path skills out
+    assert hits(with_goal) >= hits(without)  # a goal never pushes on-path skills out
 
 
 def test_recommend_goal_never_demotes_the_path_to_it(client, G):
@@ -208,13 +222,13 @@ def test_recommend_goal_never_demotes_the_path_to_it(client, G):
     for goal in G:
         path = on_path(G, goal)
         if not any(i in path for i in base):
-            continue                                          # nothing on the path is ready yet
+            continue  # nothing on the path is ready yet
         ranked = [r["indicator"] for r in recs(client, k=50, goal=goal)]
-        assert set(ranked) <= set(base)                       # a goal never surfaces a skill that is not ready
+        assert set(ranked) <= set(base)  # a goal never surfaces a skill that is not ready
         best = lambda ids: min(i for i, n in enumerate(ids) if n in path)
-        assert best(ranked) <= best(base)                     # the path to the goal never ranks lower
+        assert best(ranked) <= best(base)  # the path to the goal never ranks lower
         checked += 1
-    assert checked == G.number_of_nodes()                     # every skill is reachable from a starting skill
+    assert checked == G.number_of_nodes()  # every skill is reachable from a starting skill
 
 
 def test_recommend_unknown_goal_is_404_with_the_id_in_the_message(client):
@@ -253,6 +267,35 @@ def test_recommend_goal_and_grade_max_together(client, G):
     assert out[0]["indicator"] in on_path(G, GOAL)
 
 
+def test_recommend_goal_mode_defaults_to_strict_and_soft_keeps_the_v1_ordering(client, G):
+    for _ in range(3):
+        post(client, indicator="B1.1.1.1.1")
+        post(client, indicator="B1.1.1.1.2")
+    ids = lambda **params: [r["indicator"] for r in recs(client, k=3, goal=GOAL, **params)]
+    assert ids() == ids(goal_mode="strict")  # strict is the default; the path-first order is checked below
+    with api.LOCK:  # soft: the v1 ordering, exactly what the engine gives with goal_mode="soft"
+        direct = api.R.recommend(api.STATES["a"], k=3, goal=api.RESOLVE.resolve(GOAL), goal_mode="soft")
+    assert ids(goal_mode="soft") == [api._bare(r["indicator"]) for r in direct["recommendations"]]
+    assert ids(goal_mode="soft") != ids()  # soft lets a skill off the path in
+    path = on_path(G, GOAL)
+    full = [r["indicator"] in path for r in recs(client, k=50, goal=GOAL)]
+    assert full == sorted(full, reverse=True) and True in full and False in full
+    # without a goal the mode changes nothing
+    assert recs(client, k=5, goal_mode="soft") == recs(client, k=5, goal_mode="strict") == recs(client, k=5)
+
+
+@pytest.mark.parametrize("mode", ["STRICT", "hard", ""])
+def test_recommend_unknown_goal_mode_is_422(client, mode):
+    assert client.get("/recommend/a", params={"goal": GOAL, "goal_mode": mode}).status_code == 422
+
+
+def test_recommend_goal_mode_is_documented_in_the_openapi_spec(client):
+    params = client.get("/openapi.json").json()["paths"]["/recommend/{learner_id}"]["get"]["parameters"]
+    mode = next(p for p in params if p["name"] == "goal_mode")
+    assert mode["in"] == "query" and mode["required"] is False
+    assert mode["schema"]["enum"] == ["strict", "soft"] and mode["schema"]["default"] == "strict"
+
+
 @pytest.mark.parametrize("path", ["/recommend/%20", "/mastery/%20", "/recommend/" + "x" * 129, "/mastery/" + "x" * 129])
 def test_blank_or_oversized_learner_id_in_the_path_is_422(client, path):
     assert client.get(path).status_code == 422
@@ -260,11 +303,12 @@ def test_blank_or_oversized_learner_id_in_the_path_is_422(client, path):
 
 # --------------------------------------------------------------------------- /mastery
 
+
 def test_mastery_returns_every_indicator_in_range(client, G):
     r = client.get("/mastery/a")
     assert r.status_code == 200
     body = r.json()
-    assert set(body) == set(G.nodes) and len(body) == 266
+    assert set(body) == set(G.nodes) and len(body) == G.number_of_nodes()
     assert all(isinstance(v, float) and 0 <= v <= 1 for v in body.values())
 
 
@@ -279,16 +323,19 @@ def test_mastery_reflects_attempts(client):
 
 # --------------------------------------------------------------------------- learners never seen before
 
+
 def test_reads_for_an_unseen_learner_give_the_new_pupil_view_and_store_nothing(client):
     first = client.get("/recommend/ghost?k=5")
     assert first.status_code == 200 and len(first.json()["recommendations"]) == 5
     m = client.get("/mastery/ghost")
     assert m.status_code == 200
-    assert api.STATES == {}                                   # reads are safe: no state is created
+    assert api.STATES == {}  # reads are safe: no state is created
     assert client.delete("/learner/ghost").status_code == 404
     # the view is the same for any unseen learner and is stable across calls
     assert client.get("/mastery/other").json() == m.json() == client.get("/mastery/ghost").json()
-    assert [r["indicator"] for r in recs(client, "other", k=5)] == [r["indicator"] for r in first.json()["recommendations"]]
+    assert [r["indicator"] for r in recs(client, "other", k=5)] == [
+        r["indicator"] for r in first.json()["recommendations"]
+    ]
 
 
 def test_reads_do_not_change_a_stored_learner(client):
@@ -314,6 +361,7 @@ def test_learners_are_independent(client):
 
 # --------------------------------------------------------------------------- DELETE /learner
 
+
 def test_delete_resets_a_learner(client):
     fresh = client.get("/mastery/a").json()
     post(client)
@@ -331,7 +379,7 @@ def test_delete_unknown_learner_is_404(client):
     assert r.status_code == 404 and "nobody" in r.json()["detail"]
     post(client)
     assert client.delete("/learner/a").status_code == 204
-    assert client.delete("/learner/a").status_code == 404     # already gone
+    assert client.delete("/learner/a").status_code == 404  # already gone
 
 
 def test_delete_leaves_other_learners_alone(client):
@@ -345,6 +393,7 @@ def test_delete_leaves_other_learners_alone(client):
 
 # --------------------------------------------------------------------------- OpenAPI
 
+
 def test_openapi_lists_the_contract_paths_with_typed_responses(client):
     r = client.get("/openapi.json")
     assert r.status_code == 200
@@ -355,7 +404,13 @@ def test_openapi_lists_the_contract_paths_with_typed_responses(client):
     assert "get" in paths["/recommend/{learner_id}"]
     assert "get" in paths["/mastery/{learner_id}"]
     assert "delete" in paths["/learner/{learner_id}"]
-    assert set(paths) == {"/health", "/attempt", "/recommend/{learner_id}", "/mastery/{learner_id}", "/learner/{learner_id}"}
+    assert {  # the v0 routes stay for one minor release; the v1 routes live next to them
+        "/health",
+        "/attempt",
+        "/recommend/{learner_id}",
+        "/mastery/{learner_id}",
+        "/learner/{learner_id}",
+    } <= set(paths)
     schemas = spec["components"]["schemas"]
     ok = lambda path, method: paths[path][method]["responses"]["200"]["content"]["application/json"]["schema"]
     assert ok("/health", "get")["$ref"].endswith("/HealthResponse")
@@ -379,18 +434,20 @@ def test_docs_page_is_served_and_api_text_has_no_em_dash(client):
 
 # --------------------------------------------------------------------------- concurrency
 
+
 def test_concurrent_attempts_for_one_learner_are_all_counted(client):
     n_requests = 300
     with ThreadPoolExecutor(max_workers=24) as pool:
         codes = list(pool.map(lambda i: post(client, learner_id="busy").status_code, range(n_requests)))
     assert codes == [200] * n_requests
     st = api.STATES["busy"]
-    assert st.n["_all"] == n_requests and st.n[ROOT_SKILL] == n_requests and st.step == n_requests
+    root = api.RESOLVE.resolve(ROOT_SKILL)  # state is keyed by the node key (the canonical id on the v2 graph)
+    assert st.n["_all"] == n_requests and st.n[root] == n_requests and st.step == n_requests
     # identical attempts commute, so the result must equal a plain sequential replay
-    replay = engine.LearnerState("replay")
+    replay = LearnerState("replay")
     for _ in range(n_requests):
-        api.L.update(replay, ROOT_SKILL, True)
-    assert api.L.mastery(st, ROOT_SKILL) == api.L.mastery(replay, ROOT_SKILL)
+        api.L.update(replay, root, True)
+    assert api.L.mastery(st, root) == api.L.mastery(replay, root)
     assert st.theta == replay.theta
 
 
@@ -415,14 +472,14 @@ def test_updates_are_serialised_even_when_the_engine_is_slow(client, monkeypatch
 
     def worker(i):
         if i < 12:
-            started.wait(timeout=10)                          # release the first wave together
+            started.wait(timeout=10)  # release the first wave together
         return post(client, learner_id="busy", correct=i % 2 == 0).status_code
 
     with ThreadPoolExecutor(max_workers=12) as pool:
         codes = list(pool.map(worker, range(n_requests)))
     assert codes == [200] * n_requests
-    assert seen["overlap"] == 1                               # never two updates at once
-    assert seen["calls"] == n_requests                        # no lost update
+    assert seen["overlap"] == 1  # never two updates at once
+    assert seen["calls"] == n_requests  # no lost update
     assert api.STATES["busy"].n["_all"] == n_requests
 
 
@@ -443,6 +500,7 @@ def test_concurrent_reads_writes_and_deletes_do_not_error(client):
 
 # --------------------------------------------------------------------------- the user stories, end to end
 
+
 def test_user_story_end_to_end(client, G):
     pupil = "ama"
 
@@ -451,7 +509,7 @@ def test_user_story_end_to_end(client, G):
     assert 1 <= len(start) <= 3
     for r in start:
         assert r["rationale"].strip() and r["ghana_context"].strip()
-        assert all(client.get(f"/mastery/{pupil}").json()[p] >= engine.READY for p in G.predecessors(r["indicator"]))
+        assert all(client.get(f"/mastery/{pupil}").json()[p] >= READY for p in G.predecessors(r["indicator"]))
     skill = start[0]["indicator"]
     m0 = client.get(f"/mastery/{pupil}").json()[skill]
 
@@ -467,10 +525,10 @@ def test_user_story_end_to_end(client, G):
     # Keep answering correctly until the skill is mastered; it then drops out of the recommendations.
     mastery = slip["new_mastery"]
     for _ in range(20):
-        if mastery >= engine.MASTERY:
+        if mastery >= MASTERY:
             break
         mastery = post(client, learner_id=pupil, indicator=skill, correct=True).json()["new_mastery"]
-    assert mastery >= engine.MASTERY
+    assert mastery >= MASTERY
     later = recs(client, pupil, k=50)
     assert skill not in [r["indicator"] for r in later]
     assert [r["indicator"] for r in recs(client, pupil)] != [r["indicator"] for r in start]
