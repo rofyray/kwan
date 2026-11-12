@@ -4,6 +4,15 @@ All notable changes to Kwan are recorded here. The format follows [Keep a Change
 
 Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `uv run scripts/fill_docs.py`.
 
+## [1.0.1] - 2026-11-12
+
+Documentation and packaging only; the engine, the model parameters and the skill map are unchanged.
+
+- **README** for the released package: PyPI, docs and demo links without pre-release notes, badges, the Kwan logo (light and dark versions), and the why-Kwan story set "in a village somewhere in Ghana".
+- **Package links** on PyPI now include the documentation site and the changelog.
+- **Docs site** at https://rofyray.github.io/kwan/ is published on every push to `main`.
+- The bundle version follows the package: `math-1.0.1`.
+
 ## [1.0.0] - 2026-11-11
 
 - **Skill catalogue for people.** `GET /v1/skills` lists every skill with a short human-readable label, filtered by `grade`, `strand` and `q`; recommendations echo the goal with its label. `Kwan.skills()` and `Kwan.label()` do the same in Python. Codes stay the only thing the engine accepts.
@@ -67,6 +76,7 @@ The Round 1 build for the DataNova 2026 Global Data-thon (problem DN-ED-01).
 - A FastAPI service, a Streamlit demo, evaluation on ASSISTments 2009 and Eedi task 3/4 with skill-average, BKT and classic Elo baselines, a learner simulator with two profiles, a latency benchmark, and a results file written by a single writer.
 - A test suite and CI on Python 3.11 to 3.13.
 
+[1.0.1]: https://github.com/rofyray/kwan/releases/tag/v1.0.1
 [1.0.0]: https://github.com/rofyray/kwan/releases/tag/v1.0.0
 [1.0.0rc1]: https://github.com/rofyray/kwan/releases/tag/v1.0.0rc1
 [0.1.0]: https://github.com/rofyray/kwan/commit/a86195d

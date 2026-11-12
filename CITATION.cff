@@ -17,7 +17,7 @@ authors:
 repository-code: "https://github.com/rofyray/kwan"
 url: "https://github.com/rofyray/kwan"
 license: MIT
-version: "1.0.0"
+version: "1.0.1"
 keywords:
   - education
   - adaptive learning
