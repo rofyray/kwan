@@ -9,7 +9,7 @@ Kwan is an open-source learning path engine for Ghanaian primary maths. It follo
 
 ## Why Kwan exists
 
-Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and their learning paths follow a foreign syllabus. A pupil in a village in the Volta Region has to decode the story before she can start on the maths.
+Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and their learning paths follow a foreign syllabus. A pupil in a village somewhere in Ghana has to decode the story before she can start on the maths.
 
 Kwan starts from what Ghanaian pupils study: the curriculum their teachers plan from. Every recommendation lines up with the lesson on the blackboard and comes with a practice setting a Ghanaian child will recognise.
 

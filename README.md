@@ -28,7 +28,7 @@ Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is not r
 
 ## Why we built it
 
-Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and the order of topics follows a foreign syllabus. A child in a village in the Volta Region has to decode the story before she can start on the maths, and that extra step is where many children stop.
+Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and the order of topics follows a foreign syllabus. A child in a village somewhere in Ghana has to decode the story before she can start on the maths, and that extra step is where many children stop.
 
 Kwan starts from what Ghanaian pupils already study. Its skill map is the NaCCA Standards-Based Mathematics Curriculum for Basic 1 to Basic 6, the same document teachers plan their lessons from, so a recommendation lines up with the lesson on the blackboard. Each recommended skill comes with a setting a Ghanaian child will recognise: sharing groundnuts, giving change for kenkey and fish, continuing a kente pattern, working out a trotro fare.
 
