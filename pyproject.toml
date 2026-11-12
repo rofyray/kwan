@@ -47,7 +47,9 @@ kwan = "kwan.cli:main"
 Homepage = "https://github.com/rofyray/kwan"
 Repository = "https://github.com/rofyray/kwan"
 Issues = "https://github.com/rofyray/kwan/issues"
+Documentation = "https://rofyray.github.io/kwan/"
 Demo = "https://huggingface.co/spaces/rofyray/kwan"
+Changelog = "https://github.com/rofyray/kwan/blob/main/CHANGELOG.md"
 
 [tool.hatch.version]
 path = "src/kwan/_version.py"

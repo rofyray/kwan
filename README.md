@@ -5,15 +5,24 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://pypi.org/project/kwan/"><img src="https://img.shields.io/pypi/v/kwan" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/kwan/"><img src="https://img.shields.io/pypi/pyversions/kwan" alt="Python versions"></a>
+  <a href="https://github.com/rofyray/kwan/actions/workflows/ci.yml"><img src="https://github.com/rofyray/kwan/actions/workflows/ci.yml/badge.svg" alt="Tests"></a>
+  <a href="https://rofyray.github.io/kwan/"><img src="https://img.shields.io/badge/docs-rofyray.github.io%2Fkwan-046538" alt="Documentation"></a>
+  <a href="https://huggingface.co/spaces/rofyray/kwan"><img src="https://img.shields.io/badge/demo-Hugging%20Face-ecbc1d" alt="Live demo"></a>
+  <a href="https://github.com/rofyray/kwan/blob/main/LICENSE"><img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT licence"></a>
+</p>
+
 # Kwan
 
 **Kwan** is Twi for *the path* (*ɔkwan*). It tells a Ghanaian pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 
 Kwan is an open-source learning path engine for the NaCCA Standards-Based Curriculum, Mathematics, Basic 1 to Basic 6. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo. It began at the DataNova 2026 Global Data-thon (problem DN-ED-01, Adaptive Learning Path Recommendation) and is now a project of its own.
 
-- **Live demo:** https://huggingface.co/spaces/rofyray/kwan (a Gradio app, deployed on release)
-- **Documentation:** https://rofyray.github.io/kwan/ (published on release; the same pages are in [`docs/`](docs/index.md))
-- **Package:** `uv add kwan` once 1.0 is released; until then, install from source (see [Install](#install))
+- **Live demo:** https://huggingface.co/spaces/rofyray/kwan (a Gradio app, redeployed with each release)
+- **Documentation:** https://rofyray.github.io/kwan/ (the same pages are in [`docs/`](docs/index.md))
+- **Package:** https://pypi.org/project/kwan/ (`uv add kwan` or `pip install kwan`)
 
 Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is not reviewed, approved or endorsed by NaCCA or the Ministry of Education.
 
@@ -250,7 +259,7 @@ The [Method](docs/method.md) page has the formulas in plain language.
 Kwan needs Python 3.11, 3.12 or 3.13. The core needs only the standard library and `networkx`.
 
 ```bash
-uv add kwan                 # the engine (once 1.0 is on PyPI)
+uv add kwan                 # the engine
 uv add 'kwan[api]'          # plus the REST API
 uv add 'kwan[gradio]'       # plus the Gradio demo (the Space); kwan[demo] is the Streamlit one
 ```

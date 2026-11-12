@@ -64,6 +64,16 @@ After that, every published release deploys the Space again. To try the Gradio a
 make app-gradio
 ```
 
+## Documentation site
+
+The site at https://rofyray.github.io/kwan/ is built from `docs/` by `docs.yml` on every push and published
+on every push to `main` (or by hand: **Actions, docs, Run workflow**). Pages must use the source
+**GitHub Actions** (**Settings, Pages**); it was switched on once with:
+
+```bash
+gh api -X POST repos/rofyray/kwan/pages -f build_type=workflow
+```
+
 ## Teacher review
 
 Ongoing. The 828 practice settings and 276 short labels are drafts written for Kwan; until a teacher

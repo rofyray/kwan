@@ -390,12 +390,13 @@ def test_curriculum_error_form_asks_for_the_code_and_the_page() -> None:
     assert "Indicator code" in text and "PDF page number" in text
 
 
-def test_docs_workflow_builds_strictly_and_deploys_only_by_hand() -> None:
+def test_docs_workflow_builds_strictly_and_deploys_from_main() -> None:
     text = (ROOT / ".github" / "workflows" / "docs.yml").read_text(encoding="utf-8")
     assert "mkdocs build --strict" in text
     assert re.search(r"^\s+push:", text, re.M) and re.search(r"^\s+pull_request:", text, re.M)
     deploy = text[text.index("\n  deploy:") :]
-    assert "if: github.event_name == 'workflow_dispatch'" in deploy
+    gate = "if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')"
+    assert gate in deploy  # pull requests and other branches build the site but never publish it
     assert "deploy-pages" in deploy and "deploy-pages" not in text[: text.index("\n  deploy:")]
 
 

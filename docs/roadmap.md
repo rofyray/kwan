@@ -1,17 +1,15 @@
 # Roadmap
 
-Kwan 1.0 covers **NaCCA Mathematics, Basic 1 to Basic 6**. This page lists what the 1.0 release candidate did not reach, and then the work that comes later. None of the later work has a date, and none of it has been started.
+Kwan 1.0 covers **NaCCA Mathematics, Basic 1 to Basic 6**. Kwan 1.0.0 is on PyPI and the demo is live. This page lists what 1.0 did not reach, and then the work that comes later. None of the later work has a date, and none of it has been started.
 
 ## What 1.0 did not reach
 
-These were in the plan for 1.0 and are not done. The code paths exist; what is missing is people's time or a release step.
+These were in the plan for 1.0 and are not done. The code paths exist; what is missing is people's time.
 
 - **Reviewed practice settings.** Every indicator has drafted settings and every draft passes the automatic checks, but no teacher has reviewed one yet. Kwan ships the general strand settings by default until that changes. The [Evidence](evidence.md) page counts the reviewed settings.
 - **Translations.** The Twi, Ewe and Ga pipeline (machine draft, teacher review, import) is built. No reviewed translation ships.
 - **Accepted augmented links.** The decision model, the Junyi benchmark and the review sheets work end to end, but the local model tried first is below the precision bar and its proposals are pending review. The shipped map holds rule-based links only. A stronger decision model is the first thing to try.
 - **NaCCA permission.** The request for written permission to republish curriculum text has not been sent. See [Governance](governance.md).
-- **The PyPI release.** The release workflow is written; the package is not on PyPI until the `v1.0.0` tag is pushed.
-- **The public demo.** The Space deploy workflow is written; the Space goes live with the release.
 
 If you teach in Ghana, the first three items are yours to move. See [CONTRIBUTING.md](https://github.com/rofyray/kwan/blob/main/CONTRIBUTING.md).
 
