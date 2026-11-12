@@ -241,6 +241,11 @@ def test_space_deploy_polls_up_to_ten_minutes_then_runs_the_smoke_test():
     assert "playwright install --with-deps chromium" in text
     assert "--with playwright demo/gradio_smoke_test.py" in text and "steps.space.outputs.url" in text
     assert '--wait "$POLL_SECONDS"' in text
+    # the smoke test waits for the uploaded commit to run, never the old container
+    names = [step.get("name", "") for step in doc["jobs"]["deploy"]["steps"]]
+    wait = names.index("Wait until the Space runs the uploaded commit")
+    assert names.index("Upload to the Space") < wait < names.index("Wait for the Space, then run the smoke test")
+    assert 'runtime.get("sha")' in text and "steps.upload.outputs.commit" in DEPLOY.read_text(encoding="utf-8")
     assert doc["permissions"] == {"contents": "read"}
 
 

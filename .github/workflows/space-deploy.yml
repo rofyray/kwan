@@ -72,6 +72,7 @@ jobs:
 
       - name: Upload to the Space
         if: steps.cfg.outputs.ok == 'true'
+        id: upload
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_SPACE: ${{ vars.HF_SPACE }}
@@ -82,13 +83,49 @@ jobs:
           from huggingface_hub import HfApi
 
           api = HfApi(token=os.environ["HF_TOKEN"])
-          api.upload_folder(
+          info = api.upload_folder(
               folder_path="space",
               repo_id=os.environ["HF_SPACE"],
               repo_type="space",
               commit_message=os.environ["COMMIT_MESSAGE"],
               delete_patterns=["kwan/**", "wheels/**", "Dockerfile", ".dockerignore", "requirements-demo.txt"],
           )
+          head = api.space_info(os.environ["HF_SPACE"]).sha  # the uploaded commit, or the head if nothing changed
+          print(f"Space commit: {head} ({info.oid})")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"commit={head}\n")
+          PY
+
+      # Right after an upload the old container still answers while the new one builds, so a smoke test
+      # started then can click on a page that is about to restart. Wait until the uploaded commit runs.
+      - name: Wait until the Space runs the uploaded commit
+        if: steps.cfg.outputs.ok == 'true'
+        env:
+          HF_SPACE: ${{ vars.HF_SPACE }}
+          COMMIT: ${{ steps.upload.outputs.commit }}
+        run: |
+          uv run --no-project python - <<'PY'
+          import json, os, sys, time, urllib.request
+
+          url = f"https://huggingface.co/api/spaces/{os.environ['HF_SPACE']}"
+          deadline = time.monotonic() + float(os.environ["POLL_SECONDS"])
+          last = "no answer yet"
+          while time.monotonic() < deadline:
+              try:
+                  with urllib.request.urlopen(url, timeout=20) as resp:
+                      runtime = json.load(resp).get("runtime") or {}
+                  stage, sha = runtime.get("stage"), runtime.get("sha")
+                  if stage == "RUNNING" and sha == os.environ["COMMIT"]:
+                      print(f"the Space runs {sha}")
+                      sys.exit(0)
+                  if stage in ("BUILD_ERROR", "RUNTIME_ERROR", "CONFIG_ERROR"):
+                      sys.exit(f"the Space failed to start: {stage}. See its logs on huggingface.co.")
+                  last = f"stage {stage}, running {str(sha)[:7]}"
+              except OSError as e:
+                  last = str(e)
+              print(f"waiting: {last}")
+              time.sleep(15)
+          sys.exit(f"the Space did not run {os.environ['COMMIT'][:7]} within {os.environ['POLL_SECONDS']} seconds: {last}")
           PY
 
       - name: Work out the Space URL
