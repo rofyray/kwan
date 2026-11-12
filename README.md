@@ -1,4 +1,11 @@
-# Kwan 🧭
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rofyray/kwan/main/docs/assets/kwan-logo-dark.png">
+    <img src="https://raw.githubusercontent.com/rofyray/kwan/main/docs/assets/kwan-logo-light.png" alt="Kwan logo: a green path through gold steps to a red goal under a star" width="420">
+  </picture>
+</p>
+
+# Kwan
 
 **Kwan** is Twi for *the path* (*ɔkwan*). It tells a Ghanaian pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 

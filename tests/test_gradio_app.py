@@ -98,3 +98,10 @@ def test_copy_has_no_em_dash_and_carries_the_disclaimer(app):
     text = (ROOT / "demo" / "gradio_app.py").read_text(encoding="utf-8")
     assert EM_DASH not in text
     assert "Kwan is not reviewed, approved or endorsed by NaCCA or the Ministry of Education." in app.DISCLAIMER
+
+
+def test_the_heading_is_the_logo_in_both_themes(app):
+    head = app.logo_html()
+    assert head.count("data:image/png;base64,") == 2 and 'class="on-light"' in head and 'class="on-dark"' in head
+    assert ".dark .kwan-logo .on-dark" in app.CSS and app.MARK.endswith("kwan-mark.png")
+    assert chr(0x1F9ED) not in (ROOT / "demo" / "gradio_app.py").read_text(encoding="utf-8")

@@ -189,7 +189,9 @@ def fake_results(monkeypatch, fake):
 def test_app_runs_on_its_own_and_shows_the_three_tabs(K):
     at = open_app()
     assert [t.label for t in at.tabs] == TABS
-    assert at.title[0].value == "Kwan 🧭"
+    assert not at.title  # the wordmark image is the page heading
+    first = next(iter(at.main.children.values()))
+    assert first.type == "image" and first.proto.imgs[0].url.endswith(".png")
     assert [s.value for s in at.subheader] == ["What to learn next", "Mastery by class and strand"]
 
 

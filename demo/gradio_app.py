@@ -8,12 +8,14 @@ LearnerState held in the browser session (gr.State) and is gone when the tab clo
 
 from __future__ import annotations
 
+import base64
 import html
 import os
 import random
 from collections import Counter
 from datetime import UTC, datetime, timedelta
 from functools import cache
+from importlib.resources import files
 from time import perf_counter
 
 import gradio as gr
@@ -24,6 +26,18 @@ from kwan.eval import results, simulate
 from kwan.graph.export import graph_html
 
 TITLE = "Kwan · the next step in maths"
+ASSETS = files("kwan") / "assets"  # the logos ship inside the package (and in the Space's unpacked copy)
+MARK = str(ASSETS / "kwan-mark.png")  # the cream tile: the browser tab icon
+LOGO_ALT = "Kwan logo: a green path through gold steps to a red goal under a star"
+# the logo's green path and gold steps
+THEME = gr.themes.Default(primary_hue=gr.themes.colors.green, secondary_hue=gr.themes.colors.yellow)
+# Gradio puts the class `dark` on the page in dark mode: show the wordmark drawn for that background.
+CSS = """
+.kwan-logo img { max-width: 300px; width: 100%; height: auto; }
+.kwan-logo .on-dark { display: none; }
+.dark .kwan-logo .on-light { display: none; }
+.dark .kwan-logo .on-dark { display: inline; }
+"""
 INTRO = (
     "**Kwan** is Twi for *the path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
     "a pupil has mastered, and picks the next skill to learn, with a reason and an example from everyday "
@@ -115,6 +129,19 @@ def now() -> datetime:
 
 def plural(n, word: str) -> str:
     return f"{n} {word}{'' if n == 1 else 's'}"
+
+
+def logo_html() -> str:
+    """The wordmark as the page heading, in a light-background and a dark-background version."""
+
+    def data_uri(name: str) -> str:
+        return "data:image/png;base64," + base64.b64encode((ASSETS / name).read_bytes()).decode("ascii")
+
+    return (
+        f'<h1 class="kwan-logo" style="margin:0">'
+        f'<img class="on-light" src="{data_uri("kwan-logo-light.png")}" alt="{LOGO_ALT}">'
+        f'<img class="on-dark" src="{data_uri("kwan-logo-dark.png")}" alt="{LOGO_ALT}"></h1>'
+    )
 
 
 # ----------------------------------------------------------------------------- the pupil view
@@ -392,7 +419,8 @@ def build() -> gr.Blocks:
     ev = evidence()
     latency = block_at(ev, "latency") or {}
     with gr.Blocks(title=TITLE) as demo:
-        gr.Markdown(f"# Kwan 🧭\n\n{INTRO}")
+        gr.HTML(logo_html())
+        gr.Markdown(INTRO)
         gr.Markdown(f"NaCCA B1 to B6 Mathematics · {plural(G.number_of_nodes(), 'skill')} · bundle {K.bundle_version}")
         learner = gr.State(None)
         shown = gr.State([])
@@ -526,4 +554,9 @@ except ImportError:
 demo = build()
 
 if __name__ == "__main__":
-    demo.launch(server_name=os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1"))
+    demo.launch(
+        server_name=os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1"),
+        css=CSS,
+        favicon_path=MARK,
+        theme=THEME,
+    )

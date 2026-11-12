@@ -1,6 +1,6 @@
 ---
 title: Kwan
-emoji: 🧭
+emoji: ⭐
 colorFrom: yellow
 colorTo: green
 sdk: gradio
@@ -10,6 +10,7 @@ app_file: app.py
 pinned: false
 license: mit
 short_description: Next maths skill for Ghanaian pupils, with a reason.
+thumbnail: https://raw.githubusercontent.com/rofyray/kwan/main/docs/assets/kwan-logo.png
 ---
 
 # Kwan demo

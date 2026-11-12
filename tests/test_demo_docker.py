@@ -28,7 +28,7 @@ EM_DASH = chr(0x2014)
 SPACE_URL = "https://huggingface.co/spaces/rofyray/kwan"
 FRONT_MATTER = {  # PRD Appendix A.3, with the 1.0 scope (Mathematics only) in the short description
     "title": "Kwan",
-    "emoji": "🧭",
+    "emoji": "⭐",
     "colorFrom": "yellow",
     "colorTo": "green",
     "sdk": "docker",

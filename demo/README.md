@@ -1,6 +1,6 @@
 ---
 title: Kwan
-emoji: 🧭
+emoji: ⭐
 colorFrom: yellow
 colorTo: green
 sdk: docker

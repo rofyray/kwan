@@ -1,0 +1,36 @@
+/* Kwan brand colours, taken from the logo: path green, node gold, goal red, ink and cream. */
+:root {
+  --kwan-green: #046538;
+  --kwan-gold: #ecbc1d;
+  --kwan-red: #b4171f;
+  --kwan-ink: #0f1110;
+  --kwan-cream: #f8f4e9;
+}
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--kwan-green);
+  --md-primary-fg-color--light: #2f8a5c;
+  --md-primary-fg-color--dark: #034a29;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #b8890a;
+  --md-accent-fg-color--transparent: rgba(236, 188, 29, 0.1);
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--kwan-gold);
+}
+
+/* the logo sits on the green header with its own cream background */
+.md-header__button.md-logo img {
+  border-radius: 6px;
+  height: 1.8rem;
+}
+
+.md-typeset img.kwan-wordmark {
+  max-width: min(360px, 100%);
+  width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+}

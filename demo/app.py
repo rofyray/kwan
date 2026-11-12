@@ -9,6 +9,7 @@ import random
 import re
 from collections import Counter
 from datetime import UTC, datetime, timedelta
+from importlib.resources import files
 from time import perf_counter
 
 import pandas as pd
@@ -19,7 +20,11 @@ from kwan import Kwan
 from kwan.eval import results, simulate
 from kwan.graph.export import graph_html
 
-st.set_page_config(page_title="Kwan · the next step in maths", page_icon="🧭", layout="wide")
+ASSETS = files("kwan") / "assets"  # the logos ship inside the package, so the Docker image has them too
+LOGO = str(ASSETS / "kwan-logo.png")  # wordmark on its cream tile: reads the same in light and dark themes
+MARK = str(ASSETS / "kwan-mark.png")
+
+st.set_page_config(page_title="Kwan · the next step in maths", page_icon=MARK, layout="wide")
 
 NO_GOAL = "(no goal)"
 GOAL_HELP = (
@@ -390,7 +395,7 @@ if "learner" not in st.session_state:
 ev = evidence()
 latency = block_at(ev, "latency") or {}
 
-st.title("Kwan 🧭")
+st.image(LOGO, width=280)
 st.markdown(
     "**Kwan** is Twi for *the path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
     "a pupil has mastered, and picks the next skill to learn, with a reason and an example from everyday "

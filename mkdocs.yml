@@ -10,11 +10,15 @@ copyright: >-
   Code: MIT. Kwan-written content: CC BY 4.0.
 
 docs_dir: docs
+extra_css:
+  - stylesheets/kwan.css
 strict: false
 
 theme:
   name: material
   language: en
+  logo: assets/kwan-mark.png
+  favicon: assets/favicon.png
   features:
     - navigation.sections
     - navigation.top
@@ -24,15 +28,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
