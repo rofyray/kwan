@@ -19,7 +19,7 @@ From source:
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-uv sync --extra api --extra demo --extra eval --extra curriculum
+uv sync --extra api --extra demo --extra eval --extra curriculum --extra gradio
 ```
 <!-- VERIFY:END -->
 
@@ -177,6 +177,7 @@ Every request except `/v1/health` must carry one of the keys in `KWAN_API_KEYS` 
 | Method | Path | What it does |
 |---|---|---|
 | `GET` | `/v1/health` | Says the service is up |
+| `GET` | `/v1/skills` | Every skill with a short label, for goal pickers and search |
 | `POST` | `/v1/attempts` | Records one answer |
 | `GET` | `/v1/learners/{id}/recommendations` | The next skills for a learner |
 | `GET` | `/v1/learners/{id}/mastery` | The estimated mastery of every skill |
@@ -190,18 +191,24 @@ KEY="change-me-to-a-long-random-string"
 
 curl -s localhost:8000/v1/health
 
+curl -s -H "X-API-Key: $KEY" "localhost:8000/v1/skills?grade=4&q=fractions%20order"
+
 curl -s -X POST localhost:8000/v1/attempts \
      -H "X-API-Key: $KEY" -H "content-type: application/json" \
      -d '{"learner_id": "pupil-0042", "indicator": "math:B1.1.1.1.1", "correct": true}'
 
 curl -s -H "X-API-Key: $KEY" \
-     "localhost:8000/v1/learners/pupil-0042/recommendations?k=3&goal=math:B4.1.1.1.2"
+     "localhost:8000/v1/learners/pupil-0042/recommendations?k=3&goal=math:B4.1.3.2.1"
 
 curl -s -H "X-API-Key: $KEY" localhost:8000/v1/learners/pupil-0042/mastery
 
 curl -s -X DELETE -H "X-API-Key: $KEY" localhost:8000/v1/learners/pupil-0042
 ```
 <!-- VERIFY:END -->
+
+### Goals for people
+
+People never type a skill code. `GET /v1/skills` returns every skill with a short label (filter with `grade`, `strand` and `q`, e.g. `?grade=4&q=fractions order`); show the `short_label` in a dropdown or search box and send the `id` as `goal`. Each recommendations response echoes the goal with its label. In Python, `engine.skills(grade=4, q="fractions order")` and `engine.label(id)` do the same.
 
 A learner id needs no registration. A pupil the API has never seen gets starting recommendations. Send an `idempotency_key` with each attempt (or an `Idempotency-Key` header) and a retried request is applied once. Interactive documentation is served at `/docs` while the server runs. The Round 1 routes (`/attempt`, `/recommend/{id}`, ...) still answer, with a `Deprecation` header and a `Link` to the v1 route that replaces them.
 

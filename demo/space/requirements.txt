@@ -1,0 +1,5 @@
+# What the Gradio Space installs next to the Gradio SDK. The `kwan` package itself is not installed from PyPI:
+# space-deploy.yml unpacks it from the wheel built from the same commit, so the Space always runs that code.
+networkx==3.7
+pyvis==0.3.2
+pandas==3.1.1

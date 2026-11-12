@@ -1,13 +1,16 @@
-# Deploy the demo to the Hugging Face Space (PRD Phase 10.4 and 10.5).
+# Deploy the demo to the Hugging Face Space, a free Gradio Space (sdk: gradio).
 #
 # Runs when a GitHub release is published, when release.yml dispatches it, or by hand. It builds the wheel,
-# assembles the Space folder from demo/ (app, Dockerfile, README front matter, pinned requirements) plus
-# wheels/kwan-*.whl, data/eval_results.json and the shipped bundle, uploads the folder with
+# assembles the Space folder (demo/gradio_app.py as app.py, the README front matter and requirements from
+# demo/space/, the kwan package unpacked from the wheel, and data/eval_results.json), uploads the folder with
 # huggingface_hub.upload_folder, waits for the Space to answer (up to 10 minutes) and runs the Playwright
 # smoke test against it.
 #
 # Needs the repository secret HF_TOKEN (a Hugging Face token with write access to the Space) and the
-# repository variable HF_SPACE (the Space id, for example rofyray/kwan).
+# repository variable HF_SPACE (the Space id, for example rofyray/kwan). Without them the job says so and
+# stops without failing, so a release tagged before the Space exists still succeeds.
+#
+# The Streamlit demo in demo/app.py with demo/Dockerfile stays available for Docker hosting.
 
 name: space-deploy
 
@@ -30,27 +33,45 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Check the Space settings
+        id: cfg
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          if [ -n "$HF_TOKEN" ] && [ -n "$HF_SPACE" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::HF_TOKEN or HF_SPACE is not set: nothing deployed. See docs/maintainer-tasks.md."
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.cfg.outputs.ok == 'true'
 
       - uses: astral-sh/setup-uv@v6
+        if: steps.cfg.outputs.ok == 'true'
         with:
           python-version: "3.12"
 
       - name: Build the wheel
+        if: steps.cfg.outputs.ok == 'true'
         run: uv build --wheel --out-dir dist
 
       - name: Assemble the Space folder
+        if: steps.cfg.outputs.ok == 'true'
         run: |
           set -eu
           rm -rf space
-          mkdir -p space/wheels space/data
-          cp demo/app.py demo/Dockerfile demo/README.md demo/requirements-demo.txt demo/.dockerignore space/
-          cp dist/kwan-*.whl space/wheels/
+          mkdir -p space/data
+          cp demo/gradio_app.py space/app.py
+          cp demo/space/README.md demo/space/requirements.txt space/
           cp data/eval_results.json space/data/
-          cp src/kwan/bundles/kwan-bundle.math.json space/data/
-          ls -lR space
+          unzip -q dist/kwan-*.whl 'kwan/*' -d space/
+          find space -maxdepth 2 | sort
 
       - name: Upload to the Space
+        if: steps.cfg.outputs.ok == 'true'
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_SPACE: ${{ vars.HF_SPACE }}
@@ -66,45 +87,31 @@ jobs:
               repo_id=os.environ["HF_SPACE"],
               repo_type="space",
               commit_message=os.environ["COMMIT_MESSAGE"],
-              delete_patterns=["wheels/*.whl"],
+              delete_patterns=["kwan/**", "wheels/**", "Dockerfile", ".dockerignore", "requirements-demo.txt"],
           )
           PY
 
-      - name: Wait for the Space to answer
+      - name: Work out the Space URL
+        if: steps.cfg.outputs.ok == 'true'
         id: space
         env:
           HF_SPACE: ${{ vars.HF_SPACE }}
         run: |
           uv run --no-project python - <<'PY'
-          import os, re, sys, time, urllib.error, urllib.request
+          import os, re
 
           owner, name = os.environ["HF_SPACE"].split("/", 1)
           host = re.sub(r"[^a-z0-9-]", "-", f"{owner}-{name}".lower())
-          url = f"https://{host}.hf.space"
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
-              out.write(f"url={url}\n")
-          deadline = time.monotonic() + float(os.environ["POLL_SECONDS"])
-          last = "not tried yet"
-          while time.monotonic() < deadline:
-              try:
-                  with urllib.request.urlopen(url + "/_stcore/health", timeout=15) as resp:
-                      body = resp.read(64).decode("utf-8", "replace").strip()
-                      if resp.status == 200 and body == "ok":
-                          print(f"{url} answers 200 ok")
-                          sys.exit(0)
-                      last = f"status {resp.status}, body {body!r}"
-              except (urllib.error.URLError, OSError) as e:
-                  last = str(e)
-              print(f"waiting: {last}")
-              time.sleep(15)
-          print(f"the Space at {url} did not answer within {os.environ['POLL_SECONDS']} seconds: {last}")
-          sys.exit(1)
+              out.write(f"url=https://{host}.hf.space\n")
           PY
 
-      - name: Run the smoke test against the Space
+      - name: Wait for the Space, then run the smoke test
+        if: steps.cfg.outputs.ok == 'true'
         run: |
           uv run --no-project --with playwright playwright install --with-deps chromium
-          uv run --no-project --with playwright demo/smoke_test.py "${{ steps.space.outputs.url }}" --wait 120 --screenshot smoke-failure.png
+          uv run --no-project --with playwright demo/gradio_smoke_test.py "${{ steps.space.outputs.url }}" \
+            --wait "$POLL_SECONDS" --screenshot smoke-failure.png
 
       - name: Keep the failure screenshot
         if: failure()

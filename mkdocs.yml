@@ -63,6 +63,7 @@ nav:
       - Teacher review guide: teacher-review-guide.md
   - Project:
       - Governance: governance.md
+      - Maintainer tasks: maintainer-tasks.md
       - Roadmap: roadmap.md
   - QA reports:
       - Curriculum report: qa/curriculum-math.html

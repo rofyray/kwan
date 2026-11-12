@@ -1,6 +1,6 @@
 """The bundle: one JSON file per subject with everything Kwan needs to run (PRD 6.1, decision D2).
 
-    {"schema_version": 2, "bundle_version": "math-1.0.0rc1", "subject": "math", "text_mode": "labels",
+    {"schema_version": 2, "bundle_version": "math-1.0.0", "subject": "math", "text_mode": "labels",
      "created_at": "...", "source_commit": "...",
      "graph": {"nodes": [...], "edges": [...]},
      "params": {...},                      EloParams.to_dict()
@@ -96,7 +96,7 @@ def bundle_file_name(subject: str = ids.DEFAULT_SUBJECT) -> str:
 
 
 def bundle_version_for(subject: str = ids.DEFAULT_SUBJECT, version: str = __version__) -> str:
-    """The bundle version of a subject at a package version: `math-1.0.0rc1`."""
+    """The bundle version of a subject at a package version: `math-1.0.0`."""
     return f"{subject}-{version}"
 
 

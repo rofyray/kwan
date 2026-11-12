@@ -22,7 +22,7 @@ Kwan needs Python 3.11, 3.12 or 3.13 and [uv](https://docs.astral.sh/uv/), which
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-uv sync --extra api --extra demo --extra eval --extra curriculum
+uv sync --extra api --extra demo --extra eval --extra curriculum --extra gradio
 uv run pytest -q
 ```
 

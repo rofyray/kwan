@@ -117,6 +117,7 @@ def test_every_other_route_needs_the_key(client):
     assert client.get("/v1/learners/a/recommendations").status_code == 401
     assert client.get("/v1/learners/a/mastery").status_code == 401
     assert client.delete("/v1/learners/a").status_code == 401
+    assert client.get("/v1/skills").status_code == 401
     assert attempt(client).status_code == 200
 
 
@@ -430,6 +431,7 @@ def test_openapi_describes_v1_with_typed_models(client):
         "/v1/learners/{learner_id}/recommendations",
         "/v1/learners/{learner_id}/mastery",
         "/v1/learners/{learner_id}",
+        "/v1/skills",
     } <= set(paths)
     ok = lambda path, method: paths[path][method]["responses"]["200"]["content"]["application/json"]["schema"]  # noqa: E731
     assert ok("/v1/health", "get")["$ref"].endswith("/HealthOut")
@@ -443,7 +445,8 @@ def test_openapi_describes_v1_with_typed_models(client):
     for code in ("401", "404", "409", "413"):
         assert code in paths["/v1/attempts"]["post"]["responses"]
     tags = {t["name"] for t in spec["tags"]}
-    assert {"v1: service", "v1: learning", "v1: learners", "v0 (deprecated)"} <= tags
+    assert ok("/v1/skills", "get")["$ref"].endswith("/SkillsOut")
+    assert {"v1: service", "v1: skills", "v1: learning", "v1: learners", "v0 (deprecated)"} <= tags
     assert paths["/attempt"]["post"]["deprecated"] is True and "deprecated" not in paths["/v1/attempts"]["post"]
     assert spec["info"]["version"] == app_module.__version__
     text = json.dumps(spec)
@@ -495,3 +498,41 @@ def test_the_user_story(client, rt, engine):
     assert stored.step == 6 and stored.bundle_version == engine.bundle_version
     assert client.delete(f"/v1/learners/{pupil}", headers=HEADERS).status_code == 204
     assert recs(client, pupil, k=3) == start
+
+
+# ----------------------------------------------------------------------------- the skill catalogue
+
+
+def test_the_skill_catalogue_lists_every_skill_with_a_label(client, engine):
+    r = client.get("/v1/skills", headers=HEADERS)
+    assert r.status_code == 200
+    body = r.json()
+    assert body["count"] == len(body["skills"]) == 276 and body["bundle_version"] == engine.bundle_version
+    first = body["skills"][0]
+    assert set(first) == {"id", "code", "grade", "strand", "strand_name", "short_label"}
+    assert first["id"].startswith("math:") and first["short_label"] and first["id"] != first["short_label"]
+    for s in body["skills"]:
+        assert engine.resolve(s["id"]) == s["id"] and 1 <= s["grade"] <= 6 and s["short_label"]
+
+
+def test_the_skill_catalogue_filters_by_grade_strand_and_words(client):
+    b4 = client.get("/v1/skills", params={"grade": 4, "strand": 1}, headers=HEADERS).json()["skills"]
+    assert b4 and all(s["grade"] == 4 and s["strand"] == 1 and s["strand_name"] == "Number" for s in b4)
+    found = client.get("/v1/skills", params={"q": "FRACTIONS order", "grade": 4}, headers=HEADERS).json()["skills"]
+    assert [s["code"] for s in found] == ["B4.1.3.2.1"]
+    assert client.get("/v1/skills", params={"q": "no such words zzz"}, headers=HEADERS).json() == {
+        "skills": [],
+        "count": 0,
+        "bundle_version": client.get("/v1/health").json()["bundle_version"],
+    }
+    assert client.get("/v1/skills", params={"grade": 7}, headers=HEADERS).status_code == 422
+
+
+def test_a_goal_picked_from_the_catalogue_comes_back_with_its_label(client):
+    (skill,) = client.get("/v1/skills", params={"q": "fractions order", "grade": 4}, headers=HEADERS).json()["skills"]
+    r = client.get("/v1/learners/pupil-9/recommendations", params={"goal": skill["id"]}, headers=HEADERS)
+    assert r.status_code == 200
+    assert r.json()["goal"] == {"indicator": skill["id"], "code": skill["code"], "short_label": skill["short_label"]}
+    bare = client.get("/v1/learners/pupil-9/recommendations", params={"goal": skill["code"]}, headers=HEADERS).json()
+    assert bare["goal"]["indicator"] == skill["id"]
+    assert client.get("/v1/learners/pupil-9/recommendations", headers=HEADERS).json()["goal"] is None

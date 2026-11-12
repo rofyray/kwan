@@ -27,6 +27,7 @@ from typing import Any
 
 import networkx as nx
 
+from kwan import ids
 from kwan.bundle import Bundle, load_bundle
 from kwan.ids import Resolver
 from kwan.learner.elo import EloLearner, LearnerState
@@ -190,6 +191,38 @@ class Kwan:
         """Every indicator as a record (`id`, `code`, `grade`, `strand`, `strand_name`, `short_label`,
         `description`, ...) in the graph's order."""
         return [{"id": n, **d} for n, d in self._G.nodes(data=True)]
+
+    def skills(self, grade: int | None = None, strand: int | None = None, q: str | None = None) -> list[dict[str, Any]]:
+        """The skill catalogue for people: `{id, code, grade, strand, strand_name, short_label}` per skill,
+        in curriculum order. Show `short_label` in a picker and send `id` back to the engine.
+
+        `grade` (1 to 6) and `strand` (1 to 4) filter; `q` keeps skills whose label, strand name or code
+        holds every word of it (any case), e.g. `q="order fractions"`."""
+        words = (q or "").lower().split()
+        out: list[dict[str, Any]] = []
+        for n, d in self._G.nodes(data=True):
+            record = {
+                "id": n,
+                "code": str(d.get("code", ids.code_of(n))),
+                "grade": int(d.get("grade", 0)),
+                "strand": int(d.get("strand", 0)),
+                "strand_name": str(d.get("strand_name", "")),
+                "short_label": str(d.get("short_label") or d.get("description") or n),
+            }
+            if grade is not None and record["grade"] != grade:
+                continue
+            if strand is not None and record["strand"] != strand:
+                continue
+            haystack = f"{record['short_label']} {record['strand_name']} {record['code']}".lower()
+            if all(w in haystack for w in words):
+                out.append(record)
+        return out
+
+    def label(self, indicator: str) -> str:
+        """The short, human-readable label of a skill, for any accepted spelling of its id."""
+        node = self.resolve(indicator)
+        d = self._G.nodes[node]
+        return str(d.get("short_label") or d.get("description") or node)
 
     def __len__(self) -> int:
         return int(self._G.number_of_nodes())

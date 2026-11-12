@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
           enable-cache: true
-      - run: uv sync --locked --extra api --extra demo --extra eval --extra curriculum
+      - run: uv sync --locked --extra api --extra demo --extra eval --extra curriculum --extra gradio
       - name: The tag must match the package version
         run: |
           version="$(uv run python -c 'import kwan; print(kwan.__version__)')"

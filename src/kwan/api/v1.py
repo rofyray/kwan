@@ -1,6 +1,7 @@
 """API v1 (PRD 6.4, 9.3): the routes, their request and response models, and the error shape.
 
     GET    /v1/health                            liveness, versions, graph size
+    GET    /v1/skills                            the skill catalogue: ids with human-readable labels
     POST   /v1/attempts                          record one answer (idempotent with a key)
     GET    /v1/learners/{id}/recommendations     the next skills for a learner
     GET    /v1/learners/{id}/mastery             estimated mastery of every skill
@@ -21,6 +22,7 @@ from fastapi import APIRouter, Depends, FastAPI, Header, HTTPException, Path, Qu
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, field_validator
 
+from kwan import ids
 from kwan._version import __version__
 from kwan.api.runtime import Runtime
 from kwan.store import VersionConflict, apply_attempt
@@ -35,6 +37,7 @@ MAX_BODY_BYTES = 64 * 1024  # the largest request body accepted (an attempt is a
 
 TAGS = [
     {"name": "v1: service", "description": "Liveness, versions and graph size."},
+    {"name": "v1: skills", "description": "The skill catalogue: what people pick from, with the ids programs send."},
     {"name": "v1: learning", "description": "Record answers, get recommendations, read mastery."},
     {"name": "v1: learners", "description": "Learner lifecycle."},
 ]
@@ -161,12 +164,34 @@ class RecommendationOut(BaseModel):
     is_review: bool = Field(description="True for the review slot: a skill learned before that is fading.")
 
 
+class GoalOut(BaseModel):
+    indicator: str = Field(description="Canonical id of the goal skill.")
+    code: str = Field(description="The bare curriculum code.")
+    short_label: str = Field(description="Kwan's short label for the goal, for people.")
+
+
 class RecommendationsOut(BaseModel):
     learner_id: str
+    goal: GoalOut | None = Field(description="The goal this list works towards, with its label; null without one.")
     recommendations: list[RecommendationOut] = Field(
         description="Best first. Fewer than k, or none, when fewer skills are ready."
     )
     latency_ms: float = Field(ge=0, description="Engine time for this call in milliseconds.")
+    bundle_version: str
+
+
+class SkillOut(BaseModel):
+    id: str = Field(description="Canonical id: send this as `goal` or `indicator`.")
+    code: str = Field(description="The bare curriculum code.")
+    grade: int = Field(ge=1, le=6, description="Class level, 1 to 6 for B1 to B6.")
+    strand: int = Field(ge=1, description="Strand number.")
+    strand_name: str = Field(description="Strand name, e.g. Number.")
+    short_label: str = Field(description="Kwan's short label: what to show people.")
+
+
+class SkillsOut(BaseModel):
+    skills: list[SkillOut] = Field(description="Matching skills in curriculum order.")
+    count: int = Field(ge=0)
     bundle_version: str
 
 
@@ -231,6 +256,28 @@ def build_router(runtime: Runtime | Callable[[], Runtime]) -> APIRouter:
             "store": rt.store_kind,
             "auth": rt.auth_enabled,
         }
+
+    @router.get(
+        "/skills",
+        response_model=SkillsOut,
+        tags=["v1: skills"],
+        summary="The skill catalogue, for goal pickers and search",
+        dependencies=auth,
+        responses={401: ERR, 422: {"description": "Bad argument."}},
+    )
+    def skills(
+        grade: Annotated[int | None, Query(ge=1, le=6, description="Only this class (1 to 6).")] = None,
+        strand: Annotated[int | None, Query(ge=1, le=9, description="Only this strand number.")] = None,
+        q: Annotated[
+            str | None,
+            Query(max_length=100, description="Words that must all appear in the label, strand name or code."),
+        ] = None,
+    ) -> dict[str, Any]:
+        """Every skill with a short human-readable label. Show `short_label` to people and send `id` back
+        as `goal` or `indicator`: the engine works on ids, people never need to type one."""
+        engine = current().engine
+        found = engine.skills(grade=grade, strand=strand, q=q)
+        return {"skills": found, "count": len(found), "bundle_version": engine.bundle_version}
 
     @router.post(
         "/attempts",
@@ -334,8 +381,14 @@ def build_router(runtime: Runtime | Callable[[], Runtime]) -> APIRouter:
             lang=lang,
             include_drafts=include_drafts,
         )
+        goal_out = (
+            {"indicator": goal_id, "code": ids.code_of(goal_id), "short_label": engine.label(goal_id)}
+            if goal_id
+            else None
+        )
         return {
             "learner_id": learner_id,
+            "goal": goal_out,
             "recommendations": [r.to_dict() for r in recs],
             "latency_ms": engine.last_latency_ms,
             "bundle_version": engine.bundle_version,

@@ -4,6 +4,13 @@ All notable changes to Kwan are recorded here. The format follows [Keep a Change
 
 Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `uv run scripts/fill_docs.py`.
 
+## [1.0.0] - 2026-11-11
+
+- **Skill catalogue for people.** `GET /v1/skills` lists every skill with a short human-readable label, filtered by `grade`, `strand` and `q`; recommendations echo the goal with its label. `Kwan.skills()` and `Kwan.label()` do the same in Python. Codes stay the only thing the engine accepts.
+- **Gradio demo.** The public Space is now a Gradio app (`demo/gradio_app.py`, extra `gradio`), which runs on the free Hugging Face plan; the Streamlit demo and its Docker image stay. `space-deploy.yml` deploys the Gradio Space and stops quietly when `HF_TOKEN` or `HF_SPACE` is not set.
+- **uv.** Setup, CI, release and the Docker image use uv; development tools live in the `dev` and `docs` dependency groups, pinned by `uv.lock`.
+- **Maintainer tasks** page: releasing, the Space, teacher review and the decision model, step by step.
+
 ## [1.0.0rc1] - 2026-11-11
 
 The first release candidate of Kwan 1.0: the Round 1 prototype rebuilt as a Python package, with complete curriculum data, a learner model validated on African pupils, a recommender that follows goals strictly, a practice-setting pipeline with teacher review, a bundle format, a store, a versioned API, a Docker demo and a docs site.
@@ -60,5 +67,6 @@ The Round 1 build for the DataNova 2026 Global Data-thon (problem DN-ED-01).
 - A FastAPI service, a Streamlit demo, evaluation on ASSISTments 2009 and Eedi task 3/4 with skill-average, BKT and classic Elo baselines, a learner simulator with two profiles, a latency benchmark, and a results file written by a single writer.
 - A test suite and CI on Python 3.11 to 3.13.
 
+[1.0.0]: https://github.com/rofyray/kwan/releases/tag/v1.0.0
 [1.0.0rc1]: https://github.com/rofyray/kwan/releases/tag/v1.0.0rc1
 [0.1.0]: https://github.com/rofyray/kwan/commit/a86195d

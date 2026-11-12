@@ -34,7 +34,8 @@ Nothing a visitor does here is stored. The pupil lives in the browser session an
 uv run --with "kwan[demo]" streamlit run app.py
 ```
 
-Or build this folder as a container, which is what the Space does:
+The public Space runs the Gradio version of this demo (`demo/gradio_app.py`, folder files in `demo/space/`),
+because Docker Spaces are a paid option. This Streamlit version stays for Docker hosting:
 
 ```bash
 docker build -t kwan-demo .

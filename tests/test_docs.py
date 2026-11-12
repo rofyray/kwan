@@ -22,6 +22,8 @@ from pathlib import Path
 
 import pytest
 
+import kwan
+
 try:  # PyYAML is in the dev extra; the fallbacks below keep the tests running without it
     import yaml
 except ImportError:  # pragma: no cover - depends on the environment
@@ -264,7 +266,7 @@ def test_citation_cff_describes_kwan() -> None:
     assert cff.get("license") == "MIT"
     assert cff.get("repository-code") == "https://github.com/rofyray/kwan"
     assert cff.get("type", "software") == "software"
-    assert str(cff.get("version")) == "1.0.0rc1"
+    assert str(cff.get("version")) == kwan.__version__
     author = cff["authors"][0]
     assert (author["given-names"], author["family-names"]) == ("Rofy", "Ray")
 

@@ -209,31 +209,77 @@ def test_workflows_parse_and_lint():
     assert out.returncode == 0, out.stdout + out.stderr
 
 
-def test_space_deploy_runs_on_release_or_by_hand_and_uploads_the_demo_folder():
+def test_space_deploy_runs_on_release_or_by_hand_and_uploads_the_gradio_folder():
     doc = workflow(DEPLOY)
     assert doc["on"]["release"]["types"] == ["published"]
     assert "workflow_dispatch" in doc["on"]
     text = steps_text(doc)
     assert "uv build --wheel" in text
-    for copied in ("demo/app.py", "demo/Dockerfile", "demo/README.md", "demo/requirements-demo.txt"):
-        assert copied in text
-    assert "dist/kwan-*.whl space/wheels/" in text
-    assert "data/eval_results.json space/data/" in text and "kwan-bundle.math.json space/data/" in text
+    assert "cp demo/gradio_app.py space/app.py" in text
+    assert "demo/space/README.md demo/space/requirements.txt space/" in text
+    assert "unzip -q dist/kwan-*.whl 'kwan/*' -d space/" in text
+    assert "data/eval_results.json space/data/" in text
     assert "upload_folder(" in text and 'repo_type="space"' in text and 'folder_path="space"' in text
     raw = DEPLOY.read_text(encoding="utf-8")
     assert "${{ secrets.HF_TOKEN }}" in raw and "${{ vars.HF_SPACE }}" in raw
     assert 'HfApi(token="${{' not in raw  # the token goes through the environment, never into code text
 
 
+def test_space_deploy_stops_quietly_without_the_settings():
+    doc = workflow(DEPLOY)
+    steps = doc["jobs"]["deploy"]["steps"]
+    assert steps[0]["id"] == "cfg" and "ok=false" in steps[0]["run"]
+    for step in steps[1:]:
+        assert step.get("if") in ("steps.cfg.outputs.ok == 'true'", "failure()"), step
+
+
 def test_space_deploy_polls_up_to_ten_minutes_then_runs_the_smoke_test():
     doc = workflow(DEPLOY)
     assert doc["env"]["POLL_SECONDS"] == "600"
     text = steps_text(doc)
-    assert "/_stcore/health" in text and 'float(os.environ["POLL_SECONDS"])' in text
     assert ".hf.space" in text
     assert "playwright install --with-deps chromium" in text
-    assert "--with playwright demo/smoke_test.py" in text and "steps.space.outputs.url" in text
+    assert "--with playwright demo/gradio_smoke_test.py" in text and "steps.space.outputs.url" in text
+    assert '--wait "$POLL_SECONDS"' in text
     assert doc["permissions"] == {"contents": "read"}
+
+
+# ---------------------------------------------------------------- the Gradio Space folder
+
+GRADIO_README = DEMO / "space" / "README.md"
+GRADIO_REQUIREMENTS = DEMO / "space" / "requirements.txt"
+GRADIO_SMOKE = DEMO / "gradio_smoke_test.py"
+
+
+def test_gradio_space_front_matter_runs_the_app_on_python_3_12():
+    text = GRADIO_README.read_text(encoding="utf-8")
+    head, _, body = text[4:].partition("\n---\n")
+    meta = yaml.safe_load(head)
+    assert meta["sdk"] == "gradio" and meta["app_file"] == "app.py" and meta["python_version"] == "3.12"
+    assert re.fullmatch(r"\d+\.\d+\.\d+", str(meta["sdk_version"]))
+    for key in ("title", "emoji", "colorFrom", "colorTo", "license", "short_description"):
+        assert meta[key] == FRONT_MATTER[key]
+    assert DISCLAIMER in " ".join(body.split()) and "github.com/rofyray/kwan" in body
+    assert EM_DASH not in text
+
+
+def test_gradio_space_requirements_are_pinned_and_leave_kwan_to_the_wheel():
+    pins = lines(GRADIO_REQUIREMENTS)
+    assert pins and all(re.fullmatch(r"[A-Za-z0-9_.-]+==\d+(\.\d+)*", ln) for ln in pins), pins
+    names = {ln.split("==")[0].lower() for ln in pins}
+    assert {"networkx", "pyvis", "pandas"} <= names and "kwan" not in names and "gradio" not in names
+
+
+def test_gradio_smoke_test_compiles_and_fails_fast_when_nothing_listens():
+    py_compile.compile(str(GRADIO_SMOKE), doraise=True)
+    out = subprocess.run(
+        [sys.executable, str(GRADIO_SMOKE), "http://127.0.0.1:9", "--health-only", "--wait", "0"],
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    assert out.returncode == 1 and out.stderr.startswith("FAIL: health endpoint")
+    assert EM_DASH not in GRADIO_SMOKE.read_text(encoding="utf-8")
 
 
 def test_release_publishes_to_pypi_with_trusted_publishing():

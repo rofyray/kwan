@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
-      - run: uv sync --extra api --extra demo --extra eval --extra curriculum
+      - run: uv sync --extra api --extra demo --extra eval --extra curriculum --extra gradio
       - run: uv run pytest -q
 
   lint:

@@ -74,7 +74,7 @@ body:
     id: version
     attributes:
       label: Kwan version or bundle version
-      placeholder: kwan 1.0.0rc1, bundle math-1.0.0
+      placeholder: kwan 1.0.0, bundle math-1.0.0
   - type: checkboxes
     id: checks
     attributes:

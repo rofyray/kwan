@@ -4,7 +4,7 @@
 
 Kwan is an open-source learning path engine for the NaCCA Standards-Based Curriculum, Mathematics, Basic 1 to Basic 6. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo. It began at the DataNova 2026 Global Data-thon (problem DN-ED-01, Adaptive Learning Path Recommendation) and is now a project of its own.
 
-- **Live demo:** https://huggingface.co/spaces/rofyray/kwan (deploys on release)
+- **Live demo:** https://huggingface.co/spaces/rofyray/kwan (a Gradio app, deployed on release)
 - **Documentation:** https://rofyray.github.io/kwan/ (published on release; the same pages are in [`docs/`](docs/index.md))
 - **Package:** `uv add kwan` once 1.0 is released; until then, install from source (see [Install](#install))
 
@@ -245,7 +245,7 @@ Kwan needs Python 3.11, 3.12 or 3.13. The core needs only the standard library a
 ```bash
 uv add kwan                 # the engine (once 1.0 is on PyPI)
 uv add 'kwan[api]'          # plus the REST API
-uv add 'kwan[demo]'         # plus the Streamlit demo
+uv add 'kwan[gradio]'       # plus the Gradio demo (the Space); kwan[demo] is the Streamlit one
 ```
 
 From source, with every extra used in development:
@@ -253,11 +253,11 @@ From source, with every extra used in development:
 ```bash
 git clone https://github.com/rofyray/kwan.git
 cd kwan
-uv sync --extra api --extra demo --extra eval --extra curriculum
+uv sync --extra api --extra demo --extra eval --extra curriculum --extra gradio
 uv run pytest -q
 ```
 
-The extras: `api` (FastAPI and uvicorn), `demo` (Streamlit and pyvis), `eval` (pandas, numpy, scikit-learn and the dataset downloaders), `curriculum` (pdfplumber), `kt` (pyKT and torch, for the deep knowledge tracing benchmark), `graph-ai` (sentence-transformers, for the decision model), and `postgres` (psycopg). `uv sync` also installs the `dev` group (ruff, mypy, pytest); the `docs` group holds mkdocs-material. Not on uv? `pip install kwan` and `pip install -e '.[api]'` work too.
+The extras: `api` (FastAPI and uvicorn), `gradio` (Gradio and pyvis, for the Space demo), `demo` (Streamlit and pyvis, for the Docker demo), `eval` (pandas, numpy, scikit-learn and the dataset downloaders), `curriculum` (pdfplumber), `kt` (pyKT and torch, for the deep knowledge tracing benchmark), `graph-ai` (sentence-transformers, for the decision model), and `postgres` (psycopg). `uv sync` also installs the `dev` group (ruff, mypy, pytest); the `docs` group holds mkdocs-material. Not on uv? `pip install kwan` and `pip install -e '.[api]'` work too.
 
 The parsed curriculum, the skill map, the bundle and the results file are committed, so the tests, the API and the demo run without downloading anything.
 
@@ -329,6 +329,7 @@ uv run uvicorn kwan.api.app:app --port 8000
 | Method | Path | What it does |
 |---|---|---|
 | `GET` | `/v1/health` | Liveness, versions and the size of the map; needs no key |
+| `GET` | `/v1/skills` | The skill catalogue: each id with a short label, filtered by `grade`, `strand` and `q` |
 | `POST` | `/v1/attempts` | Records one answer; idempotent with an `idempotency_key` |
 | `GET` | `/v1/learners/{id}/recommendations` | The next skills for a learner, with `k`, `goal`, `grade_max`, `goal_mode` and `now` |
 | `GET` | `/v1/learners/{id}/mastery` | The estimated mastery of every skill |
@@ -339,8 +340,12 @@ curl -s -X POST localhost:8000/v1/attempts \
      -H "X-API-Key: change-me-to-a-long-random-string" -H "content-type: application/json" \
      -d '{"learner_id": "pupil-0042", "indicator": "math:B1.1.1.1.1", "correct": true}'
 curl -s -H "X-API-Key: change-me-to-a-long-random-string" \
-     "localhost:8000/v1/learners/pupil-0042/recommendations?k=3&goal=math:B4.1.1.1.2"
+     "localhost:8000/v1/skills?grade=4&q=fractions%20order"
+curl -s -H "X-API-Key: change-me-to-a-long-random-string" \
+     "localhost:8000/v1/learners/pupil-0042/recommendations?k=3&goal=math:B4.1.3.2.1"
 ```
+
+People never type a skill code. `GET /v1/skills` returns every skill with a short label (filter with `grade`, `strand` and `q`, e.g. `?grade=4&q=fractions order`); show the `short_label` in a dropdown or search box and send the `id` as `goal`. Each recommendations response echoes the goal with its label.
 
 A learner id needs no registration: a pupil the API has never seen gets starting recommendations. An unknown indicator or goal returns 404 with a machine-readable `code`. Interactive documentation is served at `/docs` while the server runs. The Round 1 routes (`/attempt`, `/recommend/{id}` and the rest) still answer for one minor release, with a `Deprecation` header and a `Link` to the v1 route that replaces them.
 
