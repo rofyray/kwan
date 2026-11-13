@@ -4,11 +4,14 @@ All notable changes to Kwan are recorded here. The format follows [Keep a Change
 
 Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `uv run scripts/fill_docs.py`.
 
-## [Unreleased]
+## [1.0.2] - 2026-11-12
+
+Documentation, wording and packaging only; the engine, the model parameters and the skill map are unchanged.
 
 - **Positioning:** Kwan is described as an adaptive learning engine for the NaCCA curriculum, with Mathematics B1 to B6 as what this release covers, in the package summary, the docs site, the README, the citation file, the CLI and API descriptions and both demos. The tagline says Kwan tells a Ghanaian pupil "which skill to learn next".
 - **Wording:** "Kwan means path (ɔkwan)", the README story shares kelewele and gives change for egg and pepper, and the README no longer tells how the project began.
 - **Model card:** the version row explains how the bundle version follows the package version.
+- The bundle version follows the package: `math-1.0.2`.
 
 ## [1.0.1] - 2026-11-12
 
@@ -82,6 +85,7 @@ The first build of Kwan.
 - A FastAPI service, a Streamlit demo, evaluation on ASSISTments 2009 and Eedi task 3/4 with skill-average, BKT and classic Elo baselines, a learner simulator with two profiles, a latency benchmark, and a results file written by a single writer.
 - A test suite and CI on Python 3.11 to 3.13.
 
+[1.0.2]: https://github.com/rofyray/kwan/releases/tag/v1.0.2
 [1.0.1]: https://github.com/rofyray/kwan/releases/tag/v1.0.1
 [1.0.0]: https://github.com/rofyray/kwan/releases/tag/v1.0.0
 [1.0.0rc1]: https://github.com/rofyray/kwan/releases/tag/v1.0.0rc1

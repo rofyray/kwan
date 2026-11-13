@@ -10,7 +10,7 @@ What Kwan's model is for, how it works, how well it does, and where it falls sho
 | | |
 |---|---|
 | Name | Kwan learner model and recommender |
-| Version | Package `kwan` 1.0.x; the bundle version is `math-` plus the package version (for example `math-1.0.1`) |
+| Version | Package `kwan` 1.0.x; the bundle version is `math-` plus the package version (for example `math-1.0.2`) |
 | Type | Multi-level Elo learner model with evidence passed along a prerequisite graph, a forgetting curve and an item-difficulty bank, feeding a rule-based recommender |
 | Subject | NaCCA Mathematics, Basic 1 to Basic 6 |
 | Input | A stream of answers: which skill, right or wrong, and optionally which question and when |
