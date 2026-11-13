@@ -3,7 +3,7 @@
 <img class="kwan-wordmark" src="assets/kwan-logo-light.png#only-light" alt="Kwan logo: a green path through gold steps to a red goal under a star">
 <img class="kwan-wordmark" src="assets/kwan-logo-dark.png#only-dark" alt="Kwan logo: a green path through gold steps to a red goal under a star">
 
-**Kwan** is Twi for *the path* (*ɔkwan*). It tells a pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+**Kwan** is Twi for *path* (*ɔkwan*). It tells a pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 
 Kwan is an open-source learning path engine for Ghanaian primary maths. It follows the NaCCA Standards-Based Curriculum for Mathematics, Basic 1 to Basic 6.
 

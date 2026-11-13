@@ -4,6 +4,10 @@ All notable changes to Kwan are recorded here. The format follows [Keep a Change
 
 Numbers are never written in this file. Every result lives in `data/eval_results.json` and is rendered into the README and the docs by `uv run scripts/fill_docs.py`.
 
+## [Unreleased]
+
+- **Wording:** Kwan is Twi for "path" in the README, the docs, both demos and the citation file, and the README no longer tells how the project began.
+
 ## [1.0.1] - 2026-11-12
 
 Documentation and packaging only; the engine, the model parameters and the skill map are unchanged.
@@ -68,7 +72,7 @@ The first release candidate of Kwan 1.0: the Round 1 prototype rebuilt as a Pyth
 
 ## [0.1.0] - 2026-11-10
 
-The Round 1 build for the DataNova 2026 Global Data-thon (problem DN-ED-01).
+The first build of Kwan.
 
 ### Added
 

@@ -16,9 +16,9 @@
 
 # Kwan
 
-**Kwan** is Twi for *the path* (*ɔkwan*). It tells a Ghanaian pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+**Kwan** is Twi for *path* (*ɔkwan*). It tells a Ghanaian pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 
-Kwan is an open-source learning path engine for the NaCCA Standards-Based Curriculum, Mathematics, Basic 1 to Basic 6. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo. It began at the DataNova 2026 Global Data-thon (problem DN-ED-01, Adaptive Learning Path Recommendation) and is now a project of its own.
+Kwan is an open-source learning path engine for the NaCCA Standards-Based Curriculum, Mathematics, Basic 1 to Basic 6. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo.
 
 - **Live demo:** https://huggingface.co/spaces/rofyray/kwan (a Gradio app, redeployed with each release)
 - **Documentation:** https://rofyray.github.io/kwan/ (the same pages are in [`docs/`](docs/index.md))

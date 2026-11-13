@@ -15,7 +15,7 @@ thumbnail: https://raw.githubusercontent.com/rofyray/kwan/main/docs/assets/kwan-
 
 # Kwan demo
 
-Kwan is Twi for "the path". It reads Ghana's Basic 1 to Basic 6 mathematics curriculum (NaCCA), keeps track of
+Kwan is Twi for "path". It reads Ghana's Basic 1 to Basic 6 mathematics curriculum (NaCCA), keeps track of
 what a pupil has mastered, and picks the next skill to learn, with a reason and a practice setting from
 everyday Ghanaian life.
 

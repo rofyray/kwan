@@ -39,7 +39,7 @@ CSS = """
 .dark .kwan-logo .on-dark { display: inline; }
 """
 INTRO = (
-    "**Kwan** is Twi for *the path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
+    "**Kwan** is Twi for *path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
     "a pupil has mastered, and picks the next skill to learn, with a reason and an example from everyday "
     "Ghanaian life."
 )
