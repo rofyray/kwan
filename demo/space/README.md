@@ -9,15 +9,15 @@ python_version: "3.12"
 app_file: app.py
 pinned: false
 license: mit
-short_description: Next maths skill for Ghanaian pupils, with a reason.
+short_description: Next skill for Ghanaian pupils, with a reason.
 thumbnail: https://raw.githubusercontent.com/rofyray/kwan/main/docs/assets/kwan-logo.png
 ---
 
 # Kwan demo
 
-Kwan is Twi for "path". It reads Ghana's Basic 1 to Basic 6 mathematics curriculum (NaCCA), keeps track of
-what a pupil has mastered, and picks the next skill to learn, with a reason and a practice setting from
-everyday Ghanaian life.
+Kwan means *path* (ɔkwan). It reads Ghana's NaCCA curriculum (this demo: Mathematics, Basic 1 to Basic 6),
+keeps track of what a pupil has mastered, and picks the next skill to learn, with a reason and a practice
+setting from everyday Ghanaian life.
 
 The demo has three tabs:
 

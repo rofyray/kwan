@@ -268,9 +268,9 @@ def test_fill_docs_says_not_run_for_a_missing_block(fill_docs) -> None:
 
 
 def test_the_name_and_the_project_story_read_the_same_everywhere():
-    """Kwan is Twi for "path" (no "the"), and no committed file names the data-thon it started at."""
+    """Kwan means "path", told without naming a language, and no committed file names the data-thon it started at."""
     listed = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
-    wrong = re.compile(r"Twi[^.\n]{0,12}the path|DataNova|DN-ED-01")
+    wrong = re.compile(r"\bTwi for\b|Twi \*?ɔkwan|which maths skill|primary maths|DataNova|DN-ED-01")
     offenders = []
     for name in listed:
         path = ROOT / name
@@ -279,4 +279,4 @@ def test_the_name_and_the_project_story_read_the_same_everywhere():
         if wrong.search(path.read_text(encoding="utf-8", errors="ignore")):
             offenders.append(name)
     assert not offenders, offenders
-    assert "**Kwan** is Twi for *path* (*ɔkwan*)." in README.read_text(encoding="utf-8")
+    assert "**Kwan** means *path* (*ɔkwan*)." in README.read_text(encoding="utf-8")

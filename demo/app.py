@@ -24,7 +24,7 @@ ASSETS = files("kwan") / "assets"  # the logos ship inside the package, so the D
 LOGO = str(ASSETS / "kwan-logo.png")  # wordmark on its cream tile: reads the same in light and dark themes
 MARK = str(ASSETS / "kwan-mark.png")
 
-st.set_page_config(page_title="Kwan · the next step in maths", page_icon=MARK, layout="wide")
+st.set_page_config(page_title="Kwan · the next step in learning", page_icon=MARK, layout="wide")
 
 NO_GOAL = "(no goal)"
 GOAL_HELP = (
@@ -397,9 +397,9 @@ latency = block_at(ev, "latency") or {}
 
 st.image(LOGO, width=280)
 st.markdown(
-    "**Kwan** is Twi for *path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
-    "a pupil has mastered, and picks the next skill to learn, with a reason and an example from everyday "
-    "Ghanaian life."
+    "**Kwan** means *path* (*ɔkwan*). It reads Ghana's NaCCA curriculum (this demo: Mathematics, Basic 1 to "
+    "Basic 6), keeps track of what a pupil has mastered, and picks the next skill to learn, with a reason and an "
+    "example from everyday Ghanaian life."
 )
 speed = (
     f" · top 3 picked in {latency['recommend_top3_mean_ms']} ms on average ({latency.get('hardware', 'one CPU core')})"

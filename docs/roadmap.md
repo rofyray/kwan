@@ -15,6 +15,8 @@ If you teach in Ghana, the first three items are yours to move. See [CONTRIBUTIN
 
 ## Later, not in 1.0
 
+Kwan is built to carry any NaCCA subject. Each new one is mostly a data task: a curriculum layout file, a skill map and practice settings.
+
 ### English Language, Basic 1 to Basic 6
 
 The next subject. The official NaCCA English Language documents for Basic 1 to 3 and Basic 4 to 6 use the same kind of indicator codes as Mathematics. Kwan 1.0 already leaves room for them:

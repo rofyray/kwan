@@ -35,7 +35,7 @@ FRONT_MATTER = {  # PRD Appendix A.3, with the 1.0 scope (Mathematics only) in t
     "app_port": 7860,
     "pinned": False,
     "license": "mit",
-    "short_description": "Next maths skill for Ghanaian pupils, with a reason.",
+    "short_description": "Next skill for Ghanaian pupils, with a reason.",
 }
 DISCLAIMER = (
     "Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is not reviewed, approved or "

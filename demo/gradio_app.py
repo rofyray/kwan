@@ -25,7 +25,7 @@ from kwan import Kwan
 from kwan.eval import results, simulate
 from kwan.graph.export import graph_html
 
-TITLE = "Kwan · the next step in maths"
+TITLE = "Kwan · the next step in learning"
 ASSETS = files("kwan") / "assets"  # the logos ship inside the package (and in the Space's unpacked copy)
 MARK = str(ASSETS / "kwan-mark.png")  # the cream tile: the browser tab icon
 LOGO_ALT = "Kwan logo: a green path through gold steps to a red goal under a star"
@@ -39,9 +39,9 @@ CSS = """
 .dark .kwan-logo .on-dark { display: inline; }
 """
 INTRO = (
-    "**Kwan** is Twi for *path*. It reads Ghana's Basic 1 to Basic 6 maths curriculum, keeps track of what "
-    "a pupil has mastered, and picks the next skill to learn, with a reason and an example from everyday "
-    "Ghanaian life."
+    "**Kwan** means *path* (*ɔkwan*). It reads Ghana's NaCCA curriculum (this demo: Mathematics, Basic 1 to "
+    "Basic 6), keeps track of what a pupil has mastered, and picks the next skill to learn, with a reason and an "
+    "example from everyday Ghanaian life."
 )
 DISCLAIMER = (
     "Kwan uses the NaCCA Standards-Based Curriculum to organise skills. "

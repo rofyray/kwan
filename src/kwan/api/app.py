@@ -55,7 +55,7 @@ K_MAX = 50
 V0_PATHS = ("/health", "/attempt", "/recommend/", "/mastery/", "/learner/")
 
 DESCRIPTION = """
-Adaptive learning path engine for Ghanaian primary maths (NaCCA B1 to B6).
+Adaptive learning engine for Ghanaian pupils, on the NaCCA curriculum. This release covers Mathematics B1 to B6.
 
 Typical flow for a platform such as Syto:
 
@@ -348,7 +348,7 @@ def create_app(rt: _runtime.Runtime | None = None, *, v0: bool = True) -> FastAP
     app = FastAPI(
         title="Kwan Learning Path Engine",
         version=__version__,
-        summary="Next best maths skill for each pupil, with a reason, in milliseconds.",
+        summary="Next best skill for each pupil, with a reason, in milliseconds.",
         description=DESCRIPTION,
         openapi_tags=[*_v1.TAGS, {"name": "v0 (deprecated)", "description": "Round 1 routes, in-memory state."}],
     )

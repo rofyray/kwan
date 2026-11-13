@@ -3,13 +3,13 @@
 <img class="kwan-wordmark" src="assets/kwan-logo-light.png#only-light" alt="Kwan logo: a green path through gold steps to a red goal under a star">
 <img class="kwan-wordmark" src="assets/kwan-logo-dark.png#only-dark" alt="Kwan logo: a green path through gold steps to a red goal under a star">
 
-**Kwan** is Twi for *path* (*ɔkwan*). It tells a pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+**Kwan** means *path* (*ɔkwan*). It tells a Ghanaian pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 
-Kwan is an open-source learning path engine for Ghanaian primary maths. It follows the NaCCA Standards-Based Curriculum for Mathematics, Basic 1 to Basic 6.
+Kwan is an open-source adaptive learning engine for the NaCCA Standards-Based Curriculum. Version 1 covers Mathematics, Basic 1 to Basic 6; English Language is next.
 
 ## Why Kwan exists
 
-Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and their learning paths follow a foreign syllabus. A pupil in a village somewhere in Ghana has to decode the story before she can start on the maths.
+Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and their learning paths follow a foreign syllabus. A pupil in a village somewhere in Ghana has to decode the story before she can start on the lesson.
 
 Kwan starts from what Ghanaian pupils study: the curriculum their teachers plan from. Every recommendation lines up with the lesson on the blackboard and comes with a practice setting a Ghanaian child will recognise.
 

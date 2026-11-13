@@ -5,12 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "kwan"
 dynamic = ["version"]
-description = "Open-source learning path engine for Ghanaian primary maths (NaCCA B1 to B6): the next skill to learn, the reason, and a practice setting from everyday Ghanaian life."
+description = "Open-source adaptive learning engine for Ghanaian pupils, built on the NaCCA curriculum: the next skill to learn, the reason, and a practice setting from everyday Ghanaian life. Version 1 covers Mathematics B1 to B6."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
-keywords = ["education", "adaptive learning", "knowledge tracing", "curriculum", "Ghana", "NaCCA", "mathematics"]
+keywords = ["education", "adaptive learning", "knowledge tracing", "curriculum", "learning path", "personalised learning", "Ghana", "NaCCA", "mathematics"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Education",

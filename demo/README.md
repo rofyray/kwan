@@ -7,16 +7,16 @@ sdk: docker
 app_port: 7860
 pinned: false
 license: mit
-short_description: Next maths skill for Ghanaian pupils, with a reason.
+short_description: Next skill for Ghanaian pupils, with a reason.
 ---
 
 # Kwan demo
 
 Live demo: https://huggingface.co/spaces/rofyray/kwan
 
-Kwan is Twi for "path". It reads Ghana's Basic 1 to Basic 6 mathematics curriculum (NaCCA), keeps track of
-what a pupil has mastered, and picks the next skill to learn, with a reason and a practice setting from
-everyday Ghanaian life.
+Kwan means *path* (ɔkwan). It reads Ghana's NaCCA curriculum (this demo: Mathematics, Basic 1 to Basic 6),
+keeps track of what a pupil has mastered, and picks the next skill to learn, with a reason and a practice
+setting from everyday Ghanaian life.
 
 The demo has three tabs:
 

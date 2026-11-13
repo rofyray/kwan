@@ -10,7 +10,7 @@ What Kwan's model is for, how it works, how well it does, and where it falls sho
 | | |
 |---|---|
 | Name | Kwan learner model and recommender |
-| Version | Package `kwan` 1.0, bundle `math-1.0.0` |
+| Version | Package `kwan` 1.0.x; the bundle version is `math-` plus the package version (for example `math-1.0.1`) |
 | Type | Multi-level Elo learner model with evidence passed along a prerequisite graph, a forgetting curve and an item-difficulty bank, feeding a rule-based recommender |
 | Subject | NaCCA Mathematics, Basic 1 to Basic 6 |
 | Input | A stream of answers: which skill, right or wrong, and optionally which question and when |
@@ -23,7 +23,7 @@ What Kwan's model is for, how it works, how well it does, and where it falls sho
 
 **Kwan is built to:**
 
-- suggest which maths skill a primary pupil should practise next, and say why;
+- suggest which skill a pupil should practise next, and say why (in 1.0: primary Mathematics);
 - help a teacher or a learning app see which earlier skills a pupil may have missed;
 - give developers and researchers an open engine that follows the Ghanaian curriculum.
 

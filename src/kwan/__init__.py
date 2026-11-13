@@ -1,4 +1,6 @@
-"""Kwan: an open-source learning path engine for Ghanaian primary maths (NaCCA B1 to B6).
+"""Kwan: an open-source adaptive learning engine for Ghanaian pupils, on the NaCCA curriculum.
+
+This release covers Mathematics B1 to B6.
 
 Kwan keeps track of what a pupil has mastered, picks the next skill to learn, gives the reason and
 sets the practice in everyday Ghanaian life. The core needs only the standard library and networkx.

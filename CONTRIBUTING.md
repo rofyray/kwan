@@ -1,6 +1,6 @@
 # Contributing to Kwan
 
-Thank you for wanting to help. Kwan (Twi for "path") tells a pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life. It follows the NaCCA Standards-Based Curriculum for Mathematics, Basic 1 to Basic 6.
+Thank you for wanting to help. Kwan (*ɔkwan*, path) tells a pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life. It follows the NaCCA Standards-Based Curriculum, starting with Mathematics, Basic 1 to Basic 6.
 
 ## 1. Welcome
 

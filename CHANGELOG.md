@@ -6,7 +6,9 @@ Numbers are never written in this file. Every result lives in `data/eval_results
 
 ## [Unreleased]
 
-- **Wording:** Kwan is Twi for "path" in the README, the docs, both demos and the citation file, and the README no longer tells how the project began.
+- **Positioning:** Kwan is described as an adaptive learning engine for the NaCCA curriculum, with Mathematics B1 to B6 as what this release covers, in the package summary, the docs site, the README, the citation file, the CLI and API descriptions and both demos. The tagline says Kwan tells a Ghanaian pupil "which skill to learn next".
+- **Wording:** "Kwan means path (ɔkwan)", the README story shares kelewele and gives change for egg and pepper, and the README no longer tells how the project began.
+- **Model card:** the version row explains how the bundle version follows the package version.
 
 ## [1.0.1] - 2026-11-12
 

@@ -1,5 +1,5 @@
 site_name: Kwan
-site_description: An open-source learning path engine for Ghanaian primary maths. It tells a pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+site_description: An open-source adaptive learning engine for Ghanaian pupils. It tells a pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 site_url: https://rofyray.github.io/kwan/
 repo_url: https://github.com/rofyray/kwan
 repo_name: rofyray/kwan

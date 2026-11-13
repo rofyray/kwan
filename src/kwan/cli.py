@@ -52,7 +52,11 @@ def _install_hint(extra: str | None) -> str:
 def build_parser() -> tuple[argparse.ArgumentParser, dict[str, Exception]]:
     """The parser with every available subcommand, and {registry module: why it was skipped}."""
     parser = argparse.ArgumentParser(
-        prog="kwan", description="Kwan: a learning path engine for Ghanaian primary maths (NaCCA B1 to B6)."
+        prog="kwan",
+        description=(
+            "Kwan: an adaptive learning engine for Ghanaian pupils, on the NaCCA curriculum. "
+            "This release covers Mathematics B1 to B6."
+        ),
     )
     parser.add_argument("--version", action="version", version=f"kwan {__version__}")
     subparsers = parser.add_subparsers(dest="command", metavar="COMMAND")

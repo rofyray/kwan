@@ -16,9 +16,9 @@
 
 # Kwan
 
-**Kwan** is Twi for *path* (*ɔkwan*). It tells a Ghanaian pupil which maths skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
+**Kwan** means *path* (*ɔkwan*). It tells a Ghanaian pupil which skill to learn next, explains why, and sets the practice in everyday Ghanaian life.
 
-Kwan is an open-source learning path engine for the NaCCA Standards-Based Curriculum, Mathematics, Basic 1 to Basic 6. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo.
+Kwan is an open-source adaptive learning engine for the NaCCA Standards-Based Curriculum. Version 1 covers Mathematics, Basic 1 to Basic 6; English Language is next. It is a Python package with a command-line tool, a learner-state store and an optional REST API, plus a public demo.
 
 - **Live demo:** https://huggingface.co/spaces/rofyray/kwan (a Gradio app, redeployed with each release)
 - **Documentation:** https://rofyray.github.io/kwan/ (the same pages are in [`docs/`](docs/index.md))
@@ -28,9 +28,9 @@ Kwan uses the NaCCA Standards-Based Curriculum to organise skills. Kwan is not r
 
 ## Why we built it
 
-Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and the order of topics follows a foreign syllabus. A child in a village somewhere in Ghana has to decode the story before she can start on the maths, and that extra step is where many children stop.
+Most learning apps and AI tutors used across Africa were designed somewhere else. Their word problems feature snow days and prices in dollars, and the order of topics follows a foreign syllabus. A child in a village somewhere in Ghana has to decode the story before she can start on the lesson, and that extra step is where many children stop.
 
-Kwan starts from what Ghanaian pupils already study. Its skill map is the NaCCA Standards-Based Mathematics Curriculum for Basic 1 to Basic 6, the same document teachers plan their lessons from, so a recommendation lines up with the lesson on the blackboard. Each recommended skill comes with a setting a Ghanaian child will recognise: sharing groundnuts, giving change for kenkey and fish, continuing a kente pattern, working out a trotro fare.
+Kwan starts from what Ghanaian pupils already study. Its skill map is the NaCCA Standards-Based Curriculum (Mathematics, Basic 1 to Basic 6, in this release), the same documents teachers plan their lessons from, so a recommendation lines up with the lesson on the blackboard. Each recommended skill comes with a setting a Ghanaian child will recognise: sharing kelewele, giving change for egg and pepper, continuing a kente pattern, working out a trotro fare.
 
 ## What it does
 
@@ -390,7 +390,7 @@ The [Model card](docs/model-card.md) lists the limits in full.
 
 ## What's next
 
-Later work, not part of 1.0:
+Kwan is built to carry any NaCCA subject: skill ids carry a subject prefix and the curriculum parser reads each document's layout from a settings file, so a new subject is mostly a data task. Later work, not part of 1.0:
 
 - English Language B1 to B6, then JHS Mathematics.
 - Calibration on Ghana survey data (World Bank STARS, USAID Ghana Early Grade Mathematics).
